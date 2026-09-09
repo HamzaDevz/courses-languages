@@ -25,6 +25,7 @@ import asyncio
 import hashlib
 import json
 import sys
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -101,26 +102,44 @@ def clip_name(text: str, voice_id: str) -> str:
     return f"{digest}.mp3"
 
 
-async def synth(text: str, voice_id: str, rate: str, out: Path, tries: int = 3) -> None:
+ATTEMPT_TIMEOUT = 45      # secondes : au-delà, la connexion est pendue
+
+
+async def synth(text: str, voice_id: str, rate: str, out: Path,
+                tries: int = 3, deadline: float | None = None) -> None:
+    """Enregistre une phrase, avec des reprises mais sans jamais s'éterniser.
+
+    Une connexion pendue ne remonte aucune erreur : sans limite par tentative,
+    un seul clip peut bloquer toute la publication. Et passé la limite globale,
+    on ne retente plus — le clip sera repris à la prochaine exécution.
+    """
     import edge_tts
 
     last = None
     for attempt in range(tries):
         try:
             tmp = out.with_suffix(".part")
-            await edge_tts.Communicate(text, voice_id, rate=rate).save(str(tmp))
+            await asyncio.wait_for(
+                edge_tts.Communicate(text, voice_id, rate=rate).save(str(tmp)),
+                timeout=ATTEMPT_TIMEOUT)
             if tmp.stat().st_size < 500:      # un fichier vide = échec silencieux
                 raise RuntimeError("fichier audio vide")
             tmp.replace(out)
             return
+        except asyncio.TimeoutError:
+            last = RuntimeError(f"pas de réponse en {ATTEMPT_TIMEOUT} s")
+            out.with_suffix(".part").unlink(missing_ok=True)
         except Exception as exc:              # réseau instable : on retente
             last = exc
             out.with_suffix(".part").unlink(missing_ok=True)
-            await asyncio.sleep(1.5 * (attempt + 1))
+        if deadline and time.monotonic() > deadline:
+            break
+        await asyncio.sleep(1.5 * (attempt + 1))
     raise RuntimeError(f"« {text} » : {last}")
 
 
-async def build_language(course: dict, force: bool, prune: bool) -> int:
+async def build_language(course: dict, force: bool, prune: bool,
+                         deadline_minutes: float = 0) -> int:
     voices = voices_for(course)
     rate = course.get("speech_rate", "-10%")
     outdir = AUDIO / course["code"]
@@ -144,19 +163,26 @@ async def build_language(course: dict, force: bool, prune: bool) -> int:
     print(f'{course["name_fr"]} : {len(need)} textes, {len(todo)} à enregistrer '
           f'({", ".join(sorted(set(voices.values())))})')
 
-    def write_manifest() -> None:
-        """Le manifeste décrit ce qui est demandé, pas ce qui a réussi.
+    def write_manifest() -> int:
+        """Écrit le manifeste des enregistrements **réellement présents**.
 
-        Il est écrit avant de signaler les échecs : sinon un seul enregistrement
-        raté ferait perdre les centaines d'autres, et le site publierait sans
-        aucun son. Les fichiers manquants sont rattrapés à la relance, et le
-        site retombe de toute façon sur la synthèse pour ceux-là.
+        Il est écrit même quand une partie a échoué : sinon un seul clip raté
+        ferait perdre les centaines d'autres et le site publierait sans aucun
+        son. À l'inverse, y lister un fichier absent ferait croire au site
+        qu'il a une voix alors qu'il n'en a pas : on ne garde donc que ce qui
+        existe sur le disque, et le reste est rattrapé à la relance.
         """
+        present = {}
+        for text, by_voice in clips.items():
+            kept = {v: name for v, name in by_voice.items() if (outdir / name).exists()}
+            if kept:
+                present[text] = kept
         manifest = {"language": course["code"], "voices": voices,
-                    "rate": rate, "clips": clips}
+                    "rate": rate, "clips": present}
         (outdir / "index.json").write_text(
             json.dumps(manifest, ensure_ascii=False, indent=1, sort_keys=True),
             encoding="utf-8")
+        return len(present)
 
     if todo:
         try:
@@ -169,29 +195,42 @@ async def build_language(course: dict, force: bool, prune: bool) -> int:
 
         sem = asyncio.Semaphore(4)     # rester poli avec le service
         failures: list[str] = []
+        skipped = 0
+        deadline = time.monotonic() + deadline_minutes * 60 if deadline_minutes else None
 
         async def one(text: str, voice_id: str, target: Path) -> None:
+            nonlocal skipped
+            if deadline and time.monotonic() > deadline:
+                skipped += 1
+                return
             async with sem:
                 try:
-                    await synth(text, voice_id, rate, target)
+                    await synth(text, voice_id, rate, target, deadline=deadline)
                     print(f"  ✓ {text[:52]}")
                 except Exception as exc:
                     failures.append(str(exc))
                     print(f"  ✗ {exc}")
 
         await asyncio.gather(*(one(*t) for t in todo.values()))
+        if skipped:
+            print(f"\n⏱  Limite de {deadline_minutes} min atteinte : {skipped} "
+                  f"enregistrement(s) reportés. Ils seront produits à la prochaine "
+                  f"exécution — les autres sont conservés.")
         if failures:
-            write_manifest()
+            kept = write_manifest()
             raise SystemExit(
-                f"\n{len(failures)} enregistrement(s) sur {len(todo)} ont échoué. "
-                f"Les autres sont conservés. Causes habituelles :\n"
+                f"\n{len(failures)} enregistrement(s) sur {len(todo)} ont échoué ; "
+                f"{kept} textes restent disponibles. Causes habituelles :\n"
                 "  — pas d'accès réseau vers le service de synthèse ;\n"
                 "  — service momentanément indisponible : relancer « make audio » "
                 "reprend là où ça s'est arrêté.")
 
-    write_manifest()
+    kept = write_manifest()
+    print(f"  {kept} textes disponibles dans {outdir.relative_to(ROOT)}/")
 
     if prune:
+        # `clips` décrit tout ce qui est attendu, y compris les enregistrements
+        # reportés : on ne supprime donc jamais un fichier encore utile.
         keep = {name for clip in clips.values() for name in clip.values()}
         for f in outdir.glob("*.mp3"):
             if f.name not in keep:
@@ -206,6 +245,9 @@ def main() -> None:
     ap.add_argument("--force", action="store_true", help="refaire même les fichiers existants")
     ap.add_argument("--no-prune", action="store_true",
                     help="garder les fichiers qui ne correspondent plus à aucun texte")
+    ap.add_argument("--deadline-minutes", type=float, default=0, metavar="N",
+                    help="arrêter d'enregistrer après N minutes et garder ce qui est "
+                         "fait ; le reste est produit à la prochaine exécution")
     args = ap.parse_args()
 
     langs = [c for c in load_all() if not args.lang or c["code"] == args.lang]
@@ -214,7 +256,8 @@ def main() -> None:
 
     total = 0
     for course in langs:
-        total += asyncio.run(build_language(course, args.force, not args.no_prune))
+        total += asyncio.run(build_language(course, args.force, not args.no_prune,
+                                            args.deadline_minutes))
 
     print(f"\n{total} nouveaux fichiers. Relancez « make build » pour que le site "
           f"les prenne en compte." if total else "\nTout était déjà à jour.")
