@@ -1,0 +1,3 @@
+# Optionnel : produit les enregistrements réels (make audio).
+# Le site se construit et fonctionne sans, avec la voix du navigateur.
+edge-tts>=6.1

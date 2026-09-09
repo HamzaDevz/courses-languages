@@ -58,3 +58,49 @@ activities:
     steps_fr:
       - "Écris 3 phrases en portugais : une salutation, ton nom, et *adeus*."
       - "Lis-les à voix haute en écoutant l'audio du site pour corriger ta prononciation."
+  - level: grands
+    type: dialogue
+    title_fr: "Rejoue la scène, change le prénom"
+    steps_fr:
+      - "Rejoue le dialogue en prenant le rôle de Tomás, puis celui d'Ana."
+      - "Refais-le avec **ton** prénom et celui d'un ami."
+      - "Ajoute une réplique à la fin : *Até amanhã!* (à demain)."
+year: 1
+dialogue:
+  title_fr: "Deux enfants se rencontrent"
+  context_fr: "Le matin, devant l'école. Ana voit Tomás pour la première fois."
+  lines:
+    - { who: "Ana",   term: "Olá! Bom dia!",              fr: "Salut ! Bonjour !",              phon: "o-LA! bon DI-a" }
+    - { who: "Tomás", term: "Bom dia! Tudo bem?",         fr: "Bonjour ! Ça va ?",              phon: "bon DI-a! TOU-dou bèïn" }
+    - { who: "Ana",   term: "Estou bem, obrigada. E tu?", fr: "Je vais bien, merci. Et toi ?",  phon: "chtô bèïn, o-bri-GA-da. i TOU" }
+    - { who: "Tomás", term: "Também estou bem.",          fr: "Moi aussi je vais bien.",        phon: "tan-BÈÏN chtô bèïn" }
+    - { who: "Tomás", term: "Como te chamas?",            fr: "Comment t'appelles-tu ?",        phon: "KO-mou te CHA-mach" }
+    - { who: "Ana",   term: "Chamo-me Ana. E tu?",        fr: "Je m'appelle Ana. Et toi ?",     phon: "CHA-mou-me A-na. i TOU" }
+    - { who: "Tomás", term: "Chamo-me Tomás. Adeus, Ana!", fr: "Je m'appelle Tomás. Au revoir, Ana !", phon: "CHA-mou-me tou-MACH. a-DÉOUCH, A-na" }
+    - { who: "Ana",   term: "Adeus, Tomás!",              fr: "Au revoir, Tomás !",             phon: "a-DÉOUCH, tou-MACH" }
+comprehension:
+  - q_fr: "Comment s'appellent les deux enfants ?"
+    a_fr: "Ana et Tomás."
+  - q_fr: "Est-ce qu'ils vont bien tous les deux ?"
+    a_fr: "Oui : chacun répond **estou bem**, et Tomás ajoute *também* (moi aussi)."
+  - q_fr: "Ana dit *obrigada* et pas *obrigado*. Pourquoi ?"
+    a_fr: "Parce que le merci s'accorde avec **celui qui parle** : une fille dit toujours *obrigada*."
+  - q_fr: "Quelle petite phrase les deux enfants utilisent-ils pour renvoyer la question ?"
+    a_fr: "**E tu?** — « et toi ? ». C'est elle qui transforme deux phrases en discussion."
+qa:
+  - question: { term: "Como te chamas?", fr: "Comment t'appelles-tu ?", phon: "KO-mou te CHA-mach" }
+    answers:
+      - { term: "Chamo-me Léo.",     fr: "Je m'appelle Léo.",            phon: "CHA-mou-me Léo" }
+      - { term: "O meu nome é Ana.", fr: "Mon nom est Ana.",             phon: "ou méou NO-me è A-na" }
+  - question: { term: "Tudo bem?", fr: "Ça va ?", phon: "TOU-dou bèïn" }
+    answers:
+      - { term: "Estou bem, obrigado.", fr: "Je vais bien, merci.",      phon: "chtô bèïn, o-bri-GA-dou" }
+      - { term: "Mais ou menos.",       fr: "Couci-couça.",              phon: "maïz ou MÉ-nouch" }
+      - { term: "Não estou bem.",       fr: "Je ne vais pas bien.",      phon: "nan-ou chtô bèïn" }
+  - question: { term: "Bom dia! Como estás?", fr: "Bonjour ! Comment vas-tu ?", phon: "bon DI-a! KO-mou chTACH" }
+    answers:
+      - { term: "Bom dia! Estou bem.", fr: "Bonjour ! Je vais bien.",    phon: "bon DI-a! chtô bèïn" }
+      - { term: "Olá! E tu?",          fr: "Salut ! Et toi ?",           phon: "o-LA! i TOU" }
+reemploi_fr:
+  - "Toute la semaine, on dit **bom dia** au réveil et **boa noite** au coucher, à la place du français."
+  - "Chaque fois qu'on passe quelque chose à table : *por favor* — *obrigado* — *de nada*."

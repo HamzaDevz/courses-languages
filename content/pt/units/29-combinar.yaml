@@ -1,0 +1,99 @@
+id: 29-combinar
+order: 29
+year: 3
+title: "Vamos combinar?"
+title_fr: "On s'arrange ?"
+goal_fr: "Proposer, négocier, accepter ou refuser, et se mettre d'accord."
+can_do_fr:
+  - "Je propose avec *que tal…?* et *e se…?*"
+  - "Je refuse en donnant une raison et une autre idée."
+  - "Je dis que je suis d'accord ou non, sans me fâcher."
+  - "Je conclus un accord : *então está combinado*."
+duration_min: 16
+dialogue:
+  title_fr: "Trouver un terrain d'entente"
+  context_fr: "Trois amis veulent faire quelque chose ensemble samedi. Personne n'a la même idée."
+  lines:
+    - { who: "Ana",   term: "Que tal irmos ao cinema no sábado?",         fr: "Et si on allait au cinéma samedi ?", phon: "ke tal IR-mouch aou si-NÉ-ma nou SA-ba-dou" }
+    - { who: "Tomás", term: "Hmm… não me apetece muito. E se fôssemos à piscina?", fr: "Hmm… ça ne me dit pas trop. Et si on allait à la piscine ?", phon: "nan-ou me a-pe-TÈ-se MOUÏN-tou. i se FÔ-se-mouch a pich-SI-na" }
+    - { who: "Ana",   term: "Não posso, esqueci-me do fato de banho.",    fr: "Je ne peux pas, j'ai oublié mon maillot.", phon: "nan-ou PO-sou, chke-SI-me dou FA-tou de BA-gnou" }
+    - { who: "Léo",   term: "Então vamos ao parque? É de graça!",         fr: "Alors on va au parc ? C'est gratuit !", phon: "en-TAN-ou VA-mouch aou PAR-ke? è de GRA-sa" }
+    - { who: "Tomás", term: "Boa ideia. Concordo com o Léo.",             fr: "Bonne idée. Je suis d'accord avec Léo.", phon: "BÔ-a i-DÈ-ia. kon-KOR-dou kon ou Léo" }
+    - { who: "Ana",   term: "Eu também, mas só depois do almoço.",        fr: "Moi aussi, mais seulement après le déjeuner.", phon: "éou tan-BÈÏN, mach so de-POÏCH dou al-MÔ-sou" }
+    - { who: "Léo",   term: "Às três, então? Toda a gente concorda?",     fr: "À trois heures, alors ? Tout le monde est d'accord ?", phon: "ach trèch, en-TAN-ou? TÔ-da a JEN-te kon-KOR-da" }
+    - { who: "Tomás", term: "Por mim, sim. Então está combinado!",        fr: "Pour moi, oui. Alors c'est décidé !", phon: "pour mïn, sïn. en-TAN-ou chta kon-bi-NA-dou" }
+comprehension:
+  - q_fr: "Quelles sont les trois propositions faites ?"
+    a_fr: "Le cinéma (Ana), la piscine (Tomás), le parc (Léo)."
+  - q_fr: "Pourquoi Ana refuse-t-elle la piscine ?"
+    a_fr: "Elle a oublié son maillot de bain — *esqueci-me do fato de banho*."
+  - q_fr: "Sur quoi finissent-ils par se mettre d'accord ?"
+    a_fr: "Le parc, à trois heures, après le déjeuner."
+  - q_fr: "Comment refuse-t-on poliment dans ce dialogue ?"
+    a_fr: "Jamais un *não* sec : **une raison** (*não posso porque…*) puis **une autre idée** (*e se…?*)."
+vocab:
+  - { term: "combinar",        fr: "convenir de, s'arranger", phon: "kon-bi-NAR" }
+  - { term: "que tal",         fr: "et si, ça te dit",        phon: "ke tal" }
+  - { term: "concordo",        fr: "je suis d'accord",        phon: "kon-KOR-dou" }
+  - { term: "não concordo",    fr: "je ne suis pas d'accord", phon: "nan-ou kon-KOR-dou" }
+  - { term: "talvez",          fr: "peut-être",               phon: "tal-VÈCH" }
+  - { term: "de graça",        fr: "gratuit",                 phon: "de GRA-sa" }
+  - { term: "toda a gente",    fr: "tout le monde",           phon: "TÔ-da a JEN-te" }
+  - { term: "mudar de ideias", fr: "changer d'avis",          phon: "mou-DAR de i-DÈ-iach" }
+  - { term: "esperar",         fr: "attendre",                phon: "chpe-RAR" }
+  - { term: "combinado",       fr: "c'est convenu",           phon: "kon-bi-NA-dou" }
+phrases:
+  - { term: "Que tal irmos ao parque?",  fr: "Et si on allait au parc ?",     phon: "ke tal IR-mouch aou PAR-ke" }
+  - { term: "Não me apetece muito.",     fr: "Ça ne me dit pas trop.",        phon: "nan-ou me a-pe-TÈ-se MOUÏN-tou" }
+  - { term: "Concordo contigo.",         fr: "Je suis d'accord avec toi.",    phon: "kon-KOR-dou kon-TI-gou" }
+  - { term: "Prefiro outra coisa.",      fr: "Je préfère autre chose.",       phon: "pre-FI-rou Ô-tra KOÏ-za" }
+  - { term: "Está bem, por mim.",        fr: "D'accord, ça me va.",           phon: "chta bèïn, pour mïn" }
+  - { term: "Então está combinado!",     fr: "Alors c'est décidé !",          phon: "en-TAN-ou chta kon-bi-NA-dou" }
+qa:
+  - question: { term: "Que tal irmos ao cinema?", fr: "Et si on allait au cinéma ?", phon: "ke tal IR-mouch aou si-NÉ-ma" }
+    answers:
+      - { term: "Boa ideia! A que horas?",       fr: "Bonne idée ! À quelle heure ?", phon: "BÔ-a i-DÈ-ia! a ke O-rach" }
+      - { term: "Não me apetece. E se fôssemos ao parque?", fr: "Ça ne me dit pas. Et si on allait au parc ?", phon: "nan-ou me a-pe-TÈ-se. i se FÔ-se-mouch aou PAR-ke" }
+      - { term: "Hoje não posso, tenho treino.", fr: "Aujourd'hui je ne peux pas, j'ai entraînement.", phon: "ô-je nan-ou PO-sou, TÉ-gnou TRÈÏ-nou" }
+  - question: { term: "Concordas ou não?", fr: "Tu es d'accord ou pas ?", phon: "kon-KOR-dach ô nan-ou" }
+    answers:
+      - { term: "Concordo, é a melhor ideia.",   fr: "Je suis d'accord, c'est la meilleure idée.", phon: "kon-KOR-dou, è a me-LIOR i-DÈ-ia" }
+      - { term: "Não concordo, mas faço à mesma.", fr: "Je ne suis pas d'accord, mais je le fais quand même.", phon: "nan-ou kon-KOR-dou, mach FA-sou a MÈCH-ma" }
+  - question: { term: "A que horas nos encontramos, então?", fr: "On se retrouve à quelle heure, alors ?", phon: "a ke O-rach nouz en-kon-TRA-mouch, en-TAN-ou" }
+    answers:
+      - { term: "Às três, em frente à escola.",  fr: "À trois heures, devant l'école.", phon: "ach trèch, èïn FREN-te a chKO-la" }
+      - { term: "Depois do almoço, está bem?",   fr: "Après le déjeuner, ça va ?",      phon: "de-POÏCH dou al-MÔ-sou, chta bèïn" }
+notes_fr:
+  - "**Que tal…?** et **E se…?** sont les deux façons de proposer. La réponse polie est toujours en deux temps : une raison, puis une contre-proposition."
+  - "*E se fôssemos…* est du subjonctif : on ne l'explique pas, on l'apprend comme une formule toute faite. L'enfant peut aussi dire *E vamos ao parque?*"
+  - "Un désaccord n'est pas une dispute : **não concordo, mas percebo** est la phrase la plus adulte du programme."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Trois idées, un choix"
+    steps_fr:
+      - "Trois activités dessinées sur trois papiers."
+      - "Chacun défend la sienne avec un mot : *é divertido!*, *é giro!*"
+      - "On vote à main levée et on conclut par *está combinado!*"
+  - level: petits
+    type: jeu
+    title_fr: "Oui, non, peut-être"
+    steps_fr:
+      - "Vous proposez des choses absurdes ou normales : *Vamos comer sopa de chocolate?*"
+      - "L'enfant répond *concordo!*, *não concordo!* ou *talvez!* avec le geste correspondant."
+  - level: grands
+    type: exercice
+    title_fr: "Refuser sans blesser"
+    steps_fr:
+      - "Écris trois refus polis : chacun avec une raison **et** une autre proposition."
+      - "Modèle : *Não posso, tenho de estudar. E se fôssemos amanhã?*"
+  - level: grands
+    type: dialogue
+    title_fr: "La négociation à trois"
+    steps_fr:
+      - "Trois joueurs, trois idées différentes tirées au sort. On négocie en portugais."
+      - "Règles : interdit de dire seulement *não* ; chacun doit une fois dire *tens razão* ; on finit par *está combinado*."
+      - "Chronomètre : trois minutes maximum pour se mettre d'accord."
+reemploi_fr:
+  - "Les décisions familiales de la semaine se prennent en portugais, au moins la proposition et la conclusion."
+  - "Chaque fois que l'enfant refuse quelque chose, on lui demande une raison **et** une autre idée — en portugais."

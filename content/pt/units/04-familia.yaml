@@ -56,3 +56,41 @@ activities:
       - "Dessine ton arbre sur une feuille."
       - "Écris sous chaque personne son nom en portugais : *o avô João*, *a minha irmã Sara*..."
       - "Présente-le à voix haute : *Este é o meu avô. Esta é a minha irmã.*"
+year: 1
+dialogue:
+  title_fr: "C'est ma famille"
+  context_fr: "Tomás montre une photo de famille à Ana."
+  lines:
+    - { who: "Tomás", term: "Olha, esta é a minha família.",   fr: "Regarde, ça c'est ma famille.",        phon: "O-lia, ÈCH-ta è a MI-gna fa-MI-lia" }
+    - { who: "Ana",   term: "Quem é este?",                    fr: "C'est qui, lui ?",                      phon: "kèïn è ÈCH-te" }
+    - { who: "Tomás", term: "É o meu pai. Chama-se João.",     fr: "C'est mon papa. Il s'appelle João.",    phon: "è ou méou paï. CHA-ma-se jouan-ou" }
+    - { who: "Ana",   term: "E esta menina?",                  fr: "Et cette petite fille ?",               phon: "i ÈCH-ta me-NI-na" }
+    - { who: "Tomás", term: "É a minha irmã. Tem três anos.",  fr: "C'est ma sœur. Elle a trois ans.",      phon: "è a MI-gna ir-MAN. tèïn trèch A-nouch" }
+    - { who: "Ana",   term: "Que giro! Tens irmãos?",          fr: "Qu'elle est mignonne ! Tu as des frères ?", phon: "ke JI-rou! tèïnch ir-MAN-ouch" }
+    - { who: "Tomás", term: "Tenho um irmão e uma irmã.",      fr: "J'ai un frère et une sœur.",            phon: "TÉ-gnou oun ir-MAN-ou i OU-ma ir-MAN" }
+comprehension:
+  - q_fr: "Comment s'appelle le père de Tomás ?"
+    a_fr: "João."
+  - q_fr: "Combien de frères et sœurs a Tomás ?"
+    a_fr: "Deux : **um irmão e uma irmã** (un frère et une sœur)."
+  - q_fr: "Quel âge a sa sœur ?"
+    a_fr: "Trois ans — *tem três anos*. Attention : pour quelqu'un d'autre, on dit **tem**, pas *tenho*."
+  - q_fr: "Quelle phrase utilise Ana pour demander qui est sur la photo ?"
+    a_fr: "**Quem é este?** — « c'est qui, lui ? ». Pour une fille : *Quem é esta?*"
+qa:
+  - question: { term: "Tens irmãos?", fr: "Tu as des frères et sœurs ?", phon: "tèïnch ir-MAN-ouch" }
+    answers:
+      - { term: "Tenho uma irmã.",    fr: "J'ai une sœur.",             phon: "TÉ-gnou OU-ma ir-MAN" }
+      - { term: "Tenho dois irmãos.", fr: "J'ai deux frères.",          phon: "TÉ-gnou doïch ir-MAN-ouch" }
+      - { term: "Não, sou filho único.", fr: "Non, je suis fils unique.", phon: "nan-ou, sô FI-liou OU-ni-kou" }
+  - question: { term: "Quem é este?", fr: "Qui est-ce ?", phon: "kèïn è ÈCH-te" }
+    answers:
+      - { term: "É o meu pai.",  fr: "C'est mon papa.",  phon: "è ou méou paï" }
+      - { term: "É a minha avó.", fr: "C'est ma grand-mère.", phon: "è a MI-gna a-VO" }
+  - question: { term: "Como se chama a tua mãe?", fr: "Comment s'appelle ta maman ?", phon: "KO-mou se CHA-ma a TOU-a maïn" }
+    answers:
+      - { term: "Chama-se Maria.", fr: "Elle s'appelle Maria.", phon: "CHA-ma-se ma-RI-a" }
+      - { term: "Não sei dizer.",  fr: "Je ne sais pas le dire.", phon: "nan-ou sèï di-ZÈR" }
+reemploi_fr:
+  - "Nommer en portugais chaque membre de la famille qui entre dans la pièce : *o pai*, *a mãe*, *o irmão*."
+  - "Devant l'album photo du week-end, demander : *Quem é este?*"

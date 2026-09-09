@@ -1,0 +1,103 @@
+id: 30-falar
+order: 30
+year: 3
+title: "Falar de tudo"
+title_fr: "Parler de tout"
+goal_fr: "Tenir cinq minutes de conversation libre. Bilan des trois années."
+can_do_fr:
+  - "Je tiens une conversation de cinq minutes sans passer au français."
+  - "Je passe du passé au futur et je donne mon avis dans le même échange."
+  - "Je relance, je réagis, je me corrige tout seul."
+  - "Je me débrouille quand je ne connais pas un mot."
+duration_min: 20
+dialogue:
+  title_fr: "Une conversation entière"
+  context_fr: "Tout le programme en une discussion : le passé, l'avenir, l'avis, le désaccord, la réparation. But de la semaine : la tenir sans la fiche, puis en inventer une autre."
+  lines:
+    - { who: "Ana",   term: "Então, o que fizeste nas férias?",              fr: "Alors, qu'as-tu fait pendant les vacances ?", phon: "en-TAN-ou, ou ke fi-ZÈCH-te nach FÈ-riach" }
+    - { who: "Tomás", term: "Fui a Portugal com a minha família. Foi fantástico!", fr: "Je suis allé au Portugal avec ma famille. C'était fantastique !", phon: "fouï a pour-tou-GAL kon a MI-gna fa-MI-lia. foï fan-TACH-ti-kou" }
+    - { who: "Ana",   term: "A sério? Conta-me tudo! O que visitaste?",      fr: "Ah bon ? Raconte-moi tout ! Qu'est-ce que tu as visité ?", phon: "a SÈ-riou? KON-ta-me TOU-dou! ou ke vi-zi-TACH-te" }
+    - { who: "Tomás", term: "Primeiro Lisboa, depois o Porto. No fim, a praia.", fr: "D'abord Lisbonne, ensuite Porto. À la fin, la plage.", phon: "pri-MÈÏ-rou lij-BÔ-a, de-POÏCH ou POR-tou. nou fïn, a PRAÏ-a" }
+    - { who: "Ana",   term: "E de que gostaste mais?",                       fr: "Et qu'est-ce que tu as préféré ?",  phon: "i de ke gouch-TACH-te maïch" }
+    - { who: "Tomás", term: "Acho que gostei mais do Porto, porque o comboio foi divertido.", fr: "Je crois que j'ai préféré Porto, parce que le train était amusant.", phon: "A-chou ke gouch-TÈÏ maïch dou POR-tou, pour-ke ou kon-BOÏ-ou foï di-ver-TI-dou" }
+    - { who: "Ana",   term: "Não concordo! Lisboa é muito mais bonita.",     fr: "Je ne suis pas d'accord ! Lisbonne est bien plus belle.", phon: "nan-ou kon-KOR-dou! lij-BÔ-a è MOUÏN-tou maïch bou-NI-ta" }
+    - { who: "Tomás", term: "Tens razão, Lisboa é linda. Mas eu prefiro o mar… ou melhor, o rio!", fr: "Tu as raison, Lisbonne est superbe. Mais moi je préfère la mer… ou plutôt, le fleuve !", phon: "tèïnch rra-ZAN-ou, lij-BÔ-a è LÏN-da. mach éou pre-FI-rou ou mar… ô me-LIOR, ou RRI-ou" }
+    - { who: "Ana",   term: "E vais voltar no próximo verão?",               fr: "Et tu vas y retourner l'été prochain ?", phon: "i vaïch vol-TAR nou PRO-si-mou ve-RAN-ou" }
+    - { who: "Tomás", term: "Se calhar sim. Que tal vires comigo?",          fr: "Peut-être bien. Et si tu venais avec moi ?", phon: "se ka-LIAR sïn. ke tal VI-rech kou-MI-gou" }
+    - { who: "Ana",   term: "A sério? Adorava! Tenho de perguntar aos meus pais.", fr: "Vraiment ? J'adorerais ! Je dois demander à mes parents.", phon: "a SÈ-riou? a-dou-RA-va! TÉ-gnou de per-goun-TAR aouch méouch païch" }
+    - { who: "Tomás", term: "Então está combinado. Falamos amanhã!",         fr: "Alors c'est convenu. On s'en reparle demain !", phon: "en-TAN-ou chta kon-bi-NA-dou. fa-LA-mouch a-ma-GNAN" }
+comprehension:
+  - q_fr: "Où est allé Tomás, et dans quel ordre ?"
+    a_fr: "Au Portugal : d'abord Lisbonne, ensuite Porto, à la fin la plage."
+  - q_fr: "Qu'a-t-il préféré, et pourquoi ?"
+    a_fr: "Porto, parce que le voyage en train était amusant."
+  - q_fr: "Sur quoi ne sont-ils pas d'accord ? Comment cela se termine-t-il ?"
+    a_fr: "Ana préfère Lisbonne. Tomás lui donne raison (*tens razão*) tout en gardant son avis — et personne ne se fâche."
+  - q_fr: "Repère un moment où Tomás se corrige lui-même."
+    a_fr: "*Prefiro o mar… **ou melhor**, o rio!*"
+  - q_fr: "Quels temps sont utilisés dans cette conversation ?"
+    a_fr: "Le passé (*fui*, *gostei*), le présent (*prefiro*, *acho*), le futur proche (*vais voltar*) — et une proposition (*que tal vires comigo?*). C'est le programme des trois années en douze répliques."
+vocab:
+  - { term: "então",           fr: "alors, donc",          phon: "en-TAN-ou" }
+  - { term: "afinal",          fr: "finalement",           phon: "a-fi-NAL" }
+  - { term: "por exemplo",     fr: "par exemple",          phon: "pour i-ZEN-plou" }
+  - { term: "quer dizer",      fr: "c'est-à-dire",         phon: "kèr di-ZÈR" }
+  - { term: "de qualquer maneira", fr: "de toute façon",   phon: "de koual-KÈR ma-NÈÏ-ra" }
+  - { term: "adorava",         fr: "j'adorerais",          phon: "a-dou-RA-va" }
+  - { term: "fantástico",      fr: "fantastique",          phon: "fan-TACH-ti-kou" }
+  - { term: "voltar",          fr: "revenir, retourner",   phon: "vol-TAR" }
+phrases:
+  - { term: "Conta-me tudo!",           fr: "Raconte-moi tout !",              phon: "KON-ta-me TOU-dou" }
+  - { term: "De que gostaste mais?",    fr: "Qu'as-tu préféré ?",              phon: "de ke gouch-TACH-te maïch" }
+  - { term: "Quer dizer que…",          fr: "Ça veut dire que…",               phon: "kèr di-ZÈR ke" }
+  - { term: "Espera, deixa-me explicar.", fr: "Attends, laisse-moi expliquer.", phon: "chPÈ-ra, DÈÏ-cha-me chpli-KAR" }
+  - { term: "Não sei a palavra, mas é uma coisa para…", fr: "Je ne connais pas le mot, mais c'est une chose pour…", phon: "nan-ou sèï a pa-LA-vra, mach è OU-ma KOÏ-za pa-ra" }
+  - { term: "Falamos amanhã!",          fr: "On s'en reparle demain !",        phon: "fa-LA-mouch a-ma-GNAN" }
+qa:
+  - question: { term: "Conta-me uma coisa que aconteceu esta semana.", fr: "Raconte-moi quelque chose qui s'est passé cette semaine.", phon: "KON-ta-me OU-ma KOÏ-za ke a-kon-te-SÉOU ÈCH-ta se-MA-na" }
+    answers:
+      - { term: "Na terça-feira fui ao treino e marquei um golo!", fr: "Mardi je suis allé à l'entraînement et j'ai marqué un but !", phon: "na TÈR-sa FÈÏ-ra fouï aou TRÈÏ-nou i mar-KÈÏ oun GÔ-lou" }
+      - { term: "Não aconteceu nada de especial, foi uma semana normal.", fr: "Il ne s'est rien passé de spécial, c'était une semaine normale.", phon: "nan-ou a-kon-te-SÉOU NA-da de chpe-si-AL, foï OU-ma se-MA-na nor-MAL" }
+  - question: { term: "O que vais fazer nas próximas férias?", fr: "Que vas-tu faire aux prochaines vacances ?", phon: "ou ke vaïch fa-ZÈR nach PRO-si-mach FÈ-riach" }
+    answers:
+      - { term: "Vou a casa dos meus avós e depois talvez à praia.", fr: "Je vais chez mes grands-parents et ensuite peut-être à la plage.", phon: "vô a KA-za douch méouz a-VOCH i de-POÏCH tal-VÈCH a PRAÏ-a" }
+      - { term: "Ainda não sabemos. Vamos ver.", fr: "On ne sait pas encore. On verra.", phon: "a-ÏN-da nan-ou sa-BÉ-mouch. VA-mouch vèr" }
+  - question: { term: "O que achas: é melhor a praia ou a montanha?", fr: "Qu'en penses-tu : la plage ou la montagne ?", phon: "ou ke A-chach: è me-LIOR a PRAÏ-a ô a mon-TA-gna" }
+    answers:
+      - { term: "Acho que a praia é melhor, porque adoro nadar.", fr: "Je trouve que la plage est mieux, parce que j'adore nager.", phon: "A-chou ke a PRAÏ-a è me-LIOR, pour-ke a-DO-rou na-DAR" }
+      - { term: "Depende: no verão a praia, no inverno a montanha.", fr: "Ça dépend : l'été la plage, l'hiver la montagne.", phon: "de-PEN-de: nou ve-RAN-ou a PRAÏ-a, nou ïn-VÈR-nou a mon-TA-gna" }
+notes_fr:
+  - "Une conversation qui tient repose sur quatre gestes, pas sur du vocabulaire : **relancer** (*e tu? conta-me tudo!*), **réagir** (*a sério! que fixe!*), **se réparer** (*ou melhor…*), **contourner** (*é uma coisa para…*)."
+  - "L'enfant n'a pas besoin de tout savoir dire : il a besoin de **ne jamais s'arrêter**. Un mot manquant se contourne, il n'interrompt pas la discussion."
+  - "Après cette unité, le programme ne s'arrête pas : on refait les dialogues des trente unités en les modifiant, et on cherche de vrais interlocuteurs."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "La conversation du goûter"
+    steps_fr:
+      - "Quinze minutes de goûter entièrement en portugais, avec la boîte à outils sur la table."
+      - "Un objet passe de main en main : celui qui l'a doit poser une question."
+  - level: grands
+    type: dialogue
+    title_fr: "Cinq minutes, sujet tiré au sort"
+    steps_fr:
+      - "Écrivez trente petits papiers, un par unité du programme. Tirez-en un."
+      - "Cinq minutes de conversation sur ce sujet, chronomètre en marche, **sans préparation**."
+      - "On compte trois choses : les passages au français (0 idéalement), les questions posées par l'enfant (au moins 4), les auto-corrections (au moins 1)."
+  - level: grands
+    type: production
+    title_fr: "L'enregistrement de fin de programme"
+    steps_fr:
+      - "Enregistre trois minutes de toi qui parles portugais : ce que tu as fait cette année, ce que tu aimes, ce que tu feras l'été prochain."
+      - "Réécoute l'enregistrement du début de l'année 1, si tu en as un. C'est le seul bilan qui compte."
+  - level: grands
+    type: exercice
+    title_fr: "Le mot manquant"
+    steps_fr:
+      - "Quelqu'un dit un mot français difficile (*tondeuse*, *échelle*, *hérisson*)."
+      - "Tu dois le faire comprendre **en portugais**, sans le traduire : *é uma coisa para…*, *é um animal que…*"
+      - "Cinq mots d'affilée : c'est l'épreuve reine de la conversation."
+reemploi_fr:
+  - "Chercher un vrai interlocuteur : un cousin, un voisin, un correspondant. Vingt minutes par semaine valent plus que n'importe quelle fiche."
+  - "Un film ou un dessin animé connu, en portugais du Portugal, sous-titres coupés — une fois par semaine."
+  - "Reprendre un dialogue au hasard des trente unités et le rejouer **en changeant trois choses**."

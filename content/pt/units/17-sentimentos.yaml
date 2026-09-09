@@ -1,0 +1,101 @@
+id: 17-sentimentos
+order: 17
+year: 2
+title: "Como me sinto"
+title_fr: "Comment je me sens"
+goal_fr: "Dire ce qu'on ressent et demander à l'autre comment il va."
+can_do_fr:
+  - "Je dis comment je me sens : *estou contente*, *estou triste*."
+  - "Je dis pourquoi avec *porque*."
+  - "Je demande à l'autre comment il va, et je réagis à sa réponse."
+  - "Je console : *não fiques triste*."
+duration_min: 14
+dialogue:
+  title_fr: "Qu'est-ce qui ne va pas ?"
+  context_fr: "Tomás voit Ana toute seule à la récréation."
+  lines:
+    - { who: "Tomás", term: "Ana, estás bem? Pareces triste.",       fr: "Ana, ça va ? Tu as l'air triste.",     phon: "A-na, chTACH bèïn? pa-RÈ-sech TRICH-te" }
+    - { who: "Ana",   term: "Estou triste, sim.",                    fr: "Oui, je suis triste.",                 phon: "chtô TRICH-te, sïn" }
+    - { who: "Tomás", term: "Porquê? O que aconteceu?",              fr: "Pourquoi ? Qu'est-ce qui s'est passé ?", phon: "pour-KÊ? ou ke a-kon-te-SÉOU" }
+    - { who: "Ana",   term: "Perdi o meu livro preferido.",          fr: "J'ai perdu mon livre préféré.",        phon: "per-DI ou méou LI-vrou pre-fe-RI-dou" }
+    - { who: "Tomás", term: "Não fiques triste. Vamos procurar!",    fr: "Ne sois pas triste. On va le chercher !", phon: "nan-ou FI-kech TRICH-te. VA-mouch prou-kou-RAR" }
+    - { who: "Ana",   term: "Obrigada. És muito simpático.",         fr: "Merci. Tu es très gentil.",            phon: "o-bri-GA-da. èch MOUÏN-tou sïn-PA-ti-kou" }
+    - { who: "Tomás", term: "De nada. E agora, estás melhor?",       fr: "De rien. Et maintenant, tu vas mieux ?", phon: "de NA-da. i a-GO-ra, chTACH me-LIOR" }
+    - { who: "Ana",   term: "Estou muito melhor, obrigada!",         fr: "Je vais beaucoup mieux, merci !",      phon: "chtô MOUÏN-tou me-LIOR, o-bri-GA-da" }
+comprehension:
+  - q_fr: "Comment se sent Ana au début ?"
+    a_fr: "Triste — *estou triste*."
+  - q_fr: "Pourquoi ?"
+    a_fr: "Elle a perdu son livre préféré."
+  - q_fr: "Que propose Tomás ?"
+    a_fr: "D'aller le chercher : *vamos procurar!* — et il la console avec *não fiques triste*."
+  - q_fr: "Comment ça finit ?"
+    a_fr: "Ana va mieux : *estou muito melhor*."
+vocab:
+  - { term: "contente",     fr: "content",              phon: "kon-TEN-te" }
+  - { term: "feliz",        fr: "heureux",              phon: "fe-LICH" }
+  - { term: "triste",       fr: "triste",               phon: "TRICH-te" }
+  - { term: "zangado",      fr: "fâché",                phon: "zan-GA-dou" }
+  - { term: "cansado",      fr: "fatigué",              phon: "kan-SA-dou" }
+  - { term: "aborrecido",   fr: "qui s'ennuie",         phon: "a-bou-rre-SI-dou" }
+  - { term: "com medo",     fr: "qui a peur",           phon: "kon MÉ-dou" }
+  - { term: "nervoso",      fr: "stressé",              phon: "ner-VÔ-zou" }
+  - { term: "doente",       fr: "malade",               phon: "dou-EN-te" }
+  - { term: "melhor",       fr: "mieux",                phon: "me-LIOR" }
+  - { term: "simpático",    fr: "gentil",               phon: "sïn-PA-ti-kou" }
+  - { term: "orgulhoso",    fr: "fier",                 phon: "or-gou-LIÔ-zou" }
+phrases:
+  - { term: "Como te sentes?",     fr: "Comment tu te sens ?",      phon: "KO-mou te SEN-tech" }
+  - { term: "Estou contente.",     fr: "Je suis content.",          phon: "chtô kon-TEN-te" }
+  - { term: "Estou triste porque…", fr: "Je suis triste parce que…", phon: "chtô TRICH-te pour-ke" }
+  - { term: "O que aconteceu?",    fr: "Qu'est-ce qui s'est passé ?", phon: "ou ke a-kon-te-SÉOU" }
+  - { term: "Não fiques triste.",  fr: "Ne sois pas triste.",       phon: "nan-ou FI-kech TRICH-te" }
+  - { term: "Já estou melhor.",    fr: "Je vais déjà mieux.",       phon: "ja chtô me-LIOR" }
+qa:
+  - question: { term: "Como te sentes hoje?", fr: "Comment te sens-tu aujourd'hui ?", phon: "KO-mou te SEN-tech ô-je" }
+    answers:
+      - { term: "Estou muito contente!",       fr: "Je suis très content !",       phon: "chtô MOUÏN-tou kon-TEN-te" }
+      - { term: "Estou cansado e com sono.",   fr: "Je suis fatigué et j'ai sommeil.", phon: "chtô kan-SA-dou i kon SO-nou" }
+      - { term: "Estou zangado com o meu irmão.", fr: "Je suis fâché contre mon frère.", phon: "chtô zan-GA-dou kon ou méou ir-MAN-ou" }
+  - question: { term: "Porque estás assim?", fr: "Pourquoi tu es comme ça ?", phon: "pour-ke chTACH a-SÏN" }
+    answers:
+      - { term: "Porque perdi o meu brinquedo.", fr: "Parce que j'ai perdu mon jouet.", phon: "pour-ke per-DI ou méou brïn-KÉ-dou" }
+      - { term: "Porque amanhã vou à praia!",    fr: "Parce que demain je vais à la plage !", phon: "pour-ke a-ma-GNAN vô a PRAÏ-a" }
+  - question: { term: "Queres falar sobre isso?", fr: "Tu veux en parler ?", phon: "KÈ-rech fa-LAR SÔ-bre I-sou" }
+    answers:
+      - { term: "Sim, quero.",                 fr: "Oui, je veux bien.",       phon: "sïn, KÈ-rou" }
+      - { term: "Agora não, obrigado.",        fr: "Pas maintenant, merci.",   phon: "a-GO-ra nan-ou, o-bri-GA-dou" }
+notes_fr:
+  - "Pour un état passager, toujours **estar** : *estou triste* (là, maintenant). *Sou triste* voudrait dire « je suis quelqu'un de triste », ce qui est très différent."
+  - "**Porquê?** en question (avec accent), **porque** en réponse : *— Porquê? — Porque estou cansado.*"
+  - "Demander *Como te sentes?* et **attendre la réponse** vaut mieux que dix mots de vocabulaire de plus."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Les visages"
+    steps_fr:
+      - "Dessinez quatre visages : content, triste, fâché, fatigué."
+      - "Vous dites un mot en portugais, l'enfant montre le bon visage **et le fait** avec sa tête."
+      - "Puis il choisit un visage en secret, vous devinez en portugais."
+  - level: petits
+    type: jeu
+    title_fr: "Le thermomètre du soir"
+    steps_fr:
+      - "Chaque soir, l'enfant choisit un mot pour sa journée : *contente*, *cansado*, *aborrecido*."
+      - "On ne discute pas le mot choisi, on le répète simplement : *Estás cansado. Está bem.*"
+  - level: grands
+    type: exercice
+    title_fr: "Parce que"
+    steps_fr:
+      - "Écris quatre phrases sur le modèle : *Estou ___ porque ___.*"
+      - "Utilise quatre sentiments différents et quatre raisons vraies."
+  - level: grands
+    type: dialogue
+    title_fr: "Le copain qui console"
+    steps_fr:
+      - "L'un joue quelqu'un qui ne va pas bien (il choisit son sentiment en secret)."
+      - "L'autre doit deviner en posant des questions, puis consoler avec *não fiques…* et proposer une solution."
+      - "On échange les rôles. Le but n'est pas d'avoir raison, mais de faire parler l'autre."
+reemploi_fr:
+  - "La question du soir devient portugaise toute la semaine : *Como te sentes?*"
+  - "Quand quelqu'un râle à la maison, on lui demande en portugais : *O que aconteceu?*"

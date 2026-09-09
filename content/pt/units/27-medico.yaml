@@ -1,0 +1,104 @@
+id: 27-medico
+order: 27
+year: 3
+title: "No médico"
+title_fr: "Chez le médecin"
+goal_fr: "Expliquer ce qui ne va pas et comprendre les consignes."
+can_do_fr:
+  - "J'explique où j'ai mal et depuis quand."
+  - "Je comprends une consigne simple du médecin."
+  - "Je demande ce que je dois faire."
+  - "Je sais dire qu'une chose me fait peur."
+duration_min: 16
+dialogue:
+  title_fr: "Ça fait mal depuis quand ?"
+  context_fr: "Tomás est chez le médecin avec son père. Il tousse depuis deux jours."
+  lines:
+    - { who: "Médica", term: "Boa tarde, Tomás. O que se passa?",       fr: "Bonjour Tomás. Qu'est-ce qui se passe ?", phon: "BÔ-a TAR-de, tou-MACH. ou ke se PA-sa" }
+    - { who: "Tomás",  term: "Dói-me a garganta e tenho tosse.",        fr: "J'ai mal à la gorge et je tousse.",   phon: "DOÏ-me a gar-GAN-ta i TÉ-gnou TO-se" }
+    - { who: "Médica", term: "Desde quando?",                           fr: "Depuis quand ?",                      phon: "DÈCH-de KOUAN-dou" }
+    - { who: "Tomás",  term: "Desde anteontem. Também tenho febre.",    fr: "Depuis avant-hier. J'ai aussi de la fièvre.", phon: "DÈCH-de an-te-ON-tèïn. tan-BÈÏN TÉ-gnou FÈ-bre" }
+    - { who: "Médica", term: "Abre a boca e diz «aaah».",               fr: "Ouvre la bouche et dis « aaah ».",    phon: "A-bre a BÔ-ka i dich a" }
+    - { who: "Tomás",  term: "Vai doer?",                               fr: "Ça va faire mal ?",                   phon: "vaï dou-ÈR" }
+    - { who: "Médica", term: "Não dói nada, prometo. Está inflamado.",  fr: "Ça ne fait pas mal du tout, promis. C'est enflammé.", phon: "nan-ou DOÏ NA-da, prou-MÉ-tou. chta ïn-fla-MA-dou" }
+    - { who: "Tomás",  term: "O que tenho de fazer?",                   fr: "Qu'est-ce que je dois faire ?",       phon: "ou ke TÉ-gnou de fa-ZÈR" }
+    - { who: "Médica", term: "Toma este xarope e descansa dois dias.",  fr: "Prends ce sirop et repose-toi deux jours.", phon: "TO-ma ÈCH-te cha-RO-pe i desh-KAN-sa doïch DI-ach" }
+    - { who: "Tomás",  term: "Está bem. Obrigado, doutora.",            fr: "D'accord. Merci, docteur.",           phon: "chta bèïn. o-bri-GA-dou, dô-TÔ-ra" }
+comprehension:
+  - q_fr: "Qu'est-ce qui ne va pas chez Tomás ?"
+    a_fr: "Mal à la gorge, il tousse et il a de la fièvre."
+  - q_fr: "Depuis quand ?"
+    a_fr: "Depuis avant-hier — *desde anteontem*."
+  - q_fr: "Que demande-t-il quand il a peur ?"
+    a_fr: "*Vai doer?* — « ça va faire mal ? ». Poser la question vaut mieux que se taire."
+  - q_fr: "Quelles sont les deux consignes de la doctoresse ?"
+    a_fr: "Prendre le sirop (*toma este xarope*) et se reposer deux jours (*descansa dois dias*)."
+vocab:
+  - { term: "o médico",     fr: "le médecin",       phon: "ou MÈ-di-kou" }
+  - { term: "a dor",        fr: "la douleur",       phon: "a dor" }
+  - { term: "a febre",      fr: "la fièvre",        phon: "a FÈ-bre" }
+  - { term: "a tosse",      fr: "la toux",          phon: "a TO-se" }
+  - { term: "a garganta",   fr: "la gorge",         phon: "a gar-GAN-ta" }
+  - { term: "constipado",   fr: "enrhumé",          phon: "kon-chti-PA-dou" }
+  - { term: "o xarope",     fr: "le sirop",         phon: "ou cha-RO-pe" }
+  - { term: "o penso",      fr: "le pansement",     phon: "ou PEN-sou" }
+  - { term: "descansar",    fr: "se reposer",       phon: "desh-kan-SAR" }
+  - { term: "doer",         fr: "faire mal",        phon: "dou-ÈR" }
+  - { term: "desde",        fr: "depuis",           phon: "DÈCH-de" }
+  - { term: "melhorar",     fr: "aller mieux",      phon: "me-liou-RAR" }
+phrases:
+  - { term: "O que se passa?",       fr: "Qu'est-ce qui se passe ?",   phon: "ou ke se PA-sa" }
+  - { term: "Dói-me a garganta.",    fr: "J'ai mal à la gorge.",       phon: "DOÏ-me a gar-GAN-ta" }
+  - { term: "Desde quando?",         fr: "Depuis quand ?",             phon: "DÈCH-de KOUAN-dou" }
+  - { term: "Vai doer?",             fr: "Ça va faire mal ?",          phon: "vaï dou-ÈR" }
+  - { term: "O que tenho de fazer?", fr: "Qu'est-ce que je dois faire ?", phon: "ou ke TÉ-gnou de fa-ZÈR" }
+  - { term: "Vais ficar bom depressa.", fr: "Tu vas vite aller mieux.", phon: "vaïch fi-KAR bon de-PRÈ-sa" }
+qa:
+  - question: { term: "O que se passa? Onde te dói?", fr: "Qu'est-ce qui se passe ? Où as-tu mal ?", phon: "ou ke se PA-sa? ON-de te DOÏ" }
+    answers:
+      - { term: "Dói-me a barriga desde ontem.", fr: "J'ai mal au ventre depuis hier.", phon: "DOÏ-me a ba-RRI-ga DÈCH-de ON-tèïn" }
+      - { term: "Caí e magoei o joelho.",        fr: "Je suis tombé et je me suis fait mal au genou.", phon: "ka-I i ma-gou-ÈÏ ou jou-È-liou" }
+      - { term: "Estou constipado.",             fr: "Je suis enrhumé.",  phon: "chtô kon-chti-PA-dou" }
+  - question: { term: "Tens febre?", fr: "Tu as de la fièvre ?", phon: "tèïnch FÈ-bre" }
+    answers:
+      - { term: "Tenho, um bocado.",   fr: "Oui, un peu.",       phon: "TÉ-gnou, oun bou-KA-dou" }
+      - { term: "Não sei, não medi.",  fr: "Je ne sais pas, je n'ai pas pris ma température.", phon: "nan-ou sèï, nan-ou me-DI" }
+  - question: { term: "Já estás melhor?", fr: "Tu vas mieux ?", phon: "ja chTACH me-LIOR" }
+    answers:
+      - { term: "Estou muito melhor, obrigado.", fr: "Je vais beaucoup mieux, merci.", phon: "chtô MOUÏN-tou me-LIOR, o-bri-GA-dou" }
+      - { term: "Ainda não, mas dói menos.",     fr: "Pas encore, mais ça fait moins mal.", phon: "a-ÏN-da nan-ou, mach DOÏ MÉ-nouch" }
+notes_fr:
+  - "**Desde** = depuis : *desde ontem*, *desde segunda-feira*. Le médecin le demande toujours."
+  - "Le médecin donne des ordres au tutoiement avec les enfants : *abre*, *toma*, *descansa*. Il suffit de les **comprendre**."
+  - "Attention au faux ami : **constipado** veut dire *enrhumé* en portugais, pas constipé."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "L'hôpital des peluches"
+    steps_fr:
+      - "L'enfant est le médecin, la peluche est malade."
+      - "Il pose la question rituelle : *O que se passa?* puis *Onde te dói?*"
+      - "Il soigne en annonçant ce qu'il fait : *um penso!*, *xarope!*"
+  - level: petits
+    type: jeu
+    title_fr: "Aïe, où ça ?"
+    steps_fr:
+      - "Vous faites semblant d'avoir mal quelque part en gémissant."
+      - "L'enfant devine et dit : *dói-te a cabeça!*"
+      - "Il vous « soigne » avec un bisou et dit *vais ficar bom!*"
+  - level: grands
+    type: exercice
+    title_fr: "Le carnet de santé"
+    steps_fr:
+      - "Écris trois petits maux différents avec *dói-me…* et *desde…*"
+      - "Pour chacun, écris la consigne que donnerait le médecin (*toma…*, *descansa…*)."
+  - level: grands
+    type: dialogue
+    title_fr: "La consultation"
+    steps_fr:
+      - "Un joueur est le médecin, l'autre le patient qui choisit son problème en secret."
+      - "Le médecin doit poser au moins trois questions avant de donner deux consignes."
+      - "Le patient doit poser une question sur ce qui lui fait peur : *Vai doer?*"
+reemploi_fr:
+  - "Au moindre bobo de la semaine : *O que se passa? Onde te dói? Desde quando?* — tout en portugais."
+  - "Quand quelqu'un est malade à la maison, on lui souhaite *Melhoras!* (bon rétablissement)."

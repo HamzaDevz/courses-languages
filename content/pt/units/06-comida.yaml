@@ -56,3 +56,42 @@ activities:
     steps_fr:
       - "Écris le menu d'un restaurant en portugais : entrée, plat, dessert, boisson."
       - "Joue la scène : quelqu'un commande, tu prends la commande."
+year: 1
+dialogue:
+  title_fr: "À table"
+  context_fr: "Le soir, à la maison. La mère de Tomás sert le dîner."
+  lines:
+    - { who: "Mãe",   term: "Tomás, tens fome?",              fr: "Tomás, tu as faim ?",             phon: "tou-MACH, tèïnch FO-me" }
+    - { who: "Tomás", term: "Tenho muita fome!",              fr: "J'ai très faim !",                phon: "TÉ-gnou MOUÏN-ta FO-me" }
+    - { who: "Mãe",   term: "O que queres comer?",            fr: "Qu'est-ce que tu veux manger ?",  phon: "ou ke KÈ-rech kou-MÈR" }
+    - { who: "Tomás", term: "Quero sopa, por favor.",         fr: "Je veux de la soupe, s'il te plaît.", phon: "KÈ-rou SO-pa, pour fa-VOR" }
+    - { who: "Mãe",   term: "E para beber?",                  fr: "Et pour boire ?",                 phon: "i pa-ra be-BÈR" }
+    - { who: "Tomás", term: "Água, por favor. Tenho sede.",   fr: "De l'eau, s'il te plaît. J'ai soif.", phon: "A-goua, pour fa-VOR. TÉ-gnou SÉ-de" }
+    - { who: "Mãe",   term: "Aqui tens. Bom apetite!",        fr: "Voilà. Bon appétit !",            phon: "a-KI tèïnch. bon a-pe-TI-te" }
+    - { who: "Tomás", term: "Obrigado, mãe. Está bom!",       fr: "Merci, maman. C'est bon !",       phon: "o-bri-GA-dou, maïn. chta bon" }
+comprehension:
+  - q_fr: "Qu'est-ce que Tomás veut manger ?"
+    a_fr: "De la soupe — *sopa*."
+  - q_fr: "Qu'est-ce qu'il demande à boire, et pourquoi ?"
+    a_fr: "De l'eau (*água*), parce qu'il a soif : *tenho sede*."
+  - q_fr: "Quelles sont les deux formules de politesse qu'il emploie ?"
+    a_fr: "**por favor** en demandant, **obrigado** en recevant."
+  - q_fr: "Comment dit-on « j'ai faim » ? Que faut-il retenir ?"
+    a_fr: "*Tenho fome.* En portugais on **a** la faim, comme en français : jamais *sou fome*."
+qa:
+  - question: { term: "O que queres comer?", fr: "Qu'est-ce que tu veux manger ?", phon: "ou ke KÈ-rech kou-MÈR" }
+    answers:
+      - { term: "Quero pão, por favor.",   fr: "Je veux du pain, s'il te plaît.", phon: "KÈ-rou pan-ou, pour fa-VOR" }
+      - { term: "Quero fruta.",            fr: "Je veux des fruits.",             phon: "KÈ-rou FROU-ta" }
+      - { term: "Não quero nada, obrigado.", fr: "Je ne veux rien, merci.",       phon: "nan-ou KÈ-rou NA-da, o-bri-GA-dou" }
+  - question: { term: "Tens fome ou tens sede?", fr: "Tu as faim ou tu as soif ?", phon: "tèïnch FO-me ô tèïnch SÉ-de" }
+    answers:
+      - { term: "Tenho fome.", fr: "J'ai faim.", phon: "TÉ-gnou FO-me" }
+      - { term: "Tenho sede.", fr: "J'ai soif.", phon: "TÉ-gnou SÉ-de" }
+  - question: { term: "Está bom?", fr: "C'est bon ?", phon: "chta bon" }
+    answers:
+      - { term: "Está muito bom!",     fr: "C'est très bon !",       phon: "chta MOUÏN-tou bon" }
+      - { term: "Não gosto muito.",    fr: "Je n'aime pas trop.",    phon: "nan-ou GOCH-tou MOUÏN-tou" }
+reemploi_fr:
+  - "Tout le repas se demande en portugais cette semaine : *água, por favor*, *quero pão*, *está bom!*"
+  - "Avant de commencer à manger, quelqu'un dit *Bom apetite!* — et tout le monde répond."

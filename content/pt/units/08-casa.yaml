@@ -1,0 +1,100 @@
+id: 08-casa
+order: 8
+year: 1
+title: "Em casa"
+title_fr: "À la maison"
+goal_fr: "Nommer les pièces et dire où sont les choses."
+can_do_fr:
+  - "Je nomme les pièces de la maison et les meubles."
+  - "Je réponds à *Onde está…?* avec *em cima*, *debaixo*, *ao lado*."
+  - "Je dis où je suis : *estou no quarto*."
+  - "Je demande où est quelque chose que j'ai perdu."
+duration_min: 13
+dialogue:
+  title_fr: "Où est mon manteau ?"
+  context_fr: "On part à l'école dans cinq minutes et Tomás ne trouve rien."
+  lines:
+    - { who: "Tomás", term: "Mãe, onde está o meu casaco?",      fr: "Maman, où est mon manteau ?",        phon: "maïn, ON-de chta ou méou ka-ZA-kou" }
+    - { who: "Mãe",   term: "Está na cozinha, em cima da mesa.", fr: "Il est dans la cuisine, sur la table.", phon: "chta na kou-ZI-gna, èïn SI-ma da MÉ-za" }
+    - { who: "Tomás", term: "Não está! E os meus sapatos?",      fr: "Il n'y est pas ! Et mes chaussures ?", phon: "nan-ou chta! i ouch méouch sa-PA-touch" }
+    - { who: "Mãe",   term: "Estão debaixo da cama.",            fr: "Elles sont sous le lit.",            phon: "chtan-ou de-BAÏ-chou da KA-ma" }
+    - { who: "Tomás", term: "Encontrei! E a minha mochila?",     fr: "Je les ai trouvées ! Et mon sac ?",  phon: "en-kon-TRÈÏ! i a MI-gna mou-CHI-la" }
+    - { who: "Mãe",   term: "Está ao lado da porta. Despacha-te!", fr: "Il est à côté de la porte. Dépêche-toi !", phon: "chta aou LA-dou da POR-ta. desh-PA-cha-te" }
+    - { who: "Tomás", term: "Já estou pronto! Vamos!",           fr: "Je suis déjà prêt ! On y va !",      phon: "ja chtô PRON-tou! VA-mouch" }
+comprehension:
+  - q_fr: "Où était le manteau, d'après la maman ?"
+    a_fr: "Dans la cuisine, sur la table — *na cozinha, em cima da mesa*."
+  - q_fr: "Où étaient les chaussures ?"
+    a_fr: "Sous le lit — *debaixo da cama*."
+  - q_fr: "Et le sac ?"
+    a_fr: "À côté de la porte — *ao lado da porta*."
+  - q_fr: "Pourquoi la maman dit-elle *está* pour le manteau et *estão* pour les chaussures ?"
+    a_fr: "Une chose → **está**. Plusieurs choses → **estão**."
+vocab:
+  - { term: "a casa",         fr: "la maison",      phon: "a KA-za" }
+  - { term: "o quarto",       fr: "la chambre",     phon: "ou KOUAR-tou" }
+  - { term: "a cozinha",      fr: "la cuisine",     phon: "a kou-ZI-gna" }
+  - { term: "a sala",         fr: "le salon",       phon: "a SA-la" }
+  - { term: "a casa de banho", fr: "la salle de bains", phon: "a KA-za de BA-gnou" }
+  - { term: "a porta",        fr: "la porte",       phon: "a POR-ta" }
+  - { term: "a janela",       fr: "la fenêtre",     phon: "a ja-NÈ-la" }
+  - { term: "a cama",         fr: "le lit",         phon: "a KA-ma" }
+  - { term: "a mesa",         fr: "la table",       phon: "a MÉ-za" }
+  - { term: "a cadeira",      fr: "la chaise",      phon: "a ka-DÈÏ-ra" }
+  - { term: "o sofá",         fr: "le canapé",      phon: "ou sou-FA" }
+  - { term: "o jardim",       fr: "le jardin",      phon: "ou jar-DÏN" }
+phrases:
+  - { term: "Onde está?",              fr: "Où est-ce ?",              phon: "ON-de chta" }
+  - { term: "Está em cima da mesa.",   fr: "C'est sur la table.",      phon: "chta èïn SI-ma da MÉ-za" }
+  - { term: "Está debaixo da cama.",   fr: "C'est sous le lit.",       phon: "chta de-BAÏ-chou da KA-ma" }
+  - { term: "Está ao lado da porta.",  fr: "C'est à côté de la porte.", phon: "chta aou LA-dou da POR-ta" }
+  - { term: "Estou no quarto.",        fr: "Je suis dans la chambre.", phon: "chtô nou KOUAR-tou" }
+  - { term: "Vem cá!",                 fr: "Viens ici !",              phon: "vèïn ka" }
+qa:
+  - question: { term: "Onde está o teu casaco?", fr: "Où est ton manteau ?", phon: "ON-de chta ou téou ka-ZA-kou" }
+    answers:
+      - { term: "Está no quarto.",        fr: "Il est dans la chambre.", phon: "chta nou KOUAR-tou" }
+      - { term: "Está em cima da cadeira.", fr: "Il est sur la chaise.", phon: "chta èïn SI-ma da ka-DÈÏ-ra" }
+      - { term: "Não sei, perdi-o.",      fr: "Je ne sais pas, je l'ai perdu.", phon: "nan-ou sèï, per-DI-ou" }
+  - question: { term: "Onde estás?", fr: "Tu es où ?", phon: "ON-de chTACH" }
+    answers:
+      - { term: "Estou na cozinha.",  fr: "Je suis dans la cuisine.", phon: "chtô na kou-ZI-gna" }
+      - { term: "Estou no jardim.",   fr: "Je suis dans le jardin.",  phon: "chtô nou jar-DÏN" }
+  - question: { term: "Qual é a tua divisão preferida?", fr: "Quelle est ta pièce préférée ?", phon: "koual è a TOU-a di-vi-ZAN-ou pre-fe-RI-da" }
+    answers:
+      - { term: "O meu quarto.",       fr: "Ma chambre.",        phon: "ou méou KOUAR-tou" }
+      - { term: "A cozinha, gosto de comer!", fr: "La cuisine, j'aime manger !", phon: "a kou-ZI-gna, GOCH-tou de kou-MÈR" }
+notes_fr:
+  - "**em + o = no**, **em + a = na** : *no quarto*, *na cozinha*. C'est la contraction la plus utile du portugais."
+  - "**de + a = da**, **de + o = do** : *em cima **da** mesa*, *debaixo **do** sofá*."
+  - "Une chose : *está*. Plusieurs : *estão*. C'est la seule chose à retenir pour l'instant."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Cache-cache avec le doudou"
+    steps_fr:
+      - "Cachez le doudou dans la maison."
+      - "L'enfant cherche, vous guidez en portugais : *em cima!*, *debaixo!*, *ao lado da porta!*"
+      - "Quand il trouve, c'est lui qui cache et qui guide."
+  - level: petits
+    type: jeu
+    title_fr: "La visite guidée"
+    steps_fr:
+      - "L'enfant vous prend par la main et nomme chaque pièce en y entrant : *a cozinha!*, *a sala!*"
+      - "Vous faites semblant de vous tromper : il corrige."
+  - level: grands
+    type: exercice
+    title_fr: "Le plan de la maison"
+    steps_fr:
+      - "Dessine le plan de ta maison et écris le nom de chaque pièce en portugais, avec *o* ou *a*."
+      - "Écris ensuite trois phrases : *A cama está no quarto.*"
+  - level: grands
+    type: dialogue
+    title_fr: "J'ai perdu quelque chose"
+    steps_fr:
+      - "Cache un objet. L'enfant demande : *Onde está…?*"
+      - "Tu ne réponds qu'avec *em cima de*, *debaixo de*, *ao lado de* + un meuble."
+      - "Trois questions maximum pour trouver. Puis on échange les rôles."
+reemploi_fr:
+  - "Le matin du départ à l'école, une question devient portugaise : *Onde está a tua mochila?*"
+  - "Quand on appelle l'enfant d'une autre pièce : *Onde estás?* — il répond *Estou no/na…*"

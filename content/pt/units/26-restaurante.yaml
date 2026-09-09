@@ -1,0 +1,101 @@
+id: 26-restaurante
+order: 26
+year: 3
+title: "No restaurante"
+title_fr: "Au restaurant"
+goal_fr: "Commander un repas et demander l'addition."
+can_do_fr:
+  - "Je demande une table et je commande."
+  - "Je pose une question sur un plat que je ne connais pas."
+  - "Je dis ce que je ne peux pas manger."
+  - "Je demande l'addition et je remercie."
+duration_min: 16
+dialogue:
+  title_fr: "Une table pour trois"
+  context_fr: "En vacances au Portugal. La famille entre dans un petit restaurant."
+  lines:
+    - { who: "Empregado", term: "Boa noite! Uma mesa para quantas pessoas?", fr: "Bonsoir ! Une table pour combien de personnes ?", phon: "BÔ-a NOÏ-te! OU-ma MÉ-za pa-ra KOUAN-tach pe-SÔ-ach" }
+    - { who: "Ana",       term: "Para três, por favor.",                    fr: "Pour trois, s'il vous plaît.",     phon: "pa-ra trèch, pour fa-VOR" }
+    - { who: "Empregado", term: "Faz favor. Aqui está a ementa.",           fr: "Je vous en prie. Voici la carte.", phon: "fach fa-VOR. a-KI chta a i-MEN-ta" }
+    - { who: "Ana",       term: "O que é o prato do dia?",                  fr: "C'est quoi, le plat du jour ?",    phon: "ou ke è ou PRA-tou dou DI-a" }
+    - { who: "Empregado", term: "Hoje temos peixe grelhado com batatas.",   fr: "Aujourd'hui on a du poisson grillé avec des pommes de terre.", phon: "ô-je TÉ-mouch PÈÏ-che gre-LIA-dou kon ba-TA-tach" }
+    - { who: "Ana",       term: "Queria isso, mas sem batatas, por favor.", fr: "Je voudrais ça, mais sans pommes de terre, s'il vous plaît.", phon: "ke-RI-a I-sou, mach sèïn ba-TA-tach, pour fa-VOR" }
+    - { who: "Empregado", term: "Com certeza. E para beber?",               fr: "Bien sûr. Et comme boisson ?",     phon: "kon ser-TÉ-za. i pa-ra be-BÈR" }
+    - { who: "Ana",       term: "Água, por favor. E depois um gelado!",     fr: "De l'eau, s'il vous plaît. Et après une glace !", phon: "A-goua, pour fa-VOR. i de-POÏCH oun je-LA-dou" }
+    - { who: "Ana",       term: "Estava delicioso. A conta, por favor.",    fr: "C'était délicieux. L'addition, s'il vous plaît.", phon: "chTA-va de-li-si-Ô-zou. a KON-ta, pour fa-VOR" }
+comprehension:
+  - q_fr: "Pour combien de personnes est la table ?"
+    a_fr: "Trois — *para três*."
+  - q_fr: "Quel est le plat du jour ?"
+    a_fr: "Du poisson grillé avec des pommes de terre."
+  - q_fr: "Que demande Ana comme modification ?"
+    a_fr: "Sans pommes de terre : *sem batatas*."
+  - q_fr: "Quelles sont les deux phrases pour finir le repas ?"
+    a_fr: "**Estava delicioso.** et **A conta, por favor.**"
+vocab:
+  - { term: "a ementa",     fr: "la carte, le menu",  phon: "a i-MEN-ta" }
+  - { term: "o prato",      fr: "le plat",            phon: "ou PRA-tou" }
+  - { term: "o peixe",      fr: "le poisson",         phon: "ou PÈÏ-che" }
+  - { term: "a carne",      fr: "la viande",          phon: "a KAR-ne" }
+  - { term: "as batatas",   fr: "les pommes de terre", phon: "ach ba-TA-tach" }
+  - { term: "a salada",     fr: "la salade",          phon: "a sa-LA-da" }
+  - { term: "a sobremesa",  fr: "le dessert",         phon: "a sô-bre-MÉ-za" }
+  - { term: "o gelado",     fr: "la glace",           phon: "ou je-LA-dou" }
+  - { term: "a conta",      fr: "l'addition",         phon: "a KON-ta" }
+  - { term: "o empregado",  fr: "le serveur",         phon: "ou en-pre-GA-dou" }
+  - { term: "sem",          fr: "sans",               phon: "sèïn" }
+  - { term: "delicioso",    fr: "délicieux",          phon: "de-li-si-Ô-zou" }
+phrases:
+  - { term: "Uma mesa para quatro, por favor.", fr: "Une table pour quatre, s'il vous plaît.", phon: "OU-ma MÉ-za pa-ra KOUA-trou, pour fa-VOR" }
+  - { term: "O que é o prato do dia?",  fr: "C'est quoi le plat du jour ?",   phon: "ou ke è ou PRA-tou dou DI-a" }
+  - { term: "Queria a sopa, por favor.", fr: "Je voudrais la soupe, s'il vous plaît.", phon: "ke-RI-a a SO-pa, pour fa-VOR" }
+  - { term: "Não posso comer isso.",    fr: "Je ne peux pas manger ça.",      phon: "nan-ou PO-sou kou-MÈR I-sou" }
+  - { term: "Estava delicioso!",        fr: "C'était délicieux !",            phon: "chTA-va de-li-si-Ô-zou" }
+  - { term: "A conta, por favor.",      fr: "L'addition, s'il vous plaît.",   phon: "a KON-ta, pour fa-VOR" }
+qa:
+  - question: { term: "O que deseja comer?", fr: "Que désirez-vous manger ?", phon: "ou ke de-ZÈ-ja kou-MÈR" }
+    answers:
+      - { term: "Queria peixe grelhado, por favor.", fr: "Je voudrais du poisson grillé, s'il vous plaît.", phon: "ke-RI-a PÈÏ-che gre-LIA-dou, pour fa-VOR" }
+      - { term: "Só uma sopa e uma salada.",  fr: "Juste une soupe et une salade.", phon: "so OU-ma SO-pa i OU-ma sa-LA-da" }
+      - { term: "O que recomenda?",           fr: "Qu'est-ce que vous conseillez ?", phon: "ou ke rre-kou-MEN-da" }
+  - question: { term: "Quer sobremesa?", fr: "Vous voulez un dessert ?", phon: "kèr sô-bre-MÉ-za" }
+    answers:
+      - { term: "Sim, um gelado de chocolate.", fr: "Oui, une glace au chocolat.", phon: "sïn, oun je-LA-dou de chou-kou-LA-te" }
+      - { term: "Não, obrigado, estou cheio.",  fr: "Non merci, je n'ai plus faim.", phon: "nan-ou, o-bri-GA-dou, chtô CHÈÏ-ou" }
+  - question: { term: "Está tudo bem?", fr: "Tout va bien ?", phon: "chta TOU-dou bèïn" }
+    answers:
+      - { term: "Está tudo ótimo, obrigado.",  fr: "Tout est parfait, merci.",     phon: "chta TOU-dou O-ti-mou, o-bri-GA-dou" }
+      - { term: "Pode trazer mais água, por favor?", fr: "Vous pouvez apporter de l'eau, s'il vous plaît ?", phon: "PO-de tra-ZÈR maïz A-goua, pour fa-VOR" }
+notes_fr:
+  - "Au restaurant on **vouvoie** : *o que deseja?*, *pode trazer…?* L'enfant n'a pas à produire ces formes, mais il doit les reconnaître."
+  - "**Faz favor** sert à appeler poliment le serveur au Portugal — et aussi à dire « je vous en prie »."
+  - "Une phrase à connaître par cœur en voyage : **não posso comer isso** (allergie, régime). Elle peut vraiment servir."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Le restaurant du salon"
+    steps_fr:
+      - "L'enfant est le serveur avec un torchon sur le bras."
+      - "Vous commandez trois choses en portugais, il apporte les bons objets (ou des dessins)."
+      - "Il termine toujours par *bom apetite!*"
+  - level: petits
+    type: jeu
+    title_fr: "J'aime / je n'aime pas"
+    steps_fr:
+      - "Nommez des plats en portugais. L'enfant répond *gosto!* ou *não gosto!* et fait la grimace correspondante."
+  - level: grands
+    type: production
+    title_fr: "Ma carte de restaurant"
+    steps_fr:
+      - "Écris une carte : trois entrées, trois plats, trois desserts, avec les prix en euros."
+      - "Fais commander quelqu'un dessus, en portugais."
+  - level: grands
+    type: dialogue
+    title_fr: "Le repas complet"
+    steps_fr:
+      - "Jouez la scène du début à la fin : la table, la carte, la commande, l'eau, le dessert, l'addition."
+      - "Le serveur doit une fois ne pas avoir le plat demandé : *Hoje não temos.* Le client doit choisir autre chose."
+      - "Puis on échange les rôles."
+reemploi_fr:
+  - "Au restaurant cette semaine, l'enfant commande d'abord en portugais pour lui-même, puis en français au serveur."
+  - "À la maison, le repas est « commandé » à table : *Queria mais pão, por favor.*"

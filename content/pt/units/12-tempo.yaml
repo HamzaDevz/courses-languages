@@ -1,0 +1,100 @@
+id: 12-tempo
+order: 12
+year: 2
+title: "O tempo"
+title_fr: "Le temps qu'il fait"
+goal_fr: "Dire le temps qu'il fait et décider quoi faire selon la météo."
+can_do_fr:
+  - "Je réponds à *Como está o tempo?*"
+  - "Je dis *está a chover*, *está sol*, *está frio*."
+  - "Je nomme les quatre saisons."
+  - "Je propose une activité qui va avec le temps qu'il fait."
+duration_min: 14
+dialogue:
+  title_fr: "On sort ou pas ?"
+  context_fr: "Samedi matin. Tomás regarde par la fenêtre."
+  lines:
+    - { who: "Tomás", term: "Mãe, como está o tempo hoje?",       fr: "Maman, quel temps fait-il aujourd'hui ?", phon: "maïn, KO-mou chta ou TEN-pou ô-je" }
+    - { who: "Mãe",   term: "Está a chover e está vento.",        fr: "Il pleut et il y a du vent.",         phon: "chta a chou-VÈR i chta VEN-tou" }
+    - { who: "Tomás", term: "Oh não! Então não vamos ao parque?",  fr: "Oh non ! Alors on ne va pas au parc ?", phon: "o nan-ou! en-TAN-ou nan-ou VA-mouch aou PAR-ke" }
+    - { who: "Mãe",   term: "Hoje não. Mas amanhã vai fazer sol.", fr: "Pas aujourd'hui. Mais demain il va faire soleil.", phon: "ô-je nan-ou. mach a-ma-GNAN vaï fa-ZÈR sol" }
+    - { who: "Tomás", term: "E se levarmos o guarda-chuva?",       fr: "Et si on prenait le parapluie ?",     phon: "i se le-VAR-mouch ou gouar-da-CHOU-va" }
+    - { who: "Mãe",   term: "Está muito frio. Vamos ficar em casa.", fr: "Il fait très froid. On va rester à la maison.", phon: "chta MOUÏN-tou FRI-ou. VA-mouch fi-KAR èïn KA-za" }
+    - { who: "Tomás", term: "Está bem. Então vamos desenhar!",     fr: "D'accord. Alors dessinons !",         phon: "chta bèïn. en-TAN-ou VA-mouch de-ze-GNAR" }
+comprehension:
+  - q_fr: "Quel temps fait-il aujourd'hui ?"
+    a_fr: "Il pleut et il y a du vent : *está a chover e está vento*."
+  - q_fr: "Et demain ?"
+    a_fr: "Il va faire soleil — *vai fazer sol*."
+  - q_fr: "Quelle solution Tomás propose-t-il pour sortir quand même ?"
+    a_fr: "Prendre le parapluie — *o guarda-chuva*."
+  - q_fr: "Que décident-ils de faire finalement ?"
+    a_fr: "Rester à la maison et dessiner : *vamos ficar em casa*, *vamos desenhar*."
+vocab:
+  - { term: "o sol",          fr: "le soleil",     phon: "ou sol" }
+  - { term: "a chuva",        fr: "la pluie",      phon: "a CHOU-va" }
+  - { term: "o vento",        fr: "le vent",       phon: "ou VEN-tou" }
+  - { term: "a neve",         fr: "la neige",      phon: "a NÈ-ve" }
+  - { term: "as nuvens",      fr: "les nuages",    phon: "ach NOU-vèïnch" }
+  - { term: "o guarda-chuva", fr: "le parapluie",  phon: "ou gouar-da-CHOU-va" }
+  - { term: "a primavera",    fr: "le printemps",  phon: "a pri-ma-VÈ-ra" }
+  - { term: "o verão",        fr: "l'été",         phon: "ou ve-RAN-ou" }
+  - { term: "o outono",       fr: "l'automne",     phon: "ou ô-TO-nou" }
+  - { term: "o inverno",      fr: "l'hiver",       phon: "ou ïn-VÈR-nou" }
+  - { term: "quente",         fr: "chaud",         phon: "KEN-te" }
+  - { term: "molhado",        fr: "mouillé",       phon: "mou-LIA-dou" }
+phrases:
+  - { term: "Como está o tempo?", fr: "Quel temps fait-il ?",   phon: "KO-mou chta ou TEN-pou" }
+  - { term: "Está sol.",          fr: "Il y a du soleil.",      phon: "chta sol" }
+  - { term: "Está a chover.",     fr: "Il pleut.",              phon: "chta a chou-VÈR" }
+  - { term: "Está muito frio.",   fr: "Il fait très froid.",    phon: "chta MOUÏN-tou FRI-ou" }
+  - { term: "Que calor!",         fr: "Quelle chaleur !",       phon: "ke ka-LOR" }
+  - { term: "Vai chover amanhã.", fr: "Il va pleuvoir demain.", phon: "vaï chou-VÈR a-ma-GNAN" }
+qa:
+  - question: { term: "Como está o tempo hoje?", fr: "Quel temps fait-il aujourd'hui ?", phon: "KO-mou chta ou TEN-pou ô-je" }
+    answers:
+      - { term: "Está sol e está calor.", fr: "Il y a du soleil et il fait chaud.", phon: "chta sol i chta ka-LOR" }
+      - { term: "Está a chover.",         fr: "Il pleut.",                          phon: "chta a chou-VÈR" }
+      - { term: "Está frio e está vento.", fr: "Il fait froid et il y a du vent.",  phon: "chta FRI-ou i chta VEN-tou" }
+  - question: { term: "Qual é a tua estação preferida?", fr: "Quelle est ta saison préférée ?", phon: "koual è a TOU-a chta-SAN-ou pre-fe-RI-da" }
+    answers:
+      - { term: "O verão, porque vou à praia.", fr: "L'été, parce que je vais à la plage.", phon: "ou ve-RAN-ou, pour-ke vô a PRAÏ-a" }
+      - { term: "O inverno, gosto da neve.",    fr: "L'hiver, j'aime la neige.",            phon: "ou ïn-VÈR-nou, GOCH-tou da NÈ-ve" }
+  - question: { term: "Vamos sair ou ficar em casa?", fr: "On sort ou on reste à la maison ?", phon: "VA-mouch sa-IR ô fi-KAR èïn KA-za" }
+    answers:
+      - { term: "Vamos sair, está sol!",   fr: "Sortons, il y a du soleil !",   phon: "VA-mouch sa-IR, chta sol" }
+      - { term: "Vamos ficar, está a chover.", fr: "Restons, il pleut.",        phon: "VA-mouch fi-KAR, chta a chou-VÈR" }
+notes_fr:
+  - "Le portugais du Portugal dit **está a chover** (au Brésil : *está chovendo*). C'est *estar a* + verbe pour « être en train de »."
+  - "Pour la météo on emploie **está** : *está frio*, *está sol*, *está vento*. Pas *faz froid* comme en français."
+  - "**vai** + verbe annonce le futur proche : *vai chover*, *vai fazer sol*. C'est déjà le futur de l'année 3, en douceur."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "La fenêtre du matin"
+    steps_fr:
+      - "Chaque matin, l'enfant va à la fenêtre et annonce le temps en portugais."
+      - "Un mot suffit au début : *sol!*, *chuva!*, *frio!*"
+      - "Collez une gommette météo sur un calendrier : à la fin du mois, on compte les jours de pluie en portugais."
+  - level: petits
+    type: chanson
+    title_fr: "Chove, chove"
+    steps_fr:
+      - "Tapez les doigts sur la table en chantant *chove, chove, chove* de plus en plus fort."
+      - "Au signal *sol!*, tout le monde lève les bras et s'arrête."
+  - level: grands
+    type: exercice
+    title_fr: "Le bulletin météo"
+    steps_fr:
+      - "Écris le bulletin de la semaine : un jour par ligne, avec *está* ou *vai*."
+      - "Exemple : *Segunda-feira: está sol. Terça-feira: vai chover.*"
+  - level: grands
+    type: dialogue
+    title_fr: "Sortir ou ne pas sortir"
+    steps_fr:
+      - "Un joueur annonce un temps (au hasard, en portugais)."
+      - "L'autre doit proposer une activité qui va avec, en commençant par *Então vamos…*"
+      - "Interdit de répéter deux fois la même activité."
+reemploi_fr:
+  - "Le bulletin météo du matin, en portugais, avant de choisir les vêtements — les unités 11 et 12 se répondent."
+  - "Chaque fois qu'on sort : *Leva o guarda-chuva!* ou *Está calor, leva água!*"

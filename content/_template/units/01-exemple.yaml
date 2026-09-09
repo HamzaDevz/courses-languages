@@ -25,3 +25,26 @@ activities:
     title_fr: "Nom de l'exercice"
     steps_fr:
       - "Consigne 1."
+year: 1              # année du programme (voir program.yaml)
+# Le dialogue est le cœur de l'unité : l'enfant doit d'abord entendre une
+# discussion entière avant qu'on démonte les mots.
+dialogue:
+  title_fr: "Titre de la scène"
+  context_fr: "Où, quand, avec qui — une phrase."
+  lines:
+    - { who: "Ana",   term: "…", fr: "…", phon: "…" }
+    - { who: "Tomás", term: "…", fr: "…", phon: "…" }
+# Vérifie que l'ensemble a été compris, pas seulement des mots isolés.
+comprehension:
+  - q_fr: "Question en français sur le dialogue."
+    a_fr: "La réponse, **gras** accepté."
+# Le pas qui manque entre comprendre et parler : ce qu'on me demande,
+# ce que je peux répondre. Plusieurs réponses = une vraie conversation.
+qa:
+  - question: { term: "…?", fr: "…", phon: "…" }
+    answers:
+      - { term: "…", fr: "…", phon: "…" }
+      - { term: "…", fr: "…", phon: "…" }
+# La langue ne sert que si elle sort du cours.
+reemploi_fr:
+  - "Ce qu'on utilise dans la vraie vie cette semaine."

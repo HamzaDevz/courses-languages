@@ -1,0 +1,110 @@
+id: 20-conversa
+order: 20
+year: 2
+title: "Uma conversa a sério"
+title_fr: "Une vraie conversation"
+goal_fr: "Tenir dix répliques sur son quotidien, en posant soi-même des questions. Bilan de l'année 2."
+can_do_fr:
+  - "Je tiens dix répliques sans passer au français."
+  - "Je pose au moins deux questions de moi-même."
+  - "J'enchaîne mes idées avec *primeiro*, *depois*, *no fim*."
+  - "Je me répare tout seul quand je me trompe : *ou melhor…*"
+duration_min: 16
+dialogue:
+  title_fr: "Raconte-moi ta semaine"
+  context_fr: "Tout ce qui a été appris cette année, dans une seule discussion. But de la semaine : la tenir sans la fiche."
+  lines:
+    - { who: "Tomás", term: "Olá, Ana! Como foi a tua semana?",         fr: "Salut Ana ! Comment s'est passée ta semaine ?", phon: "o-LA, A-na! KO-mou foï a TOU-a se-MA-na" }
+    - { who: "Ana",   term: "Foi boa! Na quarta-feira fui à piscina.",  fr: "Bien ! Mercredi je suis allée à la piscine.", phon: "foï BÔ-a! na KOUAR-ta FÈÏ-ra fouï a pich-SI-na" }
+    - { who: "Tomás", term: "A sério? Com quem foste?",                 fr: "Ah bon ? Tu y es allée avec qui ?",       phon: "a SÈ-riou? kon kèïn FOCH-te" }
+    - { who: "Ana",   term: "Fui com a minha mãe, de autocarro.",       fr: "J'y suis allée avec ma mère, en bus.",    phon: "fouï kon a MI-gna maïn, de aou-to-KA-rrou" }
+    - { who: "Tomás", term: "E na escola, como correu?",                fr: "Et à l'école, ça s'est passé comment ?",  phon: "i na chKO-la, KO-mou kou-RRÉOU" }
+    - { who: "Ana",   term: "Primeiro tivemos matemática, depois música. No fim, recreio!", fr: "D'abord on a eu maths, ensuite musique. À la fin, récré !", phon: "pri-MÈÏ-rou ti-VÉ-mouch ma-te-MA-ti-ka, de-POÏCH MOU-zi-ka. nou fïn, re-KRÈÏ-ou" }
+    - { who: "Tomás", term: "Que fixe! E o tempo, esteve bom?",         fr: "Génial ! Et le temps, il a fait beau ?",  phon: "ke FICH! i ou TEN-pou, chTÉ-ve bon" }
+    - { who: "Ana",   term: "Esteve frio… ou melhor, choveu na sexta.", fr: "Il a fait froid… ou plutôt, il a plu vendredi.", phon: "chTÉ-ve FRI-ou… ô me-LIOR, chou-VÉOU na SÈCH-ta" }
+    - { who: "Ana",   term: "E tu, o que fizeste no fim de semana?",    fr: "Et toi, qu'as-tu fait ce week-end ?",     phon: "i TOU, ou ke fi-ZÈCH-te nou fïn de se-MA-na" }
+    - { who: "Tomás", term: "Fiquei em casa, estava doente.",           fr: "Je suis resté à la maison, j'étais malade.", phon: "fi-KÈÏ èïn KA-za, chTA-va dou-EN-te" }
+    - { who: "Ana",   term: "Coitado! Já estás melhor?",                fr: "Le pauvre ! Tu vas mieux ?",              phon: "koï-TA-dou! ja chTACH me-LIOR" }
+    - { who: "Tomás", term: "Estou muito melhor, obrigado. Vamos brincar?", fr: "Je vais beaucoup mieux, merci. On joue ?", phon: "chtô MOUÏN-tou me-LIOR, o-bri-GA-dou. VA-mouch brïn-KAR" }
+comprehension:
+  - q_fr: "Qu'a fait Ana mercredi ?"
+    a_fr: "Elle est allée à la piscine avec sa mère, en bus."
+  - q_fr: "Raconte sa journée d'école dans l'ordre."
+    a_fr: "**Primeiro** maths, **depois** musique, **no fim** la récré."
+  - q_fr: "Pourquoi Tomás est-il resté à la maison ?"
+    a_fr: "Il était malade — *estava doente*."
+  - q_fr: "Ana se corrige une fois. Comment ?"
+    a_fr: "Avec **ou melhor** : « il a fait froid… ou plutôt, il a plu vendredi ». Se corriger soi-même est un signe qu'on parle vraiment."
+  - q_fr: "Combien de questions chacun pose-t-il ?"
+    a_fr: "Tomás en pose quatre, Ana une. Objectif de la semaine : arriver à **deux questions posées par l'enfant**."
+vocab:
+  - { term: "primeiro",    fr: "d'abord",            phon: "pri-MÈÏ-rou" }
+  - { term: "depois",      fr: "ensuite",            phon: "de-POÏCH" }
+  - { term: "no fim",      fr: "à la fin",           phon: "nou fïn" }
+  - { term: "por isso",    fr: "c'est pourquoi",     phon: "pour I-sou" }
+  - { term: "se calhar",   fr: "peut-être",          phon: "se ka-LIAR" }
+  - { term: "ou melhor",   fr: "ou plutôt",          phon: "ô me-LIOR" }
+  - { term: "coitado",     fr: "le pauvre",          phon: "koï-TA-dou" }
+  - { term: "a sério",     fr: "sérieusement, ah bon", phon: "a SÈ-riou" }
+phrases:
+  - { term: "Como foi a tua semana?",  fr: "Comment s'est passée ta semaine ?", phon: "KO-mou foï a TOU-a se-MA-na" }
+  - { term: "Conta-me tudo!",          fr: "Raconte-moi tout !",                phon: "KON-ta-me TOU-dou" }
+  - { term: "E tu, o que fizeste?",    fr: "Et toi, qu'est-ce que tu as fait ?", phon: "i TOU, ou ke fi-ZÈCH-te" }
+  - { term: "Espera, deixa-me pensar.", fr: "Attends, laisse-moi réfléchir.",   phon: "chPÈ-ra, DÈÏ-cha-me pen-SAR" }
+  - { term: "Não sei como se diz.",    fr: "Je ne sais pas comment ça se dit.",  phon: "nan-ou sèï KO-mou se dich" }
+  - { term: "Estava a brincar.",       fr: "J'étais en train de jouer.",         phon: "chTA-va a brïn-KAR" }
+qa:
+  - question: { term: "Conta-me o teu dia.", fr: "Raconte-moi ta journée.", phon: "KON-ta-me ou téou DI-a" }
+    answers:
+      - { term: "Primeiro fui à escola, depois almocei e no fim brinquei no parque.", fr: "D'abord je suis allé à l'école, ensuite j'ai déjeuné et à la fin j'ai joué au parc.", phon: "pri-MÈÏ-rou fouï a chKO-la, de-POÏCH al-mou-SÈÏ i nou fïn brïn-KÈÏ nou PAR-ke" }
+      - { term: "Foi um dia normal, nada de especial.", fr: "C'était une journée normale, rien de spécial.", phon: "foï oun DI-a nor-MAL, NA-da de chpe-si-AL" }
+  - question: { term: "O que gostas de fazer ao fim de semana?", fr: "Qu'aimes-tu faire le week-end ?", phon: "ou ke GOCH-tach de fa-ZÈR aou fïn de se-MA-na" }
+    answers:
+      - { term: "Gosto de ir ao parque com os meus amigos.", fr: "J'aime aller au parc avec mes amis.", phon: "GOCH-tou de ir aou PAR-ke kon ouch méouz a-MI-gouch" }
+      - { term: "Prefiro ficar em casa a desenhar.", fr: "Je préfère rester à la maison à dessiner.", phon: "pre-FI-rou fi-KAR èïn KA-za a de-ze-GNAR" }
+  - question: { term: "Estás bem? Pareces cansado.", fr: "Ça va ? Tu as l'air fatigué.", phon: "chTACH bèïn? pa-RÈ-sech kan-SA-dou" }
+    answers:
+      - { term: "Estou um bocado cansado, mas estou bem.", fr: "Je suis un peu fatigué, mais ça va.", phon: "chtô oun bou-KA-dou kan-SA-dou, mach chtô bèïn" }
+      - { term: "Não estou bem, dói-me a cabeça.", fr: "Je ne vais pas bien, j'ai mal à la tête.", phon: "nan-ou chtô bèïn, DOÏ-me a ka-BÉ-sa" }
+notes_fr:
+  - "**Primeiro… depois… no fim** : trois mots qui suffisent à raconter n'importe quoi dans l'ordre. C'est le début du récit, travaillé à fond en année 3."
+  - "**Ou melhor** permet de se corriger sans s'arrêter. Un enfant qui se répare tout seul est un enfant qui parle."
+  - "Le vrai objectif de l'année : **poser des questions**. Compter les questions posées par l'enfant, pas ses réponses."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Le dé des questions"
+    steps_fr:
+      - "Six questions connues, une par face du dé (dessinées si l'enfant ne lit pas)."
+      - "On lance : celui qui obtient la face **pose** la question à l'autre."
+      - "Ce qui compte n'est pas la réponse mais que l'enfant pose la question."
+  - level: petits
+    type: chanson
+    title_fr: "Primeiro, depois, no fim"
+    steps_fr:
+      - "Sur trois notes, chantez les trois mots en faisant trois gestes."
+      - "Puis racontez une journée en trois gestes seulement."
+  - level: grands
+    type: production
+    title_fr: "Le journal de la semaine"
+    steps_fr:
+      - "Écris cinq phrases sur ta semaine, une par jour, avec le jour en début de phrase."
+      - "Ajoute *primeiro*, *depois*, *no fim* dans au moins deux phrases."
+      - "Lis-le à voix haute sans t'arrêter, même s'il y a des fautes."
+  - level: grands
+    type: dialogue
+    title_fr: "Le bilan de l'année 2"
+    steps_fr:
+      - "Dix répliques, chronomètre en main, **dos à dos** : ni gestes ni lèvres."
+      - "L'adulte pose au hasard des questions des unités 11 à 19."
+      - "On compte : dix répliques tenues et **deux questions posées par l'enfant** = l'année 2 est acquise."
+  - level: grands
+    type: exercice
+    title_fr: "Répare-toi tout seul"
+    steps_fr:
+      - "Dis une phrase fausse exprès : *Ontem vou à praia.*"
+      - "Corrige-toi à voix haute : *ou melhor, ontem fui à praia.*"
+      - "Refais-le cinq fois avec des phrases différentes : c'est un réflexe qui s'entraîne."
+reemploi_fr:
+  - "Un dîner par semaine entièrement en portugais, avec la boîte à outils affichée sur la table."
+  - "Le récit de la journée, le soir, avec *primeiro / depois / no fim* — même en trois phrases."

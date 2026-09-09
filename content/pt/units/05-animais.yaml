@@ -59,3 +59,42 @@ activities:
       - "Écris trois phrases : *Gosto de ______ .*"
       - "Et une phrase avec : *Não gosto de ______ .*"
       - "Explique ton choix à l'oral, même avec des mots français au milieu."
+year: 1
+dialogue:
+  title_fr: "Tu as un animal ?"
+  context_fr: "Dans la cour, Ana parle de son chat."
+  lines:
+    - { who: "Ana",   term: "Tens animais em casa?",            fr: "Tu as des animaux à la maison ?",   phon: "tèïnch a-ni-MAÏCH èïn KA-za" }
+    - { who: "Tomás", term: "Tenho um cão. Chama-se Bolinha.",  fr: "J'ai un chien. Il s'appelle Bolinha.", phon: "TÉ-gnou oun kan-ou. CHA-ma-se bou-LI-gna" }
+    - { who: "Ana",   term: "Gosto muito de cães!",             fr: "J'aime beaucoup les chiens !",       phon: "GOCH-tou MOUÏN-tou de kaïnch" }
+    - { who: "Tomás", term: "E tu, tens algum animal?",         fr: "Et toi, tu as un animal ?",          phon: "i TOU, tèïnch al-GOUN a-ni-MAL" }
+    - { who: "Ana",   term: "Tenho dois gatos. São pretos.",    fr: "J'ai deux chats. Ils sont noirs.",   phon: "TÉ-gnou doïch GA-touch. san-ou PRÉ-touch" }
+    - { who: "Tomás", term: "A sério? Não gosto de gatos.",     fr: "Ah bon ? Je n'aime pas les chats.",  phon: "a SÈ-riou? nan-ou GOCH-tou de GA-touch" }
+    - { who: "Ana",   term: "Porquê? Os meus são simpáticos!",  fr: "Pourquoi ? Les miens sont gentils !", phon: "pour-KÊ? ouch méouch san-ou sïn-PA-ti-kouch" }
+comprehension:
+  - q_fr: "Quel animal a Tomás ? Comment s'appelle-t-il ?"
+    a_fr: "Un chien (*um cão*), qui s'appelle Bolinha."
+  - q_fr: "Combien de chats a Ana, et de quelle couleur ?"
+    a_fr: "Deux chats noirs — *dois gatos pretos*."
+  - q_fr: "Qui n'aime pas les chats ?"
+    a_fr: "Tomás : *não gosto de gatos*."
+  - q_fr: "Comment demande-t-on « pourquoi ? »"
+    a_fr: "**Porquê?** — un seul mot qui suffit à relancer toute la conversation."
+qa:
+  - question: { term: "Tens animais em casa?", fr: "Tu as des animaux à la maison ?", phon: "tèïnch a-ni-MAÏCH èïn KA-za" }
+    answers:
+      - { term: "Tenho um cão.",      fr: "J'ai un chien.",            phon: "TÉ-gnou oun kan-ou" }
+      - { term: "Tenho um peixe.",    fr: "J'ai un poisson.",          phon: "TÉ-gnou oun PÈÏ-che" }
+      - { term: "Não tenho animais.", fr: "Je n'ai pas d'animaux.",    phon: "nan-ou TÉ-gnou a-ni-MAÏCH" }
+  - question: { term: "De que animal gostas mais?", fr: "Quel animal préfères-tu ?", phon: "de ke a-ni-MAL GOCH-tach maïch" }
+    answers:
+      - { term: "Gosto mais do cavalo.", fr: "Je préfère le cheval.",  phon: "GOCH-tou maïch dou ka-VA-lou" }
+      - { term: "Gosto de todos!",       fr: "Je les aime tous !",     phon: "GOCH-tou de TO-douch" }
+  - question: { term: "Gostas de gatos?", fr: "Tu aimes les chats ?", phon: "GOCH-tach de GA-touch" }
+    answers:
+      - { term: "Sim, gosto muito.",       fr: "Oui, beaucoup.",        phon: "sïn, GOCH-tou MOUÏN-tou" }
+      - { term: "Não, tenho medo.",        fr: "Non, j'ai peur.",       phon: "nan-ou, TÉ-gnou MÉ-dou" }
+      - { term: "Mais ou menos.",          fr: "Bof.",                  phon: "maïz ou MÉ-nouch" }
+reemploi_fr:
+  - "Devant chaque animal croisé dans la rue ou dans un livre : *Olha, um cão!*"
+  - "Une fois par jour, dire une chose qu'on aime : *Gosto de…*"

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Génère le site de révision, les fiches imprimables et les exports flashcards.
 
-Source unique : content/<langue>/course.yaml + content/<langue>/units/*.yaml
+Source unique : content/<langue>/course.yaml + program.yaml + units/*.yaml
 Sorties       : site/ (web), print/ (HTML prêt à imprimer), exports/ (CSV Anki)
 
 Aucune dépendance hors PyYAML. Ajouter une langue = ajouter un dossier content/<code>/.
@@ -21,6 +21,7 @@ SITE = ROOT / "site"
 PRINT = ROOT / "print"
 EXPORTS = ROOT / "exports"
 PDF = ROOT / "pdf"
+AUDIO = ROOT / "assets" / "audio"
 
 E = lambda s: html.escape(str(s), quote=True)
 
@@ -67,10 +68,70 @@ def load_language(code_dir: Path) -> dict:
         unit.setdefault("phrases", [])
         unit.setdefault("notes_fr", [])
         unit.setdefault("activities", [])
+        # Tout ce qui sert à tenir une conversation. Une unité peut en manquer
+        # (elle reste valide), la section correspondante n'est alors pas rendue.
+        unit.setdefault("dialogue", None)
+        unit.setdefault("comprehension", [])
+        unit.setdefault("qa", [])
+        unit.setdefault("reemploi_fr", [])
+        unit.setdefault("year", 1)
         units.append(unit)
-    units.sort(key=lambda u: u.get("order", 999))
+    units.sort(key=lambda u: (u.get("year", 1), u.get("order", 999)))
     course["units"] = units
+    course["program"] = load_program(code_dir, units)
+    course["audio_index"] = load_audio_index(course["code"])
+    course["toolkit"] = course.get("toolkit", [])
     return course
+
+
+def load_audio_index(code: str) -> dict:
+    """Le manifeste des enregistrements réels produits par scripts/audio.py.
+
+    Absent = pas d'enregistrement : le site retombe sur la voix de synthèse du
+    navigateur, mais uniquement si elle parle vraiment la langue (voir SAY_JS).
+    """
+    path = AUDIO / code / "index.json"
+    if not path.exists():
+        return {}
+    import json
+    try:
+        return json.loads(path.read_text(encoding="utf-8")).get("clips", {})
+    except (OSError, ValueError) as exc:
+        raise SystemExit(f"Manifeste audio illisible ({path.relative_to(ROOT)}) : {exc}\n"
+                         f"Supprimez le dossier assets/audio/{code}/ et relancez « make audio ».")
+
+
+def audio_src(course: dict, text: str, voice: str = "f", depth: int = 1) -> str:
+    """Chemin relatif du fichier son d'une phrase, ou "" s'il n'a pas été produit."""
+    clip = (course.get("audio_index") or {}).get(text)
+    if not clip:
+        return ""
+    name = clip.get(voice) or clip.get("f") or clip.get("m")
+    if not name:
+        return ""
+    return f'{"../" * depth}audio/{course["code"]}/{name}'
+
+
+def load_program(code_dir: Path, units: list[dict]) -> dict | None:
+    """Le programme de l'année : périodes, semaines, unités, bilans.
+
+    Sans program.yaml la langue reste utilisable — on perd seulement le plan
+    annuel, pas les unités.
+    """
+    path = code_dir / "program.yaml"
+    if not path.exists():
+        return None
+    prog = read_yaml(path)
+    known = {u["id"] for u in units}
+    for year in prog.get("years", []):
+        for period in year.get("periods", []):
+            for uid in period.get("units", []):
+                if uid not in known:
+                    raise SystemExit(
+                        f"{path.relative_to(ROOT)} : la période « {period.get('label_fr','')} » "
+                        f"cite l'unité « {uid} », qui n'existe pas dans "
+                        f"{(code_dir / 'units').relative_to(ROOT)}/.")
+    return prog
 
 
 def load_all() -> list[dict]:
@@ -86,6 +147,40 @@ def load_all() -> list[dict]:
 def entries(unit: dict) -> list[dict]:
     """Vocabulaire + phrases, à plat."""
     return list(unit["vocab"]) + list(unit["phrases"])
+
+
+def qa_pairs(unit: dict) -> list[tuple[dict, dict]]:
+    """Les couples (question, première réponse) de l'unité.
+
+    C'est le matériau de la conversation : savoir un mot ne sert à rien si
+    l'enfant ne sait pas quoi répondre quand on le lui demande.
+    """
+    out = []
+    for item in unit.get("qa") or []:
+        q = item.get("question")
+        answers = item.get("answers") or []
+        if q and answers:
+            out.append((q, answers[0]))
+    return out
+
+
+def dialogue_lines(unit: dict) -> list[dict]:
+    d = unit.get("dialogue") or {}
+    return list(d.get("lines") or [])
+
+
+def units_by_year(course: dict) -> dict[int, list[dict]]:
+    grouped: dict[int, list[dict]] = {}
+    for u in course["units"]:
+        grouped.setdefault(u.get("year", 1), []).append(u)
+    return grouped
+
+
+def year_label(course: dict, year: int) -> str:
+    for y in ((course.get("program") or {}).get("years") or []):
+        if y.get("year") == year:
+            return y.get("label_fr", f"Année {year}")
+    return f"Année {year}"
 
 
 def level_label(course: dict, level_id: str) -> str:
@@ -117,6 +212,7 @@ def page(title: str, body: str, css: str, extra_head: str = "", script: str = ""
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%97%A3%3C/text%3E%3C/svg%3E">
 <title>{E(title)}</title>
 {extra_head}
 <style>{css}</style>
@@ -197,28 +293,234 @@ button.say:hover{border-color:var(--accent);color:var(--accent)}
 .nav{display:flex;justify-content:space-between;gap:12px;margin-top:2.5em;
   border-top:1px solid var(--line);padding-top:1em;font-size:.95rem}
 footer{color:var(--muted);font-size:.85rem;margin-top:3em}
-@media (max-width:520px){ .phon{white-space:normal} }
+/* Dialogue : la réplique doit se lire d'un coup d'œil, langue d'abord. */
+.dial{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:8px 16px 14px;margin:.8em 0}
+.dline{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.dline:last-child{border-bottom:none}
+.who{flex:0 0 auto;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;
+  color:#fff;background:var(--accent3);border-radius:999px;padding:3px 9px;min-width:74px;text-align:center}
+.dline[data-role="1"] .who{background:var(--accent2)}
+.dtext{flex:1 1 auto;min-width:0}
+.dtext .term{display:inline;margin-right:6px}
+.dfr{display:block;color:var(--muted);font-size:.95rem}
+.dline.hidden-fr .dfr{visibility:hidden}
+.dline.masked .term,.dline.masked .phon{filter:blur(6px);cursor:pointer;user-select:none}
+.dline.masked .say{opacity:.35}
+.ctx{color:var(--muted);font-style:italic;margin:.2em 0 .8em}
+/* Questions / réponses : ce qu'on me demande, ce que je peux répondre. */
+.qa{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent3);
+  border-radius:var(--radius);padding:12px 16px;margin:.7em 0}
+.qa .q{font-weight:700;font-size:1.1rem}
+.qa .qfr{color:var(--muted);font-size:.95rem;margin-bottom:.5em}
+.qa ul{list-style:none;margin:.2em 0 0;padding:0}
+.qa li{padding:5px 0 5px 18px;border-left:2px solid var(--line);margin-left:2px}
+.qa li .a{font-weight:600}
+.qa li .afr{color:var(--muted);font-size:.92rem;display:block}
+details.comp{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:10px 16px;margin:.5em 0}
+details.comp summary{cursor:pointer;font-weight:600}
+details.comp p{margin:.5em 0 0;color:var(--accent2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:.8em 0}
+.chip{border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:.9rem;
+  color:var(--muted);background:var(--card)}
+.plan table{background:var(--card)}
+.plan td .u{display:block}
+.week{white-space:nowrap;color:var(--muted);font-size:.9rem}
+.yearhead{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);
+  border-radius:var(--radius);padding:14px 18px;margin:1.6em 0 1em}
+.yearhead h2{margin-top:0;border:none;padding:0}
+@media (max-width:520px){ .phon{white-space:normal} .dline{flex-direction:column;gap:2px} }
 """
 
 SAY_JS = """
-function say(text, lang){
-  if(!window.speechSynthesis){ alert("La lecture vocale n'est pas disponible sur ce navigateur."); return; }
-  speechSynthesis.cancel();
+/* Le son, dans cet ordre :
+     1. l'enregistrement réel produit par scripts/audio.py (vraie voix de la
+        langue enseignée) ;
+     2. à défaut la synthèse du navigateur, mais UNIQUEMENT si l'appareil a une
+        voix de cette langue. Faire lire du portugais par une voix française
+        donne une prononciation fausse : on préfère ne rien jouer et le dire. */
+var SLOW_KEY = 'audio-lent';
+function isSlow(){ try{ return localStorage.getItem(SLOW_KEY) === '1'; }catch(e){ return false; } }
+function setSlow(v){ try{ localStorage.setItem(SLOW_KEY, v ? '1' : '0'); }catch(e){} }
+
+function normLang(l){ return String(l || '').replace('_','-').toLowerCase(); }
+function rootLang(l){ return normLang(l).split('-')[0]; }
+
+var voiceCache = null;   /* null = pas encore su, false = aucune voix utilisable */
+function scoreVoice(v, want){
+  var n = (v.name || '').toLowerCase(), s = 0;
+  if(normLang(v.lang) === want) s += 10;                       /* bonne variante */
+  if(/(neural|premium|enhanced|natural|siri)/.test(n)) s += 5; /* voix soignée */
+  if(/(joana|catarina|duarte|raquel|fernanda|ines|helia|google)/.test(n)) s += 4;
+  if(/compact/.test(n)) s -= 6;                                /* voix robotique */
+  return s;
+}
+function pickVoice(){
+  if(voiceCache !== null) return voiceCache;
+  if(!window.speechSynthesis) return (voiceCache = false);
+  var vs = speechSynthesis.getVoices() || [];
+  if(!vs.length) return null;            /* chargement asynchrone : on retentera */
+  var want = normLang(VOICE_LANG), root = rootLang(VOICE_LANG);
+  var pool = vs.filter(function(v){ return rootLang(v.lang) === root; });
+  if(!pool.length) return (voiceCache = false);
+  pool.sort(function(a, b){ return scoreVoice(b, want) - scoreVoice(a, want); });
+  voiceCache = pool[0];
+  return voiceCache;
+}
+function hasRecordings(){
+  for(var k in AUDIO_MAP){ if(AUDIO_MAP[k]) return true; }
+  return false;
+}
+var voiceTries = 0;
+function voiceNotice(){
+  var el = document.getElementById('voicewarn');
+  if(!el) return;
+  if(hasRecordings()){
+    el.textContent = '';
+    return;
+  }
+  var v = pickVoice();
+  if(v === null){
+    /* les voix arrivent de façon asynchrone ; au bout de ~2,5 s sans rien,
+       c'est qu'il n'y a aucun moteur de synthèse sur l'appareil */
+    if(voiceTries++ < 8){ setTimeout(voiceNotice, 300); return; }
+    v = false;
+  }
+  if(v === false){
+    el.innerHTML = 'Aucune voix en ' + LANG_NAME.toLowerCase() + ' installée sur cet appareil : ' +
+      'la lecture est coupée pour ne pas apprendre une mauvaise prononciation. ' +
+      '<a href="../voix.html">Comment en installer une</a>.';
+  } else if(normLang(v.lang) !== normLang(VOICE_LANG)){
+    el.innerHTML = 'Voix « ' + v.name + ' » (' + v.lang + ') : ce n\\'est pas la variante ' +
+      'enseignée, l\\'accent sera différent. <a href="../voix.html">Installer la bonne voix</a>.';
+  } else {
+    el.textContent = 'Voix du système : « ' + v.name + ' ».';
+  }
+}
+if(window.speechSynthesis && speechSynthesis.addEventListener){
+  speechSynthesis.addEventListener('voiceschanged', function(){ voiceCache = null; voiceNotice(); });
+}
+
+var currentAudio = null;
+function stopAll(){
+  if(currentAudio){ currentAudio.pause(); currentAudio = null; }
+  if(window.speechSynthesis) speechSynthesis.cancel();
+}
+function ttsSpeak(text, done, retried){
+  var v = pickVoice();
+  if(v === null && !retried){ setTimeout(function(){ ttsSpeak(text, done, true); }, 250); return; }
+  if(!v){ voiceNotice(); if(done) done(); return; }
   var u = new SpeechSynthesisUtterance(text);
-  u.lang = lang; u.rate = 0.85;
-  var v = speechSynthesis.getVoices().find(function(v){ return v.lang && v.lang.replace('_','-') === lang; });
-  if(v) u.voice = v;
+  u.voice = v; u.lang = v.lang; u.rate = isSlow() ? 0.6 : 0.9;
+  if(done){ u.onend = done; u.onerror = done; }
   speechSynthesis.speak(u);
+}
+function playItem(item, done){
+  if(item.src){
+    var a = new Audio(item.src);
+    a.playbackRate = isSlow() ? 0.7 : 1;
+    a.onended = done || null;
+    /* fichier manquant ou lecture refusée : on retombe sur la synthèse */
+    a.onerror = function(){ ttsSpeak(item.text, done); };
+    currentAudio = a;
+    var pr = a.play();
+    if(pr && pr.catch) pr.catch(function(){ ttsSpeak(item.text, done); });
+    return;
+  }
+  ttsSpeak(item.text, done);
+}
+function playSeq(items){
+  stopAll();
+  var i = 0;
+  (function next(){
+    if(i >= items.length) return;
+    var it = items[i++];
+    playItem(it, function(){ setTimeout(next, 350); });
+  })();
+}
+function say(text, lang, src){
+  playSeq([{ text: text, src: src || AUDIO_MAP[text] || '' }]);
 }
 document.addEventListener('click', function(e){
   var b = e.target.closest('button.say');
-  if(b) say(b.dataset.text, b.dataset.lang);
+  if(b) say(b.dataset.text, b.dataset.lang, b.dataset.src);
+});
+document.addEventListener('DOMContentLoaded', function(){
+  voiceNotice();
+  var sl = document.querySelector('button[data-act=slow]');
+  if(sl && isSlow()){ sl.setAttribute('aria-pressed','true'); sl.textContent = '🐢 Lecture lente'; }
 });
 """
 
 
-def say_button(text: str, lang: str) -> str:
-    return f'<button class="say" data-text="{E(text)}" data-lang="{E(lang)}" aria-label="Écouter">🔊</button>'
+DIALOG_JS = """
+/* Joue la scène en entier, réplique après réplique, en surlignant celle qui
+   parle : c'est ce qui apprend à suivre une discussion, pas un mot isolé. */
+function playDialogue(box){
+  var lines = [].slice.call(box.querySelectorAll('.dline'));
+  stopAll();
+  var i = 0;
+  (function next(){
+    lines.forEach(function(o){ o.style.background = ''; });
+    if(i >= lines.length) return;
+    var el = lines[i++];
+    el.style.background = 'rgba(127,127,127,.12)';
+    playItem({ text: el.dataset.text, src: el.dataset.src }, function(){ setTimeout(next, 420); });
+  })();
+}
+document.addEventListener('click', function(e){
+  var line = e.target.closest('.dline.masked');
+  if(line){ line.classList.remove('masked'); return; }
+  var b = e.target.closest('button[data-act]');
+  if(!b) return;
+  var act = b.dataset.act;
+  if(act === 'slow'){
+    var slow = !isSlow();
+    setSlow(slow);
+    b.setAttribute('aria-pressed', slow ? 'true' : 'false');
+    b.textContent = slow ? '🐢 Lecture lente' : '🐢 Lire lentement';
+    return;
+  }
+  var box = b.closest('.convbox');
+  if(!box) return;
+  if(act === 'play'){ playDialogue(box); }
+  if(act === 'fr'){
+    var on = box.classList.toggle('nofr');
+    box.querySelectorAll('.dline').forEach(function(el){ el.classList.toggle('hidden-fr', on); });
+    b.textContent = on ? 'Montrer le français' : 'Cacher le français';
+  }
+  if(act === 'role'){
+    var role = b.dataset.role;
+    var already = b.getAttribute('aria-pressed') === 'true';
+    box.querySelectorAll('button[data-act=role]').forEach(function(o){
+      o.setAttribute('aria-pressed','false'); });
+    box.querySelectorAll('.dline').forEach(function(el){
+      el.classList.toggle('masked', !already && el.dataset.who === role); });
+    b.setAttribute('aria-pressed', already ? 'false' : 'true');
+  }
+});
+"""
+
+
+def say_button(course: dict, text: str, voice: str = "f") -> str:
+    src = audio_src(course, text, voice)
+    attr = f' data-src="{E(src)}"' if src else ""
+    return (f'<button class="say" data-text="{E(text)}" '
+            f'data-lang="{E(course["speech_lang"])}"{attr} aria-label="Écouter">🔊</button>')
+
+
+def audio_map_js(course: dict, texts: list[str]) -> str:
+    """La table « texte → fichier » de la page, pour les flashcards et le dialogue."""
+    import json
+    mapping = {}
+    for t in texts:
+        src = audio_src(course, t)
+        if src:
+            mapping[t] = src
+    return (f"var AUDIO_MAP = {json.dumps(mapping, ensure_ascii=False)};\n"
+            f"var VOICE_LANG = {json.dumps(course['speech_lang'])};\n"
+            f"var LANG_NAME = {json.dumps(course.get('name_fr', ''))};\n")
 
 
 def vocab_table(unit_entries: list[dict], course: dict, with_audio: bool = True) -> str:
@@ -232,7 +534,7 @@ def vocab_table(unit_entries: list[dict], course: dict, with_audio: bool = True)
         cells.append(f'<td class="phon">{E(v.get("phon", ""))}</td>')
         cells.append(f'<td>{E(v.get("fr", ""))}</td>')
         if with_audio:
-            cells.append(f'<td>{say_button(v["term"], course["speech_lang"])}</td>')
+            cells.append(f'<td>{say_button(course, v["term"])}</td>')
         rows.append(f'<tr>{"".join(cells)}</tr>')
     heads = ["Mot"] + (["Translittération"] if translit else []) + ["Se prononce", "Français"]
     if with_audio:
@@ -243,8 +545,129 @@ def vocab_table(unit_entries: list[dict], course: dict, with_audio: bool = True)
 
 
 # --------------------------------------------------------------------------- #
+# Conversation : dialogue, questions/réponses, compréhension
+# --------------------------------------------------------------------------- #
+def dialogue_html(course: dict, unit: dict, interactive: bool = True) -> str:
+    """Le dialogue de l'unité : c'est là que les mots deviennent une discussion."""
+    dlg = unit.get("dialogue") or {}
+    lines = dialogue_lines(unit)
+    if not lines:
+        return ""
+    lang = course["speech_lang"]
+    roles = []
+    for ln in lines:
+        who = ln.get("who", "?")
+        if who not in roles:
+            roles.append(who)
+
+    rendered = []
+    for ln in lines:
+        who = ln.get("who", "?")
+        voice = "f" if roles.index(who) % 2 == 0 else "m"
+        src = audio_src(course, ln["term"], voice)
+        audio = say_button(course, ln["term"], voice) if interactive else ""
+        phon = f'<span class="phon">{E(ln.get("phon", ""))}</span>' if ln.get("phon") else ""
+        rendered.append(
+            f'<div class="dline" data-role="{roles.index(who) % 2}" data-who="{E(who)}" '
+            f'data-text="{E(ln["term"])}" data-lang="{E(lang)}" data-src="{E(src)}">'
+            f'<span class="who">{E(who)}</span>'
+            f'<span class="dtext"><span class="term">{E(ln["term"])}</span> {phon} {audio}'
+            f'<span class="dfr">{E(ln.get("fr", ""))}</span></span></div>'
+        )
+
+    ctx = f'<p class="ctx">{E(dlg["context_fr"])}</p>' if dlg.get("context_fr") else ""
+    controls = ""
+    if interactive:
+        role_btns = "".join(
+            f'<button class="btn ghost" data-act="role" data-role="{E(r)}" aria-pressed="false">'
+            f'Je joue {E(r)}</button>' for r in roles)
+        controls = (f'<div class="row"><button class="btn" data-act="play">▶ Écouter le dialogue</button>'
+                    f'<button class="btn ghost" data-act="fr">Cacher le français</button>'
+                    f'{role_btns}</div>'
+                    f'<p class="phon">« Je joue… » masque tes répliques : à toi de les dire. '
+                    f'Clique sur une réplique floutée pour vérifier.</p>')
+    title = dlg.get("title_fr", "Le dialogue")
+    return (f'<div class="convbox"><h2>{E(title)}</h2>{ctx}'
+            f'<div class="dial">{"".join(rendered)}</div>{controls}</div>')
+
+
+def qa_html(course: dict, unit: dict, interactive: bool = True) -> str:
+    """« On me demande / je réponds » : le pas qui manque entre comprendre et parler."""
+    items = unit.get("qa") or []
+    if not items:
+        return ""
+    lang = course["speech_lang"]
+    blocks = []
+    for item in items:
+        q = item.get("question") or {}
+        answers = item.get("answers") or []
+        audio_q = say_button(course, q["term"], "m") if interactive else ""
+        lis = []
+        for a in answers:
+            audio_a = say_button(course, a["term"]) if interactive else ""
+            phon = f' <span class="phon">{E(a.get("phon", ""))}</span>' if a.get("phon") else ""
+            lis.append(f'<li><span class="a">{E(a["term"])}</span>{phon} {audio_a}'
+                       f'<span class="afr">{E(a.get("fr", ""))}</span></li>')
+        phon_q = f' <span class="phon">{E(q.get("phon", ""))}</span>' if q.get("phon") else ""
+        blocks.append(
+            f'<div class="qa"><div class="q">{E(q["term"])}{phon_q} {audio_q}</div>'
+            f'<div class="qfr">{E(q.get("fr", ""))}</div>'
+            f'<ul>{"".join(lis)}</ul></div>')
+    return ("<h2>On me demande, je réponds</h2>"
+            "<p class=\"sub\">Plusieurs réponses sont possibles : l'enfant choisit celle qui est "
+            "vraie pour lui. C'est ce qui fait une vraie conversation.</p>" + "".join(blocks))
+
+
+def comprehension_html(unit: dict) -> str:
+    """Vérifie que l'enfant a compris l'ensemble, pas seulement des mots isolés."""
+    items = unit.get("comprehension") or []
+    if not items:
+        return ""
+    blocks = [f'<details class="comp"><summary>{E(c["q_fr"])}</summary>'
+              f'<p>{md_bold(c.get("a_fr", ""))}</p></details>' for c in items]
+    return ("<h2>Est-ce que j'ai compris ?</h2>"
+            "<p class=\"sub\">Poser la question en français après avoir écouté le dialogue "
+            "deux fois, sans le lire. Cliquer pour voir la réponse.</p>" + "".join(blocks))
+
+
+def reemploi_html(unit: dict) -> str:
+    """La langue ne sert que si elle sort du cours."""
+    items = unit.get("reemploi_fr") or []
+    if not items:
+        return ""
+    lis = "".join(f"<li>{md_bold(x)}</li>" for x in items)
+    return ('<div class="goal"><strong>Cette semaine, dans la vraie vie :</strong>'
+            f"<ul>{lis}</ul></div>")
+
+
+def toolkit_html(course: dict, interactive: bool = True) -> str:
+    """La boîte à outils : ce qu'on dit quand on ne sait plus quoi dire.
+
+    C'est ce qui permet à un enfant de rester dans la conversation au lieu de
+    la quitter dès qu'il bloque.
+    """
+    groups = course.get("toolkit") or []
+    if not groups:
+        return ""
+    out = []
+    for g in groups:
+        out.append(f'<h2>{E(g.get("title_fr", ""))}</h2>')
+        if g.get("intro_fr"):
+            out.append(f'<p class="sub">{E(g["intro_fr"])}</p>')
+        out.append(vocab_table(g.get("items", []), course, with_audio=interactive))
+    return "".join(out)
+
+
+# --------------------------------------------------------------------------- #
 # Site
 # --------------------------------------------------------------------------- #
+def audio_bar() -> str:
+    """Le réglage de vitesse et, le cas échéant, l'alerte « pas la bonne voix »."""
+    return ('<div class="row"><button class="btn ghost" data-act="slow" aria-pressed="false">'
+            '🐢 Lire lentement</button>'
+            '<span class="phon" id="voicewarn"></span></div>')
+
+
 def build_unit_page(course: dict, unit: dict, prev_u, next_u) -> str:
     lang = course["code"]
     parts = [
@@ -257,6 +680,12 @@ def build_unit_page(course: dict, unit: dict, prev_u, next_u) -> str:
     if unit.get("can_do_fr"):
         items = "".join(f"<li>{E(c)}</li>" for c in unit["can_do_fr"])
         parts.append(f'<div class="goal"><strong>À la fin de cette unité :</strong><ul>{items}</ul></div>')
+    parts.append(audio_bar())
+
+    # L'ordre suit la méthode : on entend une discussion entière d'abord, on
+    # vérifie qu'on l'a comprise, et seulement ensuite on démonte les mots.
+    parts.append(dialogue_html(course, unit))
+    parts.append(comprehension_html(unit))
 
     if unit["vocab"]:
         parts.append("<h2>Le vocabulaire</h2>")
@@ -264,6 +693,8 @@ def build_unit_page(course: dict, unit: dict, prev_u, next_u) -> str:
     if unit["phrases"]:
         parts.append("<h2>Les phrases</h2>")
         parts.append(vocab_table(unit["phrases"], course))
+
+    parts.append(qa_html(course, unit))
 
     for n in unit["notes_fr"]:
         parts.append(f'<div class="note">{md_bold(n)}</div>')
@@ -278,6 +709,23 @@ def build_unit_page(course: dict, unit: dict, prev_u, next_u) -> str:
                 f'<span class="tag">{E(a.get("type", ""))}</span>'
                 f'<h3>{E(a.get("title_fr", ""))}</h3><ol>{steps}</ol></div>'
             )
+
+    parts.append(reemploi_html(unit))
+
+    # Entraînement à répondre : la question sort en portugais, l'enfant répond
+    # à voix haute, puis vérifie. C'est l'exercice le plus proche d'une vraie
+    # discussion qu'on puisse faire seul.
+    drill = [{"q": q["term"], "qf": q.get("fr", ""),
+              "a": [{"t": a["term"], "f": a.get("fr", "")} for a in (item.get("answers") or [])]}
+             for item in (unit.get("qa") or [])
+             for q in [item.get("question") or {}] if q.get("term") and item.get("answers")]
+    if drill:
+        parts.append("<h2>Entraînement à répondre</h2>")
+        parts.append('<div class="flash" id="drill"><div class="big" id="dq">Clique pour commencer</div>'
+                     '<div class="ans" id="da"></div></div>'
+                     '<div class="row"><button class="btn" id="dnext">Autre question</button>'
+                     '<button class="btn ghost" id="dshow">Voir des réponses</button>'
+                     '<span class="phon">Réponds à voix haute avant de regarder.</span></div>')
 
     # Une unité en cours d'écriture peut n'avoir aucun mot : pas de flashcards à
     # proposer, et surtout pas de bloc interactif vide qui tournerait à vide.
@@ -304,11 +752,41 @@ def build_unit_page(course: dict, unit: dict, prev_u, next_u) -> str:
 
     import json
 
+    page_texts = ([v["term"] for v in entries(unit)]
+                  + [ln["term"] for ln in dialogue_lines(unit)]
+                  + [t for item in (unit.get("qa") or [])
+                     for t in ([(item.get("question") or {}).get("term", "")]
+                               + [a["term"] for a in (item.get("answers") or [])]) if t])
+    base_js = audio_map_js(course, page_texts) + SAY_JS + DIALOG_JS
+    if drill:
+        base_js += f"""
+var DRILL = {json.dumps(drill, ensure_ascii=False)};
+var DLANG = {json.dumps(course["speech_lang"])};
+var d = -1;
+function drillNext(){{
+  d = Math.floor(Math.random() * DRILL.length);
+  document.getElementById('dq').textContent = DRILL[d].q;
+  document.getElementById('da').textContent = DRILL[d].qf;
+  say(DRILL[d].q, DLANG);
+}}
+function drillShow(){{
+  if(d < 0){{ drillNext(); return; }}
+  document.getElementById('da').textContent =
+    DRILL[d].a.map(function(a){{ return a.t; }}).join('  ·  ');
+}}
+document.getElementById('drill').addEventListener('click', function(){{
+  if(d < 0) drillNext(); else drillShow(); }});
+document.getElementById('dnext').addEventListener('click', function(e){{
+  e.stopPropagation(); drillNext(); }});
+document.getElementById('dshow').addEventListener('click', function(e){{
+  e.stopPropagation(); drillShow(); }});
+"""
+
     if not cards:
         return page(f'{unit["title"]} — {course["name_fr"]}', "\n".join(parts), SITE_CSS,
-                    script=SAY_JS)
+                    script=base_js)
 
-    script = SAY_JS + f"""
+    script = base_js + f"""
 var CARDS = {json.dumps(cards, ensure_ascii=False)};
 var LANG = {json.dumps(course["speech_lang"])};
 var order = [], i = -1, reversed = false, revealed = false;
@@ -339,31 +817,80 @@ shuffle();
     return page(f'{unit["title"]} — {course["name_fr"]}', "\n".join(parts), SITE_CSS, script=script)
 
 
-def build_lang_index(course: dict) -> str:
+def unit_cards(course: dict, units: list[dict]) -> str:
     cards = []
-    for u in course["units"]:
+    for u in units:
         cards.append(
             f'<a class="card" href="{E(u["id"])}.html">'
             f'<div class="n">Unité {E(u.get("order",""))}</div>'
             f'<div class="t">{E(u["title"])}</div>'
             f'<div class="f">{E(u["title_fr"])} — {E(u.get("goal_fr",""))}</div></a>'
         )
+    return f'<div class="grid">{"".join(cards)}</div>'
+
+
+def build_lang_index(course: dict) -> str:
     levels = "".join(
         f'<li><strong>{E(lv["label_fr"])}</strong> — {E(lv["desc_fr"])}</li>'
         for lv in course.get("levels", [])
     )
     n_vocab = sum(len(entries(u)) for u in course["units"])
+    n_qa = sum(len(u.get("qa") or []) for u in course["units"])
+    n_dial = sum(1 for u in course["units"] if dialogue_lines(u))
     code = course["code"]
     has_pdf = (PDF / code / "cahier-complet.pdf").exists()
 
-    dl = ['<p>Chaque unité donne trois feuilles A4 : la fiche de cours, les activités '
-          'et les cartes de vocabulaire à découper.</p><ul>']
+    grouped = units_by_year(course)
+    n_years = f"{len(grouped)} année" + ("s" if len(grouped) > 1 else "")
+    sections = []
+    for year in sorted(grouped):
+        y = next((yy for yy in ((course.get("program") or {}).get("years") or [])
+                  if yy.get("year") == year), {})
+        head = [f'<div class="yearhead"><h2>{E(year_label(course, year))}</h2>']
+        if y.get("goal_fr"):
+            head.append(f'<p class="sub">{E(y["goal_fr"])}</p>')
+        if y.get("can_do_fr"):
+            head.append('<strong>À la fin de l\'année, l\'enfant sait :</strong><ul>'
+                        + "".join(f"<li>{E(c)}</li>" for c in y["can_do_fr"]) + "</ul>")
+        head.append(f'<p><a href="programme.html#annee-{year}">Le programme semaine par semaine →</a></p>')
+        head.append("</div>")
+        sections.append("".join(head) + unit_cards(course, grouped[year]))
+    units_html = "".join(sections)
+
+    entry_cards = []
+    if course.get("program"):
+        entry_cards.append(
+            '<a class="card" href="programme.html">'
+            '<div class="n">Le plan</div><div class="t">Le programme de l\'année</div>'
+            '<div class="f">Ce qu\'on fait chaque semaine, période par période, et comment '
+            'savoir si c\'est acquis.</div></a>')
+    if course.get("toolkit"):
+        entry_cards.append(
+            '<a class="card" href="boite-a-outils.html">'
+            '<div class="n">Pour tenir la discussion</div><div class="t">La boîte à outils</div>'
+            '<div class="f">Ce qu\'on dit quand on n\'a pas compris, qu\'on cherche un mot '
+            'ou qu\'on veut gagner du temps.</div></a>')
+
+    dl = ['<p>Chaque unité donne quatre feuilles A4 : la fiche de cours, le dialogue avec '
+          'les questions-réponses, les activités et les cartes de vocabulaire à découper.</p><ul>']
     cahier = f'<a href="../print/{E(code)}/cahier-complet.html">Le cahier complet (HTML, Ctrl+P pour imprimer)</a>'
     if has_pdf:
         cahier += f' · <a href="../pdf/{E(code)}/cahier-complet.pdf">PDF</a>'
     dl.append(f"<li><strong>{cahier}</strong></li>")
+    if course.get("program"):
+        line = (f'Le programme de l\'année (à afficher au mur) : '
+                f'<a href="../print/{E(code)}/programme.html">HTML</a>')
+        if has_pdf:
+            line += f' · <a href="../pdf/{E(code)}/programme.pdf">PDF</a>'
+        dl.append(f"<li>{line}</li>")
+    if course.get("toolkit"):
+        line = (f'La boîte à outils de la discussion : '
+                f'<a href="../print/{E(code)}/boite-a-outils.html">HTML</a>')
+        if has_pdf:
+            line += f' · <a href="../pdf/{E(code)}/boite-a-outils.pdf">PDF</a>'
+        dl.append(f"<li>{line}</li>")
     for u in course["units"]:
-        line = (f'Unité {E(u.get("order",""))} — {E(u["title"])} : '
+        line = (f'Année {u.get("year", 1)} · unité {E(u.get("order",""))} — {E(u["title"])} : '
                 f'<a href="../print/{E(code)}/{E(u["id"])}.html">HTML</a>')
         if has_pdf:
             line += f' · <a href="../pdf/{E(code)}/{E(u["id"])}.pdf">PDF</a>'
@@ -377,15 +904,156 @@ def build_lang_index(course: dict) -> str:
     body = f"""<div class="wrap">
 <div class="crumb"><a href="../index.html">← Toutes les langues</a></div>
 <h1>{E(course["name_fr"])}</h1>
-<p class="sub">{E(course.get("variant_fr",""))} · {len(course["units"])} unités · {n_vocab} mots et phrases</p>
+<p class="sub">{E(course.get("variant_fr",""))} · {n_years} · {len(course["units"])} unités · {n_vocab} mots et phrases · {n_dial} dialogues · {n_qa} questions à savoir répondre</p>
 <div class="goal"><strong>Deux niveaux dans chaque unité :</strong><ul>{levels}</ul></div>
-<h2>Les unités</h2>
-<div class="grid">{"".join(cards)}</div>
+<h2>Par où commencer</h2>
+<div class="grid">{"".join(entry_cards)}</div>
+{units_html}
 <h2>À imprimer et à emporter</h2>
 <div class="dl">{downloads}</div>
 <footer><p>{E(course.get("note_fr",""))}</p></footer>
 </div>"""
     return page(course["name_fr"], body, SITE_CSS)
+
+
+def program_body(course: dict, links: bool = True) -> str:
+    """Le corps du programme, partagé par la page web et la feuille à imprimer."""
+    prog = course.get("program") or {}
+    by_id = {u["id"]: u for u in course["units"]}
+    parts = []
+    if prog.get("intro_fr"):
+        parts.append(f'<p class="sub">{md_bold(prog["intro_fr"])}</p>')
+
+    if prog.get("rhythm_fr"):
+        rows = "".join(
+            f'<tr><td><strong>{E(r.get("day_fr",""))}</strong></td>'
+            f'<td>{md_bold(r.get("what_fr",""))}</td>'
+            f'<td class="week">{E(r.get("min",""))} min</td></tr>'
+            for r in prog["rhythm_fr"])
+        parts.append("<h2>La semaine type</h2>"
+                     f'<div class="tablewrap"><table><thead><tr><th>Quand</th><th>Quoi</th>'
+                     f'<th>Durée</th></tr></thead><tbody>{rows}</tbody></table></div>')
+
+    if prog.get("cycle_fr"):
+        rows = "".join(
+            f'<tr><td><strong>{E(c.get("label_fr",""))}</strong></td>'
+            f'<td>{md_bold(c.get("what_fr",""))}</td></tr>'
+            for c in prog["cycle_fr"])
+        parts.append("<h2>Comment on traite une unité</h2>"
+                     '<p class="sub">Chaque unité tient trois semaines. On ne passe à la '
+                     'suivante que si les « je sais… » sont tenus.</p>'
+                     f'<div class="tablewrap"><table><tbody>{rows}</tbody></table></div>')
+
+    for y in prog.get("years", []):
+        year = y.get("year", 1)
+        head = [f'<div class="yearhead" id="annee-{year}"><h2>{E(y.get("label_fr", ""))}</h2>']
+        if y.get("age_fr"):
+            head.append(f'<p class="sub">{E(y["age_fr"])}</p>')
+        if y.get("goal_fr"):
+            head.append(f"<p>{md_bold(y['goal_fr'])}</p>")
+        if y.get("can_do_fr"):
+            head.append("<strong>Ce que l'enfant sait faire à la fin de l'année :</strong><ul>"
+                        + "".join(f"<li>{E(c)}</li>" for c in y["can_do_fr"]) + "</ul>")
+        head.append("</div>")
+        parts.append("".join(head))
+
+        rows = []
+        for per in y.get("periods", []):
+            names = []
+            for uid in per.get("units", []):
+                u = by_id.get(uid, {"title": uid, "title_fr": ""})
+                label = f'{E(u.get("title", uid))} <span class="phon">{E(u.get("title_fr",""))}</span>'
+                names.append(f'<span class="u"><a href="{E(uid)}.html">{label}</a></span>'
+                             if links else f'<span class="u">{label}</span>')
+            rows.append(
+                f'<tr><td><strong>{E(per.get("label_fr",""))}</strong>'
+                f'<div class="week">{E(per.get("weeks_fr",""))}</div></td>'
+                f'<td>{"".join(names)}</td>'
+                f'<td>{md_bold(per.get("focus_fr",""))}</td>'
+                f'<td>{md_bold(per.get("milestone_fr",""))}</td></tr>')
+        if rows:
+            parts.append('<div class="plan tablewrap"><table><thead><tr><th>Période</th>'
+                         '<th>Unités</th><th>Ce qu\'on travaille</th>'
+                         '<th>Bilan de la période</th></tr></thead>'
+                         f'<tbody>{"".join(rows)}</tbody></table></div>')
+        if y.get("evaluation_fr"):
+            parts.append('<div class="goal"><strong>Comment vérifier, sans faire d\'examen :</strong><ul>'
+                         + "".join(f"<li>{md_bold(x)}</li>" for x in y["evaluation_fr"])
+                         + "</ul></div>")
+    return "".join(parts)
+
+
+def build_program_page(course: dict) -> str:
+    body = (f'<div class="wrap">'
+            f'<div class="crumb"><a href="index.html">← {E(course["name_fr"])}</a></div>'
+            f'<h1>Le programme</h1>'
+            + program_body(course)
+            + '<footer>Le programme est un cadre, pas une course. Une semaine sautée se '
+              'rattrape ; une unité mal tenue se refait.</footer></div>')
+    return page(f'Programme — {course["name_fr"]}', body, SITE_CSS)
+
+
+def build_toolkit_page(course: dict) -> str:
+    body = (f'<div class="wrap">'
+            f'<div class="crumb"><a href="index.html">← {E(course["name_fr"])}</a></div>'
+            f'<h1>La boîte à outils de la discussion</h1>'
+            f'<p class="sub">Ces phrases ne s\'apprennent pas dans une unité : elles se '
+            f'révisent toute l\'année. Elles servent à <strong>rester dans la conversation</strong> '
+            f'quand on ne comprend pas — c\'est exactement ce qui manque quand un enfant se tait.</p>'
+            + audio_bar()
+            + toolkit_html(course)
+            + '<footer>À afficher près de la table. Trois phrases suffisent pour commencer : '
+              '« não percebi », « outra vez, por favor », « como se diz… ? »</footer></div>')
+    texts = [v["term"] for g in (course.get("toolkit") or []) for v in g.get("items", [])]
+    return page(f'Boîte à outils — {course["name_fr"]}', body, SITE_CSS,
+                script=audio_map_js(course, texts) + SAY_JS + DIALOG_JS)
+
+
+def build_voice_help(langs: list[dict]) -> str:
+    """Comment obtenir une vraie voix. La page vers laquelle pointe l'alerte du site."""
+    rows = "".join(
+        f'<tr><td>{E(c["name_fr"])}</td><td><code>{E(c["speech_lang"])}</code></td>'
+        f'<td>{E(c.get("variant_fr", ""))}</td></tr>' for c in langs)
+    body = f"""<div class="wrap">
+<div class="crumb"><a href="index.html">← Toutes les langues</a></div>
+<h1>Avoir une vraie voix</h1>
+<p class="sub">Une mauvaise voix apprend une mauvaise prononciation. Le site refuse
+donc de lire la langue avec une voix qui ne la parle pas.</p>
+
+<h2>1. Les enregistrements du site (le mieux)</h2>
+<p>Si le dépôt a été construit avec <code>make audio</code>, chaque mot, chaque
+réplique et chaque réponse possède un <strong>enregistrement en voix de synthèse
+neuronale de la variante enseignée</strong> (deux voix différentes dans les
+dialogues, une par personnage). Rien à installer : le bouton 🔊 joue le fichier.</p>
+<p>Pour les produire soi-même :</p>
+<pre><code>make audio      # écrit assets/audio/&lt;langue&gt;/*.mp3 puis regénère le site</code></pre>
+<p>Pour une voix humaine, remplacer un fichier <code>.mp3</code> par son propre
+enregistrement en gardant le même nom : le site le jouera à la place.</p>
+
+<h2>2. Sans enregistrement : la voix du système</h2>
+<p>Le navigateur n'utilise que les voix installées sur l'appareil. Il faut donc
+en installer une dans la bonne langue :</p>
+<ul>
+<li><strong>iPhone / iPad</strong> — Réglages → Accessibilité → Contenu énoncé →
+Voix → choisir la langue, puis télécharger une voix marquée
+<em>Améliorée</em> ou <em>Premium</em> (les voix « compactes » sonnent mal).</li>
+<li><strong>Mac</strong> — Réglages Système → Accessibilité → Contenu énoncé →
+Voix du système → Gérer les voix.</li>
+<li><strong>Android</strong> — Paramètres → Système → Langues → Synthèse vocale →
+moteur Google → Installer les données vocales.</li>
+<li><strong>Windows</strong> — Paramètres → Heure et langue → Voix → Ajouter des voix.
+Edge apporte en plus des voix « Natural » de très bonne qualité.</li>
+</ul>
+<p>Après installation, fermer complètement le navigateur et rouvrir la page.</p>
+
+<h2>Les codes de voix attendus</h2>
+<div class="tablewrap"><table><thead><tr><th>Langue</th><th>Code</th>
+<th>Variante enseignée</th></tr></thead><tbody>{rows}</tbody></table></div>
+<p class="sub">Une voix d'une autre variante (brésilienne pour du portugais du
+Portugal, par exemple) reste utilisable : le site l'accepte mais le signale,
+car l'accent et certains mots diffèrent.</p>
+</div>"""
+    return page("Avoir une vraie voix", body, SITE_CSS)
 
 
 def build_home(langs: list[dict]) -> str:
@@ -395,12 +1063,18 @@ def build_home(langs: list[dict]) -> str:
             f'<a class="card" href="{E(c["code"])}/index.html">'
             f'<div class="n">{E(c.get("variant_fr", ""))}</div>'
             f'<div class="t">{E(c["name"])}</div>'
-            f'<div class="f">{E(c["name_fr"])} — {len(c["units"])} unités</div></a>'
+            f'<div class="f">{E(c["name_fr"])} — {len(c["units"])} unités sur '
+            f'{len(units_by_year(c))} années</div></a>'
         )
     body = f"""<div class="wrap">
 <h1>Les langues à la maison</h1>
-<p class="sub">Cours, fiches et flashcards pour apprendre en famille.</p>
+<p class="sub">Un vrai programme sur plusieurs années pour que l'enfant comprenne
+une discussion entière et sache y répondre.</p>
 <div class="grid">{"".join(cards)}</div>
+<h2>Le son</h2>
+<p>Les boutons 🔊 jouent de vrais enregistrements dans la langue enseignée quand ils
+ont été produits, sinon la voix du système — jamais une voix d'une autre langue.
+Si rien ne se lit : <a href="voix.html">avoir une vraie voix</a>.</p>
 <footer>Site généré depuis <code>content/</code> par <code>scripts/build.py</code>.</footer>
 </div>"""
     return page("Les langues à la maison", body, SITE_CSS)
@@ -437,6 +1111,23 @@ ol,ul{margin:1mm 0;padding-left:5mm}
 .cut .p{font-size:9.5pt;font-style:italic;color:#555;margin-top:1.5mm}
 .cut .f{font-size:11pt;color:#333;margin-top:1.5mm}
 footer{margin-top:6mm;font-size:8.5pt;color:#666;border-top:.5pt solid #bbb;padding-top:2mm}
+.dial{border:.5pt solid #999;border-radius:2mm;padding:2mm 3mm;margin:2mm 0}
+.dline{padding:1.6mm 0;border-bottom:.4pt dotted #bbb}
+.dline:last-child{border-bottom:none}
+.who{font-size:8.5pt;text-transform:uppercase;letter-spacing:.05em;color:#444;
+  border:.5pt solid #666;border-radius:8pt;padding:.3mm 1.6mm;margin-right:2mm}
+.dfr{color:#555;font-size:10pt}
+.qa{border-left:1.5pt solid #111;padding:1mm 0 1mm 3mm;margin:2.5mm 0}
+.qa .q{font-weight:700}
+.qa .qfr{color:#555;font-size:10pt;margin-bottom:1mm}
+.qa ul{list-style:none;padding-left:0;margin:0}
+.qa li{padding:.6mm 0 .6mm 3mm;border-left:.5pt solid #bbb}
+.qa .afr{color:#555;font-size:9.5pt}
+.plan table{font-size:10pt}
+.plan td{vertical-align:top}
+.plan .u{display:block}
+.week{color:#555;font-size:9pt}
+.ctx{font-style:italic;color:#555;margin:1mm 0 2mm}
 @media screen{ body{background:#eee} .sheet{background:#fff;max-width:210mm;margin:6mm auto;
   padding:15mm;box-shadow:0 1px 6px rgba(0,0,0,.2)} }
 """
@@ -460,7 +1151,46 @@ def build_print_unit(course: dict, unit: dict) -> str:
     p.append(f'<footer>{E(course["name_fr"])} — {E(unit["title"])} — fiche de cours</footer></div>')
     sheets.append("".join(p))
 
-    # Feuille 2 : les activités
+    # Feuille 2 : le dialogue et les réponses — la feuille qu'on garde sous les
+    # yeux pendant qu'on joue la scène à deux.
+    conv = []
+    if dialogue_lines(unit):
+        dlg = unit["dialogue"]
+        conv.append(f'<h2>{E(dlg.get("title_fr", "Le dialogue"))}</h2>')
+        if dlg.get("context_fr"):
+            conv.append(f'<p class="ctx">{E(dlg["context_fr"])}</p>')
+        lines = []
+        for ln in dialogue_lines(unit):
+            phon = f' <span class="phon">{E(ln.get("phon",""))}</span>' if ln.get("phon") else ""
+            lines.append(f'<div class="dline"><span class="who">{E(ln.get("who","?"))}</span>'
+                         f'<span class="term">{E(ln["term"])}</span>{phon}'
+                         f'<div class="dfr">{E(ln.get("fr",""))}</div></div>')
+        conv.append(f'<div class="dial">{"".join(lines)}</div>')
+    if unit.get("comprehension"):
+        conv.append("<h2>Est-ce que j'ai compris ?</h2><ol>"
+                    + "".join(f'<li>{E(c["q_fr"])}<br><span class="phon">Réponse : '
+                              f'{E(c.get("a_fr",""))}</span></li>' for c in unit["comprehension"])
+                    + "</ol>")
+    if unit.get("qa"):
+        conv.append("<h2>On me demande, je réponds</h2>")
+        for item in unit["qa"]:
+            q = item.get("question") or {}
+            lis = "".join(
+                f'<li><strong>{E(a["term"])}</strong> '
+                f'<span class="phon">{E(a.get("phon",""))}</span>'
+                f'<div class="afr">{E(a.get("fr",""))}</div></li>'
+                for a in (item.get("answers") or []))
+            conv.append(f'<div class="qa"><div class="q">{E(q.get("term",""))} '
+                        f'<span class="phon">{E(q.get("phon",""))}</span></div>'
+                        f'<div class="qfr">{E(q.get("fr",""))}</div><ul>{lis}</ul></div>')
+    if conv:
+        sheets.append(f'<div class="sheet"><h1>{E(unit["title"])} — la discussion</h1>'
+                      f'<p class="sub">Le parent lit une réplique, l\'enfant donne la suivante. '
+                      f'Puis on échange les rôles.</p>'
+                      + "".join(conv)
+                      + f'<footer>{E(course["name_fr"])} — {E(unit["title"])} — la discussion</footer></div>')
+
+    # Feuille 3 : les activités
     if unit["activities"]:
         a_parts = [f'<div class="sheet"><h1>{E(unit["title"])} — activités</h1>']
         for a in unit["activities"]:
@@ -470,10 +1200,14 @@ def build_print_unit(course: dict, unit: dict) -> str:
                 f'<span class="tag">{E(a.get("type",""))}</span>'
                 f'<h3>{E(a.get("title_fr",""))}</h3><ol>{steps}</ol></div>'
             )
+        if unit.get("reemploi_fr"):
+            a_parts.append('<div class="note"><strong>Cette semaine, dans la vraie vie :</strong><ul>'
+                           + "".join(f"<li>{md_bold(x)}</li>" for x in unit["reemploi_fr"])
+                           + "</ul></div>")
         a_parts.append(f'<footer>{E(course["name_fr"])} — {E(unit["title"])} — activités</footer></div>')
         sheets.append("".join(a_parts))
 
-    # Feuille 3 : les cartes à découper
+    # Feuille 4 : les cartes à découper
     cells = []
     for v in entries(unit):
         cells.append(
@@ -491,11 +1225,36 @@ def build_print_unit(course: dict, unit: dict) -> str:
     return page(f'{unit["title"]} — à imprimer', "\n".join(sheets), PRINT_CSS)
 
 
+def build_print_program(course: dict) -> str:
+    body = (f'<div class="sheet"><h1>{E(course["name_fr"])} — le programme</h1>'
+            f'<p class="sub">À afficher : on coche l\'unité quand les « je sais… » sont tenus.</p>'
+            + program_body(course, links=False)
+            + f'<footer>{E(course["name_fr"])} — programme</footer></div>')
+    return page(f'{course["name_fr"]} — programme', body, PRINT_CSS)
+
+
+def build_print_toolkit(course: dict) -> str:
+    body = (f'<div class="sheet"><h1>{E(course["name_fr"])} — boîte à outils</h1>'
+            f'<p class="sub">Les phrases qui permettent de rester dans la discussion '
+            f'quand on ne comprend pas. À garder sur la table.</p>'
+            + toolkit_html(course, interactive=False)
+            + f'<footer>{E(course["name_fr"])} — boîte à outils</footer></div>')
+    return page(f'{course["name_fr"]} — boîte à outils', body, PRINT_CSS)
+
+
+def strip_page(html_doc: str) -> str:
+    """Ne garde que le corps d'une page déjà construite, pour l'empiler dans le cahier."""
+    return html_doc.split("<body>\n", 1)[1].rsplit("\n", 3)[0]
+
+
 def build_print_all(course: dict) -> str:
     body = []
+    if course.get("program"):
+        body.append(strip_page(build_print_program(course)))
+    if course.get("toolkit"):
+        body.append(strip_page(build_print_toolkit(course)))
     for u in course["units"]:
-        inner = build_print_unit(course, u)
-        body.append(inner.split("<body>\n", 1)[1].rsplit("\n", 3)[0])
+        body.append(strip_page(build_print_unit(course, u)))
     return page(f'{course["name_fr"]} — cahier complet', "\n".join(body), PRINT_CSS)
 
 
@@ -517,6 +1276,20 @@ def build_exports(course: dict) -> None:
                 if extra:
                     verso = f"{verso}<br><i>{extra}</i>"
                 w.writerow([recto, verso, tag])
+            # Une carte « on me pose cette question, je réponds ça » : c'est ce
+            # qui s'utilise dans une discussion, pas le mot seul.
+            for item in (u.get("qa") or []):
+                q = item.get("question") or {}
+                answers = item.get("answers") or []
+                if not q.get("term") or not answers:
+                    continue
+                verso = "<br>".join(
+                    f'{a["term"]} <i>({a.get("fr", "")})</i>' for a in answers)
+                w.writerow([f'{q["term"]}<br><i>{q.get("fr", "")}</i>', verso,
+                            f'{tag} {course["code"]}::conversa'])
+        for g in (course.get("toolkit") or []):
+            for v in g.get("items", []):
+                w.writerow([v["term"], v.get("fr", ""), f'{course["code"]}::ferramentas'])
     print(f"  exports/{anki.name}")
 
 
@@ -532,6 +1305,7 @@ def main() -> None:
 
     SITE.mkdir(parents=True)
     (SITE / "index.html").write_text(build_home(langs), encoding="utf-8")
+    (SITE / "voix.html").write_text(build_voice_help(langs), encoding="utf-8")
     print("site/index.html")
 
     for course in langs:
@@ -542,6 +1316,12 @@ def main() -> None:
         pdir.mkdir(parents=True)
 
         (sdir / "index.html").write_text(build_lang_index(course), encoding="utf-8")
+        if course.get("program"):
+            (sdir / "programme.html").write_text(build_program_page(course), encoding="utf-8")
+            (pdir / "programme.html").write_text(build_print_program(course), encoding="utf-8")
+        if course.get("toolkit"):
+            (sdir / "boite-a-outils.html").write_text(build_toolkit_page(course), encoding="utf-8")
+            (pdir / "boite-a-outils.html").write_text(build_print_toolkit(course), encoding="utf-8")
         units = course["units"]
         for i, u in enumerate(units):
             prev_u = units[i - 1] if i else None
@@ -551,13 +1331,29 @@ def main() -> None:
             (pdir / f'{u["id"]}.html').write_text(build_print_unit(course, u), encoding="utf-8")
         (pdir / "cahier-complet.html").write_text(build_print_all(course), encoding="utf-8")
 
-        print(f'{course["name_fr"]} : {len(units)} unités → site/{code}/ et print/{code}/')
+        n_years = len(units_by_year(course))
+        n_dial = sum(1 for u in units if dialogue_lines(u))
+        n_qa = sum(len(u.get("qa") or []) for u in units)
+        print(f'{course["name_fr"]} : {len(units)} unités sur {n_years} années, '
+              f'{n_dial} dialogues, {n_qa} questions → site/{code}/ et print/{code}/')
+        missing = [u["id"] for u in units if not dialogue_lines(u)]
+        if missing:
+            print(f'  (sans dialogue : {", ".join(missing)})')
         build_exports(course)
 
     # Le site publié embarque les fiches, les PDF (s'ils ont été produits) et les exports,
     # pour qu'un seul dossier suffise à tout distribuer.
     shutil.copytree(PRINT, SITE / "print")
     shutil.copytree(EXPORTS, SITE / "exports")
+    # Les enregistrements réels priment sur la voix de synthèse : s'ils existent,
+    # ils partent avec le site (voir scripts/audio.py).
+    if AUDIO.exists():
+        shutil.copytree(AUDIO, SITE / "audio", ignore=shutil.ignore_patterns("*.md"))
+        n = len(list((SITE / "audio").rglob("*.mp3")))
+        print(f"audio/ : {n} enregistrements inclus dans le site")
+    else:
+        print("audio/ : aucun enregistrement (make audio) — le site utilisera la voix "
+              "de synthèse du navigateur")
     if PDF.exists():
         shutil.copytree(PDF, SITE / "pdf")
         print("pdf/ inclus dans le site")

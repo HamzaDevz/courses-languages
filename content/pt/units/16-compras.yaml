@@ -1,0 +1,101 @@
+id: 16-compras
+order: 16
+year: 2
+title: "Às compras"
+title_fr: "Faire les courses"
+goal_fr: "Acheter quelque chose, demander le prix et comprendre la réponse."
+can_do_fr:
+  - "Je demande poliment ce que je veux avec *queria*."
+  - "Je demande le prix et je comprends la somme."
+  - "Je dis que c'est cher ou bon marché."
+  - "Je termine un achat : *é tudo, obrigado*."
+duration_min: 15
+dialogue:
+  title_fr: "À la boulangerie"
+  context_fr: "Tomás va acheter le pain tout seul pour la première fois."
+  lines:
+    - { who: "Tomás",    term: "Bom dia! Queria dois pães, por favor.", fr: "Bonjour ! Je voudrais deux pains, s'il vous plaît.", phon: "bon DI-a! ke-RI-a doïch païnch, pour fa-VOR" }
+    - { who: "Vendedor", term: "Bom dia! Mais alguma coisa?",           fr: "Bonjour ! Autre chose ?",             phon: "bon DI-a! maïz al-GOU-ma KOÏ-za" }
+    - { who: "Tomás",    term: "Sim, queria também um bolo.",           fr: "Oui, je voudrais aussi un gâteau.",   phon: "sïn, ke-RI-a tan-BÈÏN oun BÔ-lou" }
+    - { who: "Vendedor", term: "Aqui tem. São três euros e vinte.",     fr: "Voilà. Ça fait trois euros vingt.",   phon: "a-KI tèïn. san-ou trèch ÉOU-rouch i VÏN-te" }
+    - { who: "Tomás",    term: "Desculpe, quanto custa?",               fr: "Pardon, ça coûte combien ?",          phon: "desh-KOUL-pe, KOUAN-tou KOUCH-ta" }
+    - { who: "Vendedor", term: "Três euros e vinte cêntimos.",          fr: "Trois euros vingt centimes.",         phon: "trèch ÉOU-rouch i VÏN-te SEN-ti-mouch" }
+    - { who: "Tomás",    term: "Aqui está. É tudo, obrigado.",          fr: "Voilà. C'est tout, merci.",           phon: "a-KI chta. è TOU-dou, o-bri-GA-dou" }
+    - { who: "Vendedor", term: "Obrigado eu. Aqui tem o troco.",        fr: "Merci à vous. Voici la monnaie.",     phon: "o-bri-GA-dou éou. a-KI tèïn ou TRO-kou" }
+comprehension:
+  - q_fr: "Qu'achète Tomás ?"
+    a_fr: "Deux pains et un gâteau — *dois pães e um bolo*."
+  - q_fr: "Combien ça coûte ?"
+    a_fr: "Trois euros vingt — *três euros e vinte*."
+  - q_fr: "Que dit-il quand il n'a pas entendu le prix ?"
+    a_fr: "*Desculpe, quanto custa?* — redemander le prix est normal, même pour un adulte."
+  - q_fr: "Comment dit-il qu'il ne veut rien d'autre ?"
+    a_fr: "**É tudo, obrigado.**"
+vocab:
+  - { term: "o dinheiro",   fr: "l'argent",       phon: "ou di-GNÈÏ-rou" }
+  - { term: "o euro",       fr: "l'euro",         phon: "ou ÉOU-rou" }
+  - { term: "o troco",      fr: "la monnaie",     phon: "ou TRO-kou" }
+  - { term: "o preço",      fr: "le prix",        phon: "ou PRÉ-sou" }
+  - { term: "o pão",        fr: "le pain",        phon: "ou pan-ou" }
+  - { term: "o bolo",       fr: "le gâteau",      phon: "ou BÔ-lou" }
+  - { term: "o leite",      fr: "le lait",        phon: "ou LÈÏ-te" }
+  - { term: "o queijo",     fr: "le fromage",     phon: "ou KÈÏ-jou" }
+  - { term: "a fruta",      fr: "les fruits",     phon: "a FROU-ta" }
+  - { term: "o saco",       fr: "le sac",         phon: "ou SA-kou" }
+  - { term: "caro",         fr: "cher",           phon: "KA-rou" }
+  - { term: "barato",       fr: "bon marché",     phon: "ba-RA-tou" }
+phrases:
+  - { term: "Quanto custa?",         fr: "Ça coûte combien ?",          phon: "KOUAN-tou KOUCH-ta" }
+  - { term: "Queria um pão, por favor.", fr: "Je voudrais un pain, s'il vous plaît.", phon: "ke-RI-a oun pan-ou, pour fa-VOR" }
+  - { term: "Custa dois euros.",     fr: "Ça coûte deux euros.",        phon: "KOUCH-ta doïch ÉOU-rouch" }
+  - { term: "É muito caro!",         fr: "C'est très cher !",           phon: "è MOUÏN-tou KA-rou" }
+  - { term: "Mais alguma coisa?",    fr: "Autre chose ?",               phon: "maïz al-GOU-ma KOÏ-za" }
+  - { term: "É tudo, obrigado.",     fr: "C'est tout, merci.",          phon: "è TOU-dou, o-bri-GA-dou" }
+qa:
+  - question: { term: "Quanto custa?", fr: "Ça coûte combien ?", phon: "KOUAN-tou KOUCH-ta" }
+    answers:
+      - { term: "Custa um euro.",        fr: "Ça coûte un euro.",       phon: "KOUCH-ta oun ÉOU-rou" }
+      - { term: "Custam cinco euros.",   fr: "Ils coûtent cinq euros.", phon: "KOUCH-tan-ou SÏN-kou ÉOU-rouch" }
+      - { term: "É muito caro para mim.", fr: "C'est trop cher pour moi.", phon: "è MOUÏN-tou KA-rou pa-ra mïn" }
+  - question: { term: "O que deseja?", fr: "Vous désirez ?", phon: "ou ke de-ZÈ-ja" }
+    answers:
+      - { term: "Queria dois bolos, por favor.", fr: "Je voudrais deux gâteaux, s'il vous plaît.", phon: "ke-RI-a doïch BÔ-louch, pour fa-VOR" }
+      - { term: "Só estou a ver, obrigado.",     fr: "Je regarde seulement, merci.",  phon: "so chtô a vèr, o-bri-GA-dou" }
+  - question: { term: "Mais alguma coisa?", fr: "Autre chose ?", phon: "maïz al-GOU-ma KOÏ-za" }
+    answers:
+      - { term: "É tudo, obrigado.",       fr: "C'est tout, merci.",       phon: "è TOU-dou, o-bri-GA-dou" }
+      - { term: "Sim, também queria leite.", fr: "Oui, je voudrais aussi du lait.", phon: "sïn, tan-BÈÏN ke-RI-a LÈÏ-te" }
+notes_fr:
+  - "**Queria** (« je voudrais ») est la forme polie de *quero*. Dans un magasin, on l'emploie toujours : *quero* seul sonne brusque."
+  - "Une chose : *quanto **custa**?* Plusieurs : *quanto **custam**?* Même règle que *está / estão*."
+  - "Au Portugal on répond souvent *obrigado eu* (« merci à vous ») : le commerçant remercie aussi."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "La boutique du salon"
+    steps_fr:
+      - "Installez cinq objets sur un plateau avec des étiquettes de prix (1 à 5 euros)."
+      - "L'enfant achète : *queria a bola, por favor*. Vous répondez le prix."
+      - "Il paie avec des bouchons ou des pièces en carton."
+  - level: petits
+    type: jeu
+    title_fr: "Cher ou pas cher ?"
+    steps_fr:
+      - "Montrez deux objets. L'enfant dit lequel est *caro* et lequel est *barato*."
+      - "Il exagère avec la voix : *é muito caro!*"
+  - level: grands
+    type: exercice
+    title_fr: "La liste de courses"
+    steps_fr:
+      - "Écris une liste de six produits avec leur prix en euros."
+      - "Calcule le total et écris la phrase : *São ___ euros.*"
+  - level: grands
+    type: dialogue
+    title_fr: "Le client et le vendeur"
+    steps_fr:
+      - "Jouez la scène de la boulangerie en changeant les produits."
+      - "Le vendeur annonce un prix ; le client doit le répéter pour vérifier : *Três euros?*"
+      - "Puis inversez les rôles. Interdit de passer au français : on se dépanne avec *como se diz…?*"
+reemploi_fr:
+  - "Au marché ou à la boulangerie, l'enfant commande en portugais à voix haute pour lui-même avant de commander en français."
+  - "À la maison, un prix vu sur une étiquette se lit en portugais."

@@ -1,0 +1,102 @@
+id: 15-cidade
+order: 15
+year: 2
+title: "Na cidade"
+title_fr: "En ville"
+goal_fr: "Demander son chemin et comprendre la réponse."
+can_do_fr:
+  - "Je nomme les lieux de la ville."
+  - "Je demande où se trouve un endroit : *Onde fica…?*"
+  - "Je comprends *à direita*, *à esquerda*, *em frente*."
+  - "Je dis si c'est loin ou près."
+duration_min: 15
+dialogue:
+  title_fr: "Où est la pharmacie ?"
+  context_fr: "Ana et sa mère cherchent la pharmacie dans une ville qu'elles ne connaissent pas."
+  lines:
+    - { who: "Ana",     term: "Desculpe, onde fica a farmácia?",       fr: "Excusez-moi, où est la pharmacie ?",  phon: "desh-KOUL-pe, ON-de FI-ka a far-MA-sia" }
+    - { who: "Senhora", term: "Fica ali, ao lado do supermercado.",    fr: "Elle est là-bas, à côté du supermarché.", phon: "FI-ka a-LI, aou LA-dou dou sou-per-mer-KA-dou" }
+    - { who: "Ana",     term: "É longe daqui?",                        fr: "C'est loin d'ici ?",                  phon: "è LON-je da-KI" }
+    - { who: "Senhora", term: "Não, é muito perto. Cinco minutos.",    fr: "Non, c'est tout près. Cinq minutes.", phon: "nan-ou, è MOUÏN-tou PÈR-tou. SÏN-kou mi-NOU-touch" }
+    - { who: "Ana",     term: "E como é que vou?",                     fr: "Et comment j'y vais ?",               phon: "i KO-mou è ke vô" }
+    - { who: "Senhora", term: "Segue em frente e depois vira à direita.", fr: "Continuez tout droit puis tournez à droite.", phon: "SÈ-gue èïn FREN-te i de-POÏCH VI-ra a di-RÈÏ-ta" }
+    - { who: "Ana",     term: "Desculpe, não percebi. Outra vez, por favor?", fr: "Pardon, je n'ai pas compris. Encore une fois ?", phon: "desh-KOUL-pe, nan-ou per-se-BI. Ô-tra vech, pour fa-VOR" }
+    - { who: "Senhora", term: "Em frente… e à direita. Está bem?",     fr: "Tout droit… et à droite. D'accord ?", phon: "èïn FREN-te… i a di-RÈÏ-ta. chta bèïn" }
+    - { who: "Ana",     term: "Agora percebi. Muito obrigada!",        fr: "Maintenant j'ai compris. Merci beaucoup !", phon: "a-GO-ra per-se-BI. MOUÏN-tou o-bri-GA-da" }
+comprehension:
+  - q_fr: "Que cherche Ana ?"
+    a_fr: "La pharmacie — *a farmácia*."
+  - q_fr: "Où se trouve-t-elle ?"
+    a_fr: "À côté du supermarché, tout droit puis à droite."
+  - q_fr: "C'est loin ?"
+    a_fr: "Non : *é muito perto*, cinq minutes."
+  - q_fr: "Qu'est-ce qu'Ana fait quand elle ne comprend pas la direction ?"
+    a_fr: "Elle demande de répéter : *Não percebi. Outra vez, por favor?* — et cette fois la dame répète plus lentement."
+vocab:
+  - { term: "a rua",           fr: "la rue",           phon: "a RROU-a" }
+  - { term: "a praça",         fr: "la place",         phon: "a PRA-sa" }
+  - { term: "a loja",          fr: "le magasin",       phon: "a LO-ja" }
+  - { term: "o supermercado",  fr: "le supermarché",   phon: "ou sou-per-mer-KA-dou" }
+  - { term: "a farmácia",      fr: "la pharmacie",     phon: "a far-MA-sia" }
+  - { term: "a padaria",       fr: "la boulangerie",   phon: "a pa-da-RI-a" }
+  - { term: "o café",          fr: "le café",          phon: "ou ka-FÈ" }
+  - { term: "a paragem",       fr: "l'arrêt de bus",   phon: "a pa-RA-jèïn" }
+  - { term: "o autocarro",     fr: "le bus",           phon: "ou aou-to-KA-rrou" }
+  - { term: "a bicicleta",     fr: "le vélo",          phon: "a bi-si-KLÈ-ta" }
+  - { term: "perto",           fr: "près",             phon: "PÈR-tou" }
+  - { term: "longe",           fr: "loin",             phon: "LON-je" }
+phrases:
+  - { term: "Onde fica a padaria?",  fr: "Où est la boulangerie ?",  phon: "ON-de FI-ka a pa-da-RI-a" }
+  - { term: "Fica ali.",             fr: "C'est là-bas.",            phon: "FI-ka a-LI" }
+  - { term: "Vira à direita.",       fr: "Tourne à droite.",         phon: "VI-ra a di-RÈÏ-ta" }
+  - { term: "Vira à esquerda.",      fr: "Tourne à gauche.",         phon: "VI-ra a chKÈR-da" }
+  - { term: "Segue em frente.",      fr: "Continue tout droit.",     phon: "SÈ-gue èïn FREN-te" }
+  - { term: "É longe daqui?",        fr: "C'est loin d'ici ?",       phon: "è LON-je da-KI" }
+qa:
+  - question: { term: "Onde fica o supermercado?", fr: "Où est le supermarché ?", phon: "ON-de FI-ka ou sou-per-mer-KA-dou" }
+    answers:
+      - { term: "Fica ali, à direita.",     fr: "C'est là-bas, à droite.",     phon: "FI-ka a-LI, a di-RÈÏ-ta" }
+      - { term: "Fica perto da praça.",     fr: "C'est près de la place.",     phon: "FI-ka PÈR-tou da PRA-sa" }
+      - { term: "Desculpe, não sou daqui.", fr: "Désolé, je ne suis pas d'ici.", phon: "desh-KOUL-pe, nan-ou sô da-KI" }
+  - question: { term: "É perto ou é longe?", fr: "C'est près ou c'est loin ?", phon: "è PÈR-tou ô è LON-je" }
+    answers:
+      - { term: "É muito perto.",         fr: "C'est tout près.",        phon: "è MOUÏN-tou PÈR-tou" }
+      - { term: "É um bocado longe.",     fr: "C'est un peu loin.",      phon: "è oun bou-KA-dou LON-je" }
+  - question: { term: "Como vamos: a pé ou de autocarro?", fr: "On y va comment : à pied ou en bus ?", phon: "KO-mou VA-mouch: a pè ô de aou-to-KA-rrou" }
+    answers:
+      - { term: "Vamos a pé, é perto.",       fr: "On y va à pied, c'est près.",  phon: "VA-mouch a pè, è PÈR-tou" }
+      - { term: "Vamos de autocarro.",        fr: "On y va en bus.",              phon: "VA-mouch de aou-to-KA-rrou" }
+notes_fr:
+  - "**ficar** sert à dire où se trouve un lieu qui ne bouge pas : *a farmácia **fica** ali*. Pour une chose qu'on a posée, on garde *está*."
+  - "À un inconnu, on dit **desculpe** (vouvoiement) et pas *desculpa*. C'est la première différence de politesse du cours."
+  - "Trois directions suffisent pour se débrouiller : *em frente*, *à direita*, *à esquerda*."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Le robot téléguidé"
+    steps_fr:
+      - "L'enfant est un robot les yeux ouverts, vous le guidez dans le couloir."
+      - "*Em frente!*, *à direita!*, *à esquerda!*, *pára!* (stop)."
+      - "But : atteindre un objet caché. Puis c'est lui qui guide."
+  - level: petits
+    type: jeu
+    title_fr: "La ville en cubes"
+    steps_fr:
+      - "Construisez une rue avec des cubes : la boulangerie, le café, le parc."
+      - "Une petite figurine se promène, l'enfant annonce où elle va : *vai à padaria!*"
+  - level: grands
+    type: exercice
+    title_fr: "L'itinéraire écrit"
+    steps_fr:
+      - "Dessine le plan du quartier avec quatre lieux."
+      - "Écris l'itinéraire de la maison à l'école en trois phrases : *Segue em frente… vira à… é perto de…*"
+  - level: grands
+    type: dialogue
+    title_fr: "Le touriste perdu"
+    steps_fr:
+      - "Un joueur est un touriste portugais perdu, l'autre habite la ville."
+      - "Le touriste demande trois lieux différents avec *Desculpe, onde fica…?*"
+      - "Règle du jeu : au moins une fois, le touriste doit dire *não percebi* et faire répéter."
+reemploi_fr:
+  - "Dans la rue, cette semaine, nommer en portugais chaque commerce devant lequel on passe."
+  - "En voiture, annoncer les virages en portugais : *à direita!*, *em frente!*"

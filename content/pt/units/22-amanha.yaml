@@ -1,0 +1,98 @@
+id: 22-amanha
+order: 22
+year: 3
+title: "Amanhã"
+title_fr: "Demain"
+goal_fr: "Dire ce qu'on va faire et faire des projets."
+can_do_fr:
+  - "Je dis mes projets avec *vou* + verbe."
+  - "Je demande les projets de l'autre : *O que vais fazer?*"
+  - "Je dis que je ne suis pas sûr : *se calhar…*"
+  - "Je fixe un rendez-vous avec un jour et une heure."
+duration_min: 15
+dialogue:
+  title_fr: "Des projets pour demain"
+  context_fr: "Fin de journée. Les deux amis préparent le lendemain."
+  lines:
+    - { who: "Ana",   term: "O que vais fazer amanhã?",                fr: "Qu'est-ce que tu vas faire demain ?", phon: "ou ke vaïch fa-ZÈR a-ma-GNAN" }
+    - { who: "Tomás", term: "De manhã vou à escola, como sempre.",     fr: "Le matin je vais à l'école, comme toujours.", phon: "de ma-GNAN vô a chKO-la, KO-mou SEN-pre" }
+    - { who: "Ana",   term: "E à tarde? Vais fazer alguma coisa?",     fr: "Et l'après-midi ? Tu vas faire quelque chose ?", phon: "i a TAR-de? vaïch fa-ZÈR al-GOU-ma KOÏ-za" }
+    - { who: "Tomás", term: "Se calhar vou andar de bicicleta.",       fr: "Peut-être que je vais faire du vélo.", phon: "se ka-LIAR vô an-DAR de bi-si-KLÈ-ta" }
+    - { who: "Ana",   term: "Posso ir contigo? Também tenho bicicleta!", fr: "Je peux venir avec toi ? J'ai un vélo aussi !", phon: "PO-sou ir kon-TI-gou? tan-BÈÏN TÉ-gnou bi-si-KLÈ-ta" }
+    - { who: "Tomás", term: "Claro! A que horas nos encontramos?",     fr: "Bien sûr ! On se retrouve à quelle heure ?", phon: "KLA-rou! a ke O-rach nouz en-kon-TRA-mouch" }
+    - { who: "Ana",   term: "Às quatro, na praça. Combinado?",         fr: "À quatre heures, sur la place. Ça marche ?", phon: "ach KOUA-trou, na PRA-sa. kon-bi-NA-dou" }
+    - { who: "Tomás", term: "Combinado! Até amanhã!",                  fr: "Ça marche ! À demain !",              phon: "kon-bi-NA-dou! a-TÈ a-ma-GNAN" }
+comprehension:
+  - q_fr: "Que fait Tomás demain matin ?"
+    a_fr: "Il va à l'école, comme d'habitude."
+  - q_fr: "Et l'après-midi ?"
+    a_fr: "Peut-être du vélo — *se calhar vou andar de bicicleta*."
+  - q_fr: "Où et quand se retrouvent-ils ?"
+    a_fr: "Sur la place, à quatre heures."
+  - q_fr: "Quel mot marque que Tomás n'est pas encore sûr ?"
+    a_fr: "**Se calhar** — « peut-être », très fréquent au Portugal."
+vocab:
+  - { term: "amanhã",            fr: "demain",              phon: "a-ma-GNAN" }
+  - { term: "logo",              fr: "tout à l'heure",      phon: "LO-gou" }
+  - { term: "a próxima semana",  fr: "la semaine prochaine", phon: "a PRO-si-ma se-MA-na" }
+  - { term: "se calhar",         fr: "peut-être",           phon: "se ka-LIAR" }
+  - { term: "sempre",            fr: "toujours",            phon: "SEN-pre" }
+  - { term: "nunca",             fr: "jamais",              phon: "NOUN-ka" }
+  - { term: "vou",               fr: "je vais",             phon: "vô" }
+  - { term: "vais",              fr: "tu vas",              phon: "vaïch" }
+  - { term: "encontrar-se",      fr: "se retrouver",        phon: "en-kon-TRAR-se" }
+  - { term: "combinado",         fr: "entendu, ça marche",  phon: "kon-bi-NA-dou" }
+phrases:
+  - { term: "O que vais fazer amanhã?", fr: "Qu'est-ce que tu fais demain ?", phon: "ou ke vaïch fa-ZÈR a-ma-GNAN" }
+  - { term: "Vou jogar à bola.",        fr: "Je vais jouer au ballon.",       phon: "vô jou-GAR a BO-la" }
+  - { term: "Não vou fazer nada.",      fr: "Je ne vais rien faire.",         phon: "nan-ou vô fa-ZÈR NA-da" }
+  - { term: "A que horas nos encontramos?", fr: "On se retrouve à quelle heure ?", phon: "a ke O-rach nouz en-kon-TRA-mouch" }
+  - { term: "Até amanhã!",              fr: "À demain !",                     phon: "a-TÈ a-ma-GNAN" }
+  - { term: "Vamos ver.",               fr: "On verra.",                      phon: "VA-mouch vèr" }
+qa:
+  - question: { term: "O que vais fazer no fim de semana?", fr: "Qu'est-ce que tu vas faire ce week-end ?", phon: "ou ke vaïch fa-ZÈR nou fïn de se-MA-na" }
+    answers:
+      - { term: "Vou visitar os meus avós.",  fr: "Je vais aller voir mes grands-parents.", phon: "vô vi-zi-TAR ouch méouz a-VOCH" }
+      - { term: "Se calhar vou ao cinema.",   fr: "Peut-être que je vais au cinéma.",       phon: "se ka-LIAR vô aou si-NÉ-ma" }
+      - { term: "Ainda não sei. Vamos ver.",  fr: "Je ne sais pas encore. On verra.",       phon: "a-ÏN-da nan-ou sèï. VA-mouch vèr" }
+  - question: { term: "Queres vir comigo?", fr: "Tu veux venir avec moi ?", phon: "KÈ-rech vir kou-MI-gou" }
+    answers:
+      - { term: "Claro que sim!",             fr: "Bien sûr que oui !",       phon: "KLA-rou ke sïn" }
+      - { term: "Não posso, tenho de estudar.", fr: "Je ne peux pas, je dois travailler.", phon: "nan-ou PO-sou, TÉ-gnou de chtou-DAR" }
+  - question: { term: "A que horas nos encontramos?", fr: "On se retrouve à quelle heure ?", phon: "a ke O-rach nouz en-kon-TRA-mouch" }
+    answers:
+      - { term: "Às três, no parque.",        fr: "À trois heures, au parc.",  phon: "ach trèch, nou PAR-ke" }
+      - { term: "Depois do almoço.",          fr: "Après le déjeuner.",        phon: "de-POÏCH dou al-MÔ-sou" }
+notes_fr:
+  - "Le futur des enfants portugais, c'est **vou + verbe** : *vou comer*, *vou brincar*. Le vrai futur (*comerei*) n'est pas nécessaire avant longtemps."
+  - "**Se calhar** = peut-être, dans la langue de tous les jours au Portugal. Au Brésil on dirait *talvez*."
+  - "Les unités 21 et 22 sont jumelles : hier / demain. Alterner les deux dans le même échange est l'exercice le plus formateur."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "La boule de cristal"
+    steps_fr:
+      - "L'enfant regarde dans un bol renversé et annonce trois choses de demain : *vou comer…*, *vou brincar…*"
+      - "Le lendemain, on vérifie ensemble ce qui s'est vraiment passé."
+  - level: petits
+    type: jeu
+    title_fr: "Le rendez-vous des peluches"
+    steps_fr:
+      - "Deux peluches se donnent rendez-vous : *A que horas?* — *Às cinco!*"
+      - "L'enfant fait les deux voix. On termine toujours par *combinado!*"
+  - level: grands
+    type: exercice
+    title_fr: "Mon planning de demain"
+    steps_fr:
+      - "Écris cinq phrases avec *vou* + verbe, une par moment de la journée."
+      - "Ajoute *se calhar* devant les deux dont tu n'es pas sûr."
+  - level: grands
+    type: dialogue
+    title_fr: "Fixer un rendez-vous"
+    steps_fr:
+      - "Proposez-vous une activité pour demain, en portugais."
+      - "Il faut se mettre d'accord sur **trois choses** : quoi, où, à quelle heure."
+      - "On finit par *Combinado!* — et le lendemain, on raconte au passé (unité 21) si ça a été fait."
+reemploi_fr:
+  - "Le soir, avant le coucher : *O que vais fazer amanhã?* — trois phrases en portugais."
+  - "Toute organisation familiale de la semaine commence par une phrase en portugais : *Sábado vamos…*"

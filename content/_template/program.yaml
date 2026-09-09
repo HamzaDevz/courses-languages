@@ -1,0 +1,25 @@
+# GABARIT du programme annuel. Chaque unité citée doit exister dans units/.
+# Supprimer ce fichier si la langue n'a pas encore de programme : le reste
+# du cours fonctionne sans lui.
+intro_fr: >
+  En une phrase : combien d'années, combien d'unités, et le fil conducteur.
+rhythm_fr:
+  - { day_fr: "Lundi", what_fr: "**Le dialogue** : l'écouter deux fois sans lire.", min: 12 }
+cycle_fr:
+  - label_fr: "Semaine 1 — je comprends"
+    what_fr: "Écouter, comprendre l'ensemble, apprendre le vocabulaire."
+years:
+  - year: 1
+    label_fr: "Année 1 — …"
+    age_fr: "Pour qui, à quel niveau."
+    goal_fr: "Ce que l'enfant sait faire de nouveau à la fin de l'année."
+    can_do_fr:
+      - "Je sais …"
+    periods:
+      - label_fr: "Période 1 — …"
+        weeks_fr: "semaines 1 à 7"
+        units: [01-exemple]
+        focus_fr: "Ce qu'on travaille."
+        milestone_fr: "Le bilan de la période, en une phrase vérifiable."
+    evaluation_fr:
+      - "Comment vérifier, sans faire d'examen."

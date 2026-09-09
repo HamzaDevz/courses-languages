@@ -1,0 +1,101 @@
+id: 25-historia
+order: 25
+year: 3
+title: "Era uma vez"
+title_fr: "Il était une fois"
+goal_fr: "Raconter une histoire courte du début à la fin."
+can_do_fr:
+  - "Je raconte une histoire en six phrases, dans l'ordre."
+  - "J'utilise *era uma vez*, *um dia*, *de repente*, *no fim*."
+  - "Je relance celui qui raconte : *E depois?*"
+  - "Je réagis à une histoire : *que medo!*, *que engraçado!*"
+duration_min: 16
+dialogue:
+  title_fr: "Raconte-moi une histoire"
+  context_fr: "Le soir, avant de dormir. Ana raconte, son père relance."
+  lines:
+    - { who: "Ana", term: "Era uma vez uma menina que vivia na floresta.", fr: "Il était une fois une petite fille qui vivait dans la forêt.", phon: "È-ra OU-ma vech OU-ma me-NI-na ke vi-VI-a na flou-RÈCH-ta" }
+    - { who: "Pai", term: "E depois? O que aconteceu?",                 fr: "Et après ? Que s'est-il passé ?",     phon: "i de-POÏCH? ou ke a-kon-te-SÉOU" }
+    - { who: "Ana", term: "Um dia, ela foi passear e encontrou um lobo.", fr: "Un jour, elle est allée se promener et a rencontré un loup.", phon: "oun DI-a, È-la foï pa-se-AR i en-kon-TRÔ oun LÔ-bou" }
+    - { who: "Pai", term: "Que medo! E o que fez a menina?",            fr: "Quelle peur ! Et qu'a fait la petite fille ?", phon: "ke MÉ-dou! i ou ke fèch a me-NI-na" }
+    - { who: "Ana", term: "De repente, ela começou a cantar.",          fr: "Tout à coup, elle s'est mise à chanter.", phon: "de rre-PEN-te, È-la kou-me-SÔ a kan-TAR" }
+    - { who: "Pai", term: "A cantar? A sério? E o lobo?",               fr: "À chanter ? Sérieux ? Et le loup ?",  phon: "a kan-TAR? a SÈ-riou? i ou LÔ-bou" }
+    - { who: "Ana", term: "O lobo gostou tanto que ficaram amigos.",    fr: "Le loup a tellement aimé qu'ils sont devenus amis.", phon: "ou LÔ-bou gouch-TÔ TAN-tou ke fi-KA-ran-ou a-MI-gouch" }
+    - { who: "Pai", term: "Que engraçado! E no fim?",                   fr: "C'est drôle ! Et à la fin ?",         phon: "ke en-gra-SA-dou! i nou fïn" }
+    - { who: "Ana", term: "No fim, viveram felizes para sempre.",       fr: "À la fin, ils vécurent heureux pour toujours.", phon: "nou fïn, vi-VÈ-ran-ou fe-LI-zech pa-ra SEN-pre" }
+comprehension:
+  - q_fr: "Qui est le personnage principal, et où vit-il ?"
+    a_fr: "Une petite fille qui vit dans la forêt."
+  - q_fr: "Qui rencontre-t-elle ?"
+    a_fr: "Un loup — *um lobo*."
+  - q_fr: "Comment s'en sort-elle ?"
+    a_fr: "Elle se met à chanter : *começou a cantar*, et le loup adore."
+  - q_fr: "Quels mots le père utilise-t-il pour faire continuer l'histoire ?"
+    a_fr: "**E depois? O que aconteceu? E no fim?** — sans ces relances, l'histoire s'arrête à la deuxième phrase."
+vocab:
+  - { term: "era uma vez",   fr: "il était une fois",  phon: "È-ra OU-ma vech" }
+  - { term: "um dia",        fr: "un jour",            phon: "oun DI-a" }
+  - { term: "de repente",    fr: "tout à coup",        phon: "de rre-PEN-te" }
+  - { term: "no fim",        fr: "à la fin",           phon: "nou fïn" }
+  - { term: "a floresta",    fr: "la forêt",           phon: "a flou-RÈCH-ta" }
+  - { term: "o lobo",        fr: "le loup",            phon: "ou LÔ-bou" }
+  - { term: "o rei",         fr: "le roi",             phon: "ou rrèï" }
+  - { term: "a princesa",    fr: "la princesse",       phon: "a prïn-SÉ-za" }
+  - { term: "o castelo",     fr: "le château",         phon: "ou kach-TÈ-lou" }
+  - { term: "aconteceu",     fr: "il s'est passé",     phon: "a-kon-te-SÉOU" }
+  - { term: "encontrou",     fr: "il a rencontré",     phon: "en-kon-TRÔ" }
+  - { term: "felizes",       fr: "heureux (pluriel)",  phon: "fe-LI-zech" }
+phrases:
+  - { term: "Era uma vez um menino…", fr: "Il était une fois un garçon…",  phon: "È-ra OU-ma vech oun me-NI-nou" }
+  - { term: "E depois?",              fr: "Et après ?",                    phon: "i de-POÏCH" }
+  - { term: "O que aconteceu?",       fr: "Que s'est-il passé ?",          phon: "ou ke a-kon-te-SÉOU" }
+  - { term: "De repente, apareceu um lobo.", fr: "Tout à coup, un loup apparut.", phon: "de rre-PEN-te, a-pa-re-SÉOU oun LÔ-bou" }
+  - { term: "Que medo!",              fr: "Quelle peur !",                 phon: "ke MÉ-dou" }
+  - { term: "Viveram felizes para sempre.", fr: "Ils vécurent heureux pour toujours.", phon: "vi-VÈ-ran-ou fe-LI-zech pa-ra SEN-pre" }
+qa:
+  - question: { term: "Contas-me uma história?", fr: "Tu me racontes une histoire ?", phon: "KON-tach-me OU-ma ich-TO-ria" }
+    answers:
+      - { term: "Conto! Era uma vez um gato muito grande…", fr: "Oui ! Il était une fois un très grand chat…", phon: "KON-tou! È-ra OU-ma vech oun GA-tou MOUÏN-tou GRAN-de" }
+      - { term: "Agora não, estou cansado.", fr: "Pas maintenant, je suis fatigué.", phon: "a-GO-ra nan-ou, chtô kan-SA-dou" }
+  - question: { term: "E depois, o que aconteceu?", fr: "Et après, que s'est-il passé ?", phon: "i de-POÏCH, ou ke a-kon-te-SÉOU" }
+    answers:
+      - { term: "De repente, ouviu-se um barulho.", fr: "Tout à coup, on entendit un bruit.", phon: "de rre-PEN-te, ô-VIOU-se oun ba-ROU-liou" }
+      - { term: "Depois, foram todos para casa.",  fr: "Ensuite, ils rentrèrent tous chez eux.", phon: "de-POÏCH, FÔ-ran-ou TO-douch pa-ra KA-za" }
+  - question: { term: "Como acaba a história?", fr: "Comment finit l'histoire ?", phon: "KO-mou a-KA-ba a ich-TO-ria" }
+    answers:
+      - { term: "No fim, ficaram todos amigos.",   fr: "À la fin, ils devinrent tous amis.",  phon: "nou fïn, fi-KA-ran-ou TO-douch a-MI-gouch" }
+      - { term: "Acaba mal, infelizmente.",        fr: "Ça finit mal, malheureusement.",      phon: "a-KA-ba mal, ïn-fe-lich-MEN-te" }
+notes_fr:
+  - "Quatre balises suffisent pour tenir une histoire : **era uma vez… um dia… de repente… no fim**. On les apprend comme des panneaux de route."
+  - "Le passé des contes (*viveram*, *apareceu*) ne s'apprend pas par cœur : on le reconnaît, on l'imite. Produire *foi*, *fez*, *encontrou* suffit."
+  - "Celui qui écoute a un vrai travail : **relancer**. *E depois?* est la phrase la plus utile de l'unité."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "L'histoire à trois images"
+    steps_fr:
+      - "Trois images tirées au hasard (un animal, un lieu, un objet)."
+      - "Vous commencez : *Era uma vez…* L'enfant continue avec l'image suivante."
+      - "Il n'a pas besoin de phrases complètes : des mots suffisent, vous les remettez en phrase."
+  - level: petits
+    type: chanson
+    title_fr: "Era uma vez"
+    steps_fr:
+      - "Chantez *Era uma vez, era uma vez…* en frappant dans les mains."
+      - "À l'arrêt, l'enfant crie un personnage. On invente deux phrases dessus."
+  - level: grands
+    type: production
+    title_fr: "Mon conte en six phrases"
+    steps_fr:
+      - "Écris une histoire en six phrases, une par balise : *era uma vez*, *um dia*, *de repente*, *então*, *depois*, *no fim*."
+      - "Lis-la à voix haute à quelqu'un, sans t'arrêter."
+  - level: grands
+    type: dialogue
+    title_fr: "L'histoire à deux voix"
+    steps_fr:
+      - "L'un raconte une phrase, l'autre relance avec *E depois?* et ajoute la phrase suivante."
+      - "Interdit de dire un mot en français : on contourne avec *é uma coisa para…*"
+      - "L'histoire s'arrête quand quelqu'un dit *no fim*."
+reemploi_fr:
+  - "L'histoire du soir commence en portugais, même si elle continue en français : *Era uma vez…*"
+  - "Chaque fois qu'on raconte un événement de la journée, on place au moins *um dia* et *de repente*."

@@ -1,0 +1,112 @@
+id: 10-conversa
+order: 10
+year: 1
+title: "Vamos conversar!"
+title_fr: "On discute !"
+goal_fr: "Tenir seul une conversation de six répliques sur soi. Bilan de l'année 1."
+can_do_fr:
+  - "Je tiens un échange de six répliques sans aide."
+  - "Je relie mes phrases avec *e*, *mas*, *também*, *porque*."
+  - "Je relance la conversation avec *E tu?* et une question à moi."
+  - "Je dis que je n'ai pas compris au lieu de me taire."
+duration_min: 15
+dialogue:
+  title_fr: "La vraie conversation"
+  context_fr: "Tout ce qui a été appris cette année, dans une seule discussion. Le but de la semaine : la rejouer sans la fiche."
+  lines:
+    - { who: "Tomás", term: "Olá! Tudo bem?",                        fr: "Salut ! Ça va ?",                        phon: "o-LA! TOU-dou bèïn" }
+    - { who: "Ana",   term: "Tudo bem, obrigada. E tu?",             fr: "Ça va, merci. Et toi ?",                 phon: "TOU-dou bèïn, o-bri-GA-da. i TOU" }
+    - { who: "Tomás", term: "Estou bem. Quantos anos tens?",         fr: "Je vais bien. Quel âge as-tu ?",         phon: "chtô bèïn. KOUAN-touch A-nouch tèïnch" }
+    - { who: "Ana",   term: "Tenho sete anos. E tu?",                fr: "J'ai sept ans. Et toi ?",                phon: "TÉ-gnou SÈ-te A-nouch. i TOU" }
+    - { who: "Tomás", term: "Também tenho sete! Tens irmãos?",       fr: "Moi aussi j'ai sept ans ! Tu as des frères et sœurs ?", phon: "tan-BÈÏN TÉ-gnou SÈ-te! tèïnch ir-MAN-ouch" }
+    - { who: "Ana",   term: "Tenho um irmão, mas não tenho irmãs.",  fr: "J'ai un frère, mais je n'ai pas de sœurs.", phon: "TÉ-gnou oun ir-MAN-ou, mach nan-ou TÉ-gnou ir-MANCH" }
+    - { who: "Tomás", term: "Tens animais em casa?",                 fr: "Tu as des animaux à la maison ?",        phon: "tèïnch a-ni-MAÏCH èïn KA-za" }
+    - { who: "Ana",   term: "Tenho um cão preto. Chama-se Bolinha.", fr: "J'ai un chien noir. Il s'appelle Bolinha.", phon: "TÉ-gnou oun kan-ou PRÉ-tou. CHA-ma-se bou-LI-gna" }
+    - { who: "Tomás", term: "Que giro! Gostas de brincar com ele?",  fr: "Trop mignon ! Tu aimes jouer avec lui ?", phon: "ke JI-rou! GOCH-tach de brïn-KAR kon É-le" }
+    - { who: "Ana",   term: "Gosto muito, porque ele corre comigo.", fr: "J'aime beaucoup, parce qu'il court avec moi.", phon: "GOCH-tou MOUÏN-tou, pour-ke É-le KO-rre kou-MI-gou" }
+    - { who: "Tomás", term: "Desculpa, não percebi. Outra vez?",     fr: "Pardon, je n'ai pas compris. Encore une fois ?", phon: "desh-KOUL-pa, nan-ou per-se-BI. Ô-tra vech" }
+    - { who: "Ana",   term: "Ele corre comigo no parque!",           fr: "Il court avec moi au parc !",            phon: "É-le KO-rre kou-MI-gou nou PAR-ke" }
+    - { who: "Tomás", term: "Ah, agora percebi! Vamos brincar?",     fr: "Ah, maintenant j'ai compris ! On va jouer ?", phon: "a, a-GO-ra per-se-BI! VA-mouch brïn-KAR" }
+    - { who: "Ana",   term: "Vamos! Tenho fome, mas depois vamos.",  fr: "Allons-y ! J'ai faim, mais on y va après.", phon: "VA-mouch! TÉ-gnou FO-me, mach de-POÏCH VA-mouch" }
+comprehension:
+  - q_fr: "Quel âge ont les deux enfants ?"
+    a_fr: "Sept ans tous les deux — Tomás le dit avec **também**."
+  - q_fr: "Qu'est-ce qu'Ana a comme famille et comme animal ?"
+    a_fr: "Un frère, pas de sœurs, et un chien noir appelé Bolinha."
+  - q_fr: "Pourquoi Ana aime-t-elle jouer avec son chien ?"
+    a_fr: "**Porque ele corre comigo** — parce qu'il court avec elle. C'est le mot *porque* qui donne la raison."
+  - q_fr: "Que fait Tomás quand il n'a pas compris ?"
+    a_fr: "Il le dit ! *Desculpa, não percebi. Outra vez?* — c'est la phrase la plus importante de l'année."
+  - q_fr: "Combien de questions Ana pose-t-elle ? Et Tomás ?"
+    a_fr: "Ana relance deux fois avec *E tu?* ; Tomás pose quatre questions. Une conversation, c'est deux personnes qui demandent."
+vocab:
+  - { term: "e",        fr: "et",              phon: "i" }
+  - { term: "mas",      fr: "mais",            phon: "mach" }
+  - { term: "também",   fr: "aussi",           phon: "tan-BÈÏN" }
+  - { term: "porque",   fr: "parce que",       phon: "pour-KE" }
+  - { term: "então",    fr: "alors",           phon: "en-TAN-ou" }
+  - { term: "depois",   fr: "après, ensuite",  phon: "de-POÏCH" }
+  - { term: "agora",    fr: "maintenant",      phon: "a-GO-ra" }
+  - { term: "claro",    fr: "bien sûr",        phon: "KLA-rou" }
+phrases:
+  - { term: "E tu?",                fr: "Et toi ?",                      phon: "i TOU" }
+  - { term: "Não percebi.",         fr: "Je n'ai pas compris.",          phon: "nan-ou per-se-BI" }
+  - { term: "Outra vez, por favor.", fr: "Encore une fois, s'il te plaît.", phon: "Ô-tra vech, pour fa-VOR" }
+  - { term: "Agora percebi!",       fr: "Maintenant j'ai compris !",     phon: "a-GO-ra per-se-BI" }
+  - { term: "Que giro!",            fr: "Trop mignon ! / Génial !",      phon: "ke JI-rou" }
+  - { term: "Conta-me mais.",       fr: "Raconte-moi encore.",           phon: "KON-ta-me maïch" }
+qa:
+  - question: { term: "Fala-me de ti.", fr: "Parle-moi de toi.", phon: "FA-la-me de TI" }
+    answers:
+      - { term: "Chamo-me Léo, tenho oito anos e tenho um gato.", fr: "Je m'appelle Léo, j'ai huit ans et j'ai un chat.", phon: "CHA-mou-me Léo, TÉ-gnou OÏ-tou A-nouch i TÉ-gnou oun GA-tou" }
+      - { term: "Sou o Léo. Gosto de jogar à bola.", fr: "Je suis Léo. J'aime jouer au ballon.", phon: "sô ou Léo. GOCH-tou de jou-GAR a BO-la" }
+  - question: { term: "De que gostas mais?", fr: "Qu'est-ce que tu préfères ?", phon: "de ke GOCH-tach maïch" }
+    answers:
+      - { term: "Gosto mais de brincar no parque.", fr: "Je préfère jouer au parc.", phon: "GOCH-tou maïch de brïn-KAR nou PAR-ke" }
+      - { term: "Gosto de comer gelado, porque é bom!", fr: "J'aime manger de la glace, parce que c'est bon !", phon: "GOCH-tou de kou-MÈR je-LA-dou, pour-ke è bon" }
+  - question: { term: "Percebeste?", fr: "Tu as compris ?", phon: "per-se-BÈCH-te" }
+    answers:
+      - { term: "Sim, percebi tudo.",       fr: "Oui, j'ai tout compris.",      phon: "sïn, per-se-BI TOU-dou" }
+      - { term: "Não percebi. Outra vez, por favor.", fr: "Je n'ai pas compris. Encore une fois, s'il te plaît.", phon: "nan-ou per-se-BI. Ô-tra vech, pour fa-VOR" }
+      - { term: "Percebi mais ou menos.",   fr: "J'ai compris à peu près.",     phon: "per-se-BI maïz ou MÉ-nouch" }
+notes_fr:
+  - "**Une conversation, c'est deux personnes qui posent des questions.** Un enfant qui répond sans jamais demander ne discute pas encore. La règle de l'unité : après chaque réponse, ajouter *E tu?*"
+  - "**mas** relie deux idées opposées, **porque** donne la raison, **também** ajoute. Trois petits mots qui transforment des phrases isolées en discours."
+  - "Dire *não percebi* n'est pas un échec : c'est **la** compétence de l'année. Un enfant qui le dit reste dans la conversation ; un enfant qui se tait en sort."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Le micro"
+    steps_fr:
+      - "Prenez un objet en guise de micro. Celui qui l'a parle, les autres écoutent."
+      - "Trois questions seulement : *Como te chamas? Quantos anos tens? De que gostas?*"
+      - "L'enfant passe le micro et pose la même question à quelqu'un d'autre."
+  - level: petits
+    type: chanson
+    title_fr: "La chanson des six répliques"
+    steps_fr:
+      - "Chantez le dialogue sur un air connu, une réplique par mesure."
+      - "Le chant fixe le rythme et l'intonation mieux que la lecture."
+  - level: grands
+    type: production
+    title_fr: "Six répliques sans filet"
+    steps_fr:
+      - "Écris ta version du dialogue avec **tes** vraies réponses : ton âge, ta famille, ton animal."
+      - "Apprends-la, puis joue-la **sans regarder la feuille**."
+      - "Ajoute une question de ton choix à la fin."
+  - level: grands
+    type: dialogue
+    title_fr: "Le bilan de l'année"
+    steps_fr:
+      - "Un adulte pose au hasard cinq questions des unités 1 à 9."
+      - "L'enfant répond avec une phrase entière, pas un mot."
+      - "On compte : cinq réponses correctes = l'année 1 est tenue. Sinon, on reprend l'unité qui a manqué."
+  - level: grands
+    type: exercice
+    title_fr: "Relie tes phrases"
+    steps_fr:
+      - "Prends deux phrases simples : *Tenho um cão.* / *Gosto de correr.*"
+      - "Relie-les avec *e*, puis avec *mas*, puis avec *porque*. Lis les trois versions à voix haute."
+reemploi_fr:
+  - "Un repas par semaine devient **le repas portugais** : on ne dit que ce qu'on sait dire, et on se dépanne avec *não percebi*."
+  - "Appeler un proche lusophone (ou un ami) et tenir six répliques au téléphone."

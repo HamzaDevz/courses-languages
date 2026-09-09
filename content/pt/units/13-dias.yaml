@@ -1,0 +1,100 @@
+id: 13-dias
+order: 13
+year: 2
+title: "Os dias e as horas"
+title_fr: "Les jours et les heures"
+goal_fr: "Dire quel jour on est, quelle heure il est, et raconter sa journée."
+can_do_fr:
+  - "Je nomme les sept jours de la semaine."
+  - "Je réponds à *Que horas são?*"
+  - "Je raconte ma journée dans l'ordre avec *acordo*, *como*, *vou*."
+  - "Je dis quand quelque chose se passe : *às oito horas*."
+duration_min: 15
+dialogue:
+  title_fr: "Ta journée, elle ressemble à quoi ?"
+  context_fr: "Ana et Tomás comparent leurs journées pendant le goûter."
+  lines:
+    - { who: "Ana",   term: "Que dia é hoje?",                      fr: "On est quel jour aujourd'hui ?",     phon: "ke DI-a è ô-je" }
+    - { who: "Tomás", term: "Hoje é quarta-feira.",                 fr: "Aujourd'hui on est mercredi.",       phon: "ô-je è KOUAR-ta FÈÏ-ra" }
+    - { who: "Ana",   term: "A que horas acordas de manhã?",        fr: "À quelle heure tu te réveilles le matin ?", phon: "a ke O-rach a-KOR-dach de ma-GNAN" }
+    - { who: "Tomás", term: "Acordo às sete. E tu?",                fr: "Je me réveille à sept heures. Et toi ?", phon: "a-KOR-dou ach SÈ-te. i TOU" }
+    - { who: "Ana",   term: "Eu acordo às sete e meia. Depois tomo o pequeno-almoço.", fr: "Moi je me réveille à sept heures et demie. Ensuite je prends le petit-déjeuner.", phon: "éou a-KOR-dou ach SÈ-te i MÈÏ-a. de-POÏCH TO-mou ou pe-KÉ-nou al-MÔ-sou" }
+    - { who: "Tomás", term: "E a que horas vais para a escola?",    fr: "Et à quelle heure tu vas à l'école ?", phon: "i a ke O-rach vaïch pa-ra a chKO-la" }
+    - { who: "Ana",   term: "Às oito e meia. Que horas são agora?", fr: "À huit heures et demie. Il est quelle heure, là ?", phon: "ach OÏ-tou i MÈÏ-a. ke O-rach san-ou a-GO-ra" }
+    - { who: "Tomás", term: "São quatro horas. Ainda temos tempo!",  fr: "Il est quatre heures. On a encore le temps !", phon: "san-ou KOUA-trou O-rach. a-ÏN-da TÉ-mouch TEN-pou" }
+comprehension:
+  - q_fr: "Quel jour de la semaine sont-ils ?"
+    a_fr: "Mercredi — *quarta-feira*."
+  - q_fr: "À quelle heure se lève chacun ?"
+    a_fr: "Tomás à 7 h (*às sete*), Ana à 7 h 30 (*às sete e meia*)."
+  - q_fr: "Que fait Ana après s'être levée ?"
+    a_fr: "Elle prend le petit-déjeuner : *tomo o pequeno-almoço*."
+  - q_fr: "Quelle heure est-il pendant la conversation ?"
+    a_fr: "Quatre heures — *são quatro horas*."
+vocab:
+  - { term: "segunda-feira", fr: "lundi",         phon: "se-GOUN-da FÈÏ-ra" }
+  - { term: "terça-feira",   fr: "mardi",         phon: "TÈR-sa FÈÏ-ra" }
+  - { term: "quarta-feira",  fr: "mercredi",      phon: "KOUAR-ta FÈÏ-ra" }
+  - { term: "quinta-feira",  fr: "jeudi",         phon: "KÏN-ta FÈÏ-ra" }
+  - { term: "sexta-feira",   fr: "vendredi",      phon: "SÈCH-ta FÈÏ-ra" }
+  - { term: "sábado",        fr: "samedi",        phon: "SA-ba-dou" }
+  - { term: "domingo",       fr: "dimanche",      phon: "dou-MÏN-gou" }
+  - { term: "hoje",          fr: "aujourd'hui",   phon: "ô-je" }
+  - { term: "amanhã",        fr: "demain",        phon: "a-ma-GNAN" }
+  - { term: "a manhã",       fr: "le matin",      phon: "a ma-GNAN" }
+  - { term: "a tarde",       fr: "l'après-midi",  phon: "a TAR-de" }
+  - { term: "a noite",       fr: "la nuit, le soir", phon: "a NOÏ-te" }
+phrases:
+  - { term: "Que dia é hoje?",       fr: "On est quel jour ?",        phon: "ke DI-a è ô-je" }
+  - { term: "Hoje é sábado.",        fr: "Aujourd'hui on est samedi.", phon: "ô-je è SA-ba-dou" }
+  - { term: "Que horas são?",        fr: "Quelle heure est-il ?",     phon: "ke O-rach san-ou" }
+  - { term: "São três horas.",       fr: "Il est trois heures.",      phon: "san-ou trèch O-rach" }
+  - { term: "É uma hora.",           fr: "Il est une heure.",         phon: "è OU-ma O-ra" }
+  - { term: "Acordo às sete horas.", fr: "Je me réveille à sept heures.", phon: "a-KOR-dou ach SÈ-te O-rach" }
+qa:
+  - question: { term: "Que dia é hoje?", fr: "On est quel jour ?", phon: "ke DI-a è ô-je" }
+    answers:
+      - { term: "Hoje é segunda-feira.", fr: "On est lundi.",  phon: "ô-je è se-GOUN-da FÈÏ-ra" }
+      - { term: "Hoje é domingo!",       fr: "On est dimanche !", phon: "ô-je è dou-MÏN-gou" }
+  - question: { term: "A que horas acordas?", fr: "À quelle heure te lèves-tu ?", phon: "a ke O-rach a-KOR-dach" }
+    answers:
+      - { term: "Acordo às sete.",        fr: "Je me lève à sept heures.",     phon: "a-KOR-dou ach SÈ-te" }
+      - { term: "Acordo às oito e meia.", fr: "Je me lève à huit heures et demie.", phon: "a-KOR-dou ach OÏ-tou i MÈÏ-a" }
+  - question: { term: "O que fazes ao sábado?", fr: "Qu'est-ce que tu fais le samedi ?", phon: "ou ke FA-zech aou SA-ba-dou" }
+    answers:
+      - { term: "Ao sábado vou ao parque.", fr: "Le samedi je vais au parc.",  phon: "aou SA-ba-dou vô aou PAR-ke" }
+      - { term: "Fico em casa a brincar.",  fr: "Je reste à la maison à jouer.", phon: "FI-kou èïn KA-za a brïn-KAR" }
+notes_fr:
+  - "Cinq jours sur sept se terminent par **-feira**, et lundi est le *deuxième* jour : *segunda* (2e), *terça* (3e), *quarta* (4e)… Le dimanche, lui, est *domingo*."
+  - "L'heure se dit au pluriel — **são** três horas — sauf une heure : **é** uma hora."
+  - "**às** + heure pour dire quand : *às oito*, *às três e meia*. C'est la contraction de *a + as*."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "La semaine en sept sauts"
+    steps_fr:
+      - "Sept feuilles au sol, une par jour, dans l'ordre."
+      - "L'enfant saute de l'une à l'autre en criant le nom du jour."
+      - "Puis vous dites un jour : il saute directement dessus."
+  - level: petits
+    type: jeu
+    title_fr: "L'horloge du corps"
+    steps_fr:
+      - "Les bras font les aiguilles. Vous annoncez *são três horas!*"
+      - "L'enfant place ses bras. Puis il annonce et vous jouez l'horloge."
+  - level: grands
+    type: exercice
+    title_fr: "Mon emploi du temps"
+    steps_fr:
+      - "Écris ta journée d'école dans l'ordre : cinq lignes, chacune avec une heure."
+      - "Utilise *acordo*, *tomo o pequeno-almoço*, *vou para a escola*, *almoço*, *deito-me*."
+  - level: grands
+    type: dialogue
+    title_fr: "L'interview de la journée"
+    steps_fr:
+      - "Pose cinq questions commençant par *A que horas…?*"
+      - "Ton camarade répond, puis pose les mêmes questions."
+      - "À la fin, chacun raconte la journée de l'autre : *Ele acorda às sete…*"
+reemploi_fr:
+  - "Chaque matin : *Que dia é hoje?* — la réponse en portugais avant toute autre chose."
+  - "Demander l'heure en portugais chaque fois qu'on la demande vraiment."

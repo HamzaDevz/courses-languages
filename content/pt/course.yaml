@@ -19,3 +19,48 @@ levels:
   - id: grands
     label_fr: 7-10 ans
     desc_fr: Lecteurs. Fiches, écriture, petits dialogues, premières règles.
+
+# Voix utilisées par scripts/audio.py pour produire les enregistrements réels.
+# Deux voix : les dialogues sonnent alors comme une vraie discussion à deux.
+voices:
+  f: pt-PT-RaquelNeural
+  m: pt-PT-DuarteNeural
+speech_rate: "-10%"     # un peu plus lent qu'un adulte pressé, pas ralenti
+
+# La boîte à outils : elle ne s'apprend pas dans une unité, elle sert toute
+# l'année. C'est ce qui permet à l'enfant de RESTER dans la discussion au lieu
+# de se taire dès qu'il ne comprend pas.
+toolkit:
+  - title_fr: "Quand je n'ai pas compris"
+    intro_fr: "Les cinq phrases les plus utiles du cours. À savoir par cœur avant tout le reste."
+    items:
+      - { term: "Não percebi.",            fr: "Je n'ai pas compris.",        phon: "nan-ou per-se-BI" }
+      - { term: "Outra vez, por favor.",   fr: "Encore une fois, s'il te plaît.", phon: "Ô-tra vech, pour fa-VOR" }
+      - { term: "Mais devagar, por favor.", fr: "Plus lentement, s'il te plaît.", phon: "maïch de-va-GAR, pour fa-VOR" }
+      - { term: "Podes repetir?",          fr: "Tu peux répéter ?",           phon: "PO-desh re-pe-TIR" }
+      - { term: "O que é isso?",           fr: "C'est quoi, ça ?",            phon: "ou ke è I-sou" }
+  - title_fr: "Quand je ne trouve pas le mot"
+    intro_fr: "Ne jamais s'arrêter parce qu'un mot manque : on le contourne."
+    items:
+      - { term: "Como se diz… em português?", fr: "Comment on dit… en portugais ?", phon: "KO-mou se dich… èïn pour-tou-GUÊCH" }
+      - { term: "Não sei.",                fr: "Je ne sais pas.",             phon: "nan-ou SÈÏ" }
+      - { term: "Esqueci-me.",             fr: "J'ai oublié.",                phon: "chke-SI-me" }
+      - { term: "É uma coisa para comer.", fr: "C'est une chose pour manger.", phon: "è OU-ma KOÏ-za pa-ra ke-MÈR" }
+      - { term: "Espera um bocadinho.",    fr: "Attends un petit peu.",       phon: "chPÈ-ra oun bou-ka-DI-gnou" }
+  - title_fr: "Pour relancer la discussion"
+    intro_fr: "Répondre, c'est bien. Renvoyer la question, c'est une conversation."
+    items:
+      - { term: "E tu?",                   fr: "Et toi ?",                    phon: "i TOU" }
+      - { term: "Também.",                 fr: "Moi aussi.",                  phon: "tan-BÈÏN" }
+      - { term: "A sério?",                fr: "C'est vrai ? / Sérieux ?",    phon: "a SÈ-riou" }
+      - { term: "Que fixe!",               fr: "Génial !",                    phon: "ke FICH" }
+      - { term: "Acho que sim.",           fr: "Je crois que oui.",           phon: "A-chou ke sïn" }
+      - { term: "Não faço ideia.",         fr: "Aucune idée.",                phon: "nan-ou FA-sou i-DÈ-ia" }
+  - title_fr: "Pour être poli"
+    intro_fr: "Ces mots-là sortent du cours et entrent dans la vraie vie dès la première semaine."
+    items:
+      - { term: "Por favor.",              fr: "S'il te plaît.",              phon: "pour fa-VOR" }
+      - { term: "Obrigado / Obrigada.",    fr: "Merci (garçon / fille).",     phon: "o-bri-GA-dou / o-bri-GA-da" }
+      - { term: "Desculpa.",               fr: "Pardon. / Désolé.",           phon: "desh-KOUL-pa" }
+      - { term: "Com licença.",            fr: "Excuse-moi (pour passer).",   phon: "kon li-SEN-sa" }
+      - { term: "Posso?",                  fr: "Je peux ?",                   phon: "PO-sou" }

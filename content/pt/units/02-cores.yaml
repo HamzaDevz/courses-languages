@@ -55,3 +55,38 @@ activities:
     steps_fr:
       - "Dessine un arc-en-ciel et écris le nom de chaque couleur en portugais."
       - "Écris ensuite : *A minha cor preferida é ______ .*"
+year: 1
+dialogue:
+  title_fr: "Quel est ton crayon ?"
+  context_fr: "Ana et Tomás rangent la boîte de crayons de couleur."
+  lines:
+    - { who: "Ana",   term: "Tomás, de que cor é o teu lápis?", fr: "Tomás, de quelle couleur est ton crayon ?", phon: "tou-MACH, de ke kor è ou téou LA-pich" }
+    - { who: "Tomás", term: "O meu lápis é azul. E o teu?",     fr: "Mon crayon est bleu. Et le tien ?",         phon: "ou méou LA-pich è a-ZOUL. i ou TÉOU" }
+    - { who: "Ana",   term: "O meu é vermelho.",                fr: "Le mien est rouge.",                         phon: "ou méou è ver-MÉ-liou" }
+    - { who: "Tomás", term: "Qual é a tua cor preferida?",      fr: "Quelle est ta couleur préférée ?",           phon: "koual è a TOU-a kor pre-fe-RI-da" }
+    - { who: "Ana",   term: "A minha cor preferida é o verde.", fr: "Ma couleur préférée est le vert.",           phon: "a MI-gna kor pre-fe-RI-da è ou VÈR-de" }
+    - { who: "Tomás", term: "A sério? A minha é o amarelo.",    fr: "Ah bon ? La mienne, c'est le jaune.",        phon: "a SÈ-riou? a MI-gna è ou a-ma-RÈ-lou" }
+comprehension:
+  - q_fr: "De quelle couleur est le crayon de Tomás ?"
+    a_fr: "Bleu — *azul*."
+  - q_fr: "Quelle est la couleur préférée d'Ana ? Et celle de Tomás ?"
+    a_fr: "Ana : le vert (*verde*). Tomás : le jaune (*amarelo*)."
+  - q_fr: "Quelle question Tomás pose-t-il pour relancer la discussion ?"
+    a_fr: "**Qual é a tua cor preferida?** — et avant cela, le très pratique *E o teu?* (et le tien ?)."
+qa:
+  - question: { term: "De que cor é?", fr: "De quelle couleur c'est ?", phon: "de ke kor è" }
+    answers:
+      - { term: "É azul.",     fr: "C'est bleu.",     phon: "è a-ZOUL" }
+      - { term: "É vermelho.", fr: "C'est rouge.",    phon: "è ver-MÉ-liou" }
+      - { term: "É branco.",   fr: "C'est blanc.",    phon: "è BRAN-kou" }
+  - question: { term: "Qual é a tua cor preferida?", fr: "Quelle est ta couleur préférée ?", phon: "koual è a TOU-a kor pre-fe-RI-da" }
+    answers:
+      - { term: "A minha cor preferida é o verde.", fr: "Ma couleur préférée est le vert.", phon: "a MI-gna kor pre-fe-RI-da è ou VÈR-de" }
+      - { term: "Gosto de azul.",                   fr: "J'aime le bleu.",                  phon: "GOCH-tou de a-ZOUL" }
+  - question: { term: "Gostas desta cor?", fr: "Tu aimes cette couleur ?", phon: "GOCH-tach DÈCH-ta kor" }
+    answers:
+      - { term: "Sim, gosto muito.", fr: "Oui, j'aime beaucoup.", phon: "sïn, GOCH-tou MOUÏN-tou" }
+      - { term: "Não, não gosto.",   fr: "Non, je n'aime pas.",   phon: "nan-ou, nan-ou GOCH-tou" }
+reemploi_fr:
+  - "Au moment de s'habiller, demander chaque matin : *De que cor é a tua camisola?* (de quelle couleur est ton pull ?)."
+  - "Dans la voiture : compter les voitures *vermelhas* qu'on croise."

@@ -1,0 +1,102 @@
+id: 07-corpo
+order: 7
+year: 1
+title: "O corpo"
+title_fr: "Le corps"
+goal_fr: "Nommer son corps et dire où on a mal."
+can_do_fr:
+  - "Je nomme les parties de mon corps."
+  - "Je dis où j'ai mal : *dói-me a cabeça*."
+  - "Je réponds quand on me demande ce que j'ai."
+  - "Je dis que j'ai froid, chaud, sommeil."
+duration_min: 13
+dialogue:
+  title_fr: "Qu'est-ce que tu as ?"
+  context_fr: "Ana s'assoit dans un coin de la cour. Tomás vient la voir."
+  lines:
+    - { who: "Tomás", term: "Ana, o que tens?",                fr: "Ana, qu'est-ce que tu as ?",        phon: "A-na, ou ke tèïnch" }
+    - { who: "Ana",   term: "Dói-me a cabeça.",                fr: "J'ai mal à la tête.",               phon: "DOÏ-me a ka-BÉ-sa" }
+    - { who: "Tomás", term: "Só a cabeça? Não te dói mais nada?", fr: "Seulement la tête ? Rien d'autre ?", phon: "so a ka-BÉ-sa? nan-ou te DOÏ maïch NA-da" }
+    - { who: "Ana",   term: "Também me doem os pés.",          fr: "J'ai mal aux pieds aussi.",         phon: "tan-BÈÏN me DOÏN-èïn ouch pèch" }
+    - { who: "Tomás", term: "Estás cansada?",                  fr: "Tu es fatiguée ?",                  phon: "chTACH kan-SA-da" }
+    - { who: "Ana",   term: "Sim, e tenho frio.",              fr: "Oui, et j'ai froid.",               phon: "sïn, i TÉ-gnou FRI-ou" }
+    - { who: "Tomás", term: "Vamos falar com a professora.",   fr: "Allons parler à la maîtresse.",     phon: "VA-mouch fa-LAR kon a prou-fe-SÔ-ra" }
+    - { who: "Ana",   term: "Está bem. Obrigada, Tomás.",      fr: "D'accord. Merci, Tomás.",           phon: "chta bèïn. o-bri-GA-da, tou-MACH" }
+comprehension:
+  - q_fr: "Où Ana a-t-elle mal ?"
+    a_fr: "À la tête (*a cabeça*) et aux pieds (*os pés*)."
+  - q_fr: "Comment se sent-elle, à part la douleur ?"
+    a_fr: "Fatiguée (*cansada*) et elle a froid (*tenho frio*)."
+  - q_fr: "Que propose Tomás ?"
+    a_fr: "D'aller parler à la maîtresse : *Vamos falar com a professora.*"
+  - q_fr: "Pourquoi Ana dit-elle *doem-me os pés* et pas *dói-me* ?"
+    a_fr: "Parce qu'il y a **deux** pieds : le verbe se met au pluriel, comme en français « ils me font mal »."
+vocab:
+  - { term: "a cabeça",   fr: "la tête",       phon: "a ka-BÉ-sa" }
+  - { term: "a cara",     fr: "le visage",     phon: "a KA-ra" }
+  - { term: "os olhos",   fr: "les yeux",      phon: "ouz O-liouch" }
+  - { term: "o nariz",    fr: "le nez",        phon: "ou na-RICH" }
+  - { term: "a boca",     fr: "la bouche",     phon: "a BÔ-ka" }
+  - { term: "as orelhas", fr: "les oreilles",  phon: "az o-RÈ-liach" }
+  - { term: "a mão",      fr: "la main",       phon: "a man-ou" }
+  - { term: "o pé",       fr: "le pied",       phon: "ou pè" }
+  - { term: "o braço",    fr: "le bras",       phon: "ou BRA-sou" }
+  - { term: "a perna",    fr: "la jambe",      phon: "a PÈR-na" }
+  - { term: "a barriga",  fr: "le ventre",     phon: "a ba-RRI-ga" }
+  - { term: "os dentes",  fr: "les dents",     phon: "ouch DEN-tech" }
+phrases:
+  - { term: "Dói-me a cabeça.",  fr: "J'ai mal à la tête.",   phon: "DOÏ-me a ka-BÉ-sa" }
+  - { term: "Onde te dói?",      fr: "Où as-tu mal ?",        phon: "ON-de te DOÏ" }
+  - { term: "Tenho frio.",       fr: "J'ai froid.",           phon: "TÉ-gnou FRI-ou" }
+  - { term: "Tenho calor.",      fr: "J'ai chaud.",           phon: "TÉ-gnou ka-LOR" }
+  - { term: "Tenho sono.",       fr: "J'ai sommeil.",         phon: "TÉ-gnou SO-nou" }
+  - { term: "Estou cansado.",    fr: "Je suis fatigué.",      phon: "chtô kan-SA-dou" }
+qa:
+  - question: { term: "O que tens?", fr: "Qu'est-ce que tu as ?", phon: "ou ke tèïnch" }
+    answers:
+      - { term: "Dói-me a barriga.", fr: "J'ai mal au ventre.", phon: "DOÏ-me a ba-RRI-ga" }
+      - { term: "Estou cansado.",    fr: "Je suis fatigué.",     phon: "chtô kan-SA-dou" }
+      - { term: "Não tenho nada.",   fr: "Je n'ai rien.",        phon: "nan-ou TÉ-gnou NA-da" }
+  - question: { term: "Onde te dói?", fr: "Où as-tu mal ?", phon: "ON-de te DOÏ" }
+    answers:
+      - { term: "Dói-me aqui.",      fr: "J'ai mal ici.",        phon: "DOÏ-me a-KI" }
+      - { term: "Doem-me os dentes.", fr: "J'ai mal aux dents.", phon: "DOÏN-èïn ouch DEN-tech" }
+  - question: { term: "Tens frio ou calor?", fr: "Tu as froid ou chaud ?", phon: "tèïnch FRI-ou ô ka-LOR" }
+    answers:
+      - { term: "Tenho frio.",  fr: "J'ai froid.", phon: "TÉ-gnou FRI-ou" }
+      - { term: "Tenho calor.", fr: "J'ai chaud.", phon: "TÉ-gnou ka-LOR" }
+      - { term: "Estou bem assim.", fr: "Je suis bien comme ça.", phon: "chtô bèïn a-SÏN" }
+notes_fr:
+  - "**Dói-me a cabeça** se dit mot à mot « me fait mal la tête ». Avec deux choses, le verbe change : *doem-me os pés*."
+  - "Les parties du corps prennent **o** ou **a**, jamais *mon* / *ma* : on dit *dói-me **a** cabeça*, pas « ma tête »."
+  - "**Tenho frio / calor / sono / fome** : le portugais utilise *avoir* là où le français aussi. Mais *estou cansado* utilise *être*."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Jacques a dit, version portugaise"
+    steps_fr:
+      - "Dites *toca no nariz!* (touche le nez), *toca nas orelhas!*, *toca nos pés!*"
+      - "L'enfant touche la bonne partie. On accélère petit à petit."
+      - "Quand il gagne, c'est lui qui donne les ordres."
+  - level: petits
+    type: chanson
+    title_fr: "Cabeça, ombros, joelhos e pés"
+    steps_fr:
+      - "Sur l'air de « Tête, épaules, genoux et pieds » : *Cabeça, ombros, joelhos e pés*."
+      - "On chante trois fois, de plus en plus vite, en montrant."
+  - level: grands
+    type: exercice
+    title_fr: "Le bonhomme à étiqueter"
+    steps_fr:
+      - "Dessine un bonhomme et écris six mots au bon endroit, avec *o* ou *a* devant."
+      - "Vérifie l'article dans le tableau : *o nariz* mais *a boca*."
+  - level: grands
+    type: dialogue
+    title_fr: "Chez l'infirmière"
+    steps_fr:
+      - "Un joueur est l'infirmière : il demande *O que tens?* puis *Onde te dói?*"
+      - "L'autre choisit en secret une partie du corps et répond sans la montrer."
+      - "L'infirmière doit deviner et pointer la bonne partie. Puis on échange."
+reemploi_fr:
+  - "Au moindre bobo de la semaine, la question devient portugaise : *Onde te dói?*"
+  - "Le soir, avant le lit : *Tens sono?* — l'enfant répond en portugais."
