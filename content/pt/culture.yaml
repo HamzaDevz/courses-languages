@@ -1,0 +1,196 @@
+title_fr: "Le passeport culturel"
+intro_fr: >
+  Une langue sans son pays reste un exercice. Voici **douze escales** dans le
+  monde qui parle portugais : une chose à voir, une à goûter, une à écouter, une
+  histoire — et surtout **une mission**, à faire pour de vrai. On tamponne le
+  passeport quand la mission est faite, jamais quand l'escale est seulement lue.
+  Une escale par mois environ, dans l'ordre qu'on veut.
+
+escales:
+  - label_fr: "Lisboa — la ville aux sept collines"
+    when_fr: "Année 1, période 1"
+    intro_fr: >
+      La capitale, tout en montées, en tramways jaunes et en carreaux bleus.
+    see_fr: "Le **elétrico 28**, ce vieux tramway jaune qui grimpe dans les ruelles ; la **Torre de Belém** au bord du fleuve Tage (*o Tejo*)."
+    taste_fr: "Le **pastel de nata**, le petit flan à la cannelle qu'on mange tiède, saupoudré de cannelle (*canela*) et de sucre en poudre."
+    listen_fr: "Le bruit du tramway et le mot **saudade**, qui n'a pas de traduction en français."
+    know_fr: "Lisbonne a été détruite par un tremblement de terre en 1755 : tout le centre, la **Baixa**, a été reconstruit d'un coup, en lignes droites."
+    words:
+      - { term: "a cidade",      fr: "la ville",       phon: "a si-DA-de" }
+      - { term: "o elétrico",    fr: "le tramway",     phon: "ou i-LÈ-tri-kou" }
+      - { term: "o rio",         fr: "le fleuve",      phon: "ou RRI-ou" }
+      - { term: "o pastel de nata", fr: "le flan portugais", phon: "ou pach-TÈL de NA-ta" }
+    mission_fr: "Manger un *pastel de nata* et le commander soi-même en portugais : *Queria um pastel de nata, por favor.*"
+
+  - label_fr: "O galo de Barcelos — le coq qui a sauvé un innocent"
+    when_fr: "Année 1, période 2"
+    intro_fr: >
+      Le coq noir à pois colorés qu'on voit partout au Portugal vient d'une légende.
+    story_fr: >
+      Un pèlerin de passage à Barcelos fut accusé d'un vol qu'il n'avait pas commis
+      et condamné à être pendu. Devant le juge qui s'apprêtait à dîner d'un coq
+      rôti, il jura : « si je suis innocent, ce coq se lèvera et chantera ». Le coq
+      se leva et chanta. Le pèlerin fut libéré. **Depuis, le coq est le symbole du
+      Portugal** — celui de l'honnêteté qui finit par être reconnue.
+    see_fr: "Le **galo de Barcelos** en céramique, noir avec un cœur rouge et des pois de toutes les couleurs."
+    words:
+      - { term: "o galo",     fr: "le coq",        phon: "ou GA-lou" }
+      - { term: "a lenda",    fr: "la légende",    phon: "a LEN-da" }
+      - { term: "cantar",     fr: "chanter",       phon: "kan-TAR" }
+      - { term: "a verdade",  fr: "la vérité",     phon: "a ver-DA-de" }
+    mission_fr: "Peindre ou dessiner son propre *galo*, puis raconter la légende en trois phrases — en portugais pour les grands, avec les mains pour les petits."
+
+  - label_fr: "Os azulejos — la ville en carreaux bleus"
+    when_fr: "Année 1, période 3"
+    intro_fr: >
+      Au Portugal, les murs racontent des histoires : églises, gares, maisons
+      entières sont couvertes de carreaux peints.
+    see_fr: "La gare **São Bento** à Porto, dont le hall entier est un tableau en azulejos ; et la **calçada portuguesa**, ces trottoirs en petits pavés blancs et noirs qui dessinent des vagues."
+    know_fr: "Le mot *azulejo* ne vient pas de *azul* (bleu) mais de l'arabe **az-zulayj**, « petite pierre polie » : huit siècles d'histoire dans un seul mot."
+    words:
+      - { term: "o azulejo",   fr: "le carreau de faïence", phon: "ou a-zou-LÉ-jou" }
+      - { term: "a parede",    fr: "le mur",                phon: "a pa-RÉ-de" }
+      - { term: "azul",        fr: "bleu",                  phon: "a-ZOUL" }
+      - { term: "desenhar",    fr: "dessiner",              phon: "de-ze-GNAR" }
+    mission_fr: "Fabriquer son azulejo : un carré de papier blanc, un motif au feutre bleu uniquement. En coller quatre côte à côte pour voir le dessin apparaître — c'est exactement le principe."
+
+  - label_fr: "O fado — la musique de la saudade"
+    when_fr: "Année 1, période 4"
+    intro_fr: >
+      Une voix, une guitare classique, une **guitarra portuguesa** en forme de
+      poire au son métallique. On chante l'amour, la mer, la ville, le manque.
+    listen_fr: "**Amália Rodrigues**, la voix la plus célèbre du fado. Écouter deux minutes suffit : on n'a pas besoin de comprendre les mots pour sentir de quoi ça parle."
+    know_fr: "Le fado est inscrit au patrimoine culturel immatériel de l'UNESCO. À Coimbra, il est chanté par les étudiants, en cape noire, et se claque des mains différemment qu'à Lisbonne."
+    words:
+      - { term: "a música",   fr: "la musique",   phon: "a MOU-zi-ka" }
+      - { term: "a voz",      fr: "la voix",      phon: "a voch" }
+      - { term: "a guitarra", fr: "la guitare",   phon: "a gui-TA-rra" }
+      - { term: "a saudade",  fr: "le manque de ce qu'on aime", phon: "a saou-DA-de" }
+    mission_fr: "Écouter un fado en entier, les yeux fermés, puis dire en portugais comment on se sent : *estou triste*, *estou calmo*, *gosto* ou *não gosto*. Il n'y a pas de mauvaise réponse."
+
+  - label_fr: "O Porto — le pont, le fleuve et la francesinha"
+    when_fr: "Année 1, période 5"
+    intro_fr: >
+      La deuxième ville du pays, au nord, sur le fleuve **Douro**. On y parle avec
+      un accent bien à soi, et on y mange fort.
+    see_fr: "Le pont **Dom Luís I**, tout en fer, à deux étages ; les bateaux *rabelos* qui descendaient le fleuve chargés de tonneaux."
+    taste_fr: "La **francesinha** : un sandwich chaud couvert de fromage fondu et d'une sauce épicée. Ça vient du croque-monsieur français — d'où le nom, « la petite Française »."
+    know_fr: "Le nom du pays vient de là : *Portus Cale*, le port sur le Douro, a donné **Portugal**."
+    words:
+      - { term: "a ponte",   fr: "le pont",       phon: "a PON-te" }
+      - { term: "o barco",   fr: "le bateau",     phon: "ou BAR-kou" }
+      - { term: "o norte",   fr: "le nord",       phon: "ou NOR-te" }
+      - { term: "a ponte de ferro", fr: "le pont de fer", phon: "a PON-te de FÈ-rrou" }
+    mission_fr: "Trouver Porto et Lisbonne sur une carte, mesurer la distance, et dire en portugais laquelle est au nord : *O Porto fica no norte.*"
+
+  - label_fr: "Os Santos Populares — la fête de juin"
+    when_fr: "Année 2, période 1"
+    intro_fr: >
+      En juin, les villes se couvrent de guirlandes en papier et l'odeur des
+      sardines grillées envahit les rues. C'est la plus grande fête de l'année.
+    see_fr: "Les rues décorées, les **manjericos** — de petits pots de basilic offerts avec un poème piqué dedans (*quadras*)."
+    taste_fr: "Les **sardinhas assadas** (sardines grillées) sur une tranche de pain, mangées debout dans la rue."
+    know_fr: "**Santo António** le 13 juin à Lisbonne, **São João** la nuit du 23 au 24 juin à Porto — où l'on se tape gentiment sur la tête avec de petits marteaux en plastique, et où l'on saute par-dessus des feux."
+    words:
+      - { term: "a festa",     fr: "la fête",       phon: "a FÈCH-ta" }
+      - { term: "a sardinha",  fr: "la sardine",    phon: "a sar-DI-gna" }
+      - { term: "a rua",       fr: "la rue",        phon: "a RROU-a" }
+      - { term: "dançar",      fr: "danser",        phon: "dan-SAR" }
+    mission_fr: "Faire un *manjerico* : planter du basilic dans un petit pot, écrire un quatrain (deux lignes suffisent) et le piquer dedans. L'offrir à quelqu'un en disant *é para ti*."
+
+  - label_fr: "À mesa — ce qu'on mange vraiment"
+    when_fr: "Année 2, période 2"
+    intro_fr: >
+      La cuisine portugaise est simple, salée, et tourne autour du poisson, du
+      pain et de l'huile d'olive.
+    taste_fr: "Le **caldo verde** (soupe de pommes de terre et de chou finement coupé) et le **bacalhau**, la morue séchée dont on dit qu'il existe **1001 façons** de la cuisiner."
+    know_fr: "Presque tous les repas commencent par une soupe (*sopa*), et le pain est sur la table à chaque repas. La morue vient de très loin : c'est un poisson des mers froides, séché et salé pour voyager."
+    words:
+      - { term: "a sopa",      fr: "la soupe",         phon: "a SO-pa" }
+      - { term: "o bacalhau",  fr: "la morue",         phon: "ou ba-ka-LIAOU" }
+      - { term: "o azeite",    fr: "l'huile d'olive",  phon: "ou a-ZÈÏ-te" }
+      - { term: "o pão",       fr: "le pain",          phon: "ou pan-ou" }
+    mission_fr: "Cuisiner un *caldo verde* ensemble en nommant chaque ingrédient en portugais, puis dire à table : *está muito bom!*"
+
+  - label_fr: "O Natal — la nuit du 24 décembre"
+    when_fr: "Année 2, période 3"
+    intro_fr: >
+      Au Portugal, le grand repas de Noël est celui du **soir du 24**, et il est
+      plus sobre qu'on ne l'imagine.
+    taste_fr: "La **consoada** : morue bouillie avec pommes de terre, chou et un filet d'huile d'olive. Puis le **bolo-rei**, une couronne briochée aux fruits confits."
+    know_fr: "Les cadeaux arrivent après le repas, à minuit. Le **bolo-rei** se mange jusqu'au 6 janvier, le **Dia de Reis**, où l'on chante de maison en maison les *Janeiras*."
+    words:
+      - { term: "o Natal",     fr: "Noël",              phon: "ou na-TAL" }
+      - { term: "a prenda",    fr: "le cadeau",         phon: "a PREN-da" }
+      - { term: "a família",   fr: "la famille",        phon: "a fa-MI-lia" }
+      - { term: "Feliz Natal!", fr: "Joyeux Noël !",    phon: "fe-LICH na-TAL" }
+    mission_fr: "Souhaiter *Feliz Natal!* ou *Boas Festas!* à quelqu'un en portugais — au téléphone, c'est encore mieux (unité 19)."
+
+  - label_fr: "Os Descobrimentos — quand les bateaux sont partis"
+    when_fr: "Année 3, période 1"
+    intro_fr: >
+      Aux XVe et XVIe siècles, de petits bateaux partis du Portugal ont fait le
+      tour du monde. C'est pour cela qu'on parle portugais sur quatre continents.
+    see_fr: "Les **caravelas**, ces navires légers à voiles triangulaires ; le **Mosteiro dos Jerónimos** à Lisbonne, construit avec l'argent de ces voyages."
+    know_fr: "**Vasco da Gama** atteint l'Inde par la mer en 1498. Le portugais a laissé des mots partout : le pain se dit *pan* en japonais, emprunté au portugais *pão*."
+    story_fr: >
+      Ces voyages ont aussi un envers qu'on n'apprend pas toujours aux enfants :
+      les mêmes bateaux ont transporté des personnes réduites en esclavage. Une
+      langue s'apprend en entier, avec ce qui est beau et ce qui ne l'est pas.
+    words:
+      - { term: "o barco",       fr: "le bateau",       phon: "ou BAR-kou" }
+      - { term: "o mar",         fr: "la mer",          phon: "ou mar" }
+      - { term: "viajar",        fr: "voyager",         phon: "vi-a-JAR" }
+      - { term: "o mundo",       fr: "le monde",        phon: "ou MOUN-dou" }
+    mission_fr: "Sur un planisphère, colorier les pays où l'on parle portugais et dire à voix haute : *Falam português no Brasil, em Angola, em Moçambique…*"
+
+  - label_fr: "A língua no mundo — neuf pays, quatre continents"
+    when_fr: "Année 3, période 2"
+    intro_fr: >
+      Le portugais n'est pas seulement la langue du Portugal : c'est l'une des
+      langues les plus parlées au monde, par plus de 250 millions de personnes.
+    know_fr: "On le parle au **Portugal**, au **Brésil**, en **Angola**, au **Mozambique**, au **Cap-Vert**, en **Guinée-Bissau**, à **São Tomé-et-Príncipe** et au **Timor oriental**. Ces pays forment ensemble la CPLP, la communauté des pays de langue portugaise."
+    listen_fr: "Écouter la même phrase dite par un Portugais et par un Brésilien : même langue, musique complètement différente. Ni l'un ni l'autre n'a « le bon accent »."
+    words:
+      - { term: "a língua",     fr: "la langue",        phon: "a LÏN-goua" }
+      - { term: "o país",       fr: "le pays",          phon: "ou pa-ICH" }
+      - { term: "o sotaque",    fr: "l'accent",         phon: "ou sou-TA-ke" }
+      - { term: "toda a gente", fr: "tout le monde",    phon: "TÔ-da a JEN-te" }
+    mission_fr: "Écouter deux extraits, un du Portugal et un du Brésil, et trouver **deux différences** qu'on peut nommer : la vitesse, les *s* en « ch », les voyelles."
+
+  - label_fr: "O futebol — la passion nationale"
+    when_fr: "Année 3, période 3"
+    intro_fr: >
+      Au Portugal, le football se discute au café, à table, partout. C'est aussi
+      une porte d'entrée formidable dans la langue de tous les jours.
+    know_fr: "Trois grands clubs : le **Benfica** et le **Sporting** à Lisbonne, le **FC Porto** au nord. **Eusébio**, dans les années 1960, et **Cristiano Ronaldo**, né à Madère, sont les joueurs les plus connus du pays."
+    listen_fr: "Un match commenté en portugais : on ne comprend presque rien, sauf le *GOLO!* — et c'est déjà beaucoup."
+    words:
+      - { term: "o futebol",   fr: "le football",   phon: "ou fou-te-BOL" }
+      - { term: "o golo",      fr: "le but",        phon: "ou GÔ-lou" }
+      - { term: "a equipa",    fr: "l'équipe",      phon: "a i-KI-pa" }
+      - { term: "ganhar",      fr: "gagner",        phon: "ga-GNAR" }
+    mission_fr: "Regarder vingt minutes d'un match commenté en portugais et relever **cinq mots** compris. Les dire ensuite à voix haute."
+
+  - label_fr: "Madeira e os Açores — le Portugal au milieu de l'océan"
+    when_fr: "Année 3, période 4"
+    intro_fr: >
+      Deux archipels en plein Atlantique, à des centaines de kilomètres du
+      continent, et pourtant totalement portugais.
+    see_fr: "À **Madère**, les *levadas*, ces petits canaux d'eau qu'on longe à pied à flanc de montagne. Aux **Açores**, neuf îles volcaniques, des lacs dans des cratères et des baleines au large."
+    know_fr: "Madère est célèbre pour son vin et pour son carnaval ; les Açores comptent parmi les meilleurs endroits du monde pour observer les baleines (*as baleias*)."
+    words:
+      - { term: "a ilha",     fr: "l'île",       phon: "a I-lia" }
+      - { term: "o oceano",   fr: "l'océan",     phon: "ou o-si-A-nou" }
+      - { term: "a baleia",   fr: "la baleine",  phon: "a ba-LÈÏ-a" }
+      - { term: "a montanha", fr: "la montagne", phon: "a mon-TA-gna" }
+    mission_fr: "Choisir une île sur la carte, chercher une photo, et la décrire en trois phrases avec l'unité 24 : *A ilha é grande e verde. Tem montanhas…*"
+
+outro_fr: >
+  **Pour les plus grands, une escale de plus.** Le **25 avril 1974**, une
+  révolution presque sans violence a mis fin à quarante-huit ans de dictature au
+  Portugal ; les soldats ont mis des œillets (*cravos*) dans le canon de leurs
+  fusils. La chanson **« Grândola, Vila Morena »** de Zeca Afonso, diffusée à la
+  radio cette nuit-là, était le signal du départ. Le 25 avril est aujourd'hui la
+  fête nationale de la liberté — l'histoire vaut d'être racontée à un enfant de
+  dix ans, et la chanson d'être écoutée.

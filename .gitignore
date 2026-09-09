@@ -1,4 +1,5 @@
 site/
+print/
 exports/
 pdf/
 __pycache__/

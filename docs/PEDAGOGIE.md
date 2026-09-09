@@ -25,21 +25,37 @@ longues et rares. Mieux vaut 10 minutes par jour que 1 heure le dimanche.
 Chaque unité tient en **12 à 15 minutes** et vise un objectif concret
 (« savoir dire son nom », « compter jusqu'à 10 »), jamais un chapitre de grammaire.
 
-## Le programme sur trois ans
+## Deux parcours, pas un seul
 
-Le plan complet, période par période, est sur la page **Programme** du site
-(source : `content/pt/program.yaml`).
+Un enfant de 4 ans et un enfant de 9 ans n'ont ni la même mémoire, ni la même
+attention, ni les mêmes moyens : l'un ne lit pas. Le contenu est le même, le
+parcours ne l'est pas.
 
-| Année | Ce qu'on vise | Unités |
+| | **Parcours A — les petits** | **Parcours B — les grands** |
 |---|---|---|
-| **1** | Comprendre qu'on me parle et répondre — six répliques sur moi | 1 → 10 |
-| **2** | Raconter mon quotidien et poser des questions — dix répliques | 11 → 20 |
-| **3** | Raconter, donner mon avis, discuter — cinq minutes libres | 21 → 30 |
+| Âge | 3-6 ans | 7-10 ans |
+| Séance | 8-10 min, 4-5 fois/semaine | 12-20 min, 5 fois/semaine |
+| Rythme | **une unité en 4 à 7 semaines** | une unité en 3 semaines |
+| Écrit | **aucun** | dès l'année 1 |
+| Règles | jamais expliquées | une par unité, jamais deux |
+| Sur 3 ans | 15 unités, tout à l'oral | 30 unités |
+| Niveau visé | pré-A1 → A1.1 oral | A1.1 → A2 |
 
-Dix unités par année, **une unité toutes les trois semaines** :
-semaine 1 « je comprends », semaine 2 « je réponds », semaine 3 « je parle ».
-Cinq périodes par année, chacune terminée par un bilan concret. On ne passe
-jamais à la suite tant que les « je sais… » de l'unité ne sont pas tenus.
+**La passerelle.** Un enfant qui sort du parcours A à 6 ans ne recommence pas de
+zéro : pendant dix semaines il refait les unités 1 à 10 **une par semaine**, avec
+l'écrit cette fois — lire un dialogue qu'on connaît déjà par cœur est le meilleur
+moyen d'apprendre à lire dans une langue. Il rejoint ensuite le parcours B à
+l'unité 11.
+
+**Deux enfants d'âges différents ensemble** : on suit le parcours du plus grand,
+le petit fait les activités 3-6 ans de la même unité, et le grand mène les jeux.
+C'est sa révision.
+
+Le plan complet, période par période, avec les niveaux visés et les bilans, est
+sur la page **Programme** du site (source : `content/pt/program.yaml`). Les
+niveaux CECRL, la progression grammaticale et les grilles d'évaluation sont
+détaillés dans **[REFERENTIEL.md](REFERENTIEL.md)** — c'est le document à donner
+à un professeur de langue à qui l'on demande son avis.
 
 ## Le rythme conseillé
 
@@ -94,6 +110,43 @@ phrases qui permettent de **rester** dans la discussion — *não percebi*,
 Un enfant qui sait dire qu'il n'a pas compris continue de parler. Un enfant qui
 ne le sait pas se tait — et c'est là que l'apprentissage s'arrête. Ces trois
 phrases-là valent plus que trente mots de vocabulaire.
+
+## Le voyage culturel
+
+Une langue sans son pays reste un exercice. Deux choses pour cela :
+
+- **un repère culturel dans chaque unité** — pourquoi le coq de Barcelos est
+  partout, pourquoi lundi se dit « deuxième jour », pourquoi le couvert du
+  restaurant est payant ;
+- **le passeport culturel** : douze escales (Lisbonne, le fado, les azulejos,
+  les Santos Populares, les Découvertes, les îles…), chacune avec une chose à
+  voir, à goûter, à écouter — et **une mission à faire pour de vrai**. On
+  tamponne quand la mission est faite, jamais quand l'escale est lue.
+
+Le passeport s'imprime : une case par escale, à signer. Un enfant qui a cuisiné
+un *caldo verde*, peint son coq et mangé un *pastel de nata* en le commandant
+lui-même n'apprend plus une matière — il visite un pays.
+
+## La pratique passe avant tout le reste
+
+**C'est le point le plus important de cette page.** Le programme organise, il ne
+remplace pas l'usage. Une heure de vraie conversation vaut dix fiches.
+
+1. **Trouver un interlocuteur réel** — un proche, un voisin, une association
+   lusophone, les cours pour enfants du réseau Instituto Camões. Vingt minutes
+   d'appel vidéo par semaine changent tout. Règle : l'interlocuteur ne traduit
+   jamais, il répète plus lentement.
+2. **L'heure portugaise** — un repas par semaine entièrement en portugais, la
+   boîte à outils sur la table, personne qui traduit.
+3. **Sortir** — pâtisserie, épicerie, restaurant portugais : l'enfant commande
+   lui-même, même trois mots.
+4. **Les écrans, mais bien** — un dessin animé **déjà connu**, revu en portugais
+   du Portugal, suivi de deux questions. Sans les questions, c'est du temps
+   d'écran, pas du cours.
+5. **Le voyage** — une semaine au Portugal après l'année 2 fait plus qu'un
+   trimestre de fiches : l'enfant découvre que la langue **sert**.
+
+Le détail est sur la page Programme, section « La pratique ».
 
 ## Ce qui marche vraiment
 

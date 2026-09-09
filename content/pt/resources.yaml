@@ -1,0 +1,65 @@
+title_fr: "Livres, chansons et écrans"
+intro_fr: >
+  Le cours donne la structure ; ce sont les **livres, les chansons et les vraies
+  voix** qui donnent la langue. Voici ce qui vaut la peine d'être acheté,
+  emprunté ou écouté, par âge. Un seul album lu vingt fois vaut mieux que dix
+  achetés une fois.
+
+warning_fr: >
+  **Deux précautions avant d'acheter.** (1) Vérifier que l'édition est en
+  **portugais du Portugal** et non du Brésil : la traduction, l'accent des
+  audiolivres et même certains mots changent (*autocarro* / *ônibus*,
+  *casa de banho* / *banheiro*). (2) Les titres ci-dessous sont donnés sans
+  numéro d'édition : éditions, prix et disponibilité changent — vérifier la
+  fiche du livre au moment de commander.
+
+groups:
+  - title_fr: "Pour les 3-6 ans — albums à lire à voix haute"
+    intro_fr: "On lit le même album des dizaines de fois. L'enfant finit par dire les phrases avant l'adulte : c'est exactement le but."
+    items:
+      - { title: "A Lagartinha Muito Comilona", author: "Eric Carle", kind_fr: "album illustré", age_fr: "3-6 ans", why_fr: "L'édition portugaise du grand classique. Les jours de la semaine et les aliments — exactement les unités 6 et 13 — dans une histoire que l'enfant connaît peut-être déjà en français.", where_fr: "librairies en ligne portugaises (wook.pt, bertrand.pt, fnac.pt), librairies lusophones" }
+      - { title: "Os Três Porquinhos · O Capuchinho Vermelho", author: "contes traditionnels, éditions portugaises", kind_fr: "contes", age_fr: "3-6 ans", why_fr: "Des histoires déjà connues : l'enfant suit le sens même s'il ne comprend pas tous les mots. Attention au titre — au Portugal c'est *Capuchinho*, au Brésil *Chapeuzinho*.", where_fr: "librairies portugaises, éditions bon marché très courantes" }
+      - { title: "Les albums de Luísa Ducla Soares", author: "Luísa Ducla Soares", kind_fr: "contes et poèmes courts", age_fr: "3-8 ans", why_fr: "L'une des grandes autrices portugaises pour enfants : des textes courts, drôles, très rythmés — parfaits à dire à voix haute même quand on comprend à moitié.", where_fr: "librairies portugaises ; souvent en bibliothèque dans les villes à forte communauté portugaise" }
+      - { title: "Les albums de Manuela Bacelar", author: "Manuela Bacelar", kind_fr: "album illustré", age_fr: "3-7 ans", why_fr: "Autrice-illustratrice portugaise ; beaucoup d'images, peu de texte : idéal quand l'enfant ne lit pas encore.", where_fr: "librairies portugaises" }
+
+  - title_fr: "Pour les 7-10 ans — premières lectures"
+    intro_fr: "On lit d'abord ensemble, l'adulte lisant une page sur deux. On ne traduit pas : on résume en français après, une fois."
+    items:
+      - { title: "A Menina do Mar", author: "Sophia de Mello Breyner Andresen", kind_fr: "conte", age_fr: "7-10 ans", why_fr: "Un classique absolu de la littérature portugaise pour enfants, court, avec la mer partout. Un enfant portugais de cet âge l'a lu.", where_fr: "librairies portugaises, très largement édité" }
+      - { title: "A Fada Oriana", author: "Sophia de Mello Breyner Andresen", kind_fr: "conte", age_fr: "8-10 ans", why_fr: "Un peu plus long, un vrai récit à suivre — bon pour l'année 3, quand on travaille *era uma vez* et le passé.", where_fr: "librairies portugaises" }
+      - { title: "Les contes d'António Torrado", author: "António Torrado", kind_fr: "contes courts", age_fr: "6-10 ans", why_fr: "Des histoires très courtes, écrites pour être racontées : une par soir, c'est le bon format. Directement utile à l'unité 25.", where_fr: "librairies portugaises" }
+      - { title: "Collection « Uma Aventura »", author: "Ana Maria Magalhães et Isabel Alçada", kind_fr: "romans d'aventure", age_fr: "9 ans et plus", why_fr: "La grande série d'aventures portugaise, celle que lisent les enfants au Portugal. À garder pour la fin de l'année 3, ou à lire à deux.", where_fr: "librairies portugaises ; série longue, commencer par n'importe quel tome" }
+      - { title: "O Principezinho", author: "Antoine de Saint-Exupéry", kind_fr: "roman illustré", age_fr: "9-10 ans", why_fr: "Le Petit Prince en portugais : le texte est connu, la langue est simple, et l'enfant peut comparer les deux versions phrase à phrase.", where_fr: "partout, y compris en édition bilingue" }
+
+  - title_fr: "Chansons et comptines"
+    intro_fr: "La chanson fixe l'intonation et les sons mieux que n'importe quel exercice. Chercher les titres sur une plateforme de musique ou de vidéo."
+    items:
+      - { title: "Atirei o pau ao gato", kind_fr: "comptine traditionnelle", age_fr: "3-6 ans", why_fr: "La comptine que tous les enfants lusophones connaissent, avec des gestes.", where_fr: "plateformes de musique et de vidéo" }
+      - { title: "O balão do João", kind_fr: "comptine traditionnelle", age_fr: "3-6 ans", why_fr: "Courte, répétitive, avec les couleurs : elle accompagne l'unité 2.", where_fr: "plateformes de musique et de vidéo" }
+      - { title: "A Loja do Mestre André", kind_fr: "comptine à accumulation", age_fr: "4-8 ans", why_fr: "On ajoute un instrument à chaque couplet : mémoire, rythme et vocabulaire d'un coup.", where_fr: "plateformes de musique et de vidéo" }
+      - { title: "Indo eu, indo eu, a caminho de Viseu", kind_fr: "chanson traditionnelle", age_fr: "5-10 ans", why_fr: "Traditionnelle portugaise, très rythmée, facile à reprendre en chœur.", where_fr: "plateformes de musique et de vidéo" }
+      - { title: "Amália Rodrigues", kind_fr: "fado", age_fr: "toute la famille", why_fr: "Pour l'escale « fado » du passeport culturel. Deux minutes suffisent.", where_fr: "plateformes de musique" }
+      - { title: "Grândola, Vila Morena", author: "José Afonso (Zeca Afonso)", kind_fr: "chanson", age_fr: "9 ans et plus", why_fr: "La chanson-signal de la révolution du 25 avril 1974. À écouter avec l'histoire racontée à côté.", where_fr: "plateformes de musique" }
+
+  - title_fr: "Écrans — à condition de bien choisir"
+    intro_fr: "Vingt minutes deux fois par semaine, et toujours suivies de deux questions en portugais. Sans les questions, c'est du temps d'écran, pas du cours."
+    items:
+      - { title: "RTP Zig Zag", kind_fr: "chaîne jeunesse du service public portugais", age_fr: "3-10 ans", why_fr: "Des programmes pour enfants **en portugais du Portugal** : c'est le bon accent, celui du cours.", where_fr: "site et application de la RTP (rtp.pt) — la disponibilité hors du Portugal peut varier" }
+      - { title: "Canal Panda", kind_fr: "chaîne jeunesse", age_fr: "3-8 ans", why_fr: "Dessins animés doublés en portugais européen, très connus des enfants au Portugal.", where_fr: "selon l'opérateur et le pays" }
+      - { title: "Ruca", kind_fr: "dessin animé", age_fr: "3-6 ans", why_fr: "La version portugaise de Caillou : des situations du quotidien (repas, école, habits) qui recoupent presque toutes les unités de l'année 1.", where_fr: "plateformes de vidéo, en cherchant la version portugaise" }
+      - { title: "Peppa Pig em português", kind_fr: "dessin animé", age_fr: "3-6 ans", why_fr: "Épisodes courts, phrases simples et répétées. **Vérifier que le doublage est portugais et non brésilien.**", where_fr: "plateformes de vidéo" }
+      - { title: "Un dessin animé déjà vu en français", kind_fr: "méthode, pas un titre", age_fr: "tous", why_fr: "Le meilleur choix reste un film ou un épisode **déjà connu** : l'histoire est comprise, l'enfant peut donc se consacrer aux sons. Changer la piste audio en portugais dans les réglages.", where_fr: "à la maison, sur ce que vous avez déjà" }
+
+  - title_fr: "Outils pour le parent"
+    intro_fr: "Rien de tout cela n'est nécessaire à l'enfant : c'est pour l'adulte qui accompagne."
+    items:
+      - { title: "Priberam", kind_fr: "dictionnaire de portugais en ligne", age_fr: "adulte", why_fr: "Le dictionnaire de référence du portugais européen : sens, conjugaisons, orthographe.", where_fr: "priberam.pt, gratuit" }
+      - { title: "Infopédia (Porto Editora)", kind_fr: "dictionnaires en ligne", age_fr: "adulte", why_fr: "Dictionnaire portugais-français et français-portugais, avec la prononciation.", where_fr: "infopedia.pt" }
+      - { title: "Forvo", kind_fr: "prononciations enregistrées", age_fr: "adulte", why_fr: "Un mot prononcé par de vraies personnes, avec le pays indiqué : c'est la façon la plus sûre de vérifier un mot avant de l'enseigner.", where_fr: "forvo.com, gratuit" }
+      - { title: "Instituto Camões — Ensino Português no Estrangeiro", kind_fr: "institution", age_fr: "adulte", why_fr: "L'organisme public portugais qui organise l'enseignement du portugais hors du Portugal : cours pour enfants dans de nombreuses villes, référentiels et certifications. C'est aussi la référence qu'un enseignant voudra consulter.", where_fr: "instituto-camoes.pt — vérifier les cours près de chez vous" }
+      - { title: "Manuels de portugais langue étrangère (Lidel, Porto Editora)", kind_fr: "méthodes", age_fr: "adulte", why_fr: "Utiles au parent qui veut comprendre la grammaire avant de l'expliquer. Ce sont des méthodes conçues pour adultes : ne pas les mettre entre les mains de l'enfant.", where_fr: "librairies portugaises et en ligne" }
+
+outro_fr: >
+  **S'il ne fallait garder que trois choses** : un album lu en boucle, une
+  comptine chantée tous les jours, et vingt minutes par semaine avec quelqu'un
+  qui parle vraiment la langue. Le reste est du confort.

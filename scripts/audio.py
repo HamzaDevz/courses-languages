@@ -85,6 +85,9 @@ def wanted_clips(course: dict) -> dict[str, set[str]]:
     for group in course.get("toolkit") or []:
         for v in group.get("items", []):
             add(v["term"], "f")
+    for escale in (course.get("culture") or {}).get("escales") or []:
+        for v in escale.get("words") or []:
+            add(v["term"], "f")
     return need
 
 
@@ -121,18 +124,35 @@ async def build_language(course: dict, force: bool, prune: bool) -> int:
 
     need = wanted_clips(course)
     clips: dict[str, dict[str, str]] = {}
-    todo: list[tuple[str, str, Path]] = []
+    todo: dict[str, tuple[str, str, Path]] = {}
     for text, wanted in need.items():
         for voice in sorted(wanted):
             voice_id = voices.get(voice) or next(iter(voices.values()))
             name = clip_name(text, voice_id)
             clips.setdefault(text, {})[voice] = name
             target = outdir / name
-            if force or not target.exists():
-                todo.append((text, voice_id, target))
+            # Deux entrées peuvent viser le même fichier (même texte, même voix
+            # pour `f` et `m`) : une seule tâche, sinon deux coroutines écrivent
+            # dans le même .part en même temps.
+            if (force or not target.exists()) and name not in todo:
+                todo[name] = (text, voice_id, target)
 
     print(f'{course["name_fr"]} : {len(need)} textes, {len(todo)} à enregistrer '
           f'({", ".join(sorted(set(voices.values())))})')
+
+    def write_manifest() -> None:
+        """Le manifeste décrit ce qui est demandé, pas ce qui a réussi.
+
+        Il est écrit avant de signaler les échecs : sinon un seul enregistrement
+        raté ferait perdre les centaines d'autres, et le site publierait sans
+        aucun son. Les fichiers manquants sont rattrapés à la relance, et le
+        site retombe de toute façon sur la synthèse pour ceux-là.
+        """
+        manifest = {"language": course["code"], "voices": voices,
+                    "rate": rate, "clips": clips}
+        (outdir / "index.json").write_text(
+            json.dumps(manifest, ensure_ascii=False, indent=1, sort_keys=True),
+            encoding="utf-8")
 
     if todo:
         try:
@@ -155,20 +175,20 @@ async def build_language(course: dict, force: bool, prune: bool) -> int:
                     failures.append(str(exc))
                     print(f"  ✗ {exc}")
 
-        await asyncio.gather(*(one(*t) for t in todo))
+        await asyncio.gather(*(one(*t) for t in todo.values()))
         if failures:
+            write_manifest()
             raise SystemExit(
-                f"\n{len(failures)} enregistrement(s) ont échoué. Causes habituelles :\n"
+                f"\n{len(failures)} enregistrement(s) sur {len(todo)} ont échoué. "
+                f"Les autres sont conservés. Causes habituelles :\n"
                 "  — pas d'accès réseau vers le service de synthèse ;\n"
                 "  — service momentanément indisponible : relancer « make audio » "
                 "reprend là où ça s'est arrêté.")
 
-    manifest = {"language": course["code"], "voices": voices, "rate": rate, "clips": clips}
-    (outdir / "index.json").write_text(
-        json.dumps(manifest, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
+    write_manifest()
 
     if prune:
-        keep = {n for c in clips.values() for n in c.values()}
+        keep = {name for clip in clips.values() for name in clip.values()}
         for f in outdir.glob("*.mp3"):
             if f.name not in keep:
                 f.unlink()

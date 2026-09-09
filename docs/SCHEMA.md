@@ -8,7 +8,9 @@ content/
   _template/          gabarit (ignoré par le build, dossiers en "_")
   pt/
     course.yaml       métadonnées de la langue + boîte à outils
-    program.yaml      le programme : années, périodes, semaines
+    program.yaml      le programme : parcours par âge, périodes, semaines
+    culture.yaml      le passeport culturel : escales et missions
+    resources.yaml    livres, chansons, écrans à acheter ou emprunter
     units/
       01-ola.yaml     une unité = un fichier
       02-cores.yaml
@@ -47,6 +49,8 @@ content/
 | `dialogue` | **la scène de l'unité** : c'est par là qu'on commence |
 | `comprehension` | questions en français pour vérifier qu'on a compris l'ensemble |
 | `qa` | « on me demande / je réponds » — le cœur de la conversation |
+| `cefr` | niveau visé, affiché sous le titre (`A1.1`, `A1 → A1+`…) |
+| `culture_fr` | un repère culturel, une ou deux phrases |
 | `notes_fr` | explications, `**gras**` accepté |
 | `activities` | liste d'activités |
 | `reemploi_fr` | ce qu'on utilise dans la vraie vie cette semaine |
@@ -135,33 +139,112 @@ toolkit:
       - { term: "Não percebi.", fr: "Je n'ai pas compris.", phon: "nan-ou per-se-BI" }
 ```
 
-## `program.yaml` — le programme de l'année
+## `program.yaml` — le programme
 
 Sans ce fichier le cours fonctionne, mais il n'y a plus de plan : les unités
 sont une liste, pas une progression. Le build **vérifie que chaque unité citée
 existe** et refuse de construire sinon.
 
+Un programme contient un ou plusieurs **parcours** (`tracks`). Un parcours = un
+âge, avec son rythme, ses objectifs et son niveau visé. Les parcours partagent
+les mêmes unités : c'est la vitesse et la profondeur qui changent, pas le
+contenu.
+
 ```yaml
 intro_fr: >
-  Trois années, dix unités par année, une unité toutes les trois semaines.
-rhythm_fr:                  # la semaine type
-  - { day_fr: "Lundi", what_fr: "**Le dialogue** : l'écouter deux fois.", min: 12 }
-cycle_fr:                   # comment une unité se traite sur trois semaines
-  - { label_fr: "Semaine 1 — je comprends", what_fr: "Écouter, comprendre l'ensemble." }
-years:
-  - year: 1
-    label_fr: "Année 1 — Je comprends qu'on me parle et je réponds"
-    age_fr: "3-6 ans : tout à l'oral. 7-10 ans : oral + écrit."
-    goal_fr: "Ce que l'enfant sait faire de nouveau à la fin de l'année."
-    can_do_fr: ["Je salue, je dis mon nom, mon âge…"]
-    periods:
-      - label_fr: "Période 1 — Qui je suis"
-        weeks_fr: "semaines 1 à 7"
-        units: [01-ola, 02-cores]
-        focus_fr: "Saluer, se présenter, nommer les couleurs."
-        milestone_fr: "L'enfant répond à *Olá, como te chamas?* sans aide."
-    evaluation_fr: ["Comment vérifier, sans faire d'examen."]
+  Deux parcours selon l'âge, un seul contenu d'unités.
+cefr_fr: >
+  Le cadre de référence utilisé (CECRL…), affiché en tête du programme.
+tracks:
+  - id: petits
+    label_fr: "Parcours A — Les petits (3-6 ans)"
+    ages_fr: "3 à 6 ans, avant de savoir lire"
+    cefr_fr: "pré-A1 puis A1.1 à l'oral"
+    session_fr: "8 à 10 min, 4 à 5 fois par semaine"
+    total_fr: "3 années, 15 unités"
+    intro_fr: "Pourquoi ce parcours est fait ainsi."
+    method_fr: ["Les règles propres à cet âge."]
+    rhythm_fr:              # la semaine type de CE parcours
+      - { day_fr: "Lundi", what_fr: "**Le dialogue** en fond, deux fois.", min: 5 }
+    cycle_fr:               # comment CE parcours traite une unité
+      - { label_fr: "Semaines 1-2 — j'entends", what_fr: "Zéro production demandée." }
+    years:
+      - year: 1
+        label_fr: "Petits · Année 1 (3-4 ans) — J'écoute et je montre"
+        cefr_fr: "pré-A1 : compréhension orale de consignes simples"
+        age_fr: "3-4 ans"
+        goal_fr: "Ce que l'enfant sait faire de nouveau à la fin de l'année."
+        can_do_fr: ["Je réagis à *bom dia*…"]
+        periods:
+          - label_fr: "Période 1"
+            weeks_fr: "semaines 1 à 7"
+            units: [01-ola]          # liste vide = période de révision
+            focus_fr: "Ce qu'on travaille."
+            milestone_fr: "Le bilan de la période, vérifiable."
+        evaluation_fr: ["Comment vérifier, sans faire d'examen."]
+  - id: grands
+    spine: true               # ce parcours numérote les années sur la liste des unités
+    label_fr: "Parcours B — Les grands (7-10 ans)"
+    years: [...]
+bridge_fr: >
+  Comment on passe d'un parcours à l'autre.
+practice_fr:                  # la pratique réelle, hors du cours
+  - title_fr: "Trouver un vrai interlocuteur"
+    when_fr: "Dès l'année 1"
+    steps_fr: ["…"]
 ```
+
+`spine: true` désigne le parcours qui donne les titres d'années sur la page de
+la langue. Un `program.yaml` écrit sans `tracks`, avec `years:` directement,
+reste valide : il devient un parcours unique.
+
+## `culture.yaml` — le passeport culturel
+
+Facultatif. Douze escales environ, chacune avec une **mission** à faire pour de
+vrai — c'est la mission qui donne le tampon, pas la lecture.
+
+```yaml
+title_fr: "Le passeport culturel"
+intro_fr: >
+  Une langue sans son pays reste un exercice.
+escales:
+  - label_fr: "Lisboa — la ville aux sept collines"
+    when_fr: "Année 1, période 1"        # quand la placer
+    intro_fr: "Une phrase de présentation."
+    see_fr: "À voir."
+    taste_fr: "À goûter."
+    listen_fr: "À écouter."
+    story_fr: "L'histoire ou la légende."
+    know_fr: "À savoir."
+    words:                                # même format que vocab, avec audio
+      - { term: "o elétrico", fr: "le tramway", phon: "ou i-LÈ-tri-kou" }
+    mission_fr: "Ce que l'enfant doit faire dans la vraie vie."
+outro_fr: "Ce qu'on ajoute pour les plus grands."
+```
+
+## `resources.yaml` — livres, chansons et écrans
+
+Facultatif. Ce qu'on achète, emprunte ou écoute autour du cours.
+
+```yaml
+title_fr: "Livres, chansons et écrans"
+intro_fr: "…"
+warning_fr: "Les précautions avant d'acheter (variante PT/BR, éditions)."
+groups:
+  - title_fr: "Pour les 3-6 ans — albums à lire à voix haute"
+    intro_fr: "…"
+    items:
+      - title: "A Lagartinha Muito Comilona"
+        author: "Eric Carle"
+        kind_fr: "album illustré"
+        age_fr: "3-6 ans"
+        why_fr: "Pourquoi celui-là, et à quelle unité il se rattache."
+        where_fr: "Où le trouver."
+outro_fr: "S'il ne fallait garder que trois choses…"
+```
+
+Aucun ISBN, aucun prix : ils changent, et une référence fausse est pire que pas
+de référence. Le champ `where_fr` dit où chercher, c'est suffisant.
 
 ## Ajouter une langue
 

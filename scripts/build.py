@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import csv
 import html
+import re
 import shutil
 from pathlib import Path
 
@@ -74,12 +75,15 @@ def load_language(code_dir: Path) -> dict:
         unit.setdefault("comprehension", [])
         unit.setdefault("qa", [])
         unit.setdefault("reemploi_fr", [])
+        unit.setdefault("culture_fr", "")
         unit.setdefault("year", 1)
         units.append(unit)
     units.sort(key=lambda u: (u.get("year", 1), u.get("order", 999)))
     course["units"] = units
     course["program"] = load_program(code_dir, units)
     course["audio_index"] = load_audio_index(course["code"])
+    course["culture"] = load_side_file(code_dir, "culture", "escales")
+    course["resources"] = load_side_file(code_dir, "resources", "groups")
     course["toolkit"] = course.get("toolkit", [])
     return course
 
@@ -123,15 +127,60 @@ def load_program(code_dir: Path, units: list[dict]) -> dict | None:
         return None
     prog = read_yaml(path)
     known = {u["id"] for u in units}
-    for year in prog.get("years", []):
-        for period in year.get("periods", []):
-            for uid in period.get("units", []):
-                if uid not in known:
-                    raise SystemExit(
-                        f"{path.relative_to(ROOT)} : la période « {period.get('label_fr','')} » "
-                        f"cite l'unité « {uid} », qui n'existe pas dans "
-                        f"{(code_dir / 'units').relative_to(ROOT)}/.")
+    for track in program_tracks(prog):
+        for year in track.get("years", []):
+            for period in year.get("periods", []):
+                for uid in period.get("units", []):
+                    if uid not in known:
+                        raise SystemExit(
+                            f"{path.relative_to(ROOT)} : « {track.get('label_fr', '')} », "
+                            f"période « {period.get('label_fr','')} » cite l'unité "
+                            f"« {uid} », qui n'existe pas dans "
+                            f"{(code_dir / 'units').relative_to(ROOT)}/.")
     return prog
+
+
+def program_tracks(prog: dict) -> list[dict]:
+    """Les parcours du programme.
+
+    Un parcours = un âge, avec son rythme, ses objectifs et son niveau visé.
+    Un programme écrit à l'ancienne (une seule liste `years`) reste valide :
+    il devient un parcours unique.
+    """
+    tracks = prog.get("tracks")
+    if tracks:
+        return tracks
+    if prog.get("years"):
+        return [{"id": "unique", "label_fr": "Le programme", "years": prog["years"]}]
+    return []
+
+
+def spine_track(prog: dict) -> dict:
+    """Le parcours qui sert de référence pour numéroter les unités.
+
+    Les deux parcours parcourent les mêmes unités à des vitesses différentes :
+    il en faut un pour donner les titres d'années affichés sur la liste des
+    unités, sinon l'enfant de 4 ans et celui de 9 ans ne lisent pas la même
+    chose au même endroit.
+    """
+    tracks = program_tracks(prog)
+    for t in tracks:
+        if t.get("spine"):
+            return t
+    return tracks[0] if tracks else {}
+
+
+def load_side_file(code_dir: Path, name: str, key: str) -> dict:
+    """Un fichier de contenu facultatif (culture.yaml, resources.yaml).
+
+    Un fichier présent mais sans contenu utile est traité comme absent : sinon
+    le site afficherait une carte qui mène à une page blanche.
+    """
+    path = code_dir / f"{name}.yaml"
+    if not path.exists():
+        return {}
+    data = read_yaml(path)
+    return data if data.get(key) else {}
 
 
 def load_all() -> list[dict]:
@@ -177,10 +226,17 @@ def units_by_year(course: dict) -> dict[int, list[dict]]:
 
 
 def year_label(course: dict, year: int) -> str:
-    for y in ((course.get("program") or {}).get("years") or []):
+    for y in (spine_track(course.get("program") or {}).get("years") or []):
         if y.get("year") == year:
             return y.get("label_fr", f"Année {year}")
     return f"Année {year}"
+
+
+def year_entry(course: dict, year: int) -> dict:
+    for y in (spine_track(course.get("program") or {}).get("years") or []):
+        if y.get("year") == year:
+            return y
+    return {}
 
 
 def level_label(course: dict, level_id: str) -> str:
@@ -190,17 +246,36 @@ def level_label(course: dict, level_id: str) -> str:
     return level_id
 
 
+def shorten(text: str, limit: int) -> str:
+    """Coupe un texte proprement, avant échappement HTML.
+
+    Tronquer après échappement couperait une entité en deux (« l&#x » au lieu
+    de « l' ») et abîmerait la page.
+    """
+    text = str(text)
+    return text if len(text) <= limit else text[: limit - 1].rstrip() + "…"
+
+
+BOLD_RE = re.compile(r"\*\*(.+?)\*\*", re.S)
+ITALIC_RE = re.compile(r"\*(.+?)\*", re.S)
+
+
 def md_bold(text: str) -> str:
-    """Convertit les **gras** des notes en HTML, le reste est échappé."""
-    out, bold = [], False
-    for i, part in enumerate(E(text).split("**")):
-        if i:
-            out.append("</strong>" if bold else "<strong>")
-            bold = not bold
-        out.append(part)
-    if bold:
-        out.append("</strong>")
-    return "".join(out)
+    """Convertit les **gras** et les *italiques* des notes ; le reste est échappé.
+
+    Le contenu est écrit en markdown léger par des non-développeurs, et les mots
+    de la langue enseignée sont notés *entre étoiles* dans tout le cours : les
+    afficher avec leurs astérisques serait une faute d'impression à chaque page.
+    Le gras est traité en premier, ce qui permet à un italique d'en contenir.
+    Une étoile isolée (« 3 * 4 ») reste telle quelle.
+    """
+    out = BOLD_RE.sub(r"<strong>\1</strong>", E(text))
+    return ITALIC_RE.sub(r"<em>\1</em>", out)
+
+
+def plain(text: str) -> str:
+    """Le même texte sans ses marques de markdown, pour les endroits sans HTML."""
+    return ITALIC_RE.sub(r"\1", BOLD_RE.sub(r"\1", str(text)))
 
 
 # --------------------------------------------------------------------------- #
@@ -330,6 +405,16 @@ details.comp p{margin:.5em 0 0;color:var(--accent2)}
 .yearhead{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);
   border-radius:var(--radius);padding:14px 18px;margin:1.6em 0 1em}
 .yearhead h2{margin-top:0;border:none;padding:0}
+.yearhead h3{margin:0 0 .3em;font-size:1.15rem}
+.escale{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 18px;margin:1em 0}
+.escale .n{font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.escale h3{margin:.15em 0 .5em;font-size:1.3rem}
+ul.esc{list-style:none;padding-left:0;margin:.4em 0}
+ul.esc li{padding:5px 0 5px 14px;border-left:2px solid var(--line);margin:.2em 0}
+.mission{border:1px dashed var(--accent);border-radius:var(--radius);
+  padding:10px 14px;margin:.8em 0 .2em}
+h3{font-size:1.15rem;margin:1.4em 0 .4em}
 @media (max-width:520px){ .phon{white-space:normal} .dline{flex-direction:column;gap:2px} }
 """
 
@@ -623,7 +708,7 @@ def comprehension_html(unit: dict) -> str:
     items = unit.get("comprehension") or []
     if not items:
         return ""
-    blocks = [f'<details class="comp"><summary>{E(c["q_fr"])}</summary>'
+    blocks = [f'<details class="comp"><summary>{md_bold(c["q_fr"])}</summary>'
               f'<p>{md_bold(c.get("a_fr", ""))}</p></details>' for c in items]
     return ("<h2>Est-ce que j'ai compris ?</h2>"
             "<p class=\"sub\">Poser la question en français après avoir écouté le dialogue "
@@ -675,10 +760,11 @@ def build_unit_page(course: dict, unit: dict, prev_u, next_u) -> str:
         f'<div class="crumb"><a href="index.html">← {E(course["name_fr"])}</a></div>',
         f'<h1>{E(unit["title"])}</h1>',
         f'<p class="sub">{E(unit["title_fr"])} · unité {unit.get("order", "")} · '
-        f'{unit.get("duration_min", 15)} min</p>',
+        f'{unit.get("duration_min", 15)} min'
+        + (f' · {E(unit["cefr"])}' if unit.get("cefr") else "") + '</p>',
     ]
     if unit.get("can_do_fr"):
-        items = "".join(f"<li>{E(c)}</li>" for c in unit["can_do_fr"])
+        items = "".join(f"<li>{md_bold(c)}</li>" for c in unit["can_do_fr"])
         parts.append(f'<div class="goal"><strong>À la fin de cette unité :</strong><ul>{items}</ul></div>')
     parts.append(audio_bar())
 
@@ -710,6 +796,9 @@ def build_unit_page(course: dict, unit: dict, prev_u, next_u) -> str:
                 f'<h3>{E(a.get("title_fr", ""))}</h3><ol>{steps}</ol></div>'
             )
 
+    if unit.get("culture_fr"):
+        parts.append('<h2>Un pas de plus dans la culture</h2>')
+        parts.append(f'<div class="mission">{md_bold(unit["culture_fr"])}</div>')
     parts.append(reemploi_html(unit))
 
     # Entraînement à répondre : la question sort en portugais, l'enfant répond
@@ -824,7 +913,7 @@ def unit_cards(course: dict, units: list[dict]) -> str:
             f'<a class="card" href="{E(u["id"])}.html">'
             f'<div class="n">Unité {E(u.get("order",""))}</div>'
             f'<div class="t">{E(u["title"])}</div>'
-            f'<div class="f">{E(u["title_fr"])} — {E(u.get("goal_fr",""))}</div></a>'
+            f'<div class="f">{E(u["title_fr"])} — {md_bold(u.get("goal_fr",""))}</div></a>'
         )
     return f'<div class="grid">{"".join(cards)}</div>'
 
@@ -844,26 +933,43 @@ def build_lang_index(course: dict) -> str:
     n_years = f"{len(grouped)} année" + ("s" if len(grouped) > 1 else "")
     sections = []
     for year in sorted(grouped):
-        y = next((yy for yy in ((course.get("program") or {}).get("years") or [])
-                  if yy.get("year") == year), {})
+        y = year_entry(course, year)
         head = [f'<div class="yearhead"><h2>{E(year_label(course, year))}</h2>']
+        sub = " · ".join(x for x in (y.get("cefr_fr"), y.get("age_fr")) if x)
+        if sub:
+            head.append(f'<p class="sub">{E(sub)}</p>')
         if y.get("goal_fr"):
-            head.append(f'<p class="sub">{E(y["goal_fr"])}</p>')
+            head.append(f'<p class="sub">{md_bold(y["goal_fr"])}</p>')
         if y.get("can_do_fr"):
             head.append('<strong>À la fin de l\'année, l\'enfant sait :</strong><ul>'
-                        + "".join(f"<li>{E(c)}</li>" for c in y["can_do_fr"]) + "</ul>")
-        head.append(f'<p><a href="programme.html#annee-{year}">Le programme semaine par semaine →</a></p>')
+                        + "".join(f"<li>{md_bold(c)}</li>" for c in y["can_do_fr"]) + "</ul>")
+        anchor = f'{spine_track(course.get("program") or {}).get("id", "x")}-annee-{year}'
+        head.append(f'<p><a href="programme.html#{E(anchor)}">'
+                    f'Le programme semaine par semaine →</a></p>')
         head.append("</div>")
         sections.append("".join(head) + unit_cards(course, grouped[year]))
     units_html = "".join(sections)
 
     entry_cards = []
     if course.get("program"):
+        n_tracks = len(program_tracks(course["program"]))
         entry_cards.append(
             '<a class="card" href="programme.html">'
-            '<div class="n">Le plan</div><div class="t">Le programme de l\'année</div>'
-            '<div class="f">Ce qu\'on fait chaque semaine, période par période, et comment '
-            'savoir si c\'est acquis.</div></a>')
+            '<div class="n">Le plan</div><div class="t">Le programme</div>'
+            f'<div class="f">{n_tracks} parcours selon l\'âge, période par période, avec '
+            'le niveau visé et comment savoir si c\'est acquis.</div></a>')
+    if course.get("culture"):
+        entry_cards.append(
+            '<a class="card" href="passeport.html">'
+            '<div class="n">Le voyage</div><div class="t">Le passeport culturel</div>'
+            '<div class="f">Douze escales : ce qu\'on voit, ce qu\'on goûte, ce qu\'on '
+            'écoute — et une mission à faire pour de vrai.</div></a>')
+    if course.get("resources"):
+        entry_cards.append(
+            '<a class="card" href="ressources.html">'
+            '<div class="n">Autour du cours</div><div class="t">Livres, chansons et écrans</div>'
+            '<div class="f">Ce qui vaut la peine d\'être acheté, emprunté ou écouté, '
+            'par âge.</div></a>')
     if course.get("toolkit"):
         entry_cards.append(
             '<a class="card" href="boite-a-outils.html">'
@@ -883,11 +989,14 @@ def build_lang_index(course: dict) -> str:
         if has_pdf:
             line += f' · <a href="../pdf/{E(code)}/programme.pdf">PDF</a>'
         dl.append(f"<li>{line}</li>")
-    if course.get("toolkit"):
-        line = (f'La boîte à outils de la discussion : '
-                f'<a href="../print/{E(code)}/boite-a-outils.html">HTML</a>')
+    for key, name, label in (("toolkit", "boite-a-outils", "La boîte à outils de la discussion"),
+                             ("culture", "passeport", "Le passeport culturel (à tamponner)"),
+                             ("resources", "ressources", "La liste des livres et des chansons")):
+        if not course.get(key):
+            continue
+        line = f'{label} : <a href="../print/{E(code)}/{name}.html">HTML</a>'
         if has_pdf:
-            line += f' · <a href="../pdf/{E(code)}/boite-a-outils.pdf">PDF</a>'
+            line += f' · <a href="../pdf/{E(code)}/{name}.pdf">PDF</a>'
         dl.append(f"<li>{line}</li>")
     for u in course["units"]:
         line = (f'Année {u.get("year", 1)} · unité {E(u.get("order",""))} — {E(u["title"])} : '
@@ -916,6 +1025,88 @@ def build_lang_index(course: dict) -> str:
     return page(course["name_fr"], body, SITE_CSS)
 
 
+def periods_table(course: dict, year: dict, by_id: dict, links: bool) -> str:
+    rows = []
+    for per in year.get("periods", []):
+        names = []
+        for uid in per.get("units", []):
+            u = by_id.get(uid, {"title": uid, "title_fr": ""})
+            label = f'{E(u.get("title", uid))} <span class="phon">{E(u.get("title_fr",""))}</span>'
+            names.append(f'<span class="u"><a href="{E(uid)}.html">{label}</a></span>'
+                         if links else f'<span class="u">{label}</span>')
+        # Une période sans unité neuve est une période de révision : le dire,
+        # plutôt que laisser une case vide qui ressemble à un oubli.
+        cell = "".join(names) or '<span class="week">révision, pas d\'unité neuve</span>'
+        rows.append(
+            f'<tr><td><strong>{E(per.get("label_fr",""))}</strong>'
+            f'<div class="week">{E(per.get("weeks_fr",""))}</div></td>'
+            f'<td>{cell}</td>'
+            f'<td>{md_bold(per.get("focus_fr",""))}</td>'
+            f'<td>{md_bold(per.get("milestone_fr",""))}</td></tr>')
+    if not rows:
+        return ""
+    return ('<div class="plan tablewrap"><table><thead><tr><th>Période</th>'
+            '<th>Unités</th><th>Ce qu\'on travaille</th>'
+            '<th>Bilan de la période</th></tr></thead>'
+            f'<tbody>{"".join(rows)}</tbody></table></div>')
+
+
+def track_html(course: dict, track: dict, by_id: dict, links: bool) -> str:
+    """Un parcours complet : à qui il s'adresse, à quel rythme, jusqu'où."""
+    parts = [f'<h2 id="parcours-{E(track.get("id","x"))}">{E(track.get("label_fr",""))}</h2>']
+
+    chips = []
+    for key, prefix in (("ages_fr", "Âge"), ("cefr_fr", "Niveau visé"),
+                        ("session_fr", "Séance"), ("total_fr", "Durée")):
+        if track.get(key):
+            chips.append(f'<span class="chip"><strong>{prefix} :</strong> {E(track[key])}</span>')
+    if chips:
+        parts.append(f'<div class="chips">{"".join(chips)}</div>')
+    if track.get("intro_fr"):
+        parts.append(f"<p>{md_bold(track['intro_fr'])}</p>")
+    if track.get("method_fr"):
+        parts.append('<div class="note"><strong>Les règles de ce parcours :</strong><ul>'
+                     + "".join(f"<li>{md_bold(x)}</li>" for x in track["method_fr"]) + "</ul></div>")
+
+    if track.get("rhythm_fr"):
+        rows = "".join(
+            f'<tr><td><strong>{E(r.get("day_fr",""))}</strong></td>'
+            f'<td>{md_bold(r.get("what_fr",""))}</td>'
+            f'<td class="week">{E(r.get("min",""))} min</td></tr>'
+            for r in track["rhythm_fr"])
+        parts.append("<h3>La semaine type</h3>"
+                     f'<div class="tablewrap"><table><thead><tr><th>Quand</th><th>Quoi</th>'
+                     f'<th>Durée</th></tr></thead><tbody>{rows}</tbody></table></div>')
+
+    if track.get("cycle_fr"):
+        rows = "".join(
+            f'<tr><td><strong>{E(c.get("label_fr",""))}</strong></td>'
+            f'<td>{md_bold(c.get("what_fr",""))}</td></tr>'
+            for c in track["cycle_fr"])
+        parts.append("<h3>Comment on traite une unité</h3>"
+                     f'<div class="tablewrap"><table><tbody>{rows}</tbody></table></div>')
+
+    for y in track.get("years", []):
+        head = [f'<div class="yearhead" id="{E(track.get("id","x"))}-annee-{y.get("year", 1)}">'
+                f'<h3>{E(y.get("label_fr", ""))}</h3>']
+        sub = " · ".join(x for x in (y.get("age_fr"), y.get("cefr_fr")) if x)
+        if sub:
+            head.append(f'<p class="sub">{E(sub)}</p>')
+        if y.get("goal_fr"):
+            head.append(f"<p>{md_bold(y['goal_fr'])}</p>")
+        if y.get("can_do_fr"):
+            head.append("<strong>Ce que l\'enfant sait faire à la fin de l\'année :</strong><ul>"
+                        + "".join(f"<li>{md_bold(c)}</li>" for c in y["can_do_fr"]) + "</ul>")
+        head.append("</div>")
+        parts.append("".join(head))
+        parts.append(periods_table(course, y, by_id, links))
+        if y.get("evaluation_fr"):
+            parts.append('<div class="goal"><strong>Comment vérifier, sans faire d\'examen :</strong><ul>'
+                         + "".join(f"<li>{md_bold(x)}</li>" for x in y["evaluation_fr"])
+                         + "</ul></div>")
+    return "".join(parts)
+
+
 def program_body(course: dict, links: bool = True) -> str:
     """Le corps du programme, partagé par la page web et la feuille à imprimer."""
     prog = course.get("program") or {}
@@ -923,64 +1114,158 @@ def program_body(course: dict, links: bool = True) -> str:
     parts = []
     if prog.get("intro_fr"):
         parts.append(f'<p class="sub">{md_bold(prog["intro_fr"])}</p>')
+    if prog.get("cefr_fr"):
+        parts.append(f'<div class="note">{md_bold(prog["cefr_fr"])}</div>')
 
-    if prog.get("rhythm_fr"):
-        rows = "".join(
-            f'<tr><td><strong>{E(r.get("day_fr",""))}</strong></td>'
-            f'<td>{md_bold(r.get("what_fr",""))}</td>'
-            f'<td class="week">{E(r.get("min",""))} min</td></tr>'
-            for r in prog["rhythm_fr"])
-        parts.append("<h2>La semaine type</h2>"
-                     f'<div class="tablewrap"><table><thead><tr><th>Quand</th><th>Quoi</th>'
-                     f'<th>Durée</th></tr></thead><tbody>{rows}</tbody></table></div>')
+    tracks = program_tracks(prog)
+    if len(tracks) > 1:
+        links_html = " · ".join(
+            f'<a href="#parcours-{E(t.get("id","x"))}">{E(t.get("label_fr",""))}</a>'
+            for t in tracks)
+        parts.append(f'<p class="sub">Deux parcours, un seul contenu : {links_html}</p>')
 
-    if prog.get("cycle_fr"):
-        rows = "".join(
-            f'<tr><td><strong>{E(c.get("label_fr",""))}</strong></td>'
-            f'<td>{md_bold(c.get("what_fr",""))}</td></tr>'
-            for c in prog["cycle_fr"])
-        parts.append("<h2>Comment on traite une unité</h2>"
-                     '<p class="sub">Chaque unité tient trois semaines. On ne passe à la '
-                     'suivante que si les « je sais… » sont tenus.</p>'
-                     f'<div class="tablewrap"><table><tbody>{rows}</tbody></table></div>')
+    for track in tracks:
+        parts.append(track_html(course, track, by_id, links))
 
-    for y in prog.get("years", []):
-        year = y.get("year", 1)
-        head = [f'<div class="yearhead" id="annee-{year}"><h2>{E(y.get("label_fr", ""))}</h2>']
-        if y.get("age_fr"):
-            head.append(f'<p class="sub">{E(y["age_fr"])}</p>')
-        if y.get("goal_fr"):
-            head.append(f"<p>{md_bold(y['goal_fr'])}</p>")
-        if y.get("can_do_fr"):
-            head.append("<strong>Ce que l'enfant sait faire à la fin de l'année :</strong><ul>"
-                        + "".join(f"<li>{E(c)}</li>" for c in y["can_do_fr"]) + "</ul>")
-        head.append("</div>")
-        parts.append("".join(head))
+    if prog.get("bridge_fr"):
+        parts.append('<h2>Passer d\'un parcours à l\'autre</h2>'
+                     f'<div class="note">{md_bold(prog["bridge_fr"])}</div>')
 
-        rows = []
-        for per in y.get("periods", []):
-            names = []
-            for uid in per.get("units", []):
-                u = by_id.get(uid, {"title": uid, "title_fr": ""})
-                label = f'{E(u.get("title", uid))} <span class="phon">{E(u.get("title_fr",""))}</span>'
-                names.append(f'<span class="u"><a href="{E(uid)}.html">{label}</a></span>'
-                             if links else f'<span class="u">{label}</span>')
-            rows.append(
-                f'<tr><td><strong>{E(per.get("label_fr",""))}</strong>'
-                f'<div class="week">{E(per.get("weeks_fr",""))}</div></td>'
-                f'<td>{"".join(names)}</td>'
-                f'<td>{md_bold(per.get("focus_fr",""))}</td>'
-                f'<td>{md_bold(per.get("milestone_fr",""))}</td></tr>')
-        if rows:
-            parts.append('<div class="plan tablewrap"><table><thead><tr><th>Période</th>'
-                         '<th>Unités</th><th>Ce qu\'on travaille</th>'
-                         '<th>Bilan de la période</th></tr></thead>'
-                         f'<tbody>{"".join(rows)}</tbody></table></div>')
-        if y.get("evaluation_fr"):
-            parts.append('<div class="goal"><strong>Comment vérifier, sans faire d\'examen :</strong><ul>'
-                         + "".join(f"<li>{md_bold(x)}</li>" for x in y["evaluation_fr"])
-                         + "</ul></div>")
+    if prog.get("practice_fr"):
+        parts.append("<h2>La pratique — ce qui fait vraiment la différence</h2>")
+        parts.append('<p class="sub">Le programme organise, il ne remplace pas l\'usage. '
+                     'Une heure de vraie conversation vaut dix fiches.</p>')
+        for item in prog["practice_fr"]:
+            steps = "".join(f"<li>{md_bold(x)}</li>" for x in item.get("steps_fr", []))
+            parts.append(f'<div class="act"><h3>{E(item.get("title_fr",""))}</h3>'
+                         f'<p class="sub">{E(item.get("when_fr",""))}</p><ul>{steps}</ul></div>')
     return "".join(parts)
+
+
+def culture_body(course: dict, interactive: bool = True) -> str:
+    """Le passeport culturel : douze escales dans le monde de la langue.
+
+    Un cours de langue qui ne fait pas voyager reste un cours. Chaque escale
+    donne quelque chose à voir, à goûter, à écouter, une histoire — et une
+    mission à faire pour de vrai.
+    """
+    culture = course.get("culture") or {}
+    escales = culture.get("escales") or []
+    if not escales:
+        return ""
+    parts = []
+    if culture.get("intro_fr"):
+        parts.append(f'<p class="sub">{md_bold(culture["intro_fr"])}</p>')
+    for i, e in enumerate(escales, 1):
+        box = [f'<div class="escale" id="escale-{i}">',
+               f'<div class="n">Escale {i}'
+               + (f' · {E(e["when_fr"])}' if e.get("when_fr") else "") + "</div>",
+               f'<h3>{E(e.get("label_fr", ""))}</h3>']
+        if e.get("intro_fr"):
+            box.append(f'<p>{md_bold(e["intro_fr"])}</p>')
+        rows = []
+        for key, label in (("see_fr", "À voir"), ("taste_fr", "À goûter"),
+                           ("listen_fr", "À écouter"), ("story_fr", "L\'histoire"),
+                           ("know_fr", "À savoir")):
+            if e.get(key):
+                rows.append(f'<li><strong>{label} :</strong> {md_bold(e[key])}</li>')
+        if rows:
+            box.append(f'<ul class="esc">{"".join(rows)}</ul>')
+        if e.get("words"):
+            box.append(vocab_table(e["words"], course, with_audio=interactive))
+        if e.get("mission_fr"):
+            box.append(f'<div class="mission"><strong>La mission :</strong> '
+                       f'{md_bold(e["mission_fr"])}</div>')
+        box.append("</div>")
+        parts.append("".join(box))
+    if culture.get("outro_fr"):
+        parts.append(f'<div class="note">{md_bold(culture["outro_fr"])}</div>')
+    return "".join(parts)
+
+
+def build_culture_page(course: dict) -> str:
+    culture = course.get("culture") or {}
+    title = culture.get("title_fr", "Passeport culturel")
+    body = (f'<div class="wrap">'
+            f'<div class="crumb"><a href="index.html">← {E(course["name_fr"])}</a></div>'
+            f'<h1>{E(title)}</h1>'
+            + audio_bar()
+            + culture_body(course)
+            + '<footer>Une escale par mois, dans l\'ordre qu\'on veut. Le tampon se '
+              'gagne quand la mission est faite — pas quand l\'escale est lue.</footer></div>')
+    texts = [w["term"] for e in (culture.get("escales") or []) for w in (e.get("words") or [])]
+    return page(f'{title} — {course["name_fr"]}', body, SITE_CSS,
+                script=audio_map_js(course, texts) + SAY_JS + DIALOG_JS)
+
+
+def build_print_culture(course: dict) -> str:
+    """Le passeport à imprimer : une case à tamponner par escale."""
+    culture = course.get("culture") or {}
+    escales = culture.get("escales") or []
+    cells = "".join(
+        f'<div class="cut"><div class="t">{E(e.get("label_fr", ""))}</div>'
+        f'<div class="p">{E(e.get("when_fr", ""))}</div>'
+        f'<div class="f">{E(shorten(plain(e.get("mission_fr", "")), 90))}</div></div>'
+        for e in escales)
+    body = (f'<div class="sheet"><h1>{E(course["name_fr"])} — passeport culturel</h1>'
+            f'<p class="sub">Une case par escale. On la signe ou on la tamponne quand la '
+            f'mission est faite pour de vrai.</p>'
+            f'<div class="cutgrid">{cells}</div>'
+            f'<footer>{E(course["name_fr"])} — passeport culturel</footer></div>'
+            f'<div class="sheet"><h1>Les escales en détail</h1>'
+            + culture_body(course, interactive=False)
+            + f'<footer>{E(course["name_fr"])} — escales</footer></div>')
+    return page(f'{course["name_fr"]} — passeport culturel', body, PRINT_CSS)
+
+
+def resources_body(course: dict) -> str:
+    """Livres, chansons, écrans, dictionnaires : ce qu'on achète ou emprunte."""
+    res = course.get("resources") or {}
+    groups = res.get("groups") or []
+    if not groups:
+        return ""
+    parts = []
+    if res.get("intro_fr"):
+        parts.append(f'<p class="sub">{md_bold(res["intro_fr"])}</p>')
+    if res.get("warning_fr"):
+        parts.append(f'<div class="note">{md_bold(res["warning_fr"])}</div>')
+    for g in groups:
+        parts.append(f'<h2>{E(g.get("title_fr", ""))}</h2>')
+        if g.get("intro_fr"):
+            parts.append(f'<p class="sub">{E(g["intro_fr"])}</p>')
+        rows = []
+        for it in g.get("items", []):
+            who = " · ".join(x for x in (it.get("author"), it.get("kind_fr"),
+                                         it.get("age_fr")) if x)
+            rows.append(
+                f'<tr><td><strong>{E(it.get("title", ""))}</strong>'
+                + (f'<div class="week">{E(who)}</div>' if who else "")
+                + f'</td><td>{md_bold(it.get("why_fr", ""))}</td>'
+                + f'<td class="week">{md_bold(it.get("where_fr", ""))}</td></tr>')
+        parts.append('<div class="tablewrap"><table><thead><tr><th>Titre</th>'
+                     '<th>Pourquoi celui-là</th><th>Où le trouver</th></tr></thead>'
+                     f'<tbody>{"".join(rows)}</tbody></table></div>')
+    if res.get("outro_fr"):
+        parts.append(f'<div class="goal">{md_bold(res["outro_fr"])}</div>')
+    return "".join(parts)
+
+
+def build_resources_page(course: dict) -> str:
+    res = course.get("resources") or {}
+    title = res.get("title_fr", "Livres, chansons et écrans")
+    body = (f'<div class="wrap">'
+            f'<div class="crumb"><a href="index.html">← {E(course["name_fr"])}</a></div>'
+            f'<h1>{E(title)}</h1>' + resources_body(course)
+            + '<footer>Rien ici n\'est obligatoire. Un seul album lu vingt fois vaut '
+              'mieux que dix achetés une fois.</footer></div>')
+    return page(f'{title} — {course["name_fr"]}', body, SITE_CSS)
+
+
+def build_print_resources(course: dict) -> str:
+    body = (f'<div class="sheet"><h1>{E(course["name_fr"])} — la liste à emporter</h1>'
+            + resources_body(course)
+            + f'<footer>{E(course["name_fr"])} — livres, chansons et écrans</footer></div>')
+    return page(f'{course["name_fr"]} — ressources', body, PRINT_CSS)
 
 
 def build_program_page(course: dict) -> str:
@@ -1128,6 +1413,15 @@ footer{margin-top:6mm;font-size:8.5pt;color:#666;border-top:.5pt solid #bbb;padd
 .plan .u{display:block}
 .week{color:#555;font-size:9pt}
 .ctx{font-style:italic;color:#555;margin:1mm 0 2mm}
+.escale{border:.5pt solid #999;border-radius:2mm;padding:3mm 4mm;margin:3mm 0}
+.escale .n{font-size:8.5pt;text-transform:uppercase;letter-spacing:.05em;color:#555}
+.escale h3{margin:1mm 0 2mm;font-size:12pt}
+ul.esc{list-style:none;padding-left:0}
+ul.esc li{padding:.6mm 0 .6mm 2.5mm;border-left:.5pt solid #bbb;margin:.6mm 0}
+.mission{border:.5pt dashed #333;padding:2mm 3mm;margin:2mm 0}
+.chips{margin:2mm 0}
+.chip{border:.5pt solid #666;border-radius:10pt;padding:.4mm 2mm;margin-right:2mm;font-size:9pt}
+h3{font-size:12pt;margin:4mm 0 1.5mm}
 @media screen{ body{background:#eee} .sheet{background:#fff;max-width:210mm;margin:6mm auto;
   padding:15mm;box-shadow:0 1px 6px rgba(0,0,0,.2)} }
 """
@@ -1141,7 +1435,7 @@ def build_print_unit(course: dict, unit: dict) -> str:
          f'<p class="sub">{E(course["name_fr"])} · unité {unit.get("order","")} — {E(unit["title_fr"])}</p>']
     if unit.get("can_do_fr"):
         p.append('<div class="note"><strong>Objectif :</strong><ul>'
-                 + "".join(f"<li>{E(c)}</li>" for c in unit["can_do_fr"]) + "</ul></div>")
+                 + "".join(f"<li>{md_bold(c)}</li>" for c in unit["can_do_fr"]) + "</ul></div>")
     if unit["vocab"]:
         p.append("<h2>Vocabulaire</h2>" + vocab_table(unit["vocab"], course, with_audio=False))
     if unit["phrases"]:
@@ -1168,8 +1462,8 @@ def build_print_unit(course: dict, unit: dict) -> str:
         conv.append(f'<div class="dial">{"".join(lines)}</div>')
     if unit.get("comprehension"):
         conv.append("<h2>Est-ce que j'ai compris ?</h2><ol>"
-                    + "".join(f'<li>{E(c["q_fr"])}<br><span class="phon">Réponse : '
-                              f'{E(c.get("a_fr",""))}</span></li>' for c in unit["comprehension"])
+                    + "".join(f'<li>{md_bold(c["q_fr"])}<br><span class="phon">Réponse : '
+                              f'{md_bold(c.get("a_fr",""))}</span></li>' for c in unit["comprehension"])
                     + "</ol>")
     if unit.get("qa"):
         conv.append("<h2>On me demande, je réponds</h2>")
@@ -1200,6 +1494,9 @@ def build_print_unit(course: dict, unit: dict) -> str:
                 f'<span class="tag">{E(a.get("type",""))}</span>'
                 f'<h3>{E(a.get("title_fr",""))}</h3><ol>{steps}</ol></div>'
             )
+        if unit.get("culture_fr"):
+            a_parts.append('<div class="mission"><strong>Un pas de plus dans la culture :</strong> '
+                           + md_bold(unit["culture_fr"]) + "</div>")
         if unit.get("reemploi_fr"):
             a_parts.append('<div class="note"><strong>Cette semaine, dans la vraie vie :</strong><ul>'
                            + "".join(f"<li>{md_bold(x)}</li>" for x in unit["reemploi_fr"])
@@ -1253,6 +1550,10 @@ def build_print_all(course: dict) -> str:
         body.append(strip_page(build_print_program(course)))
     if course.get("toolkit"):
         body.append(strip_page(build_print_toolkit(course)))
+    if course.get("culture"):
+        body.append(strip_page(build_print_culture(course)))
+    if course.get("resources"):
+        body.append(strip_page(build_print_resources(course)))
     for u in course["units"]:
         body.append(strip_page(build_print_unit(course, u)))
     return page(f'{course["name_fr"]} — cahier complet', "\n".join(body), PRINT_CSS)
@@ -1322,6 +1623,12 @@ def main() -> None:
         if course.get("toolkit"):
             (sdir / "boite-a-outils.html").write_text(build_toolkit_page(course), encoding="utf-8")
             (pdir / "boite-a-outils.html").write_text(build_print_toolkit(course), encoding="utf-8")
+        if course.get("culture"):
+            (sdir / "passeport.html").write_text(build_culture_page(course), encoding="utf-8")
+            (pdir / "passeport.html").write_text(build_print_culture(course), encoding="utf-8")
+        if course.get("resources"):
+            (sdir / "ressources.html").write_text(build_resources_page(course), encoding="utf-8")
+            (pdir / "ressources.html").write_text(build_print_resources(course), encoding="utf-8")
         units = course["units"]
         for i, u in enumerate(units):
             prev_u = units[i - 1] if i else None
