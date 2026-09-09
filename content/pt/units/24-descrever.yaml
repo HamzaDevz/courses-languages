@@ -1,0 +1,105 @@
+id: 24-descrever
+order: 24
+year: 3
+title: "Como é?"
+title_fr: "C'est comment ?"
+goal_fr: "Décrire une personne, un objet, un lieu."
+can_do_fr:
+  - "Je décris quelqu'un : taille, cheveux, yeux, caractère."
+  - "Je décris un objet : taille, couleur, matière."
+  - "J'accorde l'adjectif avec le nom."
+  - "Je fais deviner quelque chose en le décrivant."
+duration_min: 16
+dialogue:
+  title_fr: "Le nouveau de la classe"
+  context_fr: "Ana décrit un camarade que Tomás ne connaît pas encore."
+  lines:
+    - { who: "Tomás", term: "Como é o novo colega?",                    fr: "Il est comment, le nouveau ?",       phon: "KO-mou è ou NO-vou kou-LÈ-ga" }
+    - { who: "Ana",   term: "É alto e tem cabelo castanho.",            fr: "Il est grand et il a les cheveux châtains.", phon: "è AL-tou i tèïn ka-BÉ-lou kach-TA-gnou" }
+    - { who: "Tomás", term: "E os olhos? São azuis?",                   fr: "Et les yeux ? Ils sont bleus ?",     phon: "i ouz O-liouch? san-ou a-ZOUÏCH" }
+    - { who: "Ana",   term: "Não, são castanhos. Usa óculos.",          fr: "Non, ils sont marron. Il porte des lunettes.", phon: "nan-ou, san-ou kach-TA-gnouch. OU-za O-kou-louch" }
+    - { who: "Tomás", term: "E como é ele? Simpático?",                 fr: "Et comment il est ? Sympa ?",        phon: "i KO-mou è É-le? sïn-PA-ti-kou" }
+    - { who: "Ana",   term: "É muito simpático, mas é um bocado tímido.", fr: "Il est très sympa, mais un peu timide.", phon: "è MOUÏN-tou sïn-PA-ti-kou, mach è oun bou-KA-dou TI-mi-dou" }
+    - { who: "Tomás", term: "Já sei quem é! É o menino de camisola verde.", fr: "Je sais qui c'est ! C'est le garçon au pull vert.", phon: "ja sèï kèïn è! è ou me-NI-nou de ka-mi-ZO-la VÈR-de" }
+    - { who: "Ana",   term: "Exatamente, é esse!",                      fr: "Exactement, c'est lui !",            phon: "i-za-ta-MEN-te, è É-se" }
+comprehension:
+  - q_fr: "Comment est le nouveau physiquement ?"
+    a_fr: "Grand, cheveux châtains, yeux marron, il porte des lunettes."
+  - q_fr: "Et son caractère ?"
+    a_fr: "Très sympa mais un peu timide — *um bocado tímido*."
+  - q_fr: "Comment Tomás finit-il par le reconnaître ?"
+    a_fr: "Grâce à son pull vert : *o menino de camisola verde*."
+  - q_fr: "Pourquoi dit-on *os olhos castanho**s*** ?"
+    a_fr: "Parce que l'adjectif s'accorde : plusieurs yeux → *castanhos*, avec un **s**."
+vocab:
+  - { term: "alto",       fr: "grand (taille)",  phon: "AL-tou" }
+  - { term: "baixo",      fr: "petit (taille)",  phon: "BAÏ-chou" }
+  - { term: "grande",     fr: "grand",           phon: "GRAN-de" }
+  - { term: "pequeno",    fr: "petit",           phon: "pe-KÉ-nou" }
+  - { term: "novo",       fr: "neuf, jeune",     phon: "NO-vou" }
+  - { term: "velho",      fr: "vieux",           phon: "VÈ-liou" }
+  - { term: "bonito",     fr: "beau, joli",      phon: "bou-NI-tou" }
+  - { term: "o cabelo",   fr: "les cheveux",     phon: "ou ka-BÉ-lou" }
+  - { term: "castanho",   fr: "châtain, marron", phon: "kach-TA-gnou" }
+  - { term: "louro",      fr: "blond",           phon: "LÔ-rou" }
+  - { term: "os óculos",  fr: "les lunettes",    phon: "ouz O-kou-louch" }
+  - { term: "tímido",     fr: "timide",          phon: "TI-mi-dou" }
+phrases:
+  - { term: "Como é?",                  fr: "C'est comment ?",              phon: "KO-mou è" }
+  - { term: "É alto e magro.",          fr: "Il est grand et mince.",       phon: "è AL-tou i MA-grou" }
+  - { term: "Tem cabelo louro.",        fr: "Il a les cheveux blonds.",     phon: "tèïn ka-BÉ-lou LÔ-rou" }
+  - { term: "É pequeno e vermelho.",    fr: "C'est petit et rouge.",        phon: "è pe-KÉ-nou i ver-MÉ-liou" }
+  - { term: "Parece-se com o pai.",     fr: "Il ressemble à son père.",     phon: "pa-RÈ-se-se kon ou paï" }
+  - { term: "É um bocado tímido.",      fr: "Il est un peu timide.",        phon: "è oun bou-KA-dou TI-mi-dou" }
+qa:
+  - question: { term: "Como é o teu melhor amigo?", fr: "Comment est ton meilleur ami ?", phon: "KO-mou è ou téou me-LIOR a-MI-gou" }
+    answers:
+      - { term: "É baixo, tem cabelo castanho e é muito engraçado.", fr: "Il est petit, il a les cheveux châtains et il est très drôle.", phon: "è BAÏ-chou, tèïn ka-BÉ-lou kach-TA-gnou i è MOUÏN-tou en-gra-SA-dou" }
+      - { term: "É alta e usa óculos.", fr: "Elle est grande et porte des lunettes.", phon: "è AL-ta i OU-za O-kou-louch" }
+  - question: { term: "Como é a tua casa?", fr: "Comment est ta maison ?", phon: "KO-mou è a TOU-a KA-za" }
+    answers:
+      - { term: "É grande e tem um jardim.", fr: "Elle est grande et a un jardin.", phon: "è GRAN-de i tèïn oun jar-DÏN" }
+      - { term: "É pequena mas é bonita.",   fr: "Elle est petite mais jolie.",     phon: "è pe-KÉ-na mach è bou-NI-ta" }
+  - question: { term: "De que cor são os teus olhos?", fr: "De quelle couleur sont tes yeux ?", phon: "de ke kor san-ou ouch téouz O-liouch" }
+    answers:
+      - { term: "São castanhos.", fr: "Ils sont marron.", phon: "san-ou kach-TA-gnouch" }
+      - { term: "São verdes como os da minha mãe.", fr: "Ils sont verts comme ceux de ma mère.", phon: "san-ou VÈR-dech KO-mou ouch da MI-gna maïn" }
+notes_fr:
+  - "L'adjectif s'accorde en genre **et** en nombre : *alto / alta / altos / altas*. Ceux en **-e** (*grande*, *verde*) ne changent qu'au pluriel."
+  - "Deux verbes pour décrire : **ser** pour ce qui dure (*é alto*), **estar** pour ce qui passe (*está cansado*)."
+  - "**um bocado** = un peu, au Portugal. Au Brésil : *um pouco*. Les deux se comprennent."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Qui est-ce ?"
+    steps_fr:
+      - "Étalez cinq photos de la famille."
+      - "Vous décrivez quelqu'un en deux mots : *é alto, tem óculos*."
+      - "L'enfant montre la bonne photo. Puis il décrit et vous devinez."
+  - level: petits
+    type: jeu
+    title_fr: "Le sac mystère"
+    steps_fr:
+      - "Un objet caché dans un sac. L'enfant le touche sans le voir."
+      - "Il donne trois mots : *é pequeno… é duro… é redondo*."
+      - "Vous devinez ensemble."
+  - level: grands
+    type: exercice
+    title_fr: "Le portrait écrit"
+    steps_fr:
+      - "Écris le portrait de quelqu'un de la famille en cinq phrases, sans dire son nom."
+      - "Deux phrases pour le physique, deux pour le caractère, une pour ce qu'il aime."
+      - "Fais-le lire : on doit deviner qui c'est."
+  - level: grands
+    type: dialogue
+    title_fr: "Le portrait-robot"
+    steps_fr:
+      - "L'un décrit un personnage inventé, l'autre le dessine sans le voir, uniquement d'après le portugais."
+      - "On compare le dessin et l'idée de départ : ce qui manque montre ce qu'il faut réviser."
+      - "On échange les rôles."
+reemploi_fr:
+  - "Devant une photo ou dans la rue : *Como é essa pessoa?* — deux phrases en portugais."
+  - "Décrire l'objet perdu de la semaine en portugais avant de le chercher."
+cefr: "A1+ → A2"
+culture_fr: >-
+  Un mot à connaître avant tous les autres pour décrire : **giro**. Au Portugal, il sert pour joli, mignon, chouette, sympa — pour à peu près tout ce qui plaît. *Que giro!* est la réaction la plus fréquente du pays.

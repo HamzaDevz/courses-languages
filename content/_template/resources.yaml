@@ -1,0 +1,20 @@
+# GABARIT des ressources. Aucun ISBN, aucun prix : ils changent, et une
+# référence fausse est pire que pas de référence.
+title_fr: "Livres, chansons et écrans"
+intro_fr: >
+  Ce qui vaut la peine d'être acheté, emprunté ou écouté, par âge.
+warning_fr: >
+  Vérifier la variante de langue (Portugal / Brésil, MSA / dialecte) et l'édition
+  avant de commander.
+groups:
+  - title_fr: "Pour les 3-6 ans — albums à lire à voix haute"
+    intro_fr: "On lit le même album des dizaines de fois : c'est le but."
+    items:
+      - title: "Titre dans la langue"
+        author: "Auteur"
+        kind_fr: "album illustré"
+        age_fr: "3-6 ans"
+        why_fr: "Pourquoi celui-là, et à quelle unité il se rattache."
+        where_fr: "Où le trouver."
+outro_fr: >
+  S'il ne fallait garder que trois choses…

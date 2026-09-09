@@ -1,0 +1,104 @@
+id: 18-passeio
+order: 18
+year: 2
+title: "Vamos passear"
+title_fr: "On sort"
+goal_fr: "Proposer une sortie, dire comment on y va et se mettre d'accord."
+can_do_fr:
+  - "Je propose une sortie : *Apetece-te ir…?*"
+  - "J'accepte, je refuse, ou je propose autre chose."
+  - "Je dis comment on y va : *de comboio*, *a pé*."
+  - "Je demande à quelle heure on part."
+duration_min: 15
+dialogue:
+  title_fr: "Le programme du week-end"
+  context_fr: "Vendredi soir. Ana et son père organisent le samedi."
+  lines:
+    - { who: "Pai", term: "O que vamos fazer no fim de semana?",     fr: "Qu'est-ce qu'on fait ce week-end ?",   phon: "ou ke VA-mouch fa-ZÈR nou fïn de se-MA-na" }
+    - { who: "Ana", term: "Apetece-te ir à praia?",                  fr: "Ça te dit d'aller à la plage ?",       phon: "a-pe-TÈ-se-te ir a PRAÏ-a" }
+    - { who: "Pai", term: "Vai estar frio. E o cinema?",             fr: "Il va faire froid. Et le cinéma ?",    phon: "vaï chTAR FRI-ou. i ou si-NÉ-ma" }
+    - { who: "Ana", term: "Boa ideia! A que horas saímos?",          fr: "Bonne idée ! On part à quelle heure ?", phon: "BÔ-a i-DÈ-ia! a ke O-rach sa-I-mouch" }
+    - { who: "Pai", term: "Às duas da tarde. Vamos de autocarro.",   fr: "À deux heures de l'après-midi. On y va en bus.", phon: "ach DOU-ach da TAR-de. VA-mouch de aou-to-KA-rrou" }
+    - { who: "Ana", term: "Podemos ir de comboio? Gosto mais!",      fr: "On peut y aller en train ? Je préfère !", phon: "pou-DÉ-mouch ir de kon-BOÏ-ou? GOCH-tou maïch" }
+    - { who: "Pai", term: "Está bem, vamos de comboio.",             fr: "D'accord, on y va en train.",          phon: "chta bèïn, VA-mouch de kon-BOÏ-ou" }
+    - { who: "Ana", term: "Que bom! Vai ser divertido.",             fr: "Super ! Ça va être chouette.",         phon: "ke bon! vaï sèr di-ver-TI-dou" }
+comprehension:
+  - q_fr: "Que propose Ana en premier ?"
+    a_fr: "Aller à la plage — *ir à praia*."
+  - q_fr: "Pourquoi son père refuse-t-il ?"
+    a_fr: "Parce qu'il va faire froid : *vai estar frio*."
+  - q_fr: "Qu'est-ce qu'ils décident finalement ?"
+    a_fr: "Le cinéma, à deux heures, en train."
+  - q_fr: "Comment Ana obtient-elle le train à la place du bus ?"
+    a_fr: "Elle demande poliment et donne sa raison : *Podemos ir de comboio? Gosto mais!*"
+vocab:
+  - { term: "passear",        fr: "se promener",       phon: "pa-se-AR" }
+  - { term: "a praia",        fr: "la plage",          phon: "a PRAÏ-a" }
+  - { term: "o campo",        fr: "la campagne",       phon: "ou KAN-pou" }
+  - { term: "o cinema",       fr: "le cinéma",         phon: "ou si-NÉ-ma" }
+  - { term: "a piscina",      fr: "la piscine",        phon: "a pich-SI-na" }
+  - { term: "o museu",        fr: "le musée",          phon: "ou mou-ZÉOU" }
+  - { term: "o comboio",      fr: "le train",          phon: "ou kon-BOÏ-ou" }
+  - { term: "o carro",        fr: "la voiture",        phon: "ou KA-rrou" }
+  - { term: "a pé",           fr: "à pied",            phon: "a pè" }
+  - { term: "o fim de semana", fr: "le week-end",      phon: "ou fïn de se-MA-na" }
+  - { term: "divertido",      fr: "amusant",           phon: "di-ver-TI-dou" }
+  - { term: "a viagem",       fr: "le voyage",         phon: "a vi-A-jèïn" }
+phrases:
+  - { term: "Apetece-te ir ao cinema?", fr: "Ça te dit d'aller au cinéma ?", phon: "a-pe-TÈ-se-te ir aou si-NÉ-ma" }
+  - { term: "Vamos à praia!",           fr: "Allons à la plage !",           phon: "VA-mouch a PRAÏ-a" }
+  - { term: "A que horas saímos?",      fr: "On part à quelle heure ?",      phon: "a ke O-rach sa-I-mouch" }
+  - { term: "Vamos de comboio.",        fr: "On y va en train.",             phon: "VA-mouch de kon-BOÏ-ou" }
+  - { term: "Boa ideia!",               fr: "Bonne idée !",                  phon: "BÔ-a i-DÈ-ia" }
+  - { term: "Vai ser divertido.",       fr: "Ça va être amusant.",           phon: "vaï sèr di-ver-TI-dou" }
+qa:
+  - question: { term: "Apetece-te ir ao parque?", fr: "Ça te dit d'aller au parc ?", phon: "a-pe-TÈ-se-te ir aou PAR-ke" }
+    answers:
+      - { term: "Sim, apetece! Vamos.",        fr: "Oui, ça me dit ! Allons-y.",   phon: "sïn, a-pe-TÈ-se! VA-mouch" }
+      - { term: "Hoje não me apetece.",        fr: "Aujourd'hui ça ne me dit pas.", phon: "ô-je nan-ou me a-pe-TÈ-se" }
+      - { term: "Prefiro ir à piscina.",       fr: "Je préfère aller à la piscine.", phon: "pre-FI-rou ir a pich-SI-na" }
+  - question: { term: "Como vamos?", fr: "On y va comment ?", phon: "KO-mou VA-mouch" }
+    answers:
+      - { term: "Vamos a pé.",           fr: "On y va à pied.",     phon: "VA-mouch a pè" }
+      - { term: "Vamos de carro.",       fr: "On y va en voiture.", phon: "VA-mouch de KA-rrou" }
+      - { term: "Vamos de bicicleta!",   fr: "On y va à vélo !",    phon: "VA-mouch de bi-si-KLÈ-ta" }
+  - question: { term: "O que fizeste no fim de semana?", fr: "Qu'as-tu fait ce week-end ?", phon: "ou ke fi-ZÈCH-te nou fïn de se-MA-na" }
+    answers:
+      - { term: "Fui ao cinema com o meu pai.", fr: "Je suis allé au cinéma avec mon père.", phon: "fouï aou si-NÉ-ma kon ou méou paï" }
+      - { term: "Fiquei em casa a brincar.",    fr: "Je suis resté à la maison à jouer.",    phon: "fi-KÈÏ èïn KA-za a brïn-KAR" }
+notes_fr:
+  - "**Apetece-te…?** est le « ça te dit ? » portugais. Réponse : *apetece* ou *não me apetece*."
+  - "Moyen de transport : **de** + véhicule (*de carro*, *de comboio*, *de autocarro*) — sauf à pied, **a pé**."
+  - "*Ir* + **a** = aller à : *vou à praia*, *vou ao cinema* (a + o = ao, a + a = à)."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Le train des chaises"
+    steps_fr:
+      - "Alignez des chaises : c'est le *comboio*. Annoncez les arrêts : *praia!*, *parque!*, *cinema!*"
+      - "À chaque arrêt, l'enfant mime ce qu'on y fait."
+  - level: petits
+    type: jeu
+    title_fr: "Ça me dit / ça me dit pas"
+    steps_fr:
+      - "Proposez cinq sorties. L'enfant répond par *apetece!* (bras en l'air) ou *não me apetece* (bras croisés)."
+      - "Puis c'est lui qui propose."
+  - level: grands
+    type: exercice
+    title_fr: "Le programme du samedi"
+    steps_fr:
+      - "Écris le programme d'un samedi imaginaire : trois sorties avec l'heure et le moyen de transport."
+      - "Exemple : *Às dez horas vamos ao museu de autocarro.*"
+  - level: grands
+    type: dialogue
+    title_fr: "Se mettre d'accord"
+    steps_fr:
+      - "Chacun écrit en secret la sortie qu'il veut faire."
+      - "On négocie **en portugais** jusqu'à tomber d'accord : proposer, refuser avec une raison, proposer autre chose."
+      - "Interdit de dire seulement *não* : il faut toujours une raison et une contre-proposition."
+reemploi_fr:
+  - "Le programme du week-end se décide en portugais, au moins la première phrase."
+  - "Dans les transports : annoncer le moyen utilisé — *vamos de autocarro!*"
+cefr: "A1 → A1+"
+culture_fr: >-
+  Le dimanche, on part en famille : la plage même en hiver, ou la **romaria**, la fête d'un village avec musique, procession et grillades. Le mot *passeio* désigne autant la promenade que le trottoir sur lequel on la fait.

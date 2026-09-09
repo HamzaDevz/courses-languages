@@ -1,0 +1,102 @@
+id: 28-viagem
+order: 28
+year: 3
+title: "Em viagem"
+title_fr: "En voyage"
+goal_fr: "Se débrouiller en voyage et parler de son pays."
+can_do_fr:
+  - "Je dis d'où je viens et quelles langues je parle."
+  - "Je demande de l'aide à un inconnu."
+  - "Je comprends qu'on me demande d'où je suis."
+  - "Je connais quelques choses du Portugal et je peux en parler."
+duration_min: 16
+dialogue:
+  title_fr: "Tu viens d'où ?"
+  context_fr: "Sur une place de Lisbonne. Une dame engage la conversation avec Ana."
+  lines:
+    - { who: "Senhora", term: "Olá! De onde és? Não és daqui, pois não?", fr: "Bonjour ! Tu viens d'où ? Tu n'es pas d'ici, si ?", phon: "o-LA! de ON-de èch? nan-ou èch da-KI, poïch nan-ou" }
+    - { who: "Ana",     term: "Sou de França, de Paris.",                 fr: "Je viens de France, de Paris.",     phon: "sô de FRAN-sa, de pa-RICH" }
+    - { who: "Senhora", term: "E falas português muito bem!",             fr: "Et tu parles très bien portugais !", phon: "i FA-lach pour-tou-GUÊCH MOUÏN-tou bèïn" }
+    - { who: "Ana",     term: "Falo um pouco. Aprendo em casa.",          fr: "Je parle un peu. J'apprends à la maison.", phon: "FA-lou oun PÔ-kou. a-PREN-dou èïn KA-za" }
+    - { who: "Senhora", term: "Estás cá de férias? Já foste ao Porto?",   fr: "Tu es ici en vacances ? Tu es déjà allée à Porto ?", phon: "chTACH ka de FÈ-riach? ja FOCH-te aou POR-tou" }
+    - { who: "Ana",     term: "Ainda não. Amanhã vamos de comboio.",      fr: "Pas encore. Demain on y va en train.", phon: "a-ÏN-da nan-ou. a-ma-GNAN VA-mouch de kon-BOÏ-ou" }
+    - { who: "Senhora", term: "Que bom! Prova os pastéis de nata lá.",    fr: "Super ! Goûte les pastéis de nata là-bas.", phon: "ke bon! PRO-va ouch pach-TÈÏCH de NA-ta la" }
+    - { who: "Ana",     term: "Já provei aqui, adorei! Obrigada!",        fr: "J'en ai déjà goûté ici, j'ai adoré ! Merci !", phon: "ja prou-VÈÏ a-KI, a-dou-RÈÏ! o-bri-GA-da" }
+comprehension:
+  - q_fr: "D'où vient Ana ?"
+    a_fr: "De France, de Paris — *sou de França*."
+  - q_fr: "Comment a-t-elle appris le portugais ?"
+    a_fr: "À la maison : *aprendo em casa*."
+  - q_fr: "Où va-t-elle demain, et comment ?"
+    a_fr: "À Porto, en train."
+  - q_fr: "Qu'est-ce que la dame lui conseille de goûter ?"
+    a_fr: "Les *pastéis de nata*, le petit flan pâtissier portugais."
+vocab:
+  - { term: "a viagem",          fr: "le voyage",         phon: "a vi-A-jèïn" }
+  - { term: "o bilhete",         fr: "le billet",         phon: "ou bi-LIÉ-te" }
+  - { term: "a mala",            fr: "la valise",         phon: "a MA-la" }
+  - { term: "o hotel",           fr: "l'hôtel",           phon: "ou o-TÈL" }
+  - { term: "as férias",         fr: "les vacances",      phon: "ach FÈ-riach" }
+  - { term: "o mapa",            fr: "la carte",          phon: "ou MA-pa" }
+  - { term: "Portugal",          fr: "le Portugal",       phon: "pour-tou-GAL" }
+  - { term: "Lisboa",            fr: "Lisbonne",          phon: "lij-BÔ-a" }
+  - { term: "o pastel de nata",  fr: "le flan pâtissier portugais", phon: "ou pach-TÈL de NA-ta" }
+  - { term: "o azulejo",         fr: "le carreau de faïence", phon: "ou a-zou-LÉ-jou" }
+  - { term: "a língua",          fr: "la langue",         phon: "a LÏN-goua" }
+  - { term: "estrangeiro",       fr: "étranger",          phon: "chtran-JÈÏ-rou" }
+phrases:
+  - { term: "De onde és?",              fr: "D'où viens-tu ?",             phon: "de ON-de èch" }
+  - { term: "Sou de França.",           fr: "Je viens de France.",         phon: "sô de FRAN-sa" }
+  - { term: "Falo um pouco de português.", fr: "Je parle un peu portugais.", phon: "FA-lou oun PÔ-kou de pour-tou-GUÊCH" }
+  - { term: "Estou cá de férias.",      fr: "Je suis ici en vacances.",    phon: "chtô ka de FÈ-riach" }
+  - { term: "Pode ajudar-me, por favor?", fr: "Pouvez-vous m'aider, s'il vous plaît ?", phon: "PO-de a-jou-DAR-me, pour fa-VOR" }
+  - { term: "Onde posso comprar bilhetes?", fr: "Où puis-je acheter des billets ?", phon: "ON-de PO-sou kon-PRAR bi-LIÉ-tech" }
+qa:
+  - question: { term: "De onde és?", fr: "D'où viens-tu ?", phon: "de ON-de èch" }
+    answers:
+      - { term: "Sou de França, mas a minha avó é portuguesa.", fr: "Je viens de France, mais ma grand-mère est portugaise.", phon: "sô de FRAN-sa, mach a MI-gna a-VO è pour-tou-GUÉ-za" }
+      - { term: "Sou francês, de Lyon.", fr: "Je suis français, de Lyon.", phon: "sô fran-SÈCH, de li-ON" }
+  - question: { term: "Falas português?", fr: "Tu parles portugais ?", phon: "FA-lach pour-tou-GUÊCH" }
+    answers:
+      - { term: "Falo um pouco, estou a aprender.", fr: "Je parle un peu, je suis en train d'apprendre.", phon: "FA-lou oun PÔ-kou, chtô a a-pren-DÈR" }
+      - { term: "Percebo mais do que falo!", fr: "Je comprends plus que je ne parle !", phon: "per-SÈ-bou maïch dou ke FA-lou" }
+  - question: { term: "Gostas de Portugal?", fr: "Tu aimes le Portugal ?", phon: "GOCH-tach de pour-tou-GAL" }
+    answers:
+      - { term: "Adoro! A comida é muito boa.", fr: "J'adore ! La nourriture est très bonne.", phon: "a-DO-rou! a kou-MI-da è MOUÏN-tou BÔ-a" }
+      - { term: "Gosto muito, principalmente da praia.", fr: "J'aime beaucoup, surtout la plage.", phon: "GOCH-tou MOUÏN-tou, prïn-si-pal-MEN-te da PRAÏ-a" }
+notes_fr:
+  - "**Sou de…** dit d'où l'on vient ; **estou em…** dit où l'on est maintenant. *Sou de França, estou em Portugal.*"
+  - "*Percebo mais do que falo* est une phrase précieuse : elle explique en une fois pourquoi l'enfant comprend mais hésite — et les gens ralentissent."
+  - "**Pois não?** en fin de phrase attend une confirmation, comme « n'est-ce pas ? »."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "La valise pour Lisbonne"
+    steps_fr:
+      - "« Je pars au Portugal et j'emporte… » — chacun ajoute un objet en portugais."
+      - "Le suivant répète toute la liste avant d'ajouter le sien."
+  - level: petits
+    type: chanson
+    title_fr: "Lisboa, Porto, Faro"
+    steps_fr:
+      - "Sur une carte du Portugal, montrez trois villes en les chantant."
+      - "L'enfant pose le doigt sur la ville nommée."
+  - level: grands
+    type: production
+    title_fr: "La carte postale"
+    steps_fr:
+      - "Écris une carte postale de six lignes depuis le Portugal, au passé et au futur proche."
+      - "Dis où tu es, ce que tu as fait hier, ce que tu vas faire demain."
+  - level: grands
+    type: dialogue
+    title_fr: "Le voyageur perdu"
+    steps_fr:
+      - "Un joueur est un Portugais qui aborde un enfant étranger sur une place."
+      - "Il pose quatre questions : d'où tu viens, si tu parles portugais, ce que tu as visité, ce que tu vas faire."
+      - "L'enfant doit répondre **et** poser une question en retour."
+reemploi_fr:
+  - "Repérer cette semaine trois mots portugais dans la vraie vie : étiquettes, plaques, noms de plats."
+  - "Regarder une carte du Portugal et nommer trois villes à voix haute."
+cefr: "A2"
+culture_fr: >-
+  Deux gares valent le voyage à elles seules : **São Bento** à Porto, dont le hall entier est couvert d'azulejos racontant l'histoire du pays, et **Rossio** à Lisbonne. Prendre le train au Portugal, c'est déjà visiter.

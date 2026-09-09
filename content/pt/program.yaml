@@ -1,0 +1,281 @@
+# Le programme. Deux parcours selon l'âge, un seul contenu d'unités.
+# Chaque unité citée doit exister dans units/ — le build le vérifie.
+intro_fr: >
+  Un enfant de 4 ans et un enfant de 9 ans n'apprennent pas de la même façon :
+  ils n'ont ni la même mémoire, ni la même attention, ni les mêmes moyens
+  (l'un ne lit pas encore). Le contenu est donc **le même**, mais il existe
+  **deux parcours** — deux vitesses, deux profondeurs, deux façons d'évaluer —
+  reliés par une passerelle.
+
+cefr_fr: >
+  **Le cadre de référence.** Les objectifs sont écrits sous forme de descripteurs
+  « je sais faire », dans l'esprit du **CECRL** (Cadre européen commun de référence
+  pour les langues, Conseil de l'Europe) : *pré-A1 / A1.1*, *A1*, *A2*. Ce sont
+  des niveaux **de communication**, pas des quantités de vocabulaire.
+  Pour le portugais précisément, un enseignant comparera avec le référentiel de
+  l'**Instituto Camões** pour le portugais langue étrangère et le cadre de
+  l'enseignement du portugais à l'étranger (QuaREPE) — voir
+  `docs/REFERENTIEL.md`, qui détaille l'alignement, la progression grammaticale
+  et les grilles d'évaluation.
+
+tracks:
+  - id: petits
+    label_fr: "Parcours A — Les petits (3-6 ans)"
+    ages_fr: "3 à 6 ans, avant de savoir lire"
+    cefr_fr: "pré-A1 puis A1.1 à l'oral"
+    session_fr: "8 à 10 min, 4 à 5 fois par semaine"
+    total_fr: "3 années, 15 unités"
+    intro_fr: >
+      À cet âge, l'oreille fait tout le travail. L'enfant absorbe des sons et des
+      blocs entiers de phrases sans les analyser — c'est un avantage qu'on perd
+      plus tard, et il ne faut surtout pas le gâcher avec de l'écrit ou de la
+      grammaire. **Une unité dure quatre à sept semaines**, on n'en garde que le
+      dialogue, une dizaine de mots concrets et les jeux.
+    method_fr:
+      - "**Aucun écrit, aucune règle expliquée.** Le tableau de vocabulaire est pour le parent, pas pour l'enfant."
+      - "**On ne corrige jamais une prononciation.** On répète la forme juste juste après lui, sans commentaire ni « non »."
+      - "**Le corps d'abord** : montrer, mimer, toucher, bouger. Un mot lié à un geste tient dix fois mieux."
+      - "**On accepte un seul mot comme réponse.** *Azul!* est une réponse complète à 4 ans."
+      - "**On répète beaucoup plus que ce qui paraît raisonnable** : le même jeu quatre semaines de suite, c'est normal et c'est ce qui marche."
+      - "Sur les fiches et le site, on ne prend que les activités marquées **3-6 ans**."
+    rhythm_fr:
+      - { day_fr: "Lundi",    what_fr: "**Le dialogue** en fond, deux fois, pendant le petit-déjeuner. On ne demande rien.", min: 5 }
+      - { day_fr: "Mardi",    what_fr: "Le jeu de l'unité (niveau 3-6 ans). L'enfant bouge, montre, mime.", min: 10 }
+      - { day_fr: "Mercredi", what_fr: "La chanson, ou les images du vocabulaire : l'adulte nomme, l'enfant montre.", min: 8 }
+      - { day_fr: "Jeudi",    what_fr: "Le même jeu que mardi — la répétition est le moteur à cet âge.", min: 10 }
+      - { day_fr: "Vendredi", what_fr: "**Deux questions de l'unité**, posées pour de vrai. Une réponse d'un mot suffit.", min: 5 }
+    cycle_fr:
+      - label_fr: "Semaines 1-2 — j'entends"
+        what_fr: "Écouter le dialogue, jouer avec les mots. **Zéro production demandée.** L'enfant écoute et montre."
+      - label_fr: "Semaines 3-4 — je réponds par un mot"
+        what_fr: "L'adulte pose les questions de l'unité dans la vraie vie. L'enfant répond par un mot, ou montre. On applaudit la réponse, jamais la forme."
+      - label_fr: "Semaines 5-7 — je joue la scène"
+        what_fr: "On rejoue le dialogue avec des peluches, quatre répliques suffisent. L'unité est acquise quand l'enfant **réagit juste** à la question, même sans parler."
+    years:
+      - year: 1
+        label_fr: "Petits · Année 1 (3-4 ans) — J'écoute et je montre"
+        cefr_fr: "pré-A1 : compréhension orale de consignes simples"
+        goal_fr: >
+          L'enfant comprend qu'on lui parle une autre langue et **réagit** :
+          il montre, il fait, il répond par un mot. On ne cherche pas de phrases.
+        can_do_fr:
+          - "Je réagis à *bom dia*, *adeus*, *senta-te*, *vem cá*."
+          - "Je montre la bonne couleur, le bon animal, la bonne partie du corps."
+          - "Je dis mon nom quand on me demande *Como te chamas?*"
+          - "Je chante deux comptines en entier sans comprendre chaque mot."
+        periods:
+          - { label_fr: "Période 1", weeks_fr: "semaines 1 à 7",  units: [01-ola],     focus_fr: "Saluer, son prénom. Le rituel du bonjour et du dodo.", milestone_fr: "L'enfant répond *olá* quand on le salue en portugais." }
+          - { label_fr: "Période 2", weeks_fr: "semaines 8 à 14", units: [02-cores],  focus_fr: "Les couleurs par le jeu et le tri d'objets.", milestone_fr: "Il montre la bonne couleur sur trois demandes sur quatre." }
+          - { label_fr: "Période 3", weeks_fr: "semaines 15 à 21", units: [03-numeros], focus_fr: "Compter jusqu'à cinq en manipulant, dire son âge avec les doigts.", milestone_fr: "Il compte jusqu'à cinq avec les doigts, à voix haute." }
+          - { label_fr: "Période 4", weeks_fr: "semaines 22 à 28", units: [05-animais], focus_fr: "Les animaux, leurs cris, le mime.", milestone_fr: "Il nomme cinq animaux en voyant l'image." }
+          - { label_fr: "Période 5", weeks_fr: "semaines 29 à 36", units: [],          focus_fr: "**Révision par le jeu** : on refait les quatre jeux préférés, on chante tout.", milestone_fr: "**Bilan** : un adulte pose quatre questions déjà vues ; l'enfant réagit juste à trois." }
+        evaluation_fr:
+          - "**On n'évalue pas en demandant de parler.** On observe si l'enfant *réagit* : il tourne la tête, il montre, il rit au bon moment."
+          - "Une grille d'observation en cinq lignes est dans `docs/REFERENTIEL.md` — elle se remplit en deux minutes, une fois par période."
+          - "Aucune note, aucune comparaison avec un autre enfant. Le seul repère est l'enfant du trimestre précédent."
+      - year: 2
+        label_fr: "Petits · Année 2 (4-5 ans) — Je réponds par un mot"
+        cefr_fr: "A1.1 oral en réception, mots isolés en production"
+        goal_fr: >
+          L'enfant produit ses premiers mots et ses premiers blocs tout faits
+          (*tenho fome*, *quero água*), et les utilise **hors du cours**.
+        can_do_fr:
+          - "Je dis ce que je veux : *quero…*, *não quero*."
+          - "Je dis mon âge et je nomme ma famille."
+          - "Je demande à manger et à boire poliment."
+          - "Je dis que je n'ai pas compris, à ma façon (*outra vez!*)."
+        periods:
+          - { label_fr: "Période 1", weeks_fr: "semaines 1 à 7",   units: [04-familia], focus_fr: "La famille avec les photos ; *o*/*a* entendus, jamais expliqués.", milestone_fr: "Il nomme trois personnes de la famille en portugais." }
+          - { label_fr: "Période 2", weeks_fr: "semaines 8 à 14",  units: [06-comida],  focus_fr: "Le repas : *quero*, *por favor*, *tenho fome*.", milestone_fr: "Il demande de l'eau en portugais à table, sans qu'on le lui rappelle." }
+          - { label_fr: "Période 3", weeks_fr: "semaines 15 à 21", units: [07-corpo],   focus_fr: "Le corps par les chansons et « Jacques a dit ».", milestone_fr: "Il montre six parties du corps sur demande." }
+          - { label_fr: "Période 4", weeks_fr: "semaines 22 à 28", units: [08-casa],    focus_fr: "Les pièces et *em cima / debaixo*, par le cache-cache.", milestone_fr: "Il trouve un objet caché avec trois indices en portugais." }
+          - { label_fr: "Période 5", weeks_fr: "semaines 29 à 36", units: [],           focus_fr: "**Révision et fête** : le repas portugais, les chansons de l'année.", milestone_fr: "**Bilan** : dix minutes de goûter où l'adulte ne parle que portugais ; l'enfant reste dans l'échange." }
+        evaluation_fr:
+          - "On compte les mots **produits spontanément** dans la semaine, pas ceux récités sur demande."
+          - "Un mot juste dans la vraie vie vaut vingt mots récités."
+          - "Si l'enfant refuse de parler : on n'insiste jamais. On continue à lui parler, la production revient seule."
+      - year: 3
+        label_fr: "Petits · Année 3 (5-6 ans) — Je fais des phrases de deux mots"
+        cefr_fr: "A1.1 oral, début de production en phrases courtes"
+        goal_fr: >
+          L'enfant enchaîne deux ou trois mots, joue une scène entière avec des
+          peluches, et comprend une consigne qu'il n'a jamais entendue mot à mot.
+        can_do_fr:
+          - "Je réponds par une phrase courte : *tenho cinco anos*, *gosto de gatos*."
+          - "Je propose de jouer et j'accepte ou je refuse."
+          - "Je joue quatre répliques d'un dialogue avec quelqu'un."
+          - "Je dis comment je me sens : *estou contente*, *estou cansado*."
+        periods:
+          - { label_fr: "Période 1", weeks_fr: "semaines 1 à 7",   units: [09-brincar],     focus_fr: "Proposer, accepter, refuser, attendre son tour.", milestone_fr: "Il demande *queres brincar?* à quelqu'un, de lui-même." }
+          - { label_fr: "Période 2", weeks_fr: "semaines 8 à 14",  units: [11-roupa],       focus_fr: "S'habiller : le vocabulaire qui sert tous les matins.", milestone_fr: "Il nomme quatre vêtements en s'habillant." }
+          - { label_fr: "Période 3", weeks_fr: "semaines 15 à 21", units: [12-tempo],       focus_fr: "Le temps qu'il fait, annoncé à la fenêtre chaque matin.", milestone_fr: "Il annonce la météo du jour en deux mots." }
+          - { label_fr: "Période 4", weeks_fr: "semaines 22 à 28", units: [17-sentimentos], focus_fr: "Dire comment on se sent — et le demander à l'autre.", milestone_fr: "Il répond à *como te sentes?* et pose la question à son tour." }
+          - { label_fr: "Période 5", weeks_fr: "semaines 29 à 36", units: [10-conversa],    focus_fr: "**La conversation** : quatre à six répliques, en jouant.", milestone_fr: "**Bilan de fin de parcours** : six répliques tenues avec un adulte, en jeu." }
+        evaluation_fr:
+          - "Le bilan se fait **en jouant**, avec des peluches ou des marionnettes : un enfant de 6 ans montre tout ce qu'il sait dans un jeu, presque rien dans un test."
+          - "On enregistre trois minutes de jeu, une fois par trimestre. C'est le seul document qui montre les progrès."
+          - "Fin du parcours A : l'enfant passe au parcours B par le **cycle de raccord** (voir plus bas)."
+
+  - id: grands
+    spine: true
+    label_fr: "Parcours B — Les grands (7-10 ans)"
+    ages_fr: "7 à 10 ans, lecteurs"
+    cefr_fr: "A1.1 → A2 (A2 atteint si la pratique réelle suit)"
+    session_fr: "12 à 20 min, 5 fois par semaine"
+    total_fr: "3 années, 30 unités"
+    intro_fr: >
+      L'enfant lit, écrit et compare : on peut donc s'appuyer sur l'écrit, sur des
+      règles simples et sur le français comme point d'appui. Le fil reste la
+      conversation : chaque unité part d'un dialogue et se termine par des
+      questions auxquelles il faut savoir répondre.
+    method_fr:
+      - "**L'audio avant l'écrit, toujours.** On écoute le dialogue deux fois avant de le lire, sinon la lecture fabrique une fausse prononciation."
+      - "**Une règle par unité, jamais deux**, et seulement quand elle sert à dire quelque chose."
+      - "**On accepte l'erreur pendant qu'on parle.** On la corrige plus tard, à l'écrit, séparément."
+      - "**Compter les questions posées par l'enfant**, pas ses bonnes réponses : c'est ce qui montre qu'il mène la conversation."
+      - "Sur les fiches et le site, on prend les activités marquées **7-10 ans** — et on garde les jeux 3-6 ans quand il y a un petit frère : faire le meneur de jeu est la meilleure révision qui existe."
+    rhythm_fr:
+      - { day_fr: "Lundi",    what_fr: "**Le dialogue** : l'écouter deux fois les yeux fermés, sans lire. Puis le lire.", min: 12 }
+      - { day_fr: "Mardi",    what_fr: "Le vocabulaire de l'unité + **le jeu** ou l'activité du jour.", min: 12 }
+      - { day_fr: "Mercredi", what_fr: "**On me demande, je réponds** : le parent pose, l'enfant répond à voix haute.", min: 10 }
+      - { day_fr: "Jeudi",    what_fr: "L'exercice écrit + les flashcards des unités précédentes.", min: 12 }
+      - { day_fr: "Vendredi", what_fr: "**On rejoue le dialogue à deux**, chacun un rôle, puis on échange. Puis la mission culturelle en cours.", min: 15 }
+    cycle_fr:
+      - label_fr: "Semaine 1 — je comprends"
+        what_fr: "Écouter le dialogue, comprendre l'ensemble sans traduire mot à mot, apprendre le vocabulaire. On ne demande **rien** en production."
+      - label_fr: "Semaine 2 — je réponds"
+        what_fr: "Les questions/réponses de l'unité. L'enfant répond par une phrase entière, même courte. On accepte les erreurs, on répète la forme juste sans commenter."
+      - label_fr: "Semaine 3 — je parle"
+        what_fr: "Rejouer le dialogue en changeant un détail, puis inventer deux répliques. On coche les « je sais… » : si l'un manque, on reprend une semaine."
+    years:
+      - year: 1
+        label_fr: "Année 1 — Je comprends qu'on me parle et je réponds"
+        age_fr: "7-8 ans, ou 6 ans en sortie du parcours A"
+        cefr_fr: "A1.1 → A1"
+        goal_fr: >
+          À la fin de l'année, l'enfant **ne se tait plus** quand on lui parle
+          portugais : il salue, se présente, dit ce qu'il aime, ce qu'il a, ce
+          qu'il veut, et sait dire qu'il n'a pas compris.
+        can_do_fr:
+          - "Je salue, je dis mon nom, mon âge, et je demande la même chose."
+          - "Je dis ce que j'aime et ce que je n'aime pas, avec *gosto de…*."
+          - "Je nomme ma famille, les couleurs, les animaux, ce que je mange."
+          - "Je dis ce que j'ai et ce que je ressens : *tenho fome*, *tenho cinco anos*."
+          - "Je dis que je n'ai pas compris et je demande qu'on répète."
+          - "Je tiens un échange de six répliques sur moi."
+        periods:
+          - { label_fr: "Période 1 — Qui je suis",       weeks_fr: "semaines 1 à 7",   units: [01-ola, 02-cores],      focus_fr: "Saluer, se présenter, nommer les couleurs. Première question à laquelle répondre : *Como te chamas?*", milestone_fr: "L'enfant répond à *Olá, como te chamas?* sans aide." }
+          - { label_fr: "Période 2 — Ma famille et moi", weeks_fr: "semaines 8 à 14",  units: [03-numeros, 04-familia], focus_fr: "Compter, dire son âge, présenter les siens. *o* / *a* devant les noms.", milestone_fr: "L'enfant dit son âge et présente deux personnes de sa famille." }
+          - { label_fr: "Période 3 — Ce que j'aime",     weeks_fr: "semaines 15 à 21", units: [05-animais, 06-comida], focus_fr: "*gosto de…* / *não gosto de…*, le pluriel, demander poliment à table.", milestone_fr: "L'enfant dit trois choses qu'il aime et une qu'il n'aime pas." }
+          - { label_fr: "Période 4 — Mon corps, ma maison", weeks_fr: "semaines 22 à 28", units: [07-corpo, 08-casa],  focus_fr: "*tenho*, dire où on a mal, dire où sont les choses (*está na…*).", milestone_fr: "L'enfant répond à *Onde está o teu casaco?* et à *O que tens?*" }
+          - { label_fr: "Période 5 — On joue, on discute", weeks_fr: "semaines 29 à 36", units: [09-brincar, 10-conversa], focus_fr: "Proposer et accepter (*Queres brincar?*), premiers verbes d'action, bilan : tenir six répliques.", milestone_fr: "**Bilan de l'année** : l'enfant tient la conversation de l'unité 10 avec un adulte, sans la fiche." }
+        evaluation_fr:
+          - "Pas d'examen. Une fois par période, **le parent parle portugais pendant cinq minutes** au goûter : on regarde ce qui passe."
+          - "Le seul critère qui compte : l'enfant **répond quelque chose** au lieu de se taire. Une réponse d'un seul mot compte."
+          - "Si l'enfant redemande souvent la traduction, l'unité n'est pas acquise : on la refait une semaine, on ne passe pas."
+      - year: 2
+        label_fr: "Année 2 — Je raconte mon quotidien"
+        age_fr: "8-9 ans"
+        cefr_fr: "A1 → A1+"
+        goal_fr: >
+          L'enfant sort de lui-même : il parle de sa journée, de ce qu'il porte, du
+          temps qu'il fait, de son école, et **pose des questions** au lieu de
+          seulement y répondre.
+        can_do_fr:
+          - "Je raconte ma journée avec l'heure et les jours de la semaine."
+          - "Je dis le temps qu'il fait et ce que je mets pour sortir."
+          - "Je demande mon chemin et je comprends la réponse."
+          - "J'achète quelque chose et je comprends le prix."
+          - "Je dis comment je me sens et je demande à l'autre comment il va."
+          - "Je réponds au téléphone et je laisse un message simple."
+          - "Je tiens une conversation de dix répliques avec deux questions posées par moi."
+        periods:
+          - { label_fr: "Période 1 — Dehors",        weeks_fr: "semaines 1 à 7",   units: [11-roupa, 12-tempo],           focus_fr: "S'habiller selon le temps. *está frio*, *vou vestir…*, les contraires.", milestone_fr: "L'enfant décrit ce qu'il porte et dit le temps qu'il fait dehors." }
+          - { label_fr: "Période 2 — Ma semaine",    weeks_fr: "semaines 8 à 14",  units: [13-dias, 14-escola],           focus_fr: "Les jours, l'heure, la routine (*acordo*, *como*, *vou*), parler de l'école.", milestone_fr: "L'enfant raconte sa journée d'école dans l'ordre, avec trois heures." }
+          - { label_fr: "Période 3 — En ville",      weeks_fr: "semaines 15 à 21", units: [15-cidade, 16-compras],        focus_fr: "Demander son chemin, comprendre une direction, acheter, comprendre un prix.", milestone_fr: "L'enfant achète deux choses en jeu de rôle et rend la monnaie." }
+          - { label_fr: "Période 4 — Ce que je ressens", weeks_fr: "semaines 22 à 28", units: [17-sentimentos, 18-passeio], focus_fr: "*estou contente / cansado*, proposer une sortie, les transports.", milestone_fr: "L'enfant dit comment il va **et demande** à l'autre comment il va." }
+          - { label_fr: "Période 5 — À distance",    weeks_fr: "semaines 29 à 36", units: [19-telefone, 20-conversa],     focus_fr: "Le téléphone : parler sans les mains ni le visage. Bilan : dix répliques.", milestone_fr: "**Bilan de l'année** : un appel de deux minutes avec un adulte lusophone, ou en jeu de rôle dos à dos." }
+        evaluation_fr:
+          - "Le test de l'année : **dos à dos**. Sans les gestes ni les mimiques, ce qui passe est vraiment de la langue."
+          - "Compter les questions posées par l'enfant, pas ses réponses : c'est le signe qu'il mène la conversation."
+          - "Vidéo d'une minute en portugais tous les deux mois : l'enfant se compare à lui-même, pas aux autres."
+      - year: 3
+        label_fr: "Année 3 — Je raconte, je donne mon avis, je discute"
+        age_fr: "9-10 ans"
+        cefr_fr: "A1+ → A2"
+        goal_fr: >
+          L'enfant passe du présent au récit : il raconte ce qui s'est passé, dit ce
+          qu'il va faire, explique **pourquoi** il pense quelque chose, et sait ne
+          pas être d'accord poliment.
+        can_do_fr:
+          - "Je raconte ce que j'ai fait hier (passé des verbes courants)."
+          - "Je dis ce que je vais faire demain (*vou* + infinitif)."
+          - "Je donne mon avis et je le justifie avec *porque*."
+          - "Je décris une personne, un objet, un lieu."
+          - "Je raconte une histoire courte avec *primeiro*, *depois*, *no fim*."
+          - "Je commande au restaurant, j'explique un petit souci de santé."
+          - "Je propose, j'accepte, je refuse gentiment, je suis d'accord ou non."
+          - "Je tiens une conversation de cinq minutes sur un sujet libre."
+        periods:
+          - { label_fr: "Période 1 — Hier et demain",   weeks_fr: "semaines 1 à 7",   units: [21-ontem, 22-amanha],        focus_fr: "Le passé des verbes usuels (*fui*, *comi*, *vi*, *fiz*) et le futur proche.", milestone_fr: "L'enfant raconte trois choses faites hier et deux prévues demain." }
+          - { label_fr: "Période 2 — Ce que j'en pense", weeks_fr: "semaines 8 à 14",  units: [23-opiniao, 24-descrever],   focus_fr: "*acho que*, *prefiro*, *porque*, décrire avec des adjectifs accordés.", milestone_fr: "L'enfant justifie un choix en deux phrases enchaînées par *porque*." }
+          - { label_fr: "Période 3 — Je raconte",       weeks_fr: "semaines 15 à 21", units: [25-historia, 26-restaurante], focus_fr: "Les connecteurs du récit, commander et demander l'addition.", milestone_fr: "L'enfant raconte une histoire de six phrases dans l'ordre." }
+          - { label_fr: "Période 4 — Quand ça ne va pas", weeks_fr: "semaines 22 à 28", units: [27-medico, 28-viagem],     focus_fr: "Expliquer un souci, comprendre une consigne, se débrouiller en voyage.", milestone_fr: "L'enfant explique un bobo et comprend deux consignes du médecin." }
+          - { label_fr: "Période 5 — On discute vraiment", weeks_fr: "semaines 29 à 36", units: [29-combinar, 30-falar],   focus_fr: "Proposer, négocier, être d'accord ou pas, tenir un vrai sujet.", milestone_fr: "**Bilan des trois années** : cinq minutes de conversation libre, sujet tiré au sort." }
+        evaluation_fr:
+          - "Le sujet est tiré au sort parmi les unités : on ne prépare pas, c'est le but."
+          - "On note deux choses seulement : est-ce que l'enfant **relance** (question, *e tu?*) et est-ce qu'il **se répare** tout seul (*ou melhor…*, *quero dizer…*)."
+          - "Si un lusophone extérieur à la famille comprend l'enfant sans effort, le programme a fait son travail."
+          - "La grille A1/A2 détaillée (cinq critères, quatre niveaux) est dans `docs/REFERENTIEL.md`."
+
+bridge_fr: >
+  **Le cycle de raccord (6-7 ans).** Un enfant qui sort du parcours A connaît à
+  l'oral une quinzaine d'unités mais n'en a jamais vu un mot écrit. Il ne
+  recommence pas de zéro : pendant **dix semaines**, il refait les unités 1 à 10
+  **au rythme d'une par semaine**, cette fois avec l'écrit — lire le dialogue
+  qu'il connaît déjà par cœur est le meilleur moyen d'apprendre à lire dans une
+  langue. Il rejoint ensuite le parcours B à l'unité 11, en début d'année 2.
+  **Dans l'autre sens** (un grand débutant de 9 ans) : on démarre directement au
+  parcours B, unité 1 — il ira plus vite que le programme, c'est prévu.
+  **Deux enfants d'âges différents ensemble** : on suit le parcours du plus
+  grand, et le petit fait les activités 3-6 ans de la même unité. Le grand mène
+  les jeux : c'est sa révision.
+
+practice_fr:
+  - title_fr: "Trouver un vrai interlocuteur"
+    when_fr: "Dès l'année 1 — c'est ce qui compte le plus dans toute cette page"
+    steps_fr:
+      - "Un proche lusophone, même lointain : vingt minutes d'appel vidéo par semaine valent plus que n'importe quelle fiche."
+      - "À défaut : chercher une association lusophone, une paroisse portugaise, un club de foot, un voisin. Ils existent presque partout en France."
+      - "Les cours de portugais du réseau **Instituto Camões** (Ensino Português no Estrangeiro) accueillent les enfants dans beaucoup de villes — même si votre famille n'est pas d'origine portugaise, cela vaut la question."
+      - "**La règle** : l'interlocuteur ne doit jamais traduire. Il répète plus lentement, il montre, il reformule. C'est tout."
+  - title_fr: "L'heure portugaise, chaque semaine"
+    when_fr: "Dès l'année 1, non négociable"
+    steps_fr:
+      - "Un repas par semaine **entièrement en portugais**, la boîte à outils posée sur la table."
+      - "Personne ne traduit. On mime, on montre, on rit des malentendus — ce sont eux qui font apprendre."
+      - "On augmente : une heure, puis un samedi matin, puis une journée pendant les vacances."
+  - title_fr: "Sortir de la maison"
+    when_fr: "À partir de l'année 1, période 3"
+    steps_fr:
+      - "Pâtisserie ou épicerie portugaise : l'enfant commande lui-même, même trois mots."
+      - "Restaurant portugais : il commande son plat (unité 26) et dit *estava delicioso* en partant."
+      - "Marché, quartier, match de foot d'un club portugais local : partout où la langue se parle vraiment."
+  - title_fr: "Les écrans, mais bien utilisés"
+    when_fr: "Toute l'année, 20 min, deux fois par semaine"
+    steps_fr:
+      - "Un dessin animé **déjà connu en français**, revu en portugais du Portugal : l'histoire connue porte la langue."
+      - "**Vérifier que c'est du portugais du Portugal**, pas du Brésil : l'accent, le vocabulaire et même la grammaire diffèrent (*está a chover* / *está chovendo*)."
+      - "Après l'épisode : deux questions en portugais sur ce qui s'est passé. Sans les questions, c'est du temps d'écran, pas du cours."
+  - title_fr: "Le correspondant"
+    when_fr: "À partir de l'année 2"
+    steps_fr:
+      - "Un enfant portugais du même âge, par une association, une école jumelée ou une famille amie."
+      - "Un message vocal par semaine, pas un texte : c'est l'oral qu'on travaille."
+      - "L'unité 19 (au téléphone) est faite pour ça, et l'unité 28 pour parler de son pays."
+  - title_fr: "Le voyage"
+    when_fr: "Une fois dans les trois ans, si c'est possible"
+    steps_fr:
+      - "Une semaine au Portugal après l'année 2 change tout : l'enfant découvre que la langue **sert**."
+      - "Préparer avec le passeport culturel : chaque escale devient une chose à voir ou à goûter pour de vrai."
+      - "Sur place, une règle : c'est l'enfant qui commande, qui demande son chemin, qui achète le pain."

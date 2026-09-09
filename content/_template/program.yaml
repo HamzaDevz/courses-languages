@@ -1,0 +1,56 @@
+# GABARIT du programme. Un parcours = un âge, avec son rythme et son niveau visé.
+# Chaque unité citée doit exister dans units/. Supprimer ce fichier si la langue
+# n'a pas encore de programme : le reste du cours fonctionne sans lui.
+intro_fr: >
+  En une phrase : combien de parcours, combien d'années, le fil conducteur.
+cefr_fr: >
+  Le cadre de référence utilisé et où le vérifier (voir docs/REFERENTIEL.md).
+tracks:
+  - id: petits
+    label_fr: "Parcours A — Les petits (3-6 ans)"
+    ages_fr: "3 à 6 ans, avant de savoir lire"
+    cefr_fr: "pré-A1 puis A1.1 à l'oral"
+    session_fr: "8 à 10 min, 4 à 5 fois par semaine"
+    total_fr: "3 années, 15 unités"
+    method_fr:
+      - "**Aucun écrit, aucune règle expliquée.**"
+    rhythm_fr:
+      - { day_fr: "Lundi", what_fr: "Le dialogue en fond, deux fois. On ne demande rien.", min: 5 }
+    cycle_fr:
+      - { label_fr: "Semaines 1-2 — j'entends", what_fr: "Zéro production demandée." }
+    years:
+      - year: 1
+        label_fr: "Petits · Année 1 — …"
+        cefr_fr: "pré-A1"
+        goal_fr: "Ce que l'enfant sait faire de nouveau à la fin de l'année."
+        can_do_fr: ["Je réagis à …"]
+        periods:
+          - { label_fr: "Période 1", weeks_fr: "semaines 1 à 7", units: [01-exemple], focus_fr: "…", milestone_fr: "Bilan vérifiable en une phrase." }
+        evaluation_fr: ["Comment observer, sans rien demander à l'enfant."]
+  - id: grands
+    spine: true          # ce parcours numérote les années sur la liste des unités
+    label_fr: "Parcours B — Les grands (7-10 ans)"
+    ages_fr: "7 à 10 ans, lecteurs"
+    cefr_fr: "A1.1 → A2"
+    session_fr: "12 à 20 min, 5 fois par semaine"
+    rhythm_fr:
+      - { day_fr: "Lundi", what_fr: "**Le dialogue** : l'écouter deux fois sans lire.", min: 12 }
+    cycle_fr:
+      - { label_fr: "Semaine 1 — je comprends", what_fr: "Écouter, comprendre l'ensemble." }
+    years:
+      - year: 1
+        label_fr: "Année 1 — …"
+        cefr_fr: "A1.1 → A1"
+        goal_fr: "…"
+        can_do_fr: ["Je sais …"]
+        periods:
+          - { label_fr: "Période 1 — …", weeks_fr: "semaines 1 à 7", units: [01-exemple], focus_fr: "…", milestone_fr: "…" }
+        evaluation_fr: ["…"]
+bridge_fr: >
+  Comment on passe d'un parcours à l'autre, et que faire avec deux enfants
+  d'âges différents.
+practice_fr:
+  - title_fr: "Trouver un vrai interlocuteur"
+    when_fr: "Dès l'année 1"
+    steps_fr:
+      - "La pratique réelle vaut plus que le programme : dire ici comment en trouver."

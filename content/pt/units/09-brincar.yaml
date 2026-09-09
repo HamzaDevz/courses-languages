@@ -1,0 +1,105 @@
+id: 09-brincar
+order: 9
+year: 1
+title: "Vamos brincar!"
+title_fr: "On joue !"
+goal_fr: "Proposer de jouer, accepter, refuser, et dire à qui c'est le tour."
+can_do_fr:
+  - "Je propose de jouer : *Queres brincar comigo?*"
+  - "J'accepte ou je refuse gentiment."
+  - "Je dis ce que je veux faire avec *quero* + verbe."
+  - "Je dis *é a minha vez* et je respecte le tour de l'autre."
+duration_min: 13
+dialogue:
+  title_fr: "Au parc"
+  context_fr: "Ana arrive au parc, Tomás est déjà là avec un ballon."
+  lines:
+    - { who: "Ana",   term: "Olá, Tomás! Queres brincar comigo?", fr: "Salut Tomás ! Tu veux jouer avec moi ?", phon: "o-LA, tou-MACH! KÈ-rech brïn-KAR kou-MI-gou" }
+    - { who: "Tomás", term: "Quero, sim! O que queres fazer?",    fr: "Oui, je veux bien ! Tu veux faire quoi ?", phon: "KÈ-rou, sïn! ou ke KÈ-rech fa-ZÈR" }
+    - { who: "Ana",   term: "Vamos jogar à bola!",                fr: "Allons jouer au ballon !",           phon: "VA-mouch jou-GAR a BO-la" }
+    - { who: "Tomás", term: "Está bem. Corres muito depressa!",   fr: "D'accord. Tu cours très vite !",     phon: "chta bèïn. KO-rrech MOUÏN-tou de-PRÈ-sa" }
+    - { who: "Ana",   term: "Espera por mim! Agora é a minha vez.", fr: "Attends-moi ! Maintenant c'est mon tour.", phon: "chPÈ-ra pour mïn! a-GO-ra è a MI-gna vèch" }
+    - { who: "Tomás", term: "Está bem, joga tu.",                 fr: "D'accord, joue, toi.",               phon: "chta bèïn, JO-ga tou" }
+    - { who: "Ana",   term: "Ganhei! Queres jogar outra vez?",    fr: "J'ai gagné ! Tu veux rejouer ?",     phon: "ga-GNÈÏ! KÈ-rech jou-GAR Ô-tra vech" }
+    - { who: "Tomás", term: "Agora não, estou cansado.",          fr: "Pas maintenant, je suis fatigué.",   phon: "a-GO-ra nan-ou, chtô kan-SA-dou" }
+comprehension:
+  - q_fr: "Que propose Ana au début ?"
+    a_fr: "De jouer avec elle : *Queres brincar comigo?*"
+  - q_fr: "À quoi jouent-ils ?"
+    a_fr: "Au ballon — *jogar à bola*."
+  - q_fr: "Pourquoi Tomás ne veut-il pas rejouer à la fin ?"
+    a_fr: "Il est fatigué : *estou cansado*. Il refuse poliment avec **agora não**."
+  - q_fr: "Comment Ana dit-elle que c'est son tour ?"
+    a_fr: "**Agora é a minha vez.** Pour l'autre : *é a tua vez*."
+vocab:
+  - { term: "brincar",      fr: "jouer (librement)",  phon: "brïn-KAR" }
+  - { term: "jogar",        fr: "jouer (à un jeu)",   phon: "jou-GAR" }
+  - { term: "correr",       fr: "courir",             phon: "kou-RRÈR" }
+  - { term: "saltar",       fr: "sauter",             phon: "sal-TAR" }
+  - { term: "cantar",       fr: "chanter",            phon: "kan-TAR" }
+  - { term: "dançar",       fr: "danser",             phon: "dan-SAR" }
+  - { term: "desenhar",     fr: "dessiner",           phon: "de-ze-GNAR" }
+  - { term: "a bola",       fr: "le ballon",          phon: "a BO-la" }
+  - { term: "a boneca",     fr: "la poupée",          phon: "a bou-NÈ-ka" }
+  - { term: "o carrinho",   fr: "la petite voiture",  phon: "ou ka-RRI-gnou" }
+  - { term: "o parque",     fr: "le parc",            phon: "ou PAR-ke" }
+  - { term: "o escorrega",  fr: "le toboggan",        phon: "ou chkou-RRÈ-ga" }
+phrases:
+  - { term: "Queres brincar comigo?", fr: "Tu veux jouer avec moi ?", phon: "KÈ-rech brïn-KAR kou-MI-gou" }
+  - { term: "Vamos jogar à bola!",    fr: "Allons jouer au ballon !", phon: "VA-mouch jou-GAR a BO-la" }
+  - { term: "É a minha vez.",         fr: "C'est mon tour.",          phon: "è a MI-gna vèch" }
+  - { term: "É a tua vez.",           fr: "C'est ton tour.",          phon: "è a TOU-a vèch" }
+  - { term: "Espera por mim!",        fr: "Attends-moi !",            phon: "chPÈ-ra pour mïn" }
+  - { term: "Ganhei!",                fr: "J'ai gagné !",             phon: "ga-GNÈÏ" }
+qa:
+  - question: { term: "Queres brincar comigo?", fr: "Tu veux jouer avec moi ?", phon: "KÈ-rech brïn-KAR kou-MI-gou" }
+    answers:
+      - { term: "Quero, sim! Vamos!",     fr: "Oui, je veux ! On y va !",      phon: "KÈ-rou, sïn! VA-mouch" }
+      - { term: "Agora não, obrigado.",   fr: "Pas maintenant, merci.",        phon: "a-GO-ra nan-ou, o-bri-GA-dou" }
+      - { term: "Sim, mas depois.",       fr: "Oui, mais après.",              phon: "sïn, mach de-POÏCH" }
+  - question: { term: "O que queres fazer?", fr: "Tu veux faire quoi ?", phon: "ou ke KÈ-rech fa-ZÈR" }
+    answers:
+      - { term: "Quero jogar à bola.", fr: "Je veux jouer au ballon.", phon: "KÈ-rou jou-GAR a BO-la" }
+      - { term: "Quero desenhar.",     fr: "Je veux dessiner.",        phon: "KÈ-rou de-ze-GNAR" }
+      - { term: "Quero correr!",       fr: "Je veux courir !",         phon: "KÈ-rou kou-RRÈR" }
+  - question: { term: "De quem é a vez?", fr: "C'est à qui le tour ?", phon: "de kèïn è a vèch" }
+    answers:
+      - { term: "É a minha vez.", fr: "C'est mon tour.", phon: "è a MI-gna vèch" }
+      - { term: "É a tua vez.",   fr: "C'est ton tour.", phon: "è a TOU-a vèch" }
+notes_fr:
+  - "**brincar** = jouer sans règles (poupées, cabane). **jogar** = jouer à un jeu avec des règles (ballon, cartes). Un enfant portugais *brinca* au parc mais *joga* à la balle."
+  - "**Vamos + verbe** = « allons + verbe » : *vamos cantar!*, *vamos comer!* C'est la façon la plus simple de proposer quelque chose."
+  - "**comigo** = avec moi, **contigo** = avec toi. On ne dit jamais *com mim*."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Le chef d'orchestre"
+    steps_fr:
+      - "Vous criez un verbe : *correr!*, *saltar!*, *dançar!*, *cantar!*"
+      - "L'enfant fait l'action. S'il se trompe, il recommence en riant."
+      - "Ensuite c'est lui le chef : il donne les ordres, toute la famille obéit."
+  - level: petits
+    type: jeu
+    title_fr: "C'est à qui le tour ?"
+    steps_fr:
+      - "Un jeu simple (dés, cartes retournées). Avant chaque coup, on dit *é a minha vez* ou *é a tua vez*."
+      - "Celui qui oublie de le dire en portugais passe son tour."
+  - level: grands
+    type: exercice
+    title_fr: "Je veux, tu veux"
+    steps_fr:
+      - "Écris quatre phrases avec *Quero* + un verbe de la liste."
+      - "Transforme-les en questions : *Queres…?*"
+  - level: grands
+    type: dialogue
+    title_fr: "Invite, refuse, propose autre chose"
+    steps_fr:
+      - "Le premier propose : *Queres jogar à bola?*"
+      - "Le second refuse poliment (*Agora não…*) **et propose autre chose** : *Vamos desenhar?*"
+      - "On continue jusqu'à tomber d'accord. Trois refus maximum !"
+reemploi_fr:
+  - "Chaque invitation à jouer de la semaine se fait en portugais : *Queres brincar comigo?*"
+  - "Aux jeux de société : *é a minha vez* / *é a tua vez*, en portugais uniquement."
+cefr: "A1.1 → A1"
+culture_fr: >-
+  Les jeux de cour au Portugal : **a macaca** (la marelle), **as escondidas** (cache-cache), **o jogo do lenço** (le jeu du mouchoir). Dire *é a minha vez* dans une vraie partie vaut dix répétitions.

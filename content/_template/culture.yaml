@@ -1,0 +1,20 @@
+# GABARIT du passeport culturel. Facultatif, mais c'est lui qui transforme
+# un cours en voyage. Une escale par mois environ.
+title_fr: "Le passeport culturel"
+intro_fr: >
+  Une langue sans son pays reste un exercice. La mission donne le tampon —
+  pas la lecture.
+escales:
+  - label_fr: "Nom de l'escale — sous-titre"
+    when_fr: "Année 1, période 1"
+    intro_fr: "Une phrase de présentation."
+    see_fr: "À voir."
+    taste_fr: "À goûter."
+    listen_fr: "À écouter."
+    story_fr: "L'histoire ou la légende, racontée pour un enfant."
+    know_fr: "À savoir, un fait qui surprend."
+    words:
+      - { term: "…", translit: "…", fr: "…", phon: "…" }
+    mission_fr: "Ce que l'enfant doit faire dans la vraie vie."
+outro_fr: >
+  Ce qu'on ajoute pour les plus grands.

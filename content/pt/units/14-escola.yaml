@@ -1,0 +1,103 @@
+id: 14-escola
+order: 14
+year: 2
+title: "Na escola"
+title_fr: "À l'école"
+goal_fr: "Parler de sa classe, de ses affaires, et demander de l'aide."
+can_do_fr:
+  - "Je nomme mes affaires d'école."
+  - "Je raconte comment s'est passée ma journée."
+  - "Je demande la permission : *Posso…?*"
+  - "Je dis que je n'ai pas compris et je demande de l'aide."
+duration_min: 14
+dialogue:
+  title_fr: "Alors, cette journée ?"
+  context_fr: "Le soir, la mère de Tomás lui demande comment ça s'est passé."
+  lines:
+    - { who: "Mãe",   term: "Então, como foi a escola hoje?",       fr: "Alors, comment ça s'est passé à l'école ?", phon: "en-TAN-ou, KO-mou foï a chKO-la ô-je" }
+    - { who: "Tomás", term: "Foi bem! Aprendi uma canção nova.",    fr: "Bien ! J'ai appris une nouvelle chanson.", phon: "foï bèïn! a-pren-DI OU-ma kan-SAN-ou NO-va" }
+    - { who: "Mãe",   term: "Que bom! E a professora?",             fr: "Super ! Et la maîtresse ?",           phon: "ke bon! i a prou-fe-SÔ-ra" }
+    - { who: "Tomás", term: "É simpática, mas fala muito depressa.", fr: "Elle est gentille, mais elle parle très vite.", phon: "è sïn-PA-ti-ka, mach FA-la MOUÏN-tou de-PRÈ-sa" }
+    - { who: "Mãe",   term: "E o que fazes quando não percebes?",   fr: "Et qu'est-ce que tu fais quand tu ne comprends pas ?", phon: "i ou ke FA-zech KOUAN-dou nan-ou per-SÈ-bech" }
+    - { who: "Tomás", term: "Levanto o braço e digo: não percebi.", fr: "Je lève le bras et je dis : je n'ai pas compris.", phon: "le-VAN-tou ou BRA-sou i DI-gou: nan-ou per-se-BI" }
+    - { who: "Mãe",   term: "Muito bem. Tens trabalhos de casa?",   fr: "Très bien. Tu as des devoirs ?",      phon: "MOUÏN-tou bèïn. tèïnch tra-BA-liouch de KA-za" }
+    - { who: "Tomás", term: "Tenho, mas preciso de ajuda.",         fr: "Oui, mais j'ai besoin d'aide.",       phon: "TÉ-gnou, mach pre-SI-zou de a-JOU-da" }
+comprehension:
+  - q_fr: "Qu'a appris Tomás aujourd'hui ?"
+    a_fr: "Une nouvelle chanson — *uma canção nova*."
+  - q_fr: "Comment est la maîtresse, selon lui ?"
+    a_fr: "Gentille, mais elle parle très vite : *simpática, mas fala muito depressa*."
+  - q_fr: "Que fait-il quand il ne comprend pas ?"
+    a_fr: "Il lève le bras et dit *não percebi*. C'est exactement la boîte à outils du cours."
+  - q_fr: "A-t-il des devoirs ?"
+    a_fr: "Oui, et il a besoin d'aide : *preciso de ajuda*."
+vocab:
+  - { term: "a escola",        fr: "l'école",         phon: "a chKO-la" }
+  - { term: "a professora",    fr: "la maîtresse",    phon: "a prou-fe-SÔ-ra" }
+  - { term: "a sala de aula",  fr: "la salle de classe", phon: "a SA-la de AOU-la" }
+  - { term: "o livro",         fr: "le livre",        phon: "ou LI-vrou" }
+  - { term: "o caderno",       fr: "le cahier",       phon: "ou ka-DÈR-nou" }
+  - { term: "o lápis",         fr: "le crayon",       phon: "ou LA-pich" }
+  - { term: "a caneta",        fr: "le stylo",        phon: "a ka-NÉ-ta" }
+  - { term: "a mochila",       fr: "le cartable",     phon: "a mou-CHI-la" }
+  - { term: "o recreio",       fr: "la récréation",   phon: "ou re-KRÈÏ-ou" }
+  - { term: "os colegas",      fr: "les camarades",   phon: "ouch kou-LÈ-gach" }
+  - { term: "a canção",        fr: "la chanson",      phon: "a kan-SAN-ou" }
+  - { term: "os trabalhos de casa", fr: "les devoirs", phon: "ouch tra-BA-liouch de KA-za" }
+phrases:
+  - { term: "Como foi a escola?",   fr: "Comment ça s'est passé à l'école ?", phon: "KO-mou foï a chKO-la" }
+  - { term: "Aprendi uma coisa nova.", fr: "J'ai appris quelque chose de nouveau.", phon: "a-pren-DI OU-ma KOÏ-za NO-va" }
+  - { term: "Posso ir à casa de banho?", fr: "Je peux aller aux toilettes ?", phon: "PO-sou ir a KA-za de BA-gnou" }
+  - { term: "Não sei fazer isto.",  fr: "Je ne sais pas faire ça.",   phon: "nan-ou sèï fa-ZÈR ICH-tou" }
+  - { term: "Ajudas-me, por favor?", fr: "Tu m'aides, s'il te plaît ?", phon: "a-JOU-dach-me, pour fa-VOR" }
+  - { term: "Já acabei!",           fr: "J'ai fini !",                phon: "ja a-ka-BÈÏ" }
+qa:
+  - question: { term: "Como foi a escola hoje?", fr: "Comment ça s'est passé à l'école ?", phon: "KO-mou foï a chKO-la ô-je" }
+    answers:
+      - { term: "Foi muito bem!",          fr: "Très bien !",              phon: "foï MOUÏN-tou bèïn" }
+      - { term: "Foi mais ou menos.",      fr: "Bof, moyen.",              phon: "foï maïz ou MÉ-nouch" }
+      - { term: "Foi difícil hoje.",       fr: "Ça a été dur aujourd'hui.", phon: "foï di-FI-sil ô-je" }
+  - question: { term: "O que aprendeste hoje?", fr: "Qu'est-ce que tu as appris aujourd'hui ?", phon: "ou ke a-pren-DÈCH-te ô-je" }
+    answers:
+      - { term: "Aprendi uma canção.",     fr: "J'ai appris une chanson.",  phon: "a-pren-DI OU-ma kan-SAN-ou" }
+      - { term: "Aprendi a contar até vinte.", fr: "J'ai appris à compter jusqu'à vingt.", phon: "a-pren-DI a kon-TAR a-TÈ VÏN-te" }
+      - { term: "Não me lembro.",          fr: "Je ne me souviens pas.",    phon: "nan-ou me LEN-brou" }
+  - question: { term: "Precisas de ajuda?", fr: "Tu as besoin d'aide ?", phon: "pre-SI-zach de a-JOU-da" }
+    answers:
+      - { term: "Sim, não sei fazer isto.", fr: "Oui, je ne sais pas faire ça.", phon: "sïn, nan-ou sèï fa-ZÈR ICH-tou" }
+      - { term: "Não, obrigado, já acabei.", fr: "Non merci, j'ai déjà fini.",   phon: "nan-ou, o-bri-GA-dou, ja a-ka-BÈÏ" }
+notes_fr:
+  - "**Posso…?** est la clé de l'école : *posso ir à casa de banho?*, *posso beber água?*, *posso entrar?*"
+  - "*Como **foi**?* est déjà du passé. On ne l'explique pas encore : on l'apprend comme un bloc, il reviendra en année 3."
+  - "**preciso de ajuda** — le portugais met *de* après *preciso*, toujours."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Le cartable qui parle"
+    steps_fr:
+      - "Sortez les affaires une par une du cartable, l'enfant nomme chacune."
+      - "Puis vous en cachez une : *o que falta?* (qu'est-ce qui manque ?)"
+  - level: petits
+    type: jeu
+    title_fr: "On joue à l'école"
+    steps_fr:
+      - "L'enfant est la maîtresse, les peluches sont les élèves."
+      - "Il donne trois consignes en portugais : *abre o livro*, *pega no lápis*, *senta-te*."
+  - level: grands
+    type: exercice
+    title_fr: "Ma trousse en portugais"
+    steps_fr:
+      - "Fais la liste de tout ce qu'il y a dans ta trousse, avec *o* ou *a*."
+      - "Écris ensuite trois phrases avec *Preciso de…*"
+  - level: grands
+    type: dialogue
+    title_fr: "Le compte rendu du soir"
+    steps_fr:
+      - "Chaque soir de la semaine, réponds en portugais à trois questions : *Como foi a escola? O que aprendeste? Precisas de ajuda?*"
+      - "Vendredi, essaie de répondre sans regarder la fiche."
+reemploi_fr:
+  - "Le compte rendu du soir se fait en portugais, même court : deux phrases suffisent."
+  - "À la maison, demander la permission en portugais : *Posso ver televisão?*"
+cefr: "A1"
+culture_fr: >-
+  L'école primaire portugaise s'appelle le **1.º ciclo** et dure quatre ans. Les enfants y apprennent l'anglais dès la 3e année : un enfant portugais de 8 ans est souvent déjà trilingue en herbe.

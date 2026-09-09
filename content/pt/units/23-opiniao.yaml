@@ -1,0 +1,101 @@
+id: 23-opiniao
+order: 23
+year: 3
+title: "Na minha opinião"
+title_fr: "À mon avis"
+goal_fr: "Donner son avis et l'expliquer avec *porque*."
+can_do_fr:
+  - "Je donne mon avis : *acho que…*, *na minha opinião…*"
+  - "Je justifie avec *porque*."
+  - "Je dis ce que je préfère : *prefiro… a…*"
+  - "Je dis que je suis d'accord ou pas, poliment."
+duration_min: 16
+dialogue:
+  title_fr: "Le meilleur film"
+  context_fr: "Ana et Tomás ne sont pas d'accord — et c'est très bien ainsi."
+  lines:
+    - { who: "Tomás", term: "Achas que este filme é bom?",              fr: "Tu trouves que ce film est bien ?",  phon: "A-chach ke ÈCH-te FIL-me è bon" }
+    - { who: "Ana",   term: "Acho que sim, é muito engraçado.",         fr: "Je trouve que oui, il est très drôle.", phon: "A-chou ke sïn, è MOUÏN-tou en-gra-SA-dou" }
+    - { who: "Tomás", term: "Não concordo. Na minha opinião é aborrecido.", fr: "Je ne suis pas d'accord. À mon avis il est ennuyeux.", phon: "nan-ou kon-KOR-dou. na MI-gna o-pi-ni-AN-ou è a-bou-rre-SI-dou" }
+    - { who: "Ana",   term: "Porquê? Diz lá.",                          fr: "Pourquoi ? Dis-moi.",                phon: "pour-KÊ? dich la" }
+    - { who: "Tomás", term: "Porque é muito comprido e eu prefiro filmes curtos.", fr: "Parce qu'il est très long et je préfère les films courts.", phon: "pour-ke è MOUÏN-tou kon-PRI-dou i éou pre-FI-rou FIL-mech KOUR-touch" }
+    - { who: "Ana",   term: "Tens razão, é comprido. Mas eu gosto na mesma.", fr: "Tu as raison, il est long. Mais moi je l'aime quand même.", phon: "tèïnch rra-ZAN-ou, è kon-PRI-dou. mach éou GOCH-tou na MÈCH-ma" }
+    - { who: "Tomás", term: "Então cada um tem a sua opinião!",         fr: "Alors chacun son avis !",            phon: "en-TAN-ou KA-da oun tèïn a SOU-a o-pi-ni-AN-ou" }
+comprehension:
+  - q_fr: "Qui aime le film ? Qui ne l'aime pas ?"
+    a_fr: "Ana l'aime (*é engraçado*), Tomás non (*é aborrecido*)."
+  - q_fr: "Quelle raison donne Tomás ?"
+    a_fr: "Le film est trop long : *porque é muito comprido*."
+  - q_fr: "Qu'est-ce qu'Ana reconnaît, tout en gardant son avis ?"
+    a_fr: "Que le film est long : *tens razão* — mais elle l'aime quand même (*gosto na mesma*)."
+  - q_fr: "Comment dit-on qu'on n'est pas d'accord, sans se fâcher ?"
+    a_fr: "**Não concordo** + *na minha opinião* + une raison. Jamais seulement *não*."
+vocab:
+  - { term: "acho que",          fr: "je trouve que",     phon: "A-chou ke" }
+  - { term: "na minha opinião",  fr: "à mon avis",        phon: "na MI-gna o-pi-ni-AN-ou" }
+  - { term: "prefiro",           fr: "je préfère",        phon: "pre-FI-rou" }
+  - { term: "concordo",          fr: "je suis d'accord",  phon: "kon-KOR-dou" }
+  - { term: "tens razão",        fr: "tu as raison",      phon: "tèïnch rra-ZAN-ou" }
+  - { term: "engraçado",         fr: "drôle",             phon: "en-gra-SA-dou" }
+  - { term: "chato",             fr: "pénible, barbant",  phon: "CHA-tou" }
+  - { term: "o melhor",          fr: "le meilleur",       phon: "ou me-LIOR" }
+  - { term: "o pior",            fr: "le pire",           phon: "ou pi-OR" }
+  - { term: "porque",            fr: "parce que",         phon: "pour-KE" }
+phrases:
+  - { term: "Achas que…?",              fr: "Tu trouves que… ?",           phon: "A-chach ke" }
+  - { term: "Acho que sim.",            fr: "Je crois que oui.",           phon: "A-chou ke sïn" }
+  - { term: "Não concordo contigo.",    fr: "Je ne suis pas d'accord avec toi.", phon: "nan-ou kon-KOR-dou kon-TI-gou" }
+  - { term: "Prefiro este.",            fr: "Je préfère celui-ci.",        phon: "pre-FI-rou ÈCH-te" }
+  - { term: "Porque é mais divertido.", fr: "Parce que c'est plus amusant.", phon: "pour-ke è maïch di-ver-TI-dou" }
+  - { term: "Cada um tem a sua opinião.", fr: "Chacun son avis.",          phon: "KA-da oun tèïn a SOU-a o-pi-ni-AN-ou" }
+qa:
+  - question: { term: "O que achas deste livro?", fr: "Qu'est-ce que tu penses de ce livre ?", phon: "ou ke A-chach DÈCH-te LI-vrou" }
+    answers:
+      - { term: "Acho que é muito bom, porque tem imagens giras.", fr: "Je trouve qu'il est très bien, parce qu'il a de jolies images.", phon: "A-chou ke è MOUÏN-tou bon, pour-ke tèïn i-MA-jèïnch JI-rach" }
+      - { term: "Na minha opinião é chato.",  fr: "À mon avis il est barbant.", phon: "na MI-gna o-pi-ni-AN-ou è CHA-tou" }
+      - { term: "Ainda não li, não sei dizer.", fr: "Je ne l'ai pas encore lu, je ne peux pas dire.", phon: "a-ÏN-da nan-ou li, nan-ou sèï di-ZÈR" }
+  - question: { term: "Preferes o mar ou a montanha?", fr: "Tu préfères la mer ou la montagne ?", phon: "pre-FÈ-rech ou mar ô a mon-TA-gna" }
+    answers:
+      - { term: "Prefiro o mar, porque gosto de nadar.", fr: "Je préfère la mer, parce que j'aime nager.", phon: "pre-FI-rou ou mar, pour-ke GOCH-tou de na-DAR" }
+      - { term: "Gosto dos dois!",           fr: "J'aime les deux !",        phon: "GOCH-tou douch doïch" }
+  - question: { term: "Concordas comigo?", fr: "Tu es d'accord avec moi ?", phon: "kon-KOR-dach kou-MI-gou" }
+    answers:
+      - { term: "Concordo, tens razão.",     fr: "D'accord, tu as raison.",  phon: "kon-KOR-dou, tèïnch rra-ZAN-ou" }
+      - { term: "Não concordo, mas percebo.", fr: "Je ne suis pas d'accord, mais je comprends.", phon: "nan-ou kon-KOR-dou, mach per-SÈ-bou" }
+notes_fr:
+  - "**Acho que** est le passe-partout de l'opinion : *acho que sim*, *acho que não*, *acho que é giro*."
+  - "Un avis sans raison n'en est pas un. La règle de l'unité : toute phrase avec *acho que* doit être suivie de **porque**."
+  - "**Prefiro A a B** : *prefiro o mar **a** montanha*. Le portugais met *a* là où le français met « à »."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Pouce en haut, pouce en bas"
+    steps_fr:
+      - "Vous montrez un objet ou une image : *gostas?*"
+      - "Pouce en haut = *gosto!*, pouce en bas = *não gosto!*"
+      - "À chaque fois, l'enfant doit ajouter un mot : *é bom!*, *é feio!*"
+  - level: petits
+    type: jeu
+    title_fr: "Ce que je préfère"
+    steps_fr:
+      - "Deux objets dans les mains : *este ou este?*"
+      - "L'enfant choisit et dit *prefiro este*. On l'encourage à ajouter *porque…* même en un mot."
+  - level: grands
+    type: exercice
+    title_fr: "Trois avis écrits"
+    steps_fr:
+      - "Donne ton avis sur trois choses (un film, un plat, un sport)."
+      - "Chaque phrase doit contenir *acho que* **et** *porque*."
+  - level: grands
+    type: dialogue
+    title_fr: "Le débat des deux minutes"
+    steps_fr:
+      - "Sujet tiré au sort : la meilleure saison, le meilleur animal, le meilleur dessert."
+      - "Chacun défend son avis avec **deux** raisons, en portugais."
+      - "Obligatoire à la fin : reconnaître un point de l'autre avec *tens razão*, puis conclure *cada um tem a sua opinião*."
+reemploi_fr:
+  - "Au dîner, une question d'avis par jour : *O que achas do jantar?*"
+  - "Chaque fois que l'enfant dit « j'aime / j'aime pas » en français, on lui demande *porquê?* — en portugais."
+cefr: "A1+ → A2"
+culture_fr: >-
+  Le terrain d'opinion national, c'est le **football** : Benfica, Porto, Sporting se discutent au café tous les jours de la semaine. On peut être en total désaccord et rester amis — c'est même la règle du jeu.

@@ -20,3 +20,19 @@ levels:
   - id: grands
     label_fr: 7-10 ans
     desc_fr: Lecteurs. Tracé des lettres, fiches, premières règles.
+
+# Voix utilisées par scripts/audio.py (deux voix : les dialogues sonnent à deux).
+# Liste complète : python3 -m edge_tts --list-voices
+voices:
+  f: ar-SA-ZariyahNeural
+  m: ar-SA-HamedNeural
+speech_rate: "-10%"
+
+# La boîte à outils : ce qu'on dit quand on ne comprend pas. Elle ne s'apprend
+# pas dans une unité, elle sert toute l'année.
+toolkit:
+  - title_fr: "Quand je n'ai pas compris"
+    intro_fr: "À savoir par cœur avant tout le reste."
+    items:
+      - { term: "…", translit: "…", fr: "Je n'ai pas compris.", phon: "…" }
+      - { term: "…", translit: "…", fr: "Encore une fois, s'il te plaît.", phon: "…" }

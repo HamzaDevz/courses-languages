@@ -1,0 +1,102 @@
+id: 19-telefone
+order: 19
+year: 2
+title: "Ao telefone"
+title_fr: "Au téléphone"
+goal_fr: "Répondre au téléphone, se présenter et laisser un message."
+can_do_fr:
+  - "Je réponds au téléphone : *Está lá? Quem fala?*"
+  - "Je me présente : *É a Ana.*"
+  - "Je demande à parler à quelqu'un."
+  - "Je dis que je n'entends pas bien et je fais répéter."
+duration_min: 15
+dialogue:
+  title_fr: "Allô, je peux parler à Tomás ?"
+  context_fr: "Ana appelle chez Tomás. C'est sa mère qui décroche. Attention : au téléphone, il n'y a ni gestes ni visage — tout passe par la voix."
+  lines:
+    - { who: "Mãe", term: "Está lá?",                                fr: "Allô ?",                            phon: "chta la" }
+    - { who: "Ana", term: "Boa tarde. É a Ana. Quem fala?",          fr: "Bonjour. C'est Ana. Qui est à l'appareil ?", phon: "BÔ-a TAR-de. è a A-na. kèïn FA-la" }
+    - { who: "Mãe", term: "Sou a mãe do Tomás. Olá, Ana!",           fr: "Je suis la mère de Tomás. Bonjour Ana !", phon: "sô a maïn dou tou-MACH. o-LA, A-na" }
+    - { who: "Ana", term: "Posso falar com o Tomás, por favor?",     fr: "Je peux parler à Tomás, s'il vous plaît ?", phon: "PO-sou fa-LAR kon ou tou-MACH, pour fa-VOR" }
+    - { who: "Mãe", term: "Um momento… Ele está no banho.",          fr: "Un instant… Il est dans le bain.",  phon: "oun mou-MEN-tou… É-le chta nou BA-gnou" }
+    - { who: "Ana", term: "Desculpe, não estou a ouvir bem.",        fr: "Pardon, je n'entends pas bien.",    phon: "desh-KOUL-pe, nan-ou chtô a ô-VIR bèïn" }
+    - { who: "Mãe", term: "Ele não pode agora. Queres deixar recado?", fr: "Il ne peut pas maintenant. Tu veux laisser un message ?", phon: "É-le nan-ou PO-de a-GO-ra. KÈ-rech dèï-CHAR re-KA-dou" }
+    - { who: "Ana", term: "Sim: amanhã vamos ao parque às três.",    fr: "Oui : demain on va au parc à trois heures.", phon: "sïn: a-ma-GNAN VA-mouch aou PAR-ke ach trèch" }
+    - { who: "Mãe", term: "Combinado. Eu digo-lhe. Adeus!",          fr: "Entendu. Je le lui dirai. Au revoir !", phon: "kon-bi-NA-dou. éou DI-gou-lie. a-DÉOUCH" }
+comprehension:
+  - q_fr: "Qui appelle, et qui décroche ?"
+    a_fr: "Ana appelle ; c'est la mère de Tomás qui décroche."
+  - q_fr: "Pourquoi Tomás ne peut-il pas parler ?"
+    a_fr: "Il est dans le bain — *está no banho*."
+  - q_fr: "Quel message Ana laisse-t-elle ?"
+    a_fr: "Que demain ils vont au parc à trois heures."
+  - q_fr: "Que dit Ana quand elle entend mal ?"
+    a_fr: "*Não estou a ouvir bem.* Au téléphone, c'est la phrase de survie."
+vocab:
+  - { term: "o telemóvel",   fr: "le portable",          phon: "ou te-le-MO-vel" }
+  - { term: "a chamada",     fr: "l'appel",              phon: "a cha-MA-da" }
+  - { term: "o recado",      fr: "le message",           phon: "ou re-KA-dou" }
+  - { term: "ligar",         fr: "appeler",              phon: "li-GAR" }
+  - { term: "atender",       fr: "décrocher",            phon: "a-ten-DÈR" }
+  - { term: "o número",      fr: "le numéro",            phon: "ou NOU-me-rou" }
+  - { term: "ocupado",       fr: "occupé",               phon: "o-kou-PA-dou" }
+  - { term: "mais tarde",    fr: "plus tard",            phon: "maïch TAR-de" }
+  - { term: "a voz",         fr: "la voix",              phon: "a voch" }
+  - { term: "combinado",     fr: "entendu, c'est noté",  phon: "kon-bi-NA-dou" }
+phrases:
+  - { term: "Está lá?",                fr: "Allô ?",                          phon: "chta la" }
+  - { term: "Quem fala?",              fr: "Qui est à l'appareil ?",          phon: "kèïn FA-la" }
+  - { term: "É a Ana.",                fr: "C'est Ana.",                      phon: "è a A-na" }
+  - { term: "Posso falar com o Tomás?", fr: "Je peux parler à Tomás ?",       phon: "PO-sou fa-LAR kon ou tou-MACH" }
+  - { term: "Não estou a ouvir bem.",  fr: "Je n'entends pas bien.",          phon: "nan-ou chtô a ô-VIR bèïn" }
+  - { term: "Ligo mais tarde.",        fr: "Je rappelle plus tard.",          phon: "LI-gou maïch TAR-de" }
+qa:
+  - question: { term: "Está lá? Quem fala?", fr: "Allô ? Qui est à l'appareil ?", phon: "chta la? kèïn FA-la" }
+    answers:
+      - { term: "É o Léo, boa tarde.",       fr: "C'est Léo, bonjour.",          phon: "è ou Léo, BÔ-a TAR-de" }
+      - { term: "Sou eu, a Ana!",            fr: "C'est moi, Ana !",             phon: "sô éou, a A-na" }
+  - question: { term: "Queres deixar recado?", fr: "Tu veux laisser un message ?", phon: "KÈ-rech dèï-CHAR re-KA-dou" }
+    answers:
+      - { term: "Sim, por favor.",           fr: "Oui, s'il vous plaît.",        phon: "sïn, pour fa-VOR" }
+      - { term: "Não, obrigado. Ligo mais tarde.", fr: "Non merci. Je rappelle plus tard.", phon: "nan-ou, o-bri-GA-dou. LI-gou maïch TAR-de" }
+  - question: { term: "Podes repetir? Não ouvi.", fr: "Tu peux répéter ? Je n'ai pas entendu.", phon: "PO-dech re-pe-TIR? nan-ou ô-VI" }
+    answers:
+      - { term: "Claro. Disse: amanhã às três.", fr: "Bien sûr. J'ai dit : demain à trois heures.", phon: "KLA-rou. DI-se: a-ma-GNAN ach trèch" }
+      - { term: "Falo mais devagar: a… ma… nhã.", fr: "Je parle plus lentement : de… main.", phon: "FA-lou maïch de-va-GAR" }
+notes_fr:
+  - "Au Portugal on décroche en disant **Está lá?** ou **Estou?** — jamais *alô*, qui est brésilien."
+  - "Pour se présenter au téléphone : **É a Ana** / **É o Léo** — avec l'article, comme toujours devant un prénom au Portugal."
+  - "Le téléphone enlève les gestes et les lèvres : c'est **l'exercice de compréhension le plus difficile et le plus utile** du programme."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Le téléphone en carton"
+    steps_fr:
+      - "Deux gobelets reliés par une ficelle, ou simplement deux mains en coquille."
+      - "L'un dit *Está lá?*, l'autre répond *É o/a…*"
+      - "On se dit trois phrases connues, sans se voir."
+  - level: petits
+    type: jeu
+    title_fr: "Dos à dos"
+    steps_fr:
+      - "Asseyez-vous dos à dos. Vous demandez trois choses simples en portugais."
+      - "Sans les gestes, l'enfant doit répondre à l'oreille seule."
+  - level: grands
+    type: production
+    title_fr: "Le message vocal"
+    steps_fr:
+      - "Enregistre un message de trois phrases sur le téléphone d'un parent : ton nom, la raison de l'appel, l'heure."
+      - "Réécoute-le. Si tu ne te comprends pas toi-même, recommence plus lentement."
+  - level: grands
+    type: dialogue
+    title_fr: "L'appel complet"
+    steps_fr:
+      - "Jouez l'appel entier : décrocher, se présenter, demander quelqu'un, laisser un message, raccrocher."
+      - "Une contrainte : celui qui appelle doit utiliser une fois *não estou a ouvir bem*."
+      - "Puis on échange les rôles."
+reemploi_fr:
+  - "Un vrai appel dans la semaine à un proche lusophone, même de trente secondes."
+  - "Décrocher le téléphone de la maison en disant *Está lá?* — même si la conversation continue en français."
+cefr: "A1+"
+culture_fr: >-
+  On décroche au Portugal en disant **Estou?** ou **Está lá?** — jamais *alô*, qui est brésilien. Et l'on raccroche souvent par *beijinhos* même entre gens qui se connaissent peu : la distance polie n'est pas la même qu'en France.

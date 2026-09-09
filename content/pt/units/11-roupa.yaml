@@ -1,0 +1,104 @@
+id: 11-roupa
+order: 11
+year: 2
+title: "A roupa"
+title_fr: "Les vêtements"
+goal_fr: "Nommer ses vêtements et dire ce qu'on met."
+can_do_fr:
+  - "Je nomme mes vêtements et je dis leur couleur."
+  - "Je dis ce que je vais mettre : *vou vestir…*"
+  - "Je réponds quand on me demande de m'habiller."
+  - "Je dis qu'un vêtement ne me va pas ou que je n'en veux pas."
+duration_min: 14
+dialogue:
+  title_fr: "Habille-toi, on part !"
+  context_fr: "Huit heures moins le quart. Ana n'est toujours pas habillée."
+  lines:
+    - { who: "Pai",  term: "Ana, veste-te! O que vais vestir hoje?", fr: "Ana, habille-toi ! Qu'est-ce que tu vas mettre aujourd'hui ?", phon: "A-na, VÈCH-te-te! ou ke vaïch vech-TIR ô-je" }
+    - { who: "Ana",  term: "Vou vestir o vestido vermelho.",       fr: "Je vais mettre la robe rouge.",       phon: "vô vech-TIR ou vech-TI-dou ver-MÉ-liou" }
+    - { who: "Pai",  term: "Está frio lá fora. Leva o casaco.",     fr: "Il fait froid dehors. Prends le manteau.", phon: "chta FRI-ou la FO-ra. LÈ-va ou ka-ZA-kou" }
+    - { who: "Ana",  term: "Está bem. Onde estão as minhas meias?", fr: "D'accord. Où sont mes chaussettes ?", phon: "chta bèïn. ON-de chtan-ou ach MI-gnach MÈÏ-ach" }
+    - { who: "Pai",  term: "Estão em cima da cama, ao lado do pijama.", fr: "Elles sont sur le lit, à côté du pyjama.", phon: "chtan-ou èïn SI-ma da KA-ma, aou LA-dou dou pi-JA-ma" }
+    - { who: "Ana",  term: "Estes sapatos não me servem!",          fr: "Ces chaussures ne me vont pas !",     phon: "ÈCH-tech sa-PA-touch nan-ou me SÈR-vèïn" }
+    - { who: "Pai",  term: "Então calça os outros. Despacha-te!",   fr: "Alors mets les autres. Dépêche-toi !", phon: "en-TAN-ou KAL-sa ouz Ô-trouch. desh-PA-cha-te" }
+    - { who: "Ana",  term: "Já está! Estou pronta.",                fr: "Ça y est ! Je suis prête.",           phon: "ja chta! chtô PRON-ta" }
+comprehension:
+  - q_fr: "Que veut mettre Ana au départ ?"
+    a_fr: "La robe rouge — *o vestido vermelho*."
+  - q_fr: "Pourquoi son père lui demande-t-il de prendre le manteau ?"
+    a_fr: "Parce qu'il fait froid dehors : *está frio lá fora*."
+  - q_fr: "Où sont ses chaussettes ?"
+    a_fr: "Sur le lit, à côté du pyjama."
+  - q_fr: "Quel est le problème avec les chaussures ?"
+    a_fr: "Elles ne lui vont pas : *não me servem*."
+vocab:
+  - { term: "a camisola",  fr: "le pull",           phon: "a ka-mi-ZO-la" }
+  - { term: "a t-shirt",   fr: "le tee-shirt",      phon: "a ti-CHÈRT" }
+  - { term: "as calças",   fr: "le pantalon",       phon: "ach KAL-sach" }
+  - { term: "o vestido",   fr: "la robe",           phon: "ou vech-TI-dou" }
+  - { term: "a saia",      fr: "la jupe",           phon: "a SAÏ-a" }
+  - { term: "o casaco",    fr: "le manteau",        phon: "ou ka-ZA-kou" }
+  - { term: "os sapatos",  fr: "les chaussures",    phon: "ouch sa-PA-touch" }
+  - { term: "as meias",    fr: "les chaussettes",   phon: "ach MÈÏ-ach" }
+  - { term: "o chapéu",    fr: "le chapeau",        phon: "ou cha-PÈOU" }
+  - { term: "o pijama",    fr: "le pyjama",         phon: "ou pi-JA-ma" }
+  - { term: "as luvas",    fr: "les gants",         phon: "ach LOU-vach" }
+  - { term: "o cachecol",  fr: "l'écharpe",         phon: "ou ka-che-KOL" }
+phrases:
+  - { term: "O que vais vestir?",       fr: "Qu'est-ce que tu vas mettre ?", phon: "ou ke vaïch vech-TIR" }
+  - { term: "Vou vestir a camisola azul.", fr: "Je vais mettre le pull bleu.", phon: "vô vech-TIR a ka-mi-ZO-la a-ZOUL" }
+  - { term: "Veste-te, por favor.",     fr: "Habille-toi, s'il te plaît.",   phon: "VÈCH-te-te, pour fa-VOR" }
+  - { term: "Não me serve.",            fr: "Ça ne me va pas.",              phon: "nan-ou me SÈR-ve" }
+  - { term: "Estou pronto.",            fr: "Je suis prêt.",                 phon: "chtô PRON-tou" }
+  - { term: "Leva o casaco!",           fr: "Prends ton manteau !",          phon: "LÈ-va ou ka-ZA-kou" }
+qa:
+  - question: { term: "O que vais vestir hoje?", fr: "Qu'est-ce que tu mets aujourd'hui ?", phon: "ou ke vaïch vech-TIR ô-je" }
+    answers:
+      - { term: "Vou vestir as calças azuis.", fr: "Je vais mettre le pantalon bleu.", phon: "vô vech-TIR ach KAL-sach a-ZOUÏCH" }
+      - { term: "Ainda não sei.",              fr: "Je ne sais pas encore.",           phon: "a-ÏN-da nan-ou sèï" }
+  - question: { term: "De que cor é a tua camisola?", fr: "De quelle couleur est ton pull ?", phon: "de ke kor è a TOU-a ka-mi-ZO-la" }
+    answers:
+      - { term: "É verde.",              fr: "Il est vert.",              phon: "è VÈR-de" }
+      - { term: "É branca com riscas.",  fr: "Il est blanc à rayures.",   phon: "è BRAN-ka kon RICH-kach" }
+  - question: { term: "Estás com frio? Queres o casaco?", fr: "Tu as froid ? Tu veux le manteau ?", phon: "chTACH kon FRI-ou? KÈ-rech ou ka-ZA-kou" }
+    answers:
+      - { term: "Sim, por favor.",   fr: "Oui, s'il te plaît.",  phon: "sïn, pour fa-VOR" }
+      - { term: "Não, estou bem.",   fr: "Non, ça va.",          phon: "nan-ou, chtô bèïn" }
+      - { term: "Tenho calor!",      fr: "J'ai chaud !",         phon: "TÉ-gnou ka-LOR" }
+notes_fr:
+  - "Trois verbes différents là où le français dit « mettre » : **vestir** un vêtement, **calçar** des chaussures, **pôr** un chapeau."
+  - "**as calças** (le pantalon) est toujours au pluriel en portugais, comme *les lunettes* en français."
+  - "L'adjectif se met **après** le nom et s'accorde : *o vestido vermelho*, *a camisola vermelha*, *as meias vermelhas*."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "La valise magique"
+    steps_fr:
+      - "Videz un tiroir sur le lit. Vous nommez un vêtement : *as meias!*"
+      - "L'enfant court le chercher et le pose sur lui."
+      - "Le premier habillé de la tête aux pieds a gagné."
+  - level: petits
+    type: jeu
+    title_fr: "Habille l'ours"
+    steps_fr:
+      - "Avec une peluche et des habits de poupée : *veste o casaco ao urso!*"
+      - "L'enfant exécute. Puis c'est lui qui commande."
+  - level: grands
+    type: exercice
+    title_fr: "La météo de la garde-robe"
+    steps_fr:
+      - "Écris ce que tu mets quand *está frio*, puis quand *está calor*."
+      - "Trois vêtements par cas, avec la bonne couleur accordée."
+  - level: grands
+    type: dialogue
+    title_fr: "Le matin pressé"
+    steps_fr:
+      - "Un joueur est le parent pressé, l'autre l'enfant qui traîne."
+      - "Le parent donne trois consignes (*veste-te*, *calça os sapatos*, *leva o casaco*)."
+      - "L'enfant doit répondre à chaque fois — accepter, refuser ou demander où est la chose."
+reemploi_fr:
+  - "Chaque matin de la semaine, la question de l'habillage se pose en portugais : *O que vais vestir?*"
+  - "Ranger le linge en nommant chaque pièce à voix haute."
+cefr: "A1"
+culture_fr: >-
+  Le **cachecol** aux couleurs de son club (Benfica, Porto, Sporting) est un vêtement à part entière au Portugal : on le porte au stade, mais aussi dans la rue les jours de match.

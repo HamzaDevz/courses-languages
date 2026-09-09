@@ -58,3 +58,40 @@ activities:
     steps_fr:
       - "Écris : *Chamo-me ______ . Tenho ______ anos.*"
       - "Fais la même fiche pour chaque membre de la famille."
+year: 1
+dialogue:
+  title_fr: "Quel âge as-tu ?"
+  context_fr: "Ana et Tomás comparent leur âge et comptent leurs autocollantes."
+  lines:
+    - { who: "Ana",   term: "Tomás, quantos anos tens?",     fr: "Tomás, quel âge as-tu ?",        phon: "tou-MACH, KOUAN-touch A-nouch tèïnch" }
+    - { who: "Tomás", term: "Tenho sete anos. E tu?",        fr: "J'ai sept ans. Et toi ?",         phon: "TÉ-gnou SÈ-te A-nouch. i TOU" }
+    - { who: "Ana",   term: "Tenho seis anos.",              fr: "J'ai six ans.",                   phon: "TÉ-gnou sèïch A-nouch" }
+    - { who: "Tomás", term: "Quantos autocolantes tens?",    fr: "Tu as combien d'autocollants ?",  phon: "KOUAN-touch aou-to-ko-LAN-tech tèïnch" }
+    - { who: "Ana",   term: "Tenho dez. Um, dois, três…",    fr: "J'en ai dix. Un, deux, trois…",   phon: "TÉ-gnou dèch. oun, doïch, trèch" }
+    - { who: "Tomás", term: "Eu tenho oito. Tens mais dois!", fr: "Moi j'en ai huit. Tu en as deux de plus !", phon: "éou TÉ-gnou OÏ-tou. tèïnch maïch doïch" }
+comprehension:
+  - q_fr: "Qui est le plus âgé des deux ?"
+    a_fr: "Tomás : il a **sete anos**, Ana en a **seis**."
+  - q_fr: "Combien d'autocollants a Ana ?"
+    a_fr: "Dix — *dez*."
+  - q_fr: "Comment dit-on « j'ai six ans » ? Que remarque-t-on par rapport au français ?"
+    a_fr: "*Tenho seis anos.* On dit **j'ai** l'âge, comme en français — mais attention, en portugais on n'oublie jamais *anos*."
+qa:
+  - question: { term: "Quantos anos tens?", fr: "Quel âge as-tu ?", phon: "KOUAN-touch A-nouch tèïnch" }
+    answers:
+      - { term: "Tenho cinco anos.", fr: "J'ai cinq ans.",  phon: "TÉ-gnou SÏN-kou A-nouch" }
+      - { term: "Tenho oito anos.",  fr: "J'ai huit ans.",  phon: "TÉ-gnou OÏ-tou A-nouch" }
+  - question: { term: "Quantos são?", fr: "Il y en a combien ?", phon: "KOUAN-touch san-ou" }
+    answers:
+      - { term: "São três.",  fr: "Il y en a trois.", phon: "san-ou trèch" }
+      - { term: "São muitos!", fr: "Il y en a beaucoup !", phon: "san-ou MOUÏN-touch" }
+  - question: { term: "Sabes contar até dez?", fr: "Tu sais compter jusqu'à dix ?", phon: "SA-bech kon-TAR a-TÈ dèch" }
+    answers:
+      - { term: "Sim! Um, dois, três, quatro, cinco…", fr: "Oui ! Un, deux, trois, quatre, cinq…", phon: "sïn! oun, doïch, trèch, KOUA-trou, SÏN-kou" }
+      - { term: "Ainda não.", fr: "Pas encore.", phon: "a-ÏN-da nan-ou" }
+reemploi_fr:
+  - "Compter en portugais tout ce qui se compte : les marches de l'escalier, les tomates, les minutes avant de partir."
+  - "Répondre en portugais quand on demande l'âge d'un frère ou d'une sœur."
+cefr: "A1.1"
+culture_fr: >-
+  Le Portugal utilise l'**euro**. Les pièces portugaises portent des sceaux royaux du XIIe siècle : de vrais objets d'histoire dans une poche. Compter la monnaie en portugais est l'exercice le plus utile qui soit.

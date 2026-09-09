@@ -1,0 +1,106 @@
+id: 21-ontem
+order: 21
+year: 3
+title: "Ontem"
+title_fr: "Hier"
+goal_fr: "Raconter ce qu'on a fait hier."
+can_do_fr:
+  - "Je raconte trois choses que j'ai faites hier."
+  - "J'utilise *fui*, *comi*, *vi*, *fiz*, *brinquei*."
+  - "Je demande à l'autre ce qu'il a fait : *O que fizeste?*"
+  - "Je dis si c'était bien ou pas : *foi divertido*."
+duration_min: 16
+dialogue:
+  title_fr: "Alors, ce week-end ?"
+  context_fr: "Lundi matin. Les deux amis se racontent leur dimanche."
+  lines:
+    - { who: "Tomás", term: "O que fizeste ontem?",                    fr: "Qu'est-ce que tu as fait hier ?",     phon: "ou ke fi-ZÈCH-te ON-tèïn" }
+    - { who: "Ana",   term: "Fui à casa dos meus avós.",               fr: "Je suis allée chez mes grands-parents.", phon: "fouï a KA-za douch méouz a-VOCH" }
+    - { who: "Tomás", term: "E o que fizeste lá?",                     fr: "Et qu'est-ce que tu y as fait ?",     phon: "i ou ke fi-ZÈCH-te la" }
+    - { who: "Ana",   term: "Comi um bolo enorme e brinquei no jardim.", fr: "J'ai mangé un gâteau énorme et j'ai joué dans le jardin.", phon: "kou-MI oun BÔ-lou i-NOR-me i brïn-KÈÏ nou jar-DÏN" }
+    - { who: "Tomás", term: "Que sorte! Gostaste?",                    fr: "Quelle chance ! Ça t'a plu ?",        phon: "ke SOR-te! gouch-TACH-te" }
+    - { who: "Ana",   term: "Gostei muito. Foi divertido. E tu?",      fr: "J'ai beaucoup aimé. C'était amusant. Et toi ?", phon: "gouch-TÈÏ MOUÏN-tou. foï di-ver-TI-dou. i TOU" }
+    - { who: "Tomás", term: "Eu vi um filme e depois li um livro.",    fr: "Moi j'ai vu un film et ensuite j'ai lu un livre.", phon: "éou vi oun FIL-me i de-POÏCH li oun LI-vrou" }
+    - { who: "Ana",   term: "Que filme viste?",                        fr: "Tu as vu quel film ?",                phon: "ke FIL-me VICH-te" }
+    - { who: "Tomás", term: "Não me lembro do nome! Mas foi giro.",    fr: "Je ne me rappelle plus le titre ! Mais c'était chouette.", phon: "nan-ou me LEN-brou dou NO-me! mach foï JI-rou" }
+comprehension:
+  - q_fr: "Où est allée Ana hier ?"
+    a_fr: "Chez ses grands-parents — *à casa dos meus avós*."
+  - q_fr: "Qu'y a-t-elle fait ?"
+    a_fr: "Elle a mangé un énorme gâteau et joué dans le jardin."
+  - q_fr: "Et Tomás ?"
+    a_fr: "Il a vu un film puis lu un livre."
+  - q_fr: "Trouve quatre verbes au passé dans le dialogue."
+    a_fr: "*fizeste*, *fui*, *comi*, *brinquei*, *gostei*, *vi*, *li*, *viste*… — presque toutes les phrases sont au passé."
+vocab:
+  - { term: "ontem",             fr: "hier",                phon: "ON-tèïn" }
+  - { term: "anteontem",         fr: "avant-hier",          phon: "an-te-ON-tèïn" }
+  - { term: "a semana passada",  fr: "la semaine dernière", phon: "a se-MA-na pa-SA-da" }
+  - { term: "fui",               fr: "je suis allé",        phon: "fouï" }
+  - { term: "comi",              fr: "j'ai mangé",          phon: "kou-MI" }
+  - { term: "vi",                fr: "j'ai vu",             phon: "vi" }
+  - { term: "fiz",               fr: "j'ai fait",           phon: "fich" }
+  - { term: "brinquei",          fr: "j'ai joué",           phon: "brïn-KÈÏ" }
+  - { term: "corri",             fr: "j'ai couru",          phon: "kou-RRI" }
+  - { term: "li",                fr: "j'ai lu",             phon: "li" }
+  - { term: "gostei",            fr: "j'ai aimé",           phon: "gouch-TÈÏ" }
+  - { term: "foi",               fr: "c'était / il est allé", phon: "foï" }
+phrases:
+  - { term: "O que fizeste ontem?",  fr: "Qu'as-tu fait hier ?",        phon: "ou ke fi-ZÈCH-te ON-tèïn" }
+  - { term: "Ontem fui ao parque.",  fr: "Hier je suis allé au parc.",  phon: "ON-tèïn fouï aou PAR-ke" }
+  - { term: "Onde foste?",           fr: "Où es-tu allé ?",             phon: "ON-de FOCH-te" }
+  - { term: "Gostaste?",             fr: "Ça t'a plu ?",                phon: "gouch-TACH-te" }
+  - { term: "Foi divertido!",        fr: "C'était amusant !",           phon: "foï di-ver-TI-dou" }
+  - { term: "Não me lembro.",        fr: "Je ne me souviens pas.",      phon: "nan-ou me LEN-brou" }
+qa:
+  - question: { term: "O que fizeste ontem?", fr: "Qu'as-tu fait hier ?", phon: "ou ke fi-ZÈCH-te ON-tèïn" }
+    answers:
+      - { term: "Fui à escola e depois brinquei em casa.", fr: "Je suis allé à l'école puis j'ai joué à la maison.", phon: "fouï a chKO-la i de-POÏCH brïn-KÈÏ èïn KA-za" }
+      - { term: "Não fiz nada de especial.",   fr: "Je n'ai rien fait de spécial.",  phon: "nan-ou fich NA-da de chpe-si-AL" }
+      - { term: "Vi um filme com a minha família.", fr: "J'ai vu un film avec ma famille.", phon: "vi oun FIL-me kon a MI-gna fa-MI-lia" }
+  - question: { term: "Onde foste no fim de semana?", fr: "Où es-tu allé ce week-end ?", phon: "ON-de FOCH-te nou fïn de se-MA-na" }
+    answers:
+      - { term: "Fui à praia com os meus pais.", fr: "Je suis allé à la plage avec mes parents.", phon: "fouï a PRAÏ-a kon ouch méouch païch" }
+      - { term: "Fiquei em casa, estava a chover.", fr: "Je suis resté à la maison, il pleuvait.", phon: "fi-KÈÏ èïn KA-za, chTA-va a chou-VÈR" }
+  - question: { term: "Gostaste? Como foi?", fr: "Ça t'a plu ? C'était comment ?", phon: "gouch-TACH-te? KO-mou foï" }
+    answers:
+      - { term: "Gostei muito, foi muito divertido.", fr: "J'ai beaucoup aimé, c'était très amusant.", phon: "gouch-TÈÏ MOUÏN-tou, foï MOUÏN-tou di-ver-TI-dou" }
+      - { term: "Não gostei muito, foi aborrecido.",  fr: "Je n'ai pas trop aimé, c'était ennuyeux.",  phon: "nan-ou gouch-TÈÏ MOUÏN-tou, foï a-bou-rre-SI-dou" }
+notes_fr:
+  - "On n'apprend **pas** un tableau de conjugaison : on apprend six mots tout faits — *fui, comi, vi, fiz, brinquei, gostei* — comme on a appris *tenho*."
+  - "Les verbes en **-ar** font *-ei* : brincar → *brinquei*, jogar → *joguei*, gostar → *gostei*. Ceux en **-er / -ir** font *-i* : comer → *comi*, correr → *corri*."
+  - "**Fui** sert deux fois : *fui à praia* (je suis allé) et *foi divertido* (c'était). Le contexte suffit à comprendre."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Le film de la journée"
+    steps_fr:
+      - "Le soir, l'enfant mime trois choses faites dans la journée."
+      - "Vous mettez les mots dessus en portugais : *comeste!*, *brincaste!*, *correste!*"
+      - "Il répète après vous, sans rien lire."
+  - level: petits
+    type: jeu
+    title_fr: "Vrai ou faux d'hier"
+    steps_fr:
+      - "Dites trois phrases sur hier, dont une fausse : *Ontem comeste sopa.*"
+      - "L'enfant crie *é verdade!* ou *não é verdade!*"
+  - level: grands
+    type: exercice
+    title_fr: "Trois phrases d'hier"
+    steps_fr:
+      - "Écris trois choses vraies faites hier, avec trois verbes différents au passé."
+      - "Souligne le verbe dans chaque phrase."
+      - "Transforme-les en questions à poser à quelqu'un : *Foste…? Comeste…?*"
+  - level: grands
+    type: dialogue
+    title_fr: "L'enquête du lundi"
+    steps_fr:
+      - "Chacun raconte son week-end en trois phrases au passé."
+      - "L'autre doit poser **trois questions** dessus : *Com quem foste? Gostaste? O que comeste?*"
+      - "On échange. La règle : aucune phrase au présent."
+reemploi_fr:
+  - "Le récit du soir passe au passé : *O que fizeste hoje?* au lieu de *como foi*."
+  - "Le lundi matin, une question rituelle : *O que fizeste no fim de semana?*"
+cefr: "A1+ → A2"
+culture_fr: >-
+  Raconter le passé est un art de famille : les **histórias da avó**, les histoires de la grand-mère, sont une tradition vivante. Demander à un aîné de raconter son enfance est le meilleur exercice de compréhension qui existe.

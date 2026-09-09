@@ -27,6 +27,17 @@ jobs:
       - name: Installer les dépendances
         run: python -m pip install -r requirements.txt
 
+      # Les vraies voix portugaises : le runner a le réseau, l'enfant aura donc
+      # de vrais enregistrements sur le site publié. Si le service est
+      # indisponible, on publie quand même, avec la voix du navigateur.
+      - name: Installer edge-tts
+        continue-on-error: true
+        run: python -m pip install -r requirements-audio.txt
+
+      - name: Enregistrer les voix
+        continue-on-error: true
+        run: python scripts/audio.py
+
       - name: Générer le site, les fiches et les exports
         run: python scripts/build.py
 
