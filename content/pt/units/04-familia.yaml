@@ -18,8 +18,8 @@ vocab:
   - { term: "a filha",   fr: "la fille",       phon: "a FI-lia" }
   - { term: "o tio",     fr: "l'oncle",        phon: "ou TI-ou" }
   - { term: "a tia",     fr: "la tante",       phon: "a TI-a" }
-  - { term: "o primo",   fr: "le cousin",      phon: "ou PRI-mou" }
-  - { term: "a prima",   fr: "la cousine",     phon: "a PRI-ma" }
+  - { term: "o primo",   fr: "le cousin",      phon: "ou PRI-mou", level: grands }
+  - { term: "a prima",   fr: "la cousine",     phon: "a PRI-ma", level: grands }
   - { term: "o bebé",    fr: "le bébé",        phon: "ou be-BÈ" }
 phrases:
   - { term: "Esta é a minha mãe.",   fr: "Voici ma maman.",       phon: "ÈCH-ta è a MI-nia MAN-i" }

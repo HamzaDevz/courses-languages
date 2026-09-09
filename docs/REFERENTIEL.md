@@ -156,8 +156,10 @@ Pour qu'un enseignant sache d'où viennent les choix :
 
 Si vous relisez ce programme avec un œil professionnel, voici où regarder :
 
-- **la charge lexicale par unité** (10 à 12 mots + 6 phrases) : est-elle tenable
-  au rythme annoncé pour chaque âge ?
+- **la charge lexicale par unité** : le socle commun ne dépasse jamais 12 mots
+  + 6 phrases, et les mots réservés aux lecteurs portent `level: grands` (ils
+  s'affichent avec l'étiquette « 7-10 ans » et le parcours A les saute).
+  Est-ce tenable au rythme annoncé pour chaque âge ?
 - **la progression grammaticale** ci-dessus : l'ordre vous paraît-il juste, et
   manque-t-il une notion indispensable avant l'A2 ?
 - **la vraisemblance des dialogues** : un enfant portugais dirait-il cela ainsi ?

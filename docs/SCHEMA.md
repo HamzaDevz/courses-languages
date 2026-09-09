@@ -65,6 +65,11 @@ content/
   level: grands           # facultatif : réserve le mot à un niveau
 ```
 
+Un mot marqué `level:` s'affiche avec l'étiquette de ce niveau (« 7-10 ans ») :
+le parcours des petits le saute, le parent le voit sans avoir à le chercher.
+Le socle commun d'une unité — les mots **sans** `level` — ne dépasse jamais
+douze.
+
 Convention pour `phon` : syllabes séparées par des tirets, **SYLLABE ACCENTUÉE
 en majuscules**. C'est une approximation destinée aux parents, pas de l'API.
 

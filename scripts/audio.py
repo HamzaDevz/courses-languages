@@ -92,8 +92,12 @@ def wanted_clips(course: dict) -> dict[str, set[str]]:
 
 
 def clip_name(text: str, voice_id: str) -> str:
-    """Nom de fichier stable : il ne change pas tant que le texte ne change pas."""
-    digest = hashlib.sha1(f"{voice_id}|{text}".encode("utf-8")).hexdigest()[:16]
+    """Nom de fichier stable : il ne change pas tant que le texte ne change pas.
+
+    SHA-256 plutôt que SHA-1 : l'empreinte ne sert qu'à nommer un fichier, mais
+    autant ne pas laisser traîner un algorithme cassé dans le dépôt.
+    """
+    digest = hashlib.sha256(f"{voice_id}|{text}".encode("utf-8")).hexdigest()[:16]
     return f"{digest}.mp3"
 
 

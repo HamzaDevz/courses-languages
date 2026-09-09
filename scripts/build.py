@@ -613,7 +613,13 @@ def vocab_table(unit_entries: list[dict], course: dict, with_audio: bool = True)
     translit = course.get("has_transliteration")
     rows = []
     for v in unit_entries:
-        cells = [f'<td class="term">{E(v["term"])}</td>']
+        # `level` réserve un mot à un âge : le parcours des petits saute ces
+        # mots-là. Sans marque visible, le parent n'a aucun moyen de le savoir.
+        mark = ""
+        if v.get("level"):
+            mark = (f'<span class="tag {E(v["level"])}">'
+                    f'{E(level_label(course, v["level"]))}</span>')
+        cells = [f'<td class="term">{E(v["term"])} {mark}</td>']
         if translit:
             cells.append(f'<td class="phon">{E(v.get("translit", ""))}</td>')
         cells.append(f'<td class="phon">{E(v.get("phon", ""))}</td>')
