@@ -37,6 +37,20 @@ Chaque unité contient : le vocabulaire avec prononciation, des phrases utiles,
 les points à retenir, et **quatre activités** — deux pour les 3-6 ans (jeux,
 oral, mime) et deux pour les 7-10 ans (écrit, règles, production).
 
+## Le site en ligne
+
+Le site est publié automatiquement sur GitHub Pages à chaque push sur `main`,
+par le workflow `.github/workflows/pages.yml` :
+
+**https://hamzadevz.github.io/courses-languages/**
+
+Il embarque tout : les unités, les fiches à imprimer (`/print/`), les PDF
+(`/pdf/`) et l'export Anki (`/exports/`). Rien à installer côté enfant, une
+tablette et un navigateur suffisent.
+
+Activation, une seule fois : dans le dépôt, **Settings → Pages → Source :
+GitHub Actions**.
+
 ## Écrire du contenu
 
 Tout se passe dans `content/`, un fichier YAML par unité. Le format est décrit

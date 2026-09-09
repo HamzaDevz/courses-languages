@@ -49,7 +49,11 @@ def main() -> None:
             check=True, capture_output=True,
         )
         print(f"  {out.relative_to(ROOT)}")
-    print("\nPDF prêts dans pdf/")
+
+    # Le site liste les PDF disponibles : il faut le regénérer une fois qu'ils existent.
+    subprocess.run([sys.executable, str(ROOT / "scripts" / "build.py")], check=True,
+                   capture_output=True)
+    print("\nPDF prêts dans pdf/ et liés depuis le site")
 
 
 if __name__ == "__main__":

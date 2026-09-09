@@ -20,6 +20,7 @@ CONTENT = ROOT / "content"
 SITE = ROOT / "site"
 PRINT = ROOT / "print"
 EXPORTS = ROOT / "exports"
+PDF = ROOT / "pdf"
 
 E = lambda s: html.escape(str(s), quote=True)
 
@@ -130,6 +131,8 @@ h2{font-size:1.35rem;margin:2em 0 .6em;border-bottom:2px solid var(--line);paddi
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
   padding:14px 16px;text-decoration:none;color:inherit;display:block}
 .card:hover{border-color:var(--accent)}
+.dl ul{padding-left:1.2em}
+.dl li{margin:.35em 0}
 .card .n{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .card .t{font-size:1.25rem;font-weight:600;margin:.15em 0}
 .card .f{color:var(--muted);font-size:.95rem}
@@ -313,6 +316,27 @@ def build_lang_index(course: dict) -> str:
         for lv in course.get("levels", [])
     )
     n_vocab = sum(len(entries(u)) for u in course["units"])
+    code = course["code"]
+    has_pdf = (PDF / code / "cahier-complet.pdf").exists()
+
+    dl = ['<p>Chaque unité donne trois feuilles A4 : la fiche de cours, les activités '
+          'et les cartes de vocabulaire à découper.</p><ul>']
+    cahier = f'<a href="../print/{E(code)}/cahier-complet.html">Le cahier complet (HTML, Ctrl+P pour imprimer)</a>'
+    if has_pdf:
+        cahier += f' · <a href="../pdf/{E(code)}/cahier-complet.pdf">PDF</a>'
+    dl.append(f"<li><strong>{cahier}</strong></li>")
+    for u in course["units"]:
+        line = (f'Unité {E(u.get("order",""))} — {E(u["title"])} : '
+                f'<a href="../print/{E(code)}/{E(u["id"])}.html">HTML</a>')
+        if has_pdf:
+            line += f' · <a href="../pdf/{E(code)}/{E(u["id"])}.pdf">PDF</a>'
+        dl.append(f"<li>{line}</li>")
+    dl.append(f'<li>Flashcards pour Anki : '
+              f'<a href="../exports/anki-{E(code)}.csv" download>anki-{E(code)}.csv</a> '
+              f'(séparateur « ; », colonnes Recto / Verso / Tags)</li>')
+    dl.append("</ul>")
+    downloads = "".join(dl)
+
     body = f"""<div class="wrap">
 <div class="crumb"><a href="../index.html">← Toutes les langues</a></div>
 <h1>{E(course["name_fr"])}</h1>
@@ -320,8 +344,9 @@ def build_lang_index(course: dict) -> str:
 <div class="goal"><strong>Deux niveaux dans chaque unité :</strong><ul>{levels}</ul></div>
 <h2>Les unités</h2>
 <div class="grid">{"".join(cards)}</div>
-<footer><p>{E(course.get("note_fr",""))}</p>
-<p>Fiches à imprimer : dossier <code>print/{E(course["code"])}/</code>. Flashcards Anki : <code>exports/anki-{E(course["code"])}.csv</code>.</p></footer>
+<h2>À imprimer et à emporter</h2>
+<div class="dl">{downloads}</div>
+<footer><p>{E(course.get("note_fr",""))}</p></footer>
 </div>"""
     return page(course["name_fr"], body, SITE_CSS)
 
@@ -491,6 +516,14 @@ def main() -> None:
 
         print(f'{course["name_fr"]} : {len(units)} unités → site/{code}/ et print/{code}/')
         build_exports(course)
+
+    # Le site publié embarque les fiches, les PDF (s'ils ont été produits) et les exports,
+    # pour qu'un seul dossier suffise à tout distribuer.
+    shutil.copytree(PRINT, SITE / "print")
+    shutil.copytree(EXPORTS, SITE / "exports")
+    if PDF.exists():
+        shutil.copytree(PDF, SITE / "pdf")
+        print("pdf/ inclus dans le site")
 
     print("\nOK. Ouvrir site/index.html — imprimer depuis print/<langue>/cahier-complet.html")
 
