@@ -1,0 +1,22 @@
+# GABARIT — copier ce dossier vers content/<code>/ pour créer une langue.
+# Les dossiers commençant par "_" sont ignorés par le build.
+code: ar
+name: العربية
+name_fr: Arabe
+variant: MSA
+variant_fr: Arabe standard moderne
+direction: rtl            # l'arabe s'écrit de droite à gauche
+script: arabic
+has_transliteration: true # ajoute la colonne `translit` dans les tableaux
+speech_lang: ar-SA
+teaching_language: fr
+note_fr: >
+  Les mots sont écrits avec les voyelles (harakat) pour aider à la lecture.
+  Commencer par l'alphabet avant le vocabulaire.
+levels:
+  - id: petits
+    label_fr: 3-6 ans
+    desc_fr: Pré-lecteurs. Écoute, répétition, jeux, images. Aucun écrit exigé.
+  - id: grands
+    label_fr: 7-10 ans
+    desc_fr: Lecteurs. Tracé des lettres, fiches, premières règles.

@@ -1,0 +1,58 @@
+id: 06-comida
+order: 6
+title: "À mesa"
+title_fr: "À table"
+goal_fr: "Nommer les aliments, dire qu'on a faim ou soif, demander poliment."
+can_do_fr:
+  - "Je nomme les aliments du quotidien."
+  - "Je sais dire que j'ai faim, soif, et demander quelque chose poliment."
+duration_min: 15
+vocab:
+  - { term: "a água",   fr: "l'eau",      phon: "a A-goua" }
+  - { term: "o pão",    fr: "le pain",    phon: "ou pan-ou (nasal)" }
+  - { term: "o leite",  fr: "le lait",    phon: "ou LÉÏ-te" }
+  - { term: "a maçã",   fr: "la pomme",   phon: "a ma-SAN (nasal)" }
+  - { term: "a banana", fr: "la banane",  phon: "a ba-NA-na" }
+  - { term: "o queijo", fr: "le fromage", phon: "ou KÉÏ-jou" }
+  - { term: "a sopa",   fr: "la soupe",   phon: "a SÔ-pa" }
+  - { term: "o arroz",  fr: "le riz",     phon: "ou a-RROCH" }
+  - { term: "o peixe",  fr: "le poisson", phon: "ou PÉÏ-che" }
+  - { term: "o bolo",   fr: "le gâteau",  phon: "ou BÔ-lou" }
+  - { term: "a fruta",  fr: "le fruit",   phon: "a FROU-ta" }
+  - { term: "o sumo",   fr: "le jus",     phon: "ou SOU-mou" }
+phrases:
+  - { term: "Tenho fome.",          fr: "J'ai faim.",            phon: "TÉ-niou FO-me" }
+  - { term: "Tenho sede.",          fr: "J'ai soif.",            phon: "TÉ-niou SÉ-de" }
+  - { term: "Quero água, por favor.", fr: "Je veux de l'eau, s'il te plaît.", phon: "KÈ-rou A-goua, pour fa-VOR" }
+  - { term: "Está bom!",            fr: "C'est bon !",           phon: "chta bon" }
+  - { term: "Bom apetite!",         fr: "Bon appétit !",         phon: "bon a-pe-TI-te" }
+notes_fr:
+  - "Comme pour l'âge, on **a** faim et soif : *tenho fome*, *tenho sede*."
+  - "Au Portugal on dit *o sumo* pour le jus ; au Brésil on dit *o suco*. Les deux existent, ce cours utilise le portugais du Portugal."
+  - "Petite politesse portugaise : on ajoute très souvent *se faz favor* (= *por favor*) à la fin de la demande."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Le vrai petit-déjeuner"
+    steps_fr:
+      - "Au vrai petit-déjeuner, nommez chaque chose en portugais avant de la poser sur la table."
+      - "L'enfant ne reçoit l'aliment que s'il le demande : *pão, por favor!*"
+  - level: petits
+    type: jeu
+    title_fr: "La dînette portugaise"
+    steps_fr:
+      - "Jouez au restaurant avec la dînette."
+      - "Le serveur demande *Bom dia! O que queres?*, le client répond *Quero sopa, por favor.*"
+  - level: grands
+    type: exercice
+    title_fr: "Fome ou sede ?"
+    steps_fr:
+      - "Il est midi, tu n'as rien mangé → *Tenho ______ .*"
+      - "Tu reviens du sport, il fait chaud → *Tenho ______ .*"
+      - "Écris ensuite ce que tu demandes dans chaque cas."
+  - level: grands
+    type: production
+    title_fr: "Le menu du jour"
+    steps_fr:
+      - "Écris le menu d'un restaurant en portugais : entrée, plat, dessert, boisson."
+      - "Joue la scène : quelqu'un commande, tu prends la commande."

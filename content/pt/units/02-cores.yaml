@@ -1,0 +1,57 @@
+id: 02-cores
+order: 2
+title: "As cores"
+title_fr: "Les couleurs"
+goal_fr: "Nommer les couleurs et dire de quelle couleur est un objet."
+can_do_fr:
+  - "Je connais 10 couleurs en portugais."
+  - "Je sais dire : « le ballon est rouge »."
+duration_min: 12
+vocab:
+  - { term: "vermelho",    fr: "rouge",   phon: "ver-MÈ-liou" }
+  - { term: "azul",        fr: "bleu",    phon: "a-ZOUL" }
+  - { term: "amarelo",     fr: "jaune",   phon: "a-ma-RÈ-lou" }
+  - { term: "verde",       fr: "vert",    phon: "VÈR-de" }
+  - { term: "preto",       fr: "noir",    phon: "PRÉ-tou" }
+  - { term: "branco",      fr: "blanc",   phon: "BRAN-kou" }
+  - { term: "cor-de-rosa", fr: "rose",    phon: "kor-de-RÔ-za" }
+  - { term: "laranja",     fr: "orange",  phon: "la-RAN-ja" }
+  - { term: "castanho",    fr: "marron",  phon: "kach-TA-niou" }
+  - { term: "cinzento",    fr: "gris",    phon: "sin-ZEN-tou" }
+  - { term: "roxo",        fr: "violet",  phon: "RÔ-chou" }
+phrases:
+  - { term: "De que cor é?",        fr: "De quelle couleur c'est ?", phon: "de ke kor è" }
+  - { term: "A bola é vermelha.",   fr: "Le ballon est rouge.",      phon: "a BO-la è ver-MÈ-lia" }
+  - { term: "O carro é azul.",      fr: "La voiture est bleue.",     phon: "ou KA-rrou è a-ZOUL" }
+  - { term: "A minha cor preferida é o verde.", fr: "Ma couleur préférée est le vert.", phon: "a MI-nia kor pre-fe-RI-da è ou VÈR-de" }
+notes_fr:
+  - "La couleur **s'accorde** avec l'objet : *o carro amarelo* (masculin) / *a bola amarela* (féminin). Les couleurs en **-e** ou en **-l** ne changent pas : *verde*, *azul*."
+  - "*cor-de-rosa* veut dire mot à mot « couleur de rose ». Il ne change jamais."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Chasse aux couleurs"
+    steps_fr:
+      - "Vous annoncez une couleur : *vermelho!*"
+      - "L'enfant court toucher un objet de cette couleur dans la maison."
+      - "Il crie la couleur en portugais en touchant l'objet."
+  - level: petits
+    type: jeu
+    title_fr: "Coloriage guidé"
+    steps_fr:
+      - "Dessinez un bonhomme et des formes simples."
+      - "Vous dites *azul*, l'enfant colorie une partie en bleu. Enchaînez les couleurs."
+  - level: grands
+    type: exercice
+    title_fr: "Accorde la couleur"
+    steps_fr:
+      - "O gato é ______ . (preto)"
+      - "A casa é ______ . (branco)"
+      - "A bola é ______ . (amarelo)"
+      - "O livro é ______ . (verde)"
+  - level: grands
+    type: production
+    title_fr: "L'arc-en-ciel légendé"
+    steps_fr:
+      - "Dessine un arc-en-ciel et écris le nom de chaque couleur en portugais."
+      - "Écris ensuite : *A minha cor preferida é ______ .*"

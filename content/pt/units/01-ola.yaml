@@ -1,0 +1,60 @@
+id: 01-ola
+order: 1
+title: "Olá!"
+title_fr: "Bonjour !"
+goal_fr: "Saluer, dire merci, dire son nom."
+can_do_fr:
+  - "Je sais dire bonjour selon le moment de la journée."
+  - "Je sais dire merci et s'il te plaît."
+  - "Je sais dire mon nom et demander celui de l'autre."
+duration_min: 12
+vocab:
+  - { term: "olá",            fr: "salut",                     phon: "o-LA" }
+  - { term: "bom dia",        fr: "bonjour (le matin)",        phon: "bon DI-a" }
+  - { term: "boa tarde",      fr: "bonjour (l'après-midi)",    phon: "boa TAR-de" }
+  - { term: "boa noite",      fr: "bonsoir / bonne nuit",      phon: "boa NOÏ-te" }
+  - { term: "adeus",          fr: "au revoir",                 phon: "a-DÉOUCH" }
+  - { term: "sim",            fr: "oui",                       phon: "sïn (nasal)" }
+  - { term: "não",            fr: "non",                       phon: "nan-ou (nasal)" }
+  - { term: "por favor",      fr: "s'il te plaît",             phon: "pour fa-VOR" }
+  - { term: "obrigado",       fr: "merci (dit par un garçon)", phon: "o-bri-GA-dou" }
+  - { term: "obrigada",       fr: "merci (dit par une fille)", phon: "o-bri-GA-da" }
+  - { term: "de nada",        fr: "de rien",                   phon: "de NA-da" }
+phrases:
+  - { term: "Como te chamas?", fr: "Comment t'appelles-tu ?",  phon: "KO-mou te CHA-mach" }
+  - { term: "Chamo-me Léo.",   fr: "Je m'appelle Léo.",        phon: "CHA-mou-me Léo" }
+  - { term: "Tudo bem?",       fr: "Ça va ?",                  phon: "TOU-dou bèïn" }
+  - { term: "Estou bem, obrigado.", fr: "Je vais bien, merci.", phon: "chtô bèïn, o-bri-GA-dou" }
+notes_fr:
+  - "**obrigado / obrigada** : en portugais, on accorde le merci avec **celui qui parle**, pas avec la personne remerciée. Un garçon dit toujours *obrigado*, une fille toujours *obrigada*."
+  - "Au Portugal, le **s** en fin de mot se prononce « ch » : *adeus* → « adéouch »."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Le réveil et le dodo"
+    steps_fr:
+      - "Mimez le lever du soleil : tout le monde dit *bom dia*."
+      - "Mimez l'après-midi (on joue dehors) : *boa tarde*."
+      - "Éteignez la lumière : *boa noite*, et on fait semblant de dormir."
+      - "Recommencez de plus en plus vite : l'enfant doit trouver la bonne salutation."
+  - level: petits
+    type: jeu
+    title_fr: "La marionnette qui dit merci"
+    steps_fr:
+      - "Donnez un objet à l'enfant en disant *por favor*."
+      - "Il répond *obrigado* ou *obrigada* selon qu'il est garçon ou fille."
+      - "Vous répondez *de nada*. Inversez les rôles."
+  - level: grands
+    type: exercice
+    title_fr: "Complète le dialogue"
+    steps_fr:
+      - "— ______ , tudo bem ? (salut)"
+      - "— Estou bem, ______ . (merci)"
+      - "— Como te ______ ? (t'appelles)"
+      - "— ______ -me ______ . (je m'appelle + ton prénom)"
+  - level: grands
+    type: production
+    title_fr: "Ta carte de présentation"
+    steps_fr:
+      - "Écris 3 phrases en portugais : une salutation, ton nom, et *adeus*."
+      - "Lis-les à voix haute en écoutant l'audio du site pour corriger ta prononciation."

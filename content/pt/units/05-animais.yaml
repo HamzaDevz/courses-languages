@@ -1,0 +1,61 @@
+id: 05-animais
+order: 5
+title: "Os animais"
+title_fr: "Les animaux"
+goal_fr: "Nommer les animaux familiers et dire lequel on préfère."
+can_do_fr:
+  - "Je nomme 12 animaux en portugais."
+  - "Je sais dire : « j'aime les chats »."
+duration_min: 15
+vocab:
+  - { term: "o cão",     fr: "le chien",   phon: "ou kan-ou (nasal)" }
+  - { term: "o gato",    fr: "le chat",    phon: "ou GA-tou" }
+  - { term: "o cavalo",  fr: "le cheval",  phon: "ou ka-VA-lou" }
+  - { term: "o pássaro", fr: "l'oiseau",   phon: "ou PA-sa-rou" }
+  - { term: "o peixe",   fr: "le poisson", phon: "ou PÉÏ-che" }
+  - { term: "a vaca",    fr: "la vache",   phon: "a VA-ka" }
+  - { term: "o coelho",  fr: "le lapin",   phon: "ou kou-È-liou" }
+  - { term: "o rato",    fr: "la souris",  phon: "ou RRA-tou (r roulé fort)" }
+  - { term: "a galinha", fr: "la poule",   phon: "a ga-LI-nia" }
+  - { term: "o porco",   fr: "le cochon",  phon: "ou POR-kou" }
+  - { term: "a ovelha",  fr: "le mouton",  phon: "a o-VÈ-lia" }
+  - { term: "o urso",    fr: "l'ours",     phon: "ou OUR-sou" }
+phrases:
+  - { term: "Gosto de gatos.",        fr: "J'aime les chats.",          phon: "GOCH-tou de GA-touch" }
+  - { term: "Não gosto de ratos.",    fr: "Je n'aime pas les souris.",  phon: "nan-ou GOCH-tou de RRA-touch" }
+  - { term: "Qual é o teu animal preferido?", fr: "Quel est ton animal préféré ?", phon: "kwal è ou téou a-ni-MAL pre-fe-RI-dou" }
+  - { term: "O cão faz ão-ão!",       fr: "Le chien fait ouah-ouah !",  phon: "ou kan-ou fach an-ou an-ou" }
+notes_fr:
+  - "**Gosto de...** = « j'aime ». Attention, il faut toujours le petit mot **de** derrière : *gosto de cavalos*."
+  - "Le pluriel : on ajoute **-s** (*gato → gatos*). Mais *cão → cães* et *animal → animais* sont particuliers."
+  - "Les cris d'animaux changent de langue à l'autre : le chien portugais fait *ão-ão*, le coq fait *cocorocó*."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Le zoo mimé"
+    steps_fr:
+      - "Vous dites un animal en portugais : *o cavalo!*"
+      - "L'enfant le mime et fait son cri."
+      - "Puis il choisit un animal et vous devinez, en portugais."
+  - level: petits
+    type: jeu
+    title_fr: "Qui manque ?"
+    steps_fr:
+      - "Alignez 5 peluches ou figurines, nommez-les en portugais."
+      - "L'enfant ferme les yeux, vous en cachez une."
+      - "Il doit dire lequel manque : *o gato!*"
+  - level: grands
+    type: exercice
+    title_fr: "Mets au pluriel"
+    steps_fr:
+      - "o gato → ______"
+      - "a vaca → ______"
+      - "o coelho → ______"
+      - "o cão → ______ (attention, irrégulier !)"
+  - level: grands
+    type: production
+    title_fr: "Mon top 3"
+    steps_fr:
+      - "Écris trois phrases : *Gosto de ______ .*"
+      - "Et une phrase avec : *Não gosto de ______ .*"
+      - "Explique ton choix à l'oral, même avec des mots français au milieu."

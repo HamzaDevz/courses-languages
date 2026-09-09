@@ -1,0 +1,58 @@
+id: 04-familia
+order: 4
+title: "A família"
+title_fr: "La famille"
+goal_fr: "Nommer les membres de la famille et les présenter."
+can_do_fr:
+  - "Je nomme les membres de ma famille en portugais."
+  - "Je sais présenter quelqu'un : « voici ma sœur »."
+duration_min: 15
+vocab:
+  - { term: "a mãe",     fr: "la maman",       phon: "a MAN-i (nasal)" }
+  - { term: "o pai",     fr: "le papa",        phon: "ou païe" }
+  - { term: "o irmão",   fr: "le frère",       phon: "ou ir-MAN-ou" }
+  - { term: "a irmã",    fr: "la sœur",        phon: "a ir-MAN" }
+  - { term: "o avô",     fr: "le grand-père",  phon: "ou a-VÔ" }
+  - { term: "a avó",     fr: "la grand-mère",  phon: "a a-VO (o ouvert)" }
+  - { term: "o filho",   fr: "le fils",        phon: "ou FI-liou" }
+  - { term: "a filha",   fr: "la fille",       phon: "a FI-lia" }
+  - { term: "o tio",     fr: "l'oncle",        phon: "ou TI-ou" }
+  - { term: "a tia",     fr: "la tante",       phon: "a TI-a" }
+  - { term: "o primo",   fr: "le cousin",      phon: "ou PRI-mou" }
+  - { term: "a prima",   fr: "la cousine",     phon: "a PRI-ma" }
+  - { term: "o bebé",    fr: "le bébé",        phon: "ou be-BÈ" }
+phrases:
+  - { term: "Esta é a minha mãe.",   fr: "Voici ma maman.",       phon: "ÈCH-ta è a MI-nia MAN-i" }
+  - { term: "Este é o meu pai.",     fr: "Voici mon papa.",       phon: "ÈCH-te è ou méou païe" }
+  - { term: "Tenho dois irmãos.",    fr: "J'ai deux frères.",     phon: "TÉ-niou doïch ir-MAN-ouch" }
+  - { term: "Amo a minha família.",  fr: "J'aime ma famille.",    phon: "A-mou a MI-nia fa-MI-lia" }
+notes_fr:
+  - "Le mot vient presque toujours avec son petit mot devant : **o** pour le masculin, **a** pour le féminin. Apprenez toujours *o pai*, *a mãe* — jamais *pai* tout seul."
+  - "*avô* (grand-père) et *avó* (grand-mère) ne diffèrent que par l'accent : **ô** = son fermé « o », **ó** = son ouvert « ò ». C'est le seul indice, il faut bien écouter."
+  - "« mon / ma » se dit *o meu* (masc.) et *a minha* (fém.) : *o meu pai*, *a minha mãe*."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "L'album photo"
+    steps_fr:
+      - "Ouvrez un album ou le téléphone."
+      - "Vous montrez une photo et dites *a mãe*, l'enfant répète."
+      - "Puis vous montrez sans parler : c'est lui qui nomme."
+  - level: petits
+    type: chanson
+    title_fr: "La ronde de la famille"
+    steps_fr:
+      - "Sur l'air de « Frère Jacques » : *O meu pai, o meu pai, a minha mãe, a minha mãe...*"
+      - "Ajoutez un membre de la famille à chaque tour."
+  - level: grands
+    type: exercice
+    title_fr: "Masculin ou féminin ?"
+    steps_fr:
+      - "Écris **o** ou **a** devant : ___ irmã, ___ avô, ___ primo, ___ tia, ___ pai, ___ filha."
+  - level: grands
+    type: production
+    title_fr: "Mon arbre généalogique"
+    steps_fr:
+      - "Dessine ton arbre sur une feuille."
+      - "Écris sous chaque personne son nom en portugais : *o avô João*, *a minha irmã Sara*..."
+      - "Présente-le à voix haute : *Este é o meu avô. Esta é a minha irmã.*"
