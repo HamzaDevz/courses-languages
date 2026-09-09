@@ -258,6 +258,7 @@ def shorten(text: str, limit: int) -> str:
 
 BOLD_RE = re.compile(r"\*\*(.+?)\*\*", re.S)
 ITALIC_RE = re.compile(r"\*(.+?)\*", re.S)
+CODE_RE = re.compile(r"`([^`]+)`")
 
 
 def md_bold(text: str) -> str:
@@ -269,13 +270,15 @@ def md_bold(text: str) -> str:
     Le gras est traité en premier, ce qui permet à un italique d'en contenir.
     Une étoile isolée (« 3 * 4 ») reste telle quelle.
     """
-    out = BOLD_RE.sub(r"<strong>\1</strong>", E(text))
+    out = CODE_RE.sub(r"<code>\1</code>", E(text))
+    out = BOLD_RE.sub(r"<strong>\1</strong>", out)
     return ITALIC_RE.sub(r"<em>\1</em>", out)
 
 
 def plain(text: str) -> str:
     """Le même texte sans ses marques de markdown, pour les endroits sans HTML."""
-    return ITALIC_RE.sub(r"\1", BOLD_RE.sub(r"\1", str(text)))
+    out = CODE_RE.sub(r"\1", str(text))
+    return ITALIC_RE.sub(r"\1", BOLD_RE.sub(r"\1", out))
 
 
 # --------------------------------------------------------------------------- #
@@ -414,6 +417,8 @@ ul.esc{list-style:none;padding-left:0;margin:.4em 0}
 ul.esc li{padding:5px 0 5px 14px;border-left:2px solid var(--line);margin:.2em 0}
 .mission{border:1px dashed var(--accent);border-radius:var(--radius);
   padding:10px 14px;margin:.8em 0 .2em}
+code{font-size:.9em;background:color-mix(in srgb, var(--line) 55%, transparent);
+  border-radius:5px;padding:1px 5px}
 h3{font-size:1.15rem;margin:1.4em 0 .4em}
 @media (max-width:520px){ .phon{white-space:normal} .dline{flex-direction:column;gap:2px} }
 """
@@ -1425,6 +1430,7 @@ footer{margin-top:6mm;font-size:8.5pt;color:#666;border-top:.5pt solid #bbb;padd
 ul.esc{list-style:none;padding-left:0}
 ul.esc li{padding:.6mm 0 .6mm 2.5mm;border-left:.5pt solid #bbb;margin:.6mm 0}
 .mission{border:.5pt dashed #333;padding:2mm 3mm;margin:2mm 0}
+code{font-family:"Courier New",monospace;font-size:9.5pt}
 .chips{margin:2mm 0}
 .chip{border:.5pt solid #666;border-radius:10pt;padding:.4mm 2mm;margin-right:2mm;font-size:9pt}
 h3{font-size:12pt;margin:4mm 0 1.5mm}
