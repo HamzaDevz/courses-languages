@@ -105,6 +105,14 @@ def clip_name(text: str, voice_id: str) -> str:
 ATTEMPT_TIMEOUT = 45      # secondes : au-delà, la connexion est pendue
 
 
+class Postponed(Exception):
+    """La limite de temps est atteinte : le clip est reporté, pas raté.
+
+    La distinction compte : un report est normal et se rattrape à l'exécution
+    suivante, un échec signale un vrai problème et doit faire sortir en erreur.
+    """
+
+
 async def synth(text: str, voice_id: str, rate: str, out: Path,
                 tries: int = 3, deadline: float | None = None) -> None:
     """Enregistre une phrase, avec des reprises mais sans jamais s'éterniser.
@@ -133,7 +141,9 @@ async def synth(text: str, voice_id: str, rate: str, out: Path,
             last = exc
             out.with_suffix(".part").unlink(missing_ok=True)
         if deadline and time.monotonic() > deadline:
-            break
+            # On reporte, mais on garde la cause : sans elle, un service
+            # injoignable ressemblerait à un simple manque de temps.
+            raise Postponed(f"« {text} » : {last}")
         await asyncio.sleep(1.5 * (attempt + 1))
     raise RuntimeError(f"« {text} » : {last}")
 
@@ -196,10 +206,11 @@ async def build_language(course: dict, force: bool, prune: bool,
         sem = asyncio.Semaphore(4)     # rester poli avec le service
         failures: list[str] = []
         skipped = 0
+        last_error = ""
         deadline = time.monotonic() + deadline_minutes * 60 if deadline_minutes else None
 
         async def one(text: str, voice_id: str, target: Path) -> None:
-            nonlocal skipped
+            nonlocal skipped, last_error
             if deadline and time.monotonic() > deadline:
                 skipped += 1
                 return
@@ -207,6 +218,9 @@ async def build_language(course: dict, force: bool, prune: bool,
                 try:
                     await synth(text, voice_id, rate, target, deadline=deadline)
                     print(f"  ✓ {text[:52]}")
+                except Postponed as exc:
+                    skipped += 1
+                    last_error = str(exc)
                 except Exception as exc:
                     failures.append(str(exc))
                     print(f"  ✗ {exc}")
@@ -216,6 +230,16 @@ async def build_language(course: dict, force: bool, prune: bool,
             print(f"\n⏱  Limite de {deadline_minutes} min atteinte : {skipped} "
                   f"enregistrement(s) reportés. Ils seront produits à la prochaine "
                   f"exécution — les autres sont conservés.")
+        # Un lot entièrement reporté sans qu'un seul fichier n'existe n'est pas
+        # un manque de temps : c'est une panne. Le dire, sinon la publication
+        # part sans son et personne ne sait pourquoi.
+        if skipped and not any((outdir / n).exists()
+                               for clip in clips.values() for n in clip.values()):
+            write_manifest()
+            raise SystemExit(
+                f"\nAucun enregistrement n'a pu être produit. Dernière erreur :\n"
+                f"  {last_error or 'inconnue'}\n"
+                "Vérifiez l'accès réseau au service de synthèse avant de relancer.")
         if failures:
             kept = write_manifest()
             raise SystemExit(
