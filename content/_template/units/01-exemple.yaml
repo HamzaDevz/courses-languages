@@ -1,0 +1,27 @@
+id: 01-exemple
+order: 1
+title: "Titre dans la langue"
+title_fr: "Titre en français"
+goal_fr: "Ce que l'enfant sait faire à la fin, en une phrase."
+can_do_fr:
+  - "Je sais ..."
+duration_min: 12
+vocab:
+  # `translit` n'est utilisé que si has_transliteration: true (arabe, russe...)
+  # `level: grands` limite un mot au niveau lecteur ; sans ce champ, le mot est pour tous.
+  - { term: "مَرْحَبًا", translit: "marhaban", fr: "bonjour", phon: "mar-ha-BAN" }
+phrases:
+  - { term: "...", translit: "...", fr: "...", phon: "..." }
+notes_fr:
+  - "Une règle expliquée simplement. Le **gras** fonctionne."
+activities:
+  - level: petits
+    type: jeu          # jeu | chanson | exercice | production
+    title_fr: "Nom du jeu"
+    steps_fr:
+      - "Étape 1."
+  - level: grands
+    type: exercice
+    title_fr: "Nom de l'exercice"
+    steps_fr:
+      - "Consigne 1."

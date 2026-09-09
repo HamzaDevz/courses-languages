@@ -1,0 +1,6 @@
+site/
+exports/
+pdf/
+__pycache__/
+.venv/
+.DS_Store

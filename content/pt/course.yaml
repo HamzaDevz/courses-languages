@@ -1,0 +1,21 @@
+# Métadonnées de la langue. Copier ce fichier pour ajouter une langue (ar/, es/...).
+code: pt
+name: Português
+name_fr: Portugais
+variant: PT-PT
+variant_fr: Portugais du Portugal (Europe)
+direction: ltr          # ltr | rtl (arabe = rtl)
+script: latin           # latin | arabic
+has_transliteration: false   # true pour l'arabe (champ `translit` dans le vocabulaire)
+speech_lang: pt-PT      # code BCP-47 utilisé par la synthèse vocale du navigateur
+teaching_language: fr   # langue dans laquelle on explique
+note_fr: >
+  Les prononciations écrites sont des approximations pour un francophone.
+  Elles servent de béquille : l'audio du site reste la référence.
+levels:
+  - id: petits
+    label_fr: 3-6 ans
+    desc_fr: Pré-lecteurs. Écoute, répétition, jeux, images. Aucun écrit exigé.
+  - id: grands
+    label_fr: 7-10 ans
+    desc_fr: Lecteurs. Fiches, écriture, petits dialogues, premières règles.

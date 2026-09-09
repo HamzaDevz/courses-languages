@@ -1,0 +1,60 @@
+id: 03-numeros
+order: 3
+title: "Os números"
+title_fr: "Les nombres"
+goal_fr: "Compter jusqu'à 10 (jusqu'à 20 pour les grands) et dire son âge."
+can_do_fr:
+  - "Je compte jusqu'à 10 en portugais."
+  - "Je sais dire quel âge j'ai."
+duration_min: 12
+vocab:
+  - { term: "um",     fr: "un",    phon: "oun (nasal)" }
+  - { term: "dois",   fr: "deux",  phon: "doïch" }
+  - { term: "três",   fr: "trois", phon: "trèch" }
+  - { term: "quatro", fr: "quatre",phon: "KWA-trou" }
+  - { term: "cinco",  fr: "cinq",  phon: "SIN-kou" }
+  - { term: "seis",   fr: "six",   phon: "séïch" }
+  - { term: "sete",   fr: "sept",  phon: "SÈ-te" }
+  - { term: "oito",   fr: "huit",  phon: "OÏ-tou" }
+  - { term: "nove",   fr: "neuf",  phon: "NO-ve" }
+  - { term: "dez",    fr: "dix",   phon: "dèch" }
+  - { term: "onze",   fr: "onze",  phon: "ON-ze", level: grands }
+  - { term: "doze",   fr: "douze", phon: "DÔ-ze", level: grands }
+  - { term: "treze",  fr: "treize",phon: "TRÉ-ze", level: grands }
+  - { term: "catorze",fr: "quatorze", phon: "ka-TOR-ze", level: grands }
+  - { term: "quinze", fr: "quinze",phon: "KIN-ze", level: grands }
+  - { term: "vinte",  fr: "vingt", phon: "VIN-te", level: grands }
+phrases:
+  - { term: "Quantos anos tens?", fr: "Quel âge as-tu ?",   phon: "KWAN-touch A-nouch tèïnch" }
+  - { term: "Tenho sete anos.",   fr: "J'ai sept ans.",     phon: "TÉ-niou SÈ-te A-nouch" }
+  - { term: "Quantos são?",       fr: "Ça fait combien ?",  phon: "KWAN-touch san-ou" }
+notes_fr:
+  - "En portugais on **a** un âge comme en français : *tenho sete anos* = « j'ai sept ans » (jamais « je suis sept »)."
+  - "*um* et *dois* changent au féminin : *uma bola*, *duas bolas*."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Les escaliers"
+    steps_fr:
+      - "Montez une marche par nombre : *um, dois, três...* jusqu'à dix."
+      - "Redescendez à l'envers : *dez, nove, oito...*"
+  - level: petits
+    type: jeu
+    title_fr: "Combien de doigts ?"
+    steps_fr:
+      - "Montrez un nombre de doigts, l'enfant le dit en portugais."
+      - "Inversez : vous dites *cinco*, il montre cinq doigts."
+  - level: grands
+    type: exercice
+    title_fr: "Calcule en portugais"
+    steps_fr:
+      - "dois + três = ______"
+      - "dez − quatro = ______"
+      - "seis + seis = ______"
+      - "Écris la réponse en lettres, pas en chiffres."
+  - level: grands
+    type: production
+    title_fr: "La fiche d'identité"
+    steps_fr:
+      - "Écris : *Chamo-me ______ . Tenho ______ anos.*"
+      - "Fais la même fiche pour chaque membre de la famille."
