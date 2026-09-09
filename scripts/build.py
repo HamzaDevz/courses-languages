@@ -28,11 +28,41 @@ E = lambda s: html.escape(str(s), quote=True)
 # --------------------------------------------------------------------------- #
 # Chargement
 # --------------------------------------------------------------------------- #
+def read_yaml(path: Path) -> dict:
+    """Lit un fichier de contenu en signalant clairement où est le problème.
+
+    Le contenu est écrit à la main par des non-développeurs : une trace Python
+    ne leur dit rien, le nom du fichier et la ligne fautive si.
+    """
+    rel = path.relative_to(ROOT) if path.is_relative_to(ROOT) else path
+    try:
+        raw = path.read_text(encoding="utf-8")
+    except OSError as exc:
+        raise SystemExit(f"Impossible de lire {rel} : {exc}")
+    try:
+        data = yaml.safe_load(raw)
+    except yaml.YAMLError as exc:
+        raise SystemExit(f"YAML invalide dans {rel} :\n{exc}")
+    if data is None:
+        raise SystemExit(f"{rel} est vide. Supprimez le fichier ou complétez-le "
+                         f"(voir content/_template/).")
+    if not isinstance(data, dict):
+        raise SystemExit(f"{rel} doit contenir une liste de champs "
+                         f"(id, title, vocab...), pas un {type(data).__name__}.")
+    return data
+
+
 def load_language(code_dir: Path) -> dict:
-    course = yaml.safe_load((code_dir / "course.yaml").read_text(encoding="utf-8"))
+    course = read_yaml(code_dir / "course.yaml")
+    for field in ("code", "name_fr", "speech_lang"):
+        if field not in course:
+            raise SystemExit(f"Champ « {field} » manquant dans "
+                             f"{(code_dir / 'course.yaml').relative_to(ROOT)}.")
     units = []
     for f in sorted((code_dir / "units").glob("*.yaml")):
-        unit = yaml.safe_load(f.read_text(encoding="utf-8"))
+        unit = read_yaml(f)
+        if "id" not in unit:
+            raise SystemExit(f"Champ « id » manquant dans {f.relative_to(ROOT)}.")
         unit.setdefault("vocab", [])
         unit.setdefault("phrases", [])
         unit.setdefault("notes_fr", [])
@@ -249,12 +279,16 @@ def build_unit_page(course: dict, unit: dict, prev_u, next_u) -> str:
                 f'<h3>{E(a.get("title_fr", ""))}</h3><ol>{steps}</ol></div>'
             )
 
-    parts.append("<h2>Les flashcards</h2>")
-    parts.append('<div class="flash" id="flash"><div class="big" id="fq">Clique pour commencer</div>'
-                 '<div class="ans" id="fa"></div></div>'
-                 '<div class="row"><button class="btn" id="fnext">Carte suivante</button>'
-                 '<button class="btn ghost" id="fflip">Sens inverse</button>'
-                 '<span class="phon" id="fcount"></span></div>')
+    # Une unité en cours d'écriture peut n'avoir aucun mot : pas de flashcards à
+    # proposer, et surtout pas de bloc interactif vide qui tournerait à vide.
+    cards = [{"t": v["term"], "f": v.get("fr", "")} for v in entries(unit)]
+    if cards:
+        parts.append("<h2>Les flashcards</h2>")
+        parts.append('<div class="flash" id="flash"><div class="big" id="fq">Clique pour commencer</div>'
+                     '<div class="ans" id="fa"></div></div>'
+                     '<div class="row"><button class="btn" id="fnext">Carte suivante</button>'
+                     '<button class="btn ghost" id="fflip">Sens inverse</button>'
+                     '<span class="phon" id="fcount"></span></div>')
 
     nav = []
     if prev_u:
@@ -268,8 +302,11 @@ def build_unit_page(course: dict, unit: dict, prev_u, next_u) -> str:
     parts.append(f'<div class="nav">{"".join(nav)}</div>')
     parts.append("</div>")
 
-    cards = [{"t": v["term"], "f": v.get("fr", "")} for v in entries(unit)]
     import json
+
+    if not cards:
+        return page(f'{unit["title"]} — {course["name_fr"]}', "\n".join(parts), SITE_CSS,
+                    script=SAY_JS)
 
     script = SAY_JS + f"""
 var CARDS = {json.dumps(cards, ensure_ascii=False)};

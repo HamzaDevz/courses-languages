@@ -39,20 +39,30 @@ def main() -> None:
     if not PRINT.exists():
         sys.exit("Lancez d'abord : python3 scripts/build.py")
 
+    def run(cmd: list[str], echec: str) -> None:
+        """Lance une commande en remontant sa sortie d'erreur si elle échoue.
+
+        Sans cela, `capture_output` avale le message de Chrome et il ne reste
+        qu'une trace Python qui ne dit pas ce qui s'est passé.
+        """
+        try:
+            subprocess.run(cmd, check=True, capture_output=True)
+        except subprocess.CalledProcessError as exc:
+            detail = (exc.stderr or b"").decode("utf-8", "replace").strip()
+            sys.exit(f"{echec}\n{detail}" if detail else echec)
+
     for src in sorted(PRINT.rglob("*.html")):
         rel = src.relative_to(PRINT)
         out = PDF / rel.with_suffix(".pdf")
         out.parent.mkdir(parents=True, exist_ok=True)
-        subprocess.run(
-            [chrome, "--headless", "--disable-gpu", "--no-sandbox",
+        run([chrome, "--headless", "--disable-gpu", "--no-sandbox",
              "--no-pdf-header-footer", f"--print-to-pdf={out}", src.as_uri()],
-            check=True, capture_output=True,
-        )
+            f"Échec de la conversion de {rel} en PDF.")
         print(f"  {out.relative_to(ROOT)}")
 
     # Le site liste les PDF disponibles : il faut le regénérer une fois qu'ils existent.
-    subprocess.run([sys.executable, str(ROOT / "scripts" / "build.py")], check=True,
-                   capture_output=True)
+    run([sys.executable, str(ROOT / "scripts" / "build.py")],
+        "Les PDF sont générés mais la regénération du site a échoué.")
     print("\nPDF prêts dans pdf/ et liés depuis le site")
 
 
