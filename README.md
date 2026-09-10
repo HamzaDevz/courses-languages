@@ -156,6 +156,24 @@ tablette et un navigateur suffisent.
 Activation, une seule fois : dans le dépôt, **Settings → Pages → Source :
 GitHub Actions**.
 
+### L'installer comme une application
+
+Le site est une *application web installable* : il s'ajoute à l'écran d'accueil
+comme n'importe quelle appli, s'ouvre en plein écran (sans barre d'adresse) et
+continue de fonctionner sans réseau.
+
+* **Android (Chrome)** : ouvrir le site, menu ⋮ → *Installer l'application*.
+* **iPhone / iPad (Safari)** : bouton Partager → *Sur l'écran d'accueil*.
+* **Ordinateur (Chrome, Edge)** : l'icône d'installation dans la barre d'adresse.
+
+Hors connexion, toutes les pages déjà publiées restent lisibles ; les
+enregistrements se gardent au fur et à mesure qu'ils sont écoutés (les mille
+fichiers ne sont pas téléchargés d'office, ce serait des dizaines de Mo imposés
+à l'installation).
+
+Le manifeste, les icônes et le service worker sont générés par
+`scripts/webapp.py` à chaque `make build` — rien de binaire n'est versionné.
+
 ## Écrire du contenu
 
 Tout se passe dans `content/`, un fichier YAML par unité. Le format est décrit
@@ -182,6 +200,7 @@ content/pt/culture.yaml   le passeport culturel : 12 escales, 12 missions
 content/pt/resources.yaml livres, chansons, écrans, outils
 content/pt/units/         une unité = un fichier (dialogue, Q/R, activités)
 scripts/build.py          génère site/ print/ exports/
+scripts/webapp.py         l'appli web : manifeste, icônes, service worker
 scripts/audio.py          produit les enregistrements (assets/audio/)
 scripts/pdf.py            convertit print/ en PDF
 docs/REFERENTIEL.md       niveaux CECRL, progression, grilles d'évaluation
