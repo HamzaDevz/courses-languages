@@ -134,6 +134,10 @@ make install-audio   # une fois : installe edge-tts
 make audio           # produit ce qui manque (relancer est rapide et sans risque)
 ```
 
+La première production prend environ six minutes pour un millier de phrases.
+Le workflow GitHub garde les fichiers en cache d'une publication à l'autre :
+seuls les textes modifiés sont réenregistrés.
+
 Pour une **voix humaine** : remplacer un fichier de `assets/audio/pt/` par son
 propre enregistrement, en gardant le même nom. Le site jouera celui-là.
 

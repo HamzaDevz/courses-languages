@@ -28,15 +28,31 @@ jobs:
         run: python -m pip install -r requirements.txt
 
       # Les vraies voix portugaises : le runner a le réseau, l'enfant aura donc
-      # de vrais enregistrements sur le site publié. Si le service est
-      # indisponible, on publie quand même, avec la voix du navigateur.
+      # de vrais enregistrements sur le site publié.
+      #
+      # Le cache est ce qui rend la chose tenable : les enregistrements ne sont
+      # pas dans le dépôt, et sans lui chaque publication refabriquerait le
+      # millier de fichiers (un quart d'heure à chaque push). La clé porte sur
+      # le contenu : elle ne change que si un texte change, et `restore-keys`
+      # récupère le lot précédent pour ne produire que le delta.
+      - name: Restaurer les enregistrements déjà produits
+        uses: actions/cache@v4
+        with:
+          path: assets/audio
+          key: audio-${{ hashFiles('content/**/*.yaml') }}
+          restore-keys: audio-
+
       - name: Installer edge-tts
         continue-on-error: true
         run: python -m pip install -r requirements-audio.txt
 
+      # Limite de temps : un lot partiel complété à la publication suivante vaut
+      # mieux qu'un déploiement bloqué. `continue-on-error` garantit que le site
+      # part de toute façon, avec la voix du navigateur pour ce qui manque.
       - name: Enregistrer les voix
         continue-on-error: true
-        run: python scripts/audio.py
+        timeout-minutes: 12
+        run: python scripts/audio.py --deadline-minutes 10
 
       - name: Générer le site, les fiches et les exports
         run: python scripts/build.py

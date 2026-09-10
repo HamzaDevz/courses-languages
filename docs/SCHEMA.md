@@ -283,3 +283,17 @@ code. Le nom se lit dans `assets/audio/<langue>/index.json`.
 make install-audio   # une fois : installe edge-tts
 make audio           # produit ce qui manque, ne refait pas l'existant
 ```
+
+Le manifeste ne liste que les fichiers **réellement présents** : un
+enregistrement manquant fait simplement retomber le site sur la synthèse, il ne
+lui fait pas croire qu'il a une voix. Options utiles :
+
+| Option | Rôle |
+|---|---|
+| `--lang pt` | ne traiter qu'une langue |
+| `--force` | refaire même les fichiers existants |
+| `--deadline-minutes N` | s'arrêter après N minutes en gardant ce qui est fait ; le reste est produit à la prochaine exécution |
+| `--no-prune` | garder les fichiers qui ne correspondent plus à aucun texte |
+
+Le workflow GitHub met `assets/audio/` en cache entre deux publications : sans
+lui, chaque déploiement refabriquerait le millier de fichiers.
