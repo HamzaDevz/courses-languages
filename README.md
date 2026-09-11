@@ -28,6 +28,7 @@ Le contenu est écrit **une seule fois** en YAML, puis généré en trois suppor
 ```bash
 make install     # installe PyYAML (seule dépendance pour construire le site)
 make serve       # génère tout et ouvre http://localhost:8000
+make check       # construit, puis vérifie le contenu (ce que lance la CI)
 make audio       # enregistre les vraies voix portugaises (voir « Le son »)
 make pdf         # fabrique les PDF imprimables (nécessite Chrome/Chromium)
 ```
@@ -190,8 +191,16 @@ dans **[docs/SCHEMA.md](docs/SCHEMA.md)**.
 
 ```bash
 cp -r content/_template content/ar   # le gabarit est déjà réglé pour l'arabe
-make build
+make check                           # construit et relit ce qui vient d'être écrit
 ```
+
+`make check` (`scripts/check.py`) attrape ce qui **construit sans erreur mais
+donne une page fausse** : un niveau mal orthographié dans une activité, une
+question sans réponse possible, une unité qui n'a plus assez d'activités pour
+les petits, une page qui a cessé d'être écrite. La même vérification tourne sur
+chaque proposition de modification (`.github/workflows/ci.yml`), qui publie
+aussi le site construit en téléchargement — de quoi le regarder sans rien
+installer.
 
 ## La méthode
 
@@ -210,6 +219,7 @@ content/pt/resources.yaml livres, chansons, écrans, outils
 content/pt/games.yaml     la boîte à jeux : 30 jeux réutilisables
 content/pt/units/         une unité = un fichier (dialogue, Q/R, activités)
 scripts/build.py          génère site/ print/ exports/
+scripts/check.py          relit le contenu et les pages produites (make check)
 scripts/audio.py          produit les enregistrements (assets/audio/)
 scripts/pdf.py            convertit print/ en PDF
 docs/REFERENTIEL.md       niveaux CECRL, progression, grilles d'évaluation
