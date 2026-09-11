@@ -67,7 +67,12 @@ def check_built(course: dict) -> None:
     """Une page qui a cessé d'être écrite ne casse rien : elle disparaît."""
     code = course["code"]
     expected = [SITE / "index.html", SITE / code / "index.html",
-                PRINT / code / "cahier-complet.html", EXPORTS / f"anki-{code}.csv"]
+                PRINT / code / "cahier-complet.html", EXPORTS / f"anki-{code}.csv",
+                # L'appli installable : sans ces trois-là, le site continue de
+                # s'afficher mais ne s'installe plus et ne marche plus hors
+                # connexion — une perte qui ne fait échouer aucune construction.
+                SITE / "manifest.webmanifest", SITE / "sw.js",
+                SITE / "icons" / "icon-512.png"]
     for key, name in (("program", "programme"), ("toolkit", "boite-a-outils"),
                       ("culture", "passeport"), ("resources", "ressources"),
                       ("games", "boite-a-jeux")):
