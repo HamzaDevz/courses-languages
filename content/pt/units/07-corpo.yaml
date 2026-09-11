@@ -97,6 +97,33 @@ activities:
       - "Un joueur est l'infirmière : il demande *O que tens?* puis *Onde te dói?*"
       - "L'autre choisit en secret une partie du corps et répond sans la montrer."
       - "L'infirmière doit deviner et pointer la bonne partie. Puis on échange."
+  - level: petits
+    type: jeu
+    title_fr: "Le monstre dicté"
+    steps_fr:
+      - "Vous dictez, l'enfant dessine, sans montrer d'exemple : *um monstro com três olhos*, *duas bocas*, *quatro pernas*."
+      - "On compare le dessin à ce qui était demandé : chaque partie juste vaut un point."
+      - "Puis c'est lui qui dicte et vous qui dessinez."
+  - level: petits
+    type: bricolage
+    title_fr: "Le bonhomme en pâte à modeler"
+    steps_fr:
+      - "Faites un bonhomme ensemble. À chaque morceau posé, on le nomme : *a cabeça*, *um braço*, *dois pés*."
+      - "Cassez-lui un bras en douce quand il regarde ailleurs : *o que falta?* Il doit trouver ce qui manque."
+  - level: grands
+    type: mouvement
+    title_fr: "Touche avec…"
+    steps_fr:
+      - "Donnez des consignes qui relient deux parties du corps : *toca com a mão direita no joelho esquerdo*."
+      - "On tient la position jusqu'à la consigne suivante ; les positions s'empilent jusqu'à la chute."
+      - "Ensuite, c'est l'enfant qui invente les consignes — c'est là qu'il produit les mots."
+  - level: grands
+    type: jeu
+    title_fr: "Le mime de la douleur"
+    steps_fr:
+      - "Tirez une carte : une partie du corps. Mimez la douleur sans parler."
+      - "L'autre devine avec la bonne phrase : *Dói-te a barriga?* On répond *sim, dói-me muito* ou *não*."
+      - "Trois bonnes réponses d'affilée : on gagne le droit de jouer le médecin de l'unité suivante."
 reemploi_fr:
   - "Au moindre bobo de la semaine, la question devient portugaise : *Onde te dói?*"
   - "Le soir, avant le lit : *Tens sono?* — l'enfant répond en portugais."

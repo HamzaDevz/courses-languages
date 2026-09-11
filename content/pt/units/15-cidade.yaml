@@ -97,6 +97,34 @@ activities:
       - "Un joueur est un touriste portugais perdu, l'autre habite la ville."
       - "Le touriste demande trois lieux différents avec *Desculpe, onde fica…?*"
       - "Règle du jeu : au moins une fois, le touriste doit dire *não percebi* et faire répéter."
+  - level: petits
+    type: mouvement
+    title_fr: "Le labyrinthe de coussins"
+    steps_fr:
+      - "Installez un parcours de coussins au sol, avec deux virages."
+      - "Guidez l'enfant à la voix, sans montrer : *segue em frente*, *vira à direita*, *para!*"
+      - "Puis c'est lui qui vous guide — et vous foncez droit dans le mur s'il se trompe de côté."
+  - level: petits
+    type: jeu
+    title_fr: "La promenade comptée"
+    steps_fr:
+      - "En allant à l'école, comptez à voix haute en portugais : les boulangeries, les arrêts de bus, les vélos."
+      - "Une catégorie par trajet, pas plus. Le chiffre final s'annonce en arrivant : *vimos quatro autocarros!*"
+      - "Le lendemain, on essaie de battre le score."
+  - level: grands
+    type: jeu
+    title_fr: "Le guidage aveugle"
+    steps_fr:
+      - "Un bandeau sur les yeux, un objet posé à l'autre bout de la pièce."
+      - "L'autre guide uniquement à la voix, en portugais : *três passos em frente*, *vira à esquerda*, *para!*"
+      - "Objet atteint sans rien renverser : on inverse les rôles. Chronométrez pour ajouter la pression."
+  - level: grands
+    type: jeu
+    title_fr: "La chasse au trésor du quartier"
+    steps_fr:
+      - "Écrivez cinq indices de trajet en portugais : *vira à direita na farmácia*, *segue em frente até à praça*."
+      - "L'enfant vous guide dehors, indice après indice. Vous ne faites qu'exécuter, même quand c'est faux."
+      - "Le trésor est au bout : un *pastel de nata*, si le quartier le permet."
 reemploi_fr:
   - "Dans la rue, cette semaine, nommer en portugais chaque commerce devant lequel on passe."
   - "En voiture, annoncer les virages en portugais : *à direita!*, *em frente!*"

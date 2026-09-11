@@ -107,6 +107,34 @@ activities:
     steps_fr:
       - "Prends deux phrases simples : *Tenho um cão.* / *Gosto de correr.*"
       - "Relie-les avec *e*, puis avec *mas*, puis avec *porque*. Lis les trois versions à voix haute."
+  - level: petits
+    type: jeu
+    title_fr: "Le téléphone cassé"
+    steps_fr:
+      - "En file indienne, le premier chuchote une phrase de l'unité à l'oreille du suivant."
+      - "La phrase circule ; le dernier la dit à voix haute. On compare : *era assim?*"
+      - "À deux, on passe par la peluche : elle entend, elle répète."
+  - level: petits
+    type: jeu
+    title_fr: "La balle qui parle"
+    steps_fr:
+      - "On se lance une balle molle. Celui qui lance pose une question : *Como te chamas?*"
+      - "Celui qui attrape répond avant de relancer. Balle tombée : on recommence la question."
+      - "Cinq questions suffisent — ce sont celles de l'année entière."
+  - level: grands
+    type: jeu
+    title_fr: "Le dé des questions"
+    steps_fr:
+      - "Écrivez six questions de l'année, numérotées de un à six."
+      - "On lance le dé, on répond à la question tirée. Répondu sans hésiter : on relance."
+      - "Au troisième tour, c'est l'enfant qui pose les questions au parent. Le jeu complet est dans la **boîte à jeux**."
+  - level: grands
+    type: jeu
+    title_fr: "Soixante secondes sans français"
+    steps_fr:
+      - "Chacun reçoit trois jetons. On discute en portugais pendant une minute, montre en main."
+      - "Chaque mot français prononcé coûte un jeton — mais *não percebi* et *como se diz…?* sont gratuits, et le resteront toujours."
+      - "Objectif de la semaine : finir la minute avec au moins un jeton. Puis on passe à deux minutes."
 reemploi_fr:
   - "Un repas par semaine devient **le repas portugais** : on ne dit que ce qu'on sait dire, et on se dépanne avec *não percebi*."
   - "Appeler un proche lusophone (ou un ami) et tenir six répliques au téléphone."

@@ -94,6 +94,34 @@ activities:
       - "Trois joueurs, trois idées différentes tirées au sort. On négocie en portugais."
       - "Règles : interdit de dire seulement *não* ; chacun doit une fois dire *tens razão* ; on finit par *está combinado*."
       - "Chronomètre : trois minutes maximum pour se mettre d'accord."
+  - level: petits
+    type: jeu
+    title_fr: "Le tirage du samedi"
+    steps_fr:
+      - "Trois papiers, trois sorties possibles dessinées dessus."
+      - "Chacun dit ce qu'il préfère en portugais, puis on tire au sort pour de vrai."
+      - "Celui qui n'a pas eu son choix dit *está bem, por mim* — et on fait vraiment la sortie tirée."
+  - level: petits
+    type: jeu
+    title_fr: "Pierre, papier, ciseaux pour décider"
+    steps_fr:
+      - "Quand deux envies s'opposent, on tranche à *pedra, papel ou tesoura!*"
+      - "Le gagnant dit *ganhei!*, le perdant *está bem, fica combinado.*"
+      - "La règle vaut pour de vrai dans la maison, toute la semaine : qui met la table, qui choisit la musique."
+  - level: grands
+    type: jeu
+    title_fr: "Le marché aux échanges"
+    steps_fr:
+      - "Chacun reçoit cinq objets (des cartes, des jouets) et une liste secrète de ce qu'il doit obtenir."
+      - "On négocie en portugais : *dou-te o carro se me deres o livro*, *não me apetece*, *e se trocarmos os dois?*"
+      - "Le premier qui complète sa liste gagne. Aucun échange ne compte s'il s'est fait en français."
+  - level: grands
+    type: dialogue
+    title_fr: "Le conseil de famille"
+    steps_fr:
+      - "Un vrai sujet à trancher : la sortie du week-end, le film du soir, le menu du dimanche."
+      - "Chacun propose (*que tal…?*), écoute, accepte ou refuse poliment, et argumente."
+      - "La décision se prend en portugais et s'applique pour de vrai. C'est ce dernier point qui fait tout."
 reemploi_fr:
   - "Les décisions familiales de la semaine se prennent en portugais, au moins la proposition et la conclusion."
   - "Chaque fois que l'enfant refuse quelque chose, on lui demande une raison **et** une autre idée — en portugais."

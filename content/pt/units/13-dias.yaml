@@ -95,6 +95,34 @@ activities:
       - "Pose cinq questions commençant par *A que horas…?*"
       - "Ton camarade répond, puis pose les mêmes questions."
       - "À la fin, chacun raconte la journée de l'autre : *Ele acorda às sete…*"
+  - level: petits
+    type: mouvement
+    title_fr: "La marelle des jours"
+    steps_fr:
+      - "Sept cases au sol, une par jour, de *segunda-feira* à *domingo*."
+      - "On saute en nommant chaque jour. Le jour d'aujourd'hui se saute à pieds joints, en criant : *hoje é quinta-feira!*"
+      - "Les jours en *-feira* sont les plus durs : faites-les sauter deux fois."
+  - level: petits
+    type: jeu
+    title_fr: "Le train de la semaine"
+    steps_fr:
+      - "Sept chaises en file, une par jour, avec une étiquette."
+      - "Vous annoncez un jour : l'enfant court s'asseoir à la bonne place."
+      - "Ensuite on enlève les étiquettes. Puis on enlève une chaise."
+  - level: grands
+    type: jeu
+    title_fr: "L'heure au dé"
+    steps_fr:
+      - "Un dé donne l'heure, l'autre donne les minutes (par tranches de dix)."
+      - "L'enfant annonce l'heure en portugais : *são quatro horas e vinte.*"
+      - "Piège à retenir : à une heure, on dit *é uma hora* et non *são*. Erreur sur ce point : on rejoue le tour."
+  - level: grands
+    type: jeu
+    title_fr: "Le jour mystère"
+    steps_fr:
+      - "Décrivez un jour sans le nommer : *É o dia em que não há escola e vamos ao mercado.*"
+      - "L'enfant devine : *é sábado?* Puis il en fait deviner un à son tour."
+      - "Trois indices maximum. Le troisième a le droit d'être un mime."
 reemploi_fr:
   - "Chaque matin : *Que dia é hoje?* — la réponse en portugais avant toute autre chose."
   - "Demander l'heure en portugais chaque fois qu'on la demande vraiment."

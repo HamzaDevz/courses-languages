@@ -56,6 +56,34 @@ activities:
     steps_fr:
       - "Écris le menu d'un restaurant en portugais : entrée, plat, dessert, boisson."
       - "Joue la scène : quelqu'un commande, tu prends la commande."
+  - level: petits
+    type: jeu
+    title_fr: "Le goût mystère"
+    steps_fr:
+      - "Les yeux bandés, l'enfant goûte un petit morceau : pomme, pain, fromage, banane."
+      - "Il devine en portugais : *é a maçã!* Juste, il a le droit de finir le morceau."
+      - "Ajoutez deux mots de jugement : *está bom!* ou *não gosto*."
+  - level: petits
+    type: jeu
+    title_fr: "Le panier qui grossit"
+    steps_fr:
+      - "Le premier dit : *Fui ao mercado e comprei pão.*"
+      - "Le deuxième reprend et ajoute : *…comprei pão e leite.*"
+      - "On continue jusqu'à l'oubli. Chez les petits, on pose les vrais objets sur la table pour aider la mémoire."
+  - level: grands
+    type: jeu
+    title_fr: "La vraie recette en portugais"
+    steps_fr:
+      - "Choisissez quelque chose de simple : des tartines, une salade de fruits, une soupe."
+      - "Vous donnez les consignes uniquement en portugais : *corta a maçã*, *põe na taça*, *mistura*."
+      - "Aucune traduction : si l'enfant ne comprend pas, on montre. À la fin, il dicte la recette à quelqu'un d'autre."
+  - level: grands
+    type: jeu
+    title_fr: "Explique sans le dire"
+    steps_fr:
+      - "Tirez une carte d'aliment et faites-la deviner **sans dire le mot** et sans français."
+      - "Trois outils autorisés : à quoi ça sert (*é uma coisa para beber*), à quoi ça ressemble (*parece-se com uma bola*), où on le trouve (*está no frigorífico*)."
+      - "Ce jeu est le plus utile du programme : il est détaillé dans la **boîte à jeux**."
 year: 1
 dialogue:
   title_fr: "À table"

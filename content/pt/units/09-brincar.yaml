@@ -97,6 +97,34 @@ activities:
       - "Le premier propose : *Queres jogar à bola?*"
       - "Le second refuse poliment (*Agora não…*) **et propose autre chose** : *Vamos desenhar?*"
       - "On continue jusqu'à tomber d'accord. Trois refus maximum !"
+  - level: petits
+    type: mouvement
+    title_fr: "Un, deux, trois, soleil à la portugaise"
+    steps_fr:
+      - "Le meneur est face au mur et crie *Um, dois, três, macaquinho do chinês!*"
+      - "À *chinês*, il se retourne : celui qui bouge encore retourne au départ."
+      - "C'est le vrai jeu des cours de récréation portugaises. Il est détaillé dans la **boîte à jeux**."
+  - level: petits
+    type: mouvement
+    title_fr: "Les statues"
+    steps_fr:
+      - "Musique portugaise à fond, tout le monde danse : *dança!*"
+      - "La musique s'arrête, vous criez un mot : *gato!* Chacun se fige en statue de chat."
+      - "Celui qui bouge après *estátua!* choisit le mot suivant."
+  - level: grands
+    type: jeu
+    title_fr: "Le tournoi de *pedra, papel ou tesoura*"
+    steps_fr:
+      - "On joue à pierre-papier-ciseaux en annonçant **en portugais** : *pedra, papel ou tesoura!*"
+      - "Le gagnant de chaque manche dit *ganhei!*, le perdant *perdi*, et en cas d'égalité *empatámos!*"
+      - "Premier à cinq points. On compte les points à voix haute, en portugais, après chaque manche."
+  - level: grands
+    type: production
+    title_fr: "Le règlement de mon jeu"
+    steps_fr:
+      - "Invente un jeu — même bête, même injouable — et écris ses trois règles en portugais."
+      - "Commence chaque règle par un verbe : *lança o dado*, *não vale correr*, *ganha quem…*"
+      - "Fais-y jouer quelqu'un sans traduire. Une règle mal comprise, c'est une règle à réécrire."
 reemploi_fr:
   - "Chaque invitation à jouer de la semaine se fait en portugais : *Queres brincar comigo?*"
   - "Aux jeux de société : *é a minha vez* / *é a tua vez*, en portugais uniquement."

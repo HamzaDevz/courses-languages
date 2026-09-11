@@ -95,6 +95,34 @@ activities:
     steps_fr:
       - "Chaque soir de la semaine, réponds en portugais à trois questions : *Como foi a escola? O que aprendeste? Precisas de ajuda?*"
       - "Vendredi, essaie de répondre sans regarder la fiche."
+  - level: petits
+    type: jeu
+    title_fr: "La maîtresse, c'est moi"
+    steps_fr:
+      - "L'enfant est la professeure ; les élèves sont les peluches, et vous."
+      - "Il fait l'appel (*estás aqui?*), distribue le matériel (*toma o lápis*) et donne les consignes (*abre o livro*)."
+      - "Votre rôle : être l'élève qui ne comprend pas, pour l'obliger à répéter autrement."
+  - level: petits
+    type: jeu
+    title_fr: "Le cartable au son"
+    steps_fr:
+      - "Posez sur la table tout ce qui rentre dans le cartable."
+      - "Vous annoncez : *põe o caderno na mochila!* L'enfant range l'objet nommé."
+      - "Cartable fini, on le vide en nommant chaque objet qui sort. Faites-le pour de vrai le soir, avant l'école."
+  - level: grands
+    type: jeu
+    title_fr: "Le loto de la journée d'école"
+    steps_fr:
+      - "Grille de six cases : *recreio*, *professora*, *trabalhos de casa*, *colegas*, *livro*, *canção*."
+      - "Le soir, l'enfant raconte sa journée en portugais ; chaque mot qu'il place vraiment coche une case."
+      - "Grille pleine dans la semaine : il choisit le dessert du dimanche."
+  - level: grands
+    type: production
+    title_fr: "Les cinq règles de ma classe idéale"
+    steps_fr:
+      - "Écris cinq règles pour une classe inventée, en portugais, même absurdes : *não se pode falar francês*, *o recreio é de duas horas*."
+      - "Chaque règle commence par un verbe ou par *não se pode*."
+      - "Affiche-les et fais-les respecter pendant une séance : c'est toi qui surveilles."
 reemploi_fr:
   - "Le compte rendu du soir se fait en portugais, même court : deux phrases suffisent."
   - "À la maison, demander la permission en portugais : *Posso ver televisão?*"

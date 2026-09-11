@@ -84,6 +84,7 @@ def load_language(code_dir: Path) -> dict:
     course["audio_index"] = load_audio_index(course["code"])
     course["culture"] = load_side_file(code_dir, "culture", "escales")
     course["resources"] = load_side_file(code_dir, "resources", "groups")
+    course["games"] = load_side_file(code_dir, "games", "groups")
     course["toolkit"] = course.get("toolkit", [])
     return course
 
@@ -409,10 +410,15 @@ details.comp p{margin:.5em 0 0;color:var(--accent2)}
   border-radius:var(--radius);padding:14px 18px;margin:1.6em 0 1em}
 .yearhead h2{margin-top:0;border:none;padding:0}
 .yearhead h3{margin:0 0 .3em;font-size:1.15rem}
-.escale{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+.escale,.game{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
   padding:14px 18px;margin:1em 0}
-.escale .n{font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
-.escale h3{margin:.15em 0 .5em;font-size:1.3rem}
+.escale .n,.game .n{font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.escale h3,.game h3{margin:.15em 0 .5em;font-size:1.3rem}
+.game .why{border-left:3px solid var(--accent2);padding:2px 0 2px 12px;margin:.5em 0;color:var(--fg)}
+.game ol{margin:.4em 0 .6em;padding-left:1.2em}
+.game ol li{margin:.3em 0}
+.game .var{margin:.5em 0 0}
+.game .var li{margin:.2em 0}
 ul.esc{list-style:none;padding-left:0;margin:.4em 0}
 ul.esc li{padding:5px 0 5px 14px;border-left:2px solid var(--line);margin:.2em 0}
 .mission{border:1px dashed var(--accent);border-radius:var(--radius);
@@ -937,6 +943,9 @@ def build_lang_index(course: dict) -> str:
     n_vocab = sum(len(entries(u)) for u in course["units"])
     n_qa = sum(len(u.get("qa") or []) for u in course["units"])
     n_dial = sum(1 for u in course["units"] if dialogue_lines(u))
+    n_act = sum(len(u["activities"]) for u in course["units"])
+    n_games = sum(len(g.get("games") or [])
+                  for g in ((course.get("games") or {}).get("groups") or []))
     code = course["code"]
     has_pdf = (PDF / code / "cahier-complet.pdf").exists()
 
@@ -981,6 +990,14 @@ def build_lang_index(course: dict) -> str:
             '<div class="n">Autour du cours</div><div class="t">Livres, chansons et écrans</div>'
             '<div class="f">Ce qui vaut la peine d\'être acheté, emprunté ou écouté, '
             'par âge.</div></a>')
+    if course.get("games"):
+        n_games = sum(len(g.get("games") or [])
+                      for g in (course["games"].get("groups") or []))
+        entry_cards.append(
+            '<a class="card" href="boite-a-jeux.html">'
+            '<div class="n">Pour jouer</div><div class="t">La boîte à jeux</div>'
+            f'<div class="f">{n_games} jeux qui marchent avec n\'importe quelle unité : '
+            'on y verse le vocabulaire de la semaine.</div></a>')
     if course.get("toolkit"):
         entry_cards.append(
             '<a class="card" href="boite-a-outils.html">'
@@ -1000,7 +1017,8 @@ def build_lang_index(course: dict) -> str:
         if has_pdf:
             line += f' · <a href="../pdf/{E(code)}/programme.pdf">PDF</a>'
         dl.append(f"<li>{line}</li>")
-    for key, name, label in (("toolkit", "boite-a-outils", "La boîte à outils de la discussion"),
+    for key, name, label in (("games", "boite-a-jeux", "La boîte à jeux (30 jeux réutilisables)"),
+                             ("toolkit", "boite-a-outils", "La boîte à outils de la discussion"),
                              ("culture", "passeport", "Le passeport culturel (à tamponner)"),
                              ("resources", "ressources", "La liste des livres et des chansons")):
         if not course.get(key):
@@ -1024,7 +1042,7 @@ def build_lang_index(course: dict) -> str:
     body = f"""<div class="wrap">
 <div class="crumb"><a href="../index.html">← Toutes les langues</a></div>
 <h1>{E(course["name_fr"])}</h1>
-<p class="sub">{E(course.get("variant_fr",""))} · {n_years} · {len(course["units"])} unités · {n_vocab} mots et phrases · {n_dial} dialogues · {n_qa} questions à savoir répondre</p>
+<p class="sub">{E(course.get("variant_fr",""))} · {n_years} · {len(course["units"])} unités · {n_vocab} mots et phrases · {n_dial} dialogues · {n_qa} questions à savoir répondre · {n_act} activités{f" · {n_games} jeux réutilisables" if n_games else ""}</p>
 <div class="goal"><strong>Deux niveaux dans chaque unité :</strong><ul>{levels}</ul></div>
 <h2>Par où commencer</h2>
 <div class="grid">{"".join(entry_cards)}</div>
@@ -1279,6 +1297,104 @@ def build_print_resources(course: dict) -> str:
     return page(f'{course["name_fr"]} — ressources', body, PRINT_CSS)
 
 
+def games_body(course: dict, interactive: bool = True) -> str:
+    """La boîte à jeux : des jeux réutilisables, pas attachés à une unité.
+
+    Une activité d'unité s'use quand l'unité est finie. Un jeu de cette page est
+    un moule : on y verse le vocabulaire de la semaine et il resert trente fois.
+    C'est ce qui manque le plus à un parent qui n'est pas enseignant — pas des
+    mots de plus, mais des façons de les faire jouer.
+    """
+    games = course.get("games") or {}
+    groups = games.get("groups") or []
+    if not groups:
+        return ""
+    parts = []
+    if games.get("intro_fr"):
+        parts.append(f'<p class="sub">{md_bold(games["intro_fr"])}</p>')
+    if games.get("warning_fr"):
+        parts.append(f'<div class="note">{md_bold(games["warning_fr"])}</div>')
+
+    # La langue du jeu vient avant les jeux : sans « é a tua vez », la partie se
+    # joue en français et le jeu ne sert à rien.
+    for sec in games.get("speak") or []:
+        parts.append(f'<h2>{E(sec.get("title_fr", ""))}</h2>')
+        if sec.get("intro_fr"):
+            parts.append(f'<p class="sub">{md_bold(sec["intro_fr"])}</p>')
+        parts.append(vocab_table(sec.get("items", []), course, with_audio=interactive))
+
+    for g in groups:
+        parts.append(f'<h2>{E(g.get("title_fr", ""))}</h2>')
+        if g.get("intro_fr"):
+            parts.append(f'<p class="sub">{md_bold(g["intro_fr"])}</p>')
+        for game in g.get("games") or []:
+            box = ['<div class="game">']
+            if game.get("pt"):
+                box.append(f'<div class="n">{E(game["pt"])}</div>')
+            box.append(f'<h3>{E(game.get("title_fr", ""))}</h3>')
+            chips = []
+            for key, prefix in (("ages_fr", "Âge"), ("players_fr", "Joueurs"),
+                                ("material_fr", "Matériel")):
+                if game.get(key):
+                    chips.append(f'<span class="chip"><strong>{prefix} :</strong> '
+                                 f'{E(game[key])}</span>')
+            if game.get("min"):
+                chips.insert(1, f'<span class="chip"><strong>Durée :</strong> '
+                                f'{E(game["min"])} min</span>')
+            if game.get("units_fr"):
+                chips.append(f'<span class="chip">{E(game["units_fr"])}</span>')
+            if chips:
+                box.append(f'<div class="chips">{"".join(chips)}</div>')
+            if game.get("why_fr"):
+                box.append(f'<div class="why">{md_bold(game["why_fr"])}</div>')
+            if game.get("how_fr"):
+                steps = "".join(f"<li>{md_bold(x)}</li>" for x in game["how_fr"])
+                box.append(f"<ol>{steps}</ol>")
+            if game.get("variants_fr"):
+                var = "".join(f"<li>{md_bold(x)}</li>" for x in game["variants_fr"])
+                box.append(f'<strong>Variantes :</strong><ul class="var">{var}</ul>')
+            if game.get("phrases"):
+                box.append('<strong>Ce qu\'on dit pour jouer :</strong>')
+                box.append(vocab_table(game["phrases"], course, with_audio=interactive))
+            box.append("</div>")
+            parts.append("".join(box))
+    if games.get("outro_fr"):
+        parts.append(f'<div class="goal">{md_bold(games["outro_fr"])}</div>')
+    return "".join(parts)
+
+
+def games_texts(course: dict) -> list[str]:
+    """Tout ce qui se dit pendant un jeu, pour la carte audio de la page."""
+    games = course.get("games") or {}
+    out = [v["term"] for sec in (games.get("speak") or []) for v in sec.get("items", [])]
+    out += [v["term"] for g in (games.get("groups") or [])
+            for game in (g.get("games") or []) for v in (game.get("phrases") or [])]
+    return out
+
+
+def build_games_page(course: dict) -> str:
+    games = course.get("games") or {}
+    title = games.get("title_fr", "La boîte à jeux")
+    body = (f'<div class="wrap">'
+            f'<div class="crumb"><a href="index.html">← {E(course["name_fr"])}</a></div>'
+            f'<h1>{E(title)}</h1>'
+            + audio_bar()
+            + games_body(course)
+            + '<footer>Un jeu joué trente fois avec trente mots différents vaut mieux '
+              'que trente jeux essayés une fois.</footer></div>')
+    return page(f'{title} — {course["name_fr"]}', body, SITE_CSS,
+                script=audio_map_js(course, games_texts(course)) + SAY_JS + DIALOG_JS)
+
+
+def build_print_games(course: dict) -> str:
+    body = (f'<div class="sheet"><h1>{E(course["name_fr"])} — la boîte à jeux</h1>'
+            f'<p class="sub">Des jeux qui marchent avec n\'importe quelle unité : '
+            f'on y verse le vocabulaire de la semaine.</p>'
+            + games_body(course, interactive=False)
+            + f'<footer>{E(course["name_fr"])} — boîte à jeux</footer></div>')
+    return page(f'{course["name_fr"]} — boîte à jeux', body, PRINT_CSS)
+
+
 def build_program_page(course: dict) -> str:
     body = (f'<div class="wrap">'
             f'<div class="crumb"><a href="index.html">← {E(course["name_fr"])}</a></div>'
@@ -1424,9 +1540,12 @@ footer{margin-top:6mm;font-size:8.5pt;color:#666;border-top:.5pt solid #bbb;padd
 .plan .u{display:block}
 .week{color:#555;font-size:9pt}
 .ctx{font-style:italic;color:#555;margin:1mm 0 2mm}
-.escale{border:.5pt solid #999;border-radius:2mm;padding:3mm 4mm;margin:3mm 0}
-.escale .n{font-size:8.5pt;text-transform:uppercase;letter-spacing:.05em;color:#555}
-.escale h3{margin:1mm 0 2mm;font-size:12pt}
+.escale,.game{border:.5pt solid #999;border-radius:2mm;padding:3mm 4mm;margin:3mm 0}
+.escale .n,.game .n{font-size:8.5pt;text-transform:uppercase;letter-spacing:.05em;color:#555}
+.escale h3,.game h3{margin:1mm 0 2mm;font-size:12pt}
+.game .why{border-left:.5pt solid #666;padding-left:2.5mm;margin:1.5mm 0;font-size:10pt}
+.game ol{margin:1mm 0;padding-left:5mm}
+.game ol li{margin:.6mm 0}
 ul.esc{list-style:none;padding-left:0}
 ul.esc li{padding:.6mm 0 .6mm 2.5mm;border-left:.5pt solid #bbb;margin:.6mm 0}
 .mission{border:.5pt dashed #333;padding:2mm 3mm;margin:2mm 0}
@@ -1562,6 +1681,8 @@ def build_print_all(course: dict) -> str:
         body.append(strip_page(build_print_program(course)))
     if course.get("toolkit"):
         body.append(strip_page(build_print_toolkit(course)))
+    if course.get("games"):
+        body.append(strip_page(build_print_games(course)))
     if course.get("culture"):
         body.append(strip_page(build_print_culture(course)))
     if course.get("resources"):
@@ -1632,6 +1753,9 @@ def main() -> None:
         if course.get("program"):
             (sdir / "programme.html").write_text(build_program_page(course), encoding="utf-8")
             (pdir / "programme.html").write_text(build_print_program(course), encoding="utf-8")
+        if course.get("games"):
+            (sdir / "boite-a-jeux.html").write_text(build_games_page(course), encoding="utf-8")
+            (pdir / "boite-a-jeux.html").write_text(build_print_games(course), encoding="utf-8")
         if course.get("toolkit"):
             (sdir / "boite-a-outils.html").write_text(build_toolkit_page(course), encoding="utf-8")
             (pdir / "boite-a-outils.html").write_text(build_print_toolkit(course), encoding="utf-8")

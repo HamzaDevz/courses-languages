@@ -94,6 +94,34 @@ activities:
       - "Jouez l'appel entier : décrocher, se présenter, demander quelqu'un, laisser un message, raccrocher."
       - "Une contrainte : celui qui appelle doit utiliser une fois *não estou a ouvir bem*."
       - "Puis on échange les rôles."
+  - level: petits
+    type: jeu
+    title_fr: "Allô, c'est qui ?"
+    steps_fr:
+      - "Deux boîtes de conserve reliées par une ficelle, ou simplement dos à dos."
+      - "Vous appelez en déguisant votre voix : *Está lá? Quem fala?* L'enfant doit deviner qui appelle."
+      - "Il rappelle ensuite en imitant quelqu'un d'autre."
+  - level: petits
+    type: jeu
+    title_fr: "Le téléphone des peluches"
+    steps_fr:
+      - "Chaque peluche a un numéro écrit sur un papier."
+      - "L'enfant compose le numéro à voix haute en portugais, puis mène l'appel : *Está lá? Posso falar com o urso?*"
+      - "Vous faites la voix de la peluche. Trois phrases d'appel suffisent."
+  - level: grands
+    type: jeu
+    title_fr: "La ligne qui grésille"
+    steps_fr:
+      - "Dos à dos, l'un parle en couvrant sa bouche ; l'autre doit obtenir l'information malgré le bruit."
+      - "Seules les phrases de secours sont autorisées : *não estou a ouvir bem*, *outra vez, por favor*, *podes falar mais alto?*"
+      - "Message transmis en entier : on inverse. C'est un entraînement à ne pas raccrocher quand on ne comprend pas."
+  - level: grands
+    type: production
+    title_fr: "Le vrai message vocal"
+    steps_fr:
+      - "Enregistre un message vocal de trente secondes pour un proche, entièrement en portugais."
+      - "Il faut dire qui tu es, pourquoi tu appelles, et quand tu rappelles."
+      - "Réécoute-le avant d'envoyer. Ce que tu changerais, c'est exactement ce qu'il faut retravailler."
 reemploi_fr:
   - "Un vrai appel dans la semaine à un proche lusophone, même de trente secondes."
   - "Décrocher le téléphone de la maison en disant *Está lá?* — même si la conversation continue en français."

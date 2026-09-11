@@ -18,6 +18,7 @@ Le contenu est écrit **une seule fois** en YAML, puis généré en trois suppor
 | Support | Où | Pour quoi |
 |---|---|---|
 | **Site web** | `site/` | écouter les dialogues, jouer les rôles, s'entraîner à répondre |
+| **Boîte à jeux** | `site/pt/boite-a-jeux.html` | 30 jeux à faire avec n'importe quelle unité |
 | **Fiches A4** | `print/` puis `pdf/` | programme, cours, dialogue + Q/R, activités, cartes à découper |
 | **Flashcards** | `exports/anki-*.csv` | révision espacée dans Anki, questions/réponses comprises |
 | **Enregistrements** | `assets/audio/` | de vraies voix, produites par `make audio` |
@@ -37,7 +38,7 @@ Ctrl+P → « Enregistrer au format PDF ». La mise en page A4 est déjà prête
 ## Le programme
 
 **Portugais — 30 unités, 30 dialogues, 90 questions à savoir répondre,
-12 escales culturelles.**
+246 activités, 30 jeux réutilisables, 12 escales culturelles.**
 
 Deux parcours, parce qu'un enfant de 4 ans et un enfant de 9 ans n'apprennent
 pas de la même façon :
@@ -81,9 +82,35 @@ tel quel dans le programme.
 3. **Le vocabulaire et les phrases**, avec prononciation approchée et audio.
 4. **On me demande, je réponds** — chaque question avec **plusieurs** réponses
    possibles, plus un entraînement où la question sort à l'oral.
-5. **Les points à retenir** et **quatre à cinq activités** — pour les 3-6 ans
-   (jeux, oral, mime) et pour les 7-10 ans (écrit, règles, production).
+5. **Les points à retenir** et **huit à neuf activités** — pour les 3-6 ans
+   (jeux de course, de cartes, de mime, bricolages) et pour les 7-10 ans (jeux
+   de mots, écrit, production). La moitié au moins vise les petits : à cet âge,
+   le jeu n'est pas la récompense de la leçon, c'est la leçon.
 6. **Cette semaine dans la vraie vie** — ce qui sort du cours.
+
+### La boîte à jeux
+
+Les activités d'une unité s'usent quand l'unité est finie. La **boîte à jeux**
+contient **30 jeux qui n'appartiennent à aucune unité** : ce sont des moules, on
+y verse le vocabulaire de la semaine et ils resservent trente fois.
+
+Cinq familles, du plus simple au plus exigeant : les **jeux du corps** (*O Rei
+manda*, *Um, dois, três, macaquinho do chinês*, *a cabra-cega*, la leçon en trois
+temps), les **jeux de cartes** qui réutilisent les cartes à découper déjà
+imprimées avec chaque unité (memory, loto, *o que desapareceu?*, jeu des
+familles, mime, *quem sou eu?*), les **jeux de dés et de plateau** (jeu de l'oie,
+marelle, morpion parlant), les **jeux qui se cachent dans la journée** (sac à
+surprises, chasse au trésor, maison étiquetée, la boutique, le jeu du trajet) et
+les **jeux de mots pour les grands** (Stop!, qui est-ce ?, dessine et devine,
+l'alibi, expliquer un mot sans le dire).
+
+Chaque jeu indique l'âge, la durée, le matériel, **ce qu'il travaille vraiment**,
+les unités avec lesquelles il marche, les étapes, des variantes — et les phrases
+portugaises pour y jouer.
+
+Car la page commence par ce qui manque le plus : **la langue du jeu**. *É a tua
+vez*, *quem começa?*, *baralha as cartas*, *ganhei*, *não vale*, *outra vez!*
+Sans ces phrases-là, la partie se joue en français et le jeu n'apprend rien.
 
 ### Le voyage culturel
 
@@ -180,6 +207,7 @@ content/pt/course.yaml    la langue + la boîte à outils
 content/pt/program.yaml   le programme : parcours par âge, périodes, pratique
 content/pt/culture.yaml   le passeport culturel : 12 escales, 12 missions
 content/pt/resources.yaml livres, chansons, écrans, outils
+content/pt/games.yaml     la boîte à jeux : 30 jeux réutilisables
 content/pt/units/         une unité = un fichier (dialogue, Q/R, activités)
 scripts/build.py          génère site/ print/ exports/
 scripts/audio.py          produit les enregistrements (assets/audio/)

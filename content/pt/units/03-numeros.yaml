@@ -58,6 +58,40 @@ activities:
     steps_fr:
       - "Écris : *Chamo-me ______ . Tenho ______ anos.*"
       - "Fais la même fiche pour chaque membre de la famille."
+  - level: petits
+    type: mouvement
+    title_fr: "La marelle des nombres"
+    steps_fr:
+      - "Tracez une marelle de huit cases à la craie, ou avec du ruban adhésif dans le couloir."
+      - "On saute case par case en disant le nombre en portugais. Un nombre dit en français : on repart du début."
+      - "Au retour, on compte à l'envers : *oito, sete, seis…*"
+  - level: petits
+    type: jeu
+    title_fr: "Combien dans la boîte ?"
+    steps_fr:
+      - "Mettez quelques pâtes sèches dans une boîte fermée et secouez-la."
+      - "L'enfant devine : *três? cinco?* On ouvre et on compte ensemble, à voix haute, en portugais."
+      - "Il a le droit de secouer la boîte pour vous faire deviner à votre tour."
+  - level: petits
+    type: mouvement
+    title_fr: "Les claps"
+    steps_fr:
+      - "Tapez dans vos mains un certain nombre de fois. L'enfant annonce le nombre : *quatro!*"
+      - "Puis l'inverse : vous dites *seis* et il tape six fois."
+      - "Version soir, dans le noir : on compte les claps les yeux fermés."
+  - level: grands
+    type: jeu
+    title_fr: "Le dé qui monte jusqu'à cinquante"
+    steps_fr:
+      - "Deux dés, deux joueurs. À chaque tour, on lance et on annonce la somme en portugais : *quatro e três… sete!*"
+      - "On additionne son total à voix haute d'un tour sur l'autre. Premier à cinquante."
+      - "Un total annoncé en français ou faux : le tour ne compte pas."
+  - level: grands
+    type: jeu
+    title_fr: "La dictée de numéros"
+    steps_fr:
+      - "Dictez un numéro de téléphone portugais chiffre par chiffre : *nove, um, dois…* L'enfant l'écrit."
+      - "On vérifie. Puis il dicte le vôtre, et vous écrivez — en vous trompant exprès une fois, pour qu'il corrige."
 year: 1
 dialogue:
   title_fr: "Quel âge as-tu ?"

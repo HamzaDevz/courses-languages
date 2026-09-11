@@ -96,6 +96,33 @@ activities:
       - "Jouez la scène de la boulangerie en changeant les produits."
       - "Le vendeur annonce un prix ; le client doit le répéter pour vérifier : *Três euros?*"
       - "Puis inversez les rôles. Interdit de passer au français : on se dépanne avec *como se diz…?*"
+  - level: petits
+    type: jeu
+    title_fr: "La caisse et la monnaie"
+    steps_fr:
+      - "Fabriquez des pièces en carton : 1, 2, 5 euros."
+      - "L'enfant achète trois choses, paie et attend sa monnaie : *aqui está o troco.*"
+      - "Puis il tient la caisse — et c'est lui qui doit rendre la monnaie, en comptant à voix haute."
+  - level: petits
+    type: jeu
+    title_fr: "Plus cher, moins cher"
+    steps_fr:
+      - "Posez un objet et annoncez un prix. L'enfant dit s'il trouve ça *caro* ou *barato*."
+      - "Version devinette : il devine le prix affiché, vous répondez *mais caro!* ou *mais barato!* jusqu'à ce qu'il tombe juste."
+  - level: grands
+    type: jeu
+    title_fr: "Les dix euros"
+    steps_fr:
+      - "Dix euros en carton, six produits étiquetés sur la table."
+      - "Il doit acheter trois choses sans dépasser, et justifier : *levo o queijo porque é barato.*"
+      - "Toute la transaction se fait en portugais, addition comprise."
+  - level: grands
+    type: jeu
+    title_fr: "Le client impossible"
+    steps_fr:
+      - "Tirez une contrainte au sort : le client n'a pas assez d'argent, il veut quelque chose qui n'existe pas, il trouve tout trop cher."
+      - "Le vendeur doit s'en sortir poliment, sans passer au français."
+      - "Deux minutes par scène, puis on échange les rôles."
 reemploi_fr:
   - "Au marché ou à la boulangerie, l'enfant commande en portugais à voix haute pour lui-même avant de commander en français."
   - "À la maison, un prix vu sur une étiquette se lit en portugais."

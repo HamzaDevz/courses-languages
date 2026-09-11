@@ -56,6 +56,34 @@ activities:
       - "Dessine ton arbre sur une feuille."
       - "Écris sous chaque personne son nom en portugais : *o avô João*, *a minha irmã Sara*..."
       - "Présente-le à voix haute : *Este é o meu avô. Esta é a minha irmã.*"
+  - level: petits
+    type: jeu
+    title_fr: "Le memory de la famille"
+    steps_fr:
+      - "Imprimez ou photocopiez deux fois six photos de la famille. Collez-les sur du carton."
+      - "Cartes retournées : on cherche les paires. On ne garde la paire que si on dit qui c'est — *o avô!*"
+      - "Trop difficile à six paires ? Commencez à quatre."
+  - level: petits
+    type: jeu
+    title_fr: "Qui a dit ça ?"
+    steps_fr:
+      - "Imitez la voix de quelqu'un de la famille en disant une petite phrase portugaise connue."
+      - "L'enfant devine : *é o pai!*, *é a avó!*"
+      - "À son tour d'imiter. C'est le moment de la séance où l'on rit le plus."
+  - level: grands
+    type: jeu
+    title_fr: "Qui est-ce ? version famille"
+    steps_fr:
+      - "Étalez douze photos de famille sur la table. Chacun en choisit une en secret."
+      - "On pose des questions fermées, en portugais : *É um homem? Tem óculos? É o teu irmão?*"
+      - "Le premier qui devine gagne. Les règles complètes sont dans la **boîte à jeux**."
+  - level: grands
+    type: jeu
+    title_fr: "Le dé de la famille"
+    steps_fr:
+      - "Fabriquez un dé en papier avec six membres de la famille, un par face."
+      - "On lance et on dit **deux phrases** sur la personne tirée : *Esta é a minha tia. Tem dois filhos.*"
+      - "Difficile : la deuxième phrase doit contenir un nombre."
 year: 1
 dialogue:
   title_fr: "C'est ma famille"
