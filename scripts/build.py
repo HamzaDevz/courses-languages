@@ -9,12 +9,15 @@ Aucune dépendance hors PyYAML. Ajouter une langue = ajouter un dossier content/
 from __future__ import annotations
 
 import csv
+import hashlib
 import html
 import re
 import shutil
 from pathlib import Path
 
 import yaml
+
+import webapp  # même dossier : le manifeste, les icônes et le service worker
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
@@ -284,12 +287,23 @@ def plain(text: str) -> str:
 # --------------------------------------------------------------------------- #
 # Gabarits
 # --------------------------------------------------------------------------- #
-def page(title: str, body: str, css: str, extra_head: str = "", script: str = "") -> str:
+def page(title: str, body: str, css: str, extra_head: str = "", script: str = "",
+         app: int | None = None) -> str:
+    """Une page complète.
+
+    « app » = la profondeur du fichier sous site/ (0 à la racine, 1 dans site/pt/).
+    Renseignée, la page devient installable : manifeste, icônes et service worker.
+    Les fiches à imprimer, elles, restent de simples pages HTML — on ne les met
+    pas en cache et on ne propose pas de les installer.
+    """
+    if app is not None:
+        extra_head = f"{webapp.head_tags(app)}\n{extra_head}"
+        script = f"{script}\n{webapp.register_js(app)}" if script else webapp.register_js(app)
     return f"""<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%97%A3%3C/text%3E%3C/svg%3E">
 <title>{E(title)}</title>
 {extra_head}
@@ -320,9 +334,14 @@ SITE_CSS = """
   --accent:#f2795b; --accent2:#6ec191; --accent3:#7bb0e0;
 }
 *{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);
   font:17px/1.6 "Iowan Old Style",Georgia,"Times New Roman",serif;}
-.wrap{max-width:900px;margin:0 auto;padding-inline:18px;padding-block:28px 64px}
+/* Installée sur iPhone, la page passe sous l'encoche et sous la barre du bas :
+   les marges latérales suivent donc la zone sûre. */
+.wrap{max-width:900px;margin:0 auto;
+  padding-inline:max(18px,env(safe-area-inset-left)) max(18px,env(safe-area-inset-right));
+  padding-block:max(28px,env(safe-area-inset-top)) calc(64px + env(safe-area-inset-bottom))}
 a{color:var(--accent3)}
 h1{font-size:clamp(1.7rem,5vw,2.6rem);margin:.2em 0 .1em;line-height:1.15}
 h2{font-size:1.35rem;margin:2em 0 .6em;border-bottom:2px solid var(--line);padding-bottom:.3em}
@@ -347,8 +366,11 @@ th{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mu
 .term{font-weight:700;font-size:1.12rem}
 .phon{color:var(--muted);font-style:italic;white-space:nowrap}
 .rtl .term{direction:rtl;unicode-bidi:isolate;font-size:1.4rem}
+/* 44 px : la cible qu'un doigt d'enfant atteint sans rater. Ces boutons sont
+   ce qu'on touche le plus souvent, ils ne peuvent pas rester à 30 px de haut. */
 button.say{background:none;border:1px solid var(--line);border-radius:9px;cursor:pointer;
-  font-size:1rem;padding:3px 9px;color:inherit;line-height:1.4}
+  font-size:1rem;padding:3px 9px;color:inherit;line-height:1.4;
+  min-width:44px;min-height:44px;touch-action:manipulation}
 button.say:hover{border-color:var(--accent);color:var(--accent)}
 .note{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);
   border-radius:var(--radius);padding:12px 16px;margin:.7em 0}
@@ -366,7 +388,7 @@ button.say:hover{border-color:var(--accent);color:var(--accent)}
 .flash .ans{font-size:1.3rem;color:var(--accent2)}
 .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:.8em 0}
 .btn{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:9px 16px;
-  font:inherit;font-size:.95rem;cursor:pointer}
+  font:inherit;font-size:.95rem;cursor:pointer;min-height:44px;touch-action:manipulation}
 .btn.ghost{background:none;color:var(--ink);border:1px solid var(--line)}
 .nav{display:flex;justify-content:space-between;gap:12px;margin-top:2.5em;
   border-top:1px solid var(--line);padding-top:1em;font-size:.95rem}
@@ -397,7 +419,8 @@ footer{color:var(--muted);font-size:.85rem;margin-top:3em}
 .qa li .afr{color:var(--muted);font-size:.92rem;display:block}
 details.comp{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
   padding:10px 16px;margin:.5em 0}
-details.comp summary{cursor:pointer;font-weight:600}
+details.comp summary{cursor:pointer;font-weight:600;min-height:44px;
+  display:flex;align-items:center;touch-action:manipulation}
 details.comp p{margin:.5em 0 0;color:var(--accent2)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:.8em 0}
 .chip{border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:.9rem;
@@ -421,6 +444,12 @@ code{font-size:.9em;background:color-mix(in srgb, var(--line) 55%, transparent);
   border-radius:5px;padding:1px 5px}
 h3{font-size:1.15rem;margin:1.4em 0 .4em}
 @media (max-width:520px){ .phon{white-space:normal} .dline{flex-direction:column;gap:2px} }
+/* Au doigt, les liens en pleine ligne de texte sont trop fins pour être visés :
+   on les épaissit là où le pointeur est imprécis, sans toucher à la souris. */
+@media (pointer:coarse){
+  .plan td .u a,.crumb a,.nav a{display:inline-block;padding-block:11px}
+  .qa li,.dl li{padding-top:9px;padding-bottom:9px}
+}
 """
 
 SAY_JS = """
@@ -883,7 +912,7 @@ document.getElementById('dshow').addEventListener('click', function(e){{
 """
 
     if not cards:
-        return page(f'{unit["title"]} — {course["name_fr"]}', "\n".join(parts), SITE_CSS,
+        return page(f'{unit["title"]} — {course["name_fr"]}', "\n".join(parts), SITE_CSS, app=1,
                     script=base_js)
 
     script = base_js + f"""
@@ -914,7 +943,8 @@ document.getElementById('fflip').addEventListener('click', function(e){{
   e.stopPropagation(); reversed = !reversed; i = -1; order = []; draw(); }});
 shuffle();
 """
-    return page(f'{unit["title"]} — {course["name_fr"]}', "\n".join(parts), SITE_CSS, script=script)
+    return page(f'{unit["title"]} — {course["name_fr"]}', "\n".join(parts), SITE_CSS,
+                script=script, app=1)
 
 
 def unit_cards(course: dict, units: list[dict]) -> str:
@@ -1033,7 +1063,7 @@ def build_lang_index(course: dict) -> str:
 <div class="dl">{downloads}</div>
 <footer><p>{E(course.get("note_fr",""))}</p></footer>
 </div>"""
-    return page(course["name_fr"], body, SITE_CSS)
+    return page(course["name_fr"], body, SITE_CSS, app=1)
 
 
 def periods_table(course: dict, year: dict, by_id: dict, links: bool) -> str:
@@ -1205,7 +1235,7 @@ def build_culture_page(course: dict) -> str:
             + '<footer>Une escale par mois, dans l\'ordre qu\'on veut. Le tampon se '
               'gagne quand la mission est faite — pas quand l\'escale est lue.</footer></div>')
     texts = [w["term"] for e in (culture.get("escales") or []) for w in (e.get("words") or [])]
-    return page(f'{title} — {course["name_fr"]}', body, SITE_CSS,
+    return page(f'{title} — {course["name_fr"]}', body, SITE_CSS, app=1,
                 script=audio_map_js(course, texts) + SAY_JS + DIALOG_JS)
 
 
@@ -1269,7 +1299,7 @@ def build_resources_page(course: dict) -> str:
             f'<h1>{E(title)}</h1>' + resources_body(course)
             + '<footer>Rien ici n\'est obligatoire. Un seul album lu vingt fois vaut '
               'mieux que dix achetés une fois.</footer></div>')
-    return page(f'{title} — {course["name_fr"]}', body, SITE_CSS)
+    return page(f'{title} — {course["name_fr"]}', body, SITE_CSS, app=1)
 
 
 def build_print_resources(course: dict) -> str:
@@ -1286,7 +1316,7 @@ def build_program_page(course: dict) -> str:
             + program_body(course)
             + '<footer>Le programme est un cadre, pas une course. Une semaine sautée se '
               'rattrape ; une unité mal tenue se refait.</footer></div>')
-    return page(f'Programme — {course["name_fr"]}', body, SITE_CSS)
+    return page(f'Programme — {course["name_fr"]}', body, SITE_CSS, app=1)
 
 
 def build_toolkit_page(course: dict) -> str:
@@ -1301,7 +1331,7 @@ def build_toolkit_page(course: dict) -> str:
             + '<footer>À afficher près de la table. Trois phrases suffisent pour commencer : '
               '« não percebi », « outra vez, por favor », « como se diz… ? »</footer></div>')
     texts = [v["term"] for g in (course.get("toolkit") or []) for v in g.get("items", [])]
-    return page(f'Boîte à outils — {course["name_fr"]}', body, SITE_CSS,
+    return page(f'Boîte à outils — {course["name_fr"]}', body, SITE_CSS, app=1,
                 script=audio_map_js(course, texts) + SAY_JS + DIALOG_JS)
 
 
@@ -1349,7 +1379,7 @@ Edge apporte en plus des voix « Natural » de très bonne qualité.</li>
 Portugal, par exemple) reste utilisable : le site l'accepte mais le signale,
 car l'accent et certains mots diffèrent.</p>
 </div>"""
-    return page("Avoir une vraie voix", body, SITE_CSS)
+    return page("Avoir une vraie voix", body, SITE_CSS, app=0)
 
 
 def build_home(langs: list[dict]) -> str:
@@ -1373,7 +1403,7 @@ ont été produits, sinon la voix du système — jamais une voix d'une autre la
 Si rien ne se lit : <a href="voix.html">avoir une vraie voix</a>.</p>
 <footer>Site généré depuis <code>content/</code> par <code>scripts/build.py</code>.</footer>
 </div>"""
-    return page("Les langues à la maison", body, SITE_CSS)
+    return page("Les langues à la maison", body, SITE_CSS, app=0)
 
 
 # --------------------------------------------------------------------------- #
@@ -1676,6 +1706,14 @@ def main() -> None:
     if PDF.exists():
         shutil.copytree(PDF, SITE / "pdf")
         print("pdf/ inclus dans le site")
+
+    # Le manifeste, les icônes et le service worker viennent en dernier : le
+    # service worker précache les pages, elles doivent donc déjà exister.
+    version = hashlib.sha256(
+        b"".join(p.read_bytes() for p in sorted(SITE.rglob("*.html")))
+    ).hexdigest()[:12]
+    n_icons = webapp.write_all(SITE, langs, version)
+    print(f"appli web : manifest.webmanifest, sw.js et {n_icons} icônes (version {version})")
 
     print("\nOK. Ouvrir site/index.html — imprimer depuis print/<langue>/cahier-complet.html")
 
