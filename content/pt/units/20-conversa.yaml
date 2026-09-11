@@ -105,6 +105,34 @@ activities:
       - "Dis une phrase fausse exprès : *Ontem vou à praia.*"
       - "Corrige-toi à voix haute : *ou melhor, ontem fui à praia.*"
       - "Refais-le cinq fois avec des phrases différentes : c'est un réflexe qui s'entraîne."
+  - level: petits
+    type: jeu
+    title_fr: "La boîte à questions du dîner"
+    steps_fr:
+      - "Écrivez huit questions de l'année sur des papiers, pliez-les dans une boîte posée sur la table."
+      - "Chaque soir, un papier tiré au hasard : tout le monde répond, l'enfant en dernier."
+      - "Les questions restent les mêmes toute la semaine. C'est la répétition qui fait l'effet."
+  - level: petits
+    type: jeu
+    title_fr: "Le relais de la parole"
+    steps_fr:
+      - "Un objet passe de main en main : seul celui qui le tient parle."
+      - "Chacun ajoute une phrase à l'histoire de la journée, en commençant par *primeiro*, *depois*, *no fim*."
+      - "Trois tours de table suffisent."
+  - level: grands
+    type: jeu
+    title_fr: "Deux vérités, un mensonge"
+    steps_fr:
+      - "Dis trois phrases sur ta semaine : deux vraies, une fausse."
+      - "L'autre enquête en portugais — *A sério? Com quem? A que horas?* — puis annonce laquelle est fausse."
+      - "Un point par mensonge non démasqué. Le jeu complet est dans la **boîte à jeux**."
+  - level: grands
+    type: production
+    title_fr: "L'interview du parent"
+    steps_fr:
+      - "Prépare dix questions écrites en portugais sur la semaine de ton père, ta mère ou ta grand-mère."
+      - "Mène l'interview pour de vrai, en enregistrant. Tu as le droit de relancer : *conta-me mais*, *e depois?*"
+      - "Réécoute et note trois choses que tu as apprises. La langue servait à quelque chose : c'était le but."
 reemploi_fr:
   - "Un dîner par semaine entièrement en portugais, avec la boîte à outils affichée sur la table."
   - "Le récit de la journée, le soir, avec *primeiro / depois / no fim* — même en trois phrases."

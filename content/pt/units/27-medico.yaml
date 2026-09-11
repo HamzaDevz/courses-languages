@@ -99,6 +99,34 @@ activities:
       - "Un joueur est le médecin, l'autre le patient qui choisit son problème en secret."
       - "Le médecin doit poser au moins trois questions avant de donner deux consignes."
       - "Le patient doit poser une question sur ce qui lui fait peur : *Vai doer?*"
+  - level: petits
+    type: jeu
+    title_fr: "Le dé des bobos"
+    steps_fr:
+      - "Un dé et six parties du corps écrites ou dessinées sur un papier."
+      - "On lance : l'enfant montre l'endroit et dit *dói-me a barriga!*, avec la grimace qui va avec."
+      - "Vous jouez le médecin : *desde quando? vais ficar bom depressa.*"
+  - level: petits
+    type: jeu
+    title_fr: "Le pansement bien placé"
+    steps_fr:
+      - "Une planche de pansements (ou de gommettes) et une peluche."
+      - "Vous donnez la consigne : *põe um penso no joelho do urso.* Il exécute."
+      - "Puis c'est lui qui commande — et la peluche finit couverte de gommettes, ce qui est exactement le but."
+  - level: grands
+    type: jeu
+    title_fr: "Le diagnostic mystère"
+    steps_fr:
+      - "Tirez une carte symptôme : *tosse*, *febre*, *dor de garganta*, *dor de barriga*."
+      - "Le patient décrit sans nommer la carte ; le médecin pose trois questions puis annonce le traitement."
+      - "Trois traitements possibles seulement : *xarope*, *descansar*, *um penso*. Il faut justifier son choix."
+  - level: grands
+    type: jeu
+    title_fr: "La salle d'attente"
+    steps_fr:
+      - "Trois patients (peluches ou joueurs), trois maux différents, un seul médecin."
+      - "Chacun explique son problème en portugais ; le médecin décide qui passe en premier et dit pourquoi."
+      - "Le patient mal compris insiste : *não é a cabeça, é a garganta!*"
 reemploi_fr:
   - "Au moindre bobo de la semaine : *O que se passa? Onde te dói? Desde quando?* — tout en portugais."
   - "Quand quelqu'un est malade à la maison, on lui souhaite *Melhoras!* (bon rétablissement)."

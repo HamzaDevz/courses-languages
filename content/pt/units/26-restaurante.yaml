@@ -96,6 +96,34 @@ activities:
       - "Jouez la scène du début à la fin : la table, la carte, la commande, l'eau, le dessert, l'addition."
       - "Le serveur doit une fois ne pas avoir le plat demandé : *Hoje não temos.* Le client doit choisir autre chose."
       - "Puis on échange les rôles."
+  - level: petits
+    type: jeu
+    title_fr: "Le serveur qui note"
+    steps_fr:
+      - "L'enfant est serveur, avec un carnet et un crayon. Il ne sait pas écrire ? Il dessine."
+      - "Vous commandez en portugais ; il note, répète la commande à voix haute, puis l'apporte pour de faux."
+      - "Une erreur dans la commande se signale : *não pedi isto!* Il refait le tour."
+  - level: petits
+    type: jeu
+    title_fr: "Le plateau du goût"
+    steps_fr:
+      - "Quatre petites assiettes, les yeux fermés. On goûte et on devine : *é a sopa? é o queijo?*"
+      - "Après chaque bouchée, une phrase de jugement : *está delicioso!* ou *não gosto muito.*"
+      - "Version portugaise, si vous en trouvez : *pastel de nata*, fromage de brebis, olives."
+  - level: grands
+    type: production
+    title_fr: "Le chef du jour"
+    steps_fr:
+      - "Invente un plat, donne-lui un nom portugais et écris-le sur une vraie carte."
+      - "Vends-le en trois phrases à la table : ce qu'il y a dedans, pourquoi il est bon, combien il coûte."
+      - "La table commande ou refuse — en portugais, évidemment."
+  - level: grands
+    type: jeu
+    title_fr: "L'addition contestée"
+    steps_fr:
+      - "Préparez une addition avec une erreur cachée : un plat en trop, un prix qui ne tombe pas juste."
+      - "L'enfant vérifie, trouve l'erreur et la signale poliment : *desculpe, acho que há um erro na conta.*"
+      - "Le serveur s'excuse et recompte. On échange les rôles à la manche suivante."
 reemploi_fr:
   - "Au restaurant cette semaine, l'enfant commande d'abord en portugais pour lui-même, puis en français au serveur."
   - "À la maison, le repas est « commandé » à table : *Queria mais pão, por favor.*"

@@ -98,6 +98,34 @@ activities:
       - "Chacun raconte son week-end en trois phrases au passé."
       - "L'autre doit poser **trois questions** dessus : *Com quem foste? Gostaste? O que comeste?*"
       - "On échange. La règle : aucune phrase au présent."
+  - level: petits
+    type: jeu
+    title_fr: "Les trois images d'hier"
+    steps_fr:
+      - "L'enfant dessine trois moments de la veille sur trois papiers."
+      - "On mélange, et il les remet dans l'ordre en racontant : *primeiro fui à escola, depois comi…*"
+      - "Vous en cachez un : *o que falta?* Il doit retrouver le moment manquant."
+  - level: petits
+    type: jeu
+    title_fr: "Le détective du soir"
+    steps_fr:
+      - "Au coucher, trois questions rituelles, toujours les mêmes : *O que comeste? Onde foste? Com quem brincaste?*"
+      - "Une réponse par question suffit. On ne corrige pas, on reformule joliment juste après."
+      - "Au bout de dix soirs, l'enfant répond avant qu'on demande."
+  - level: grands
+    type: jeu
+    title_fr: "L'alibi"
+    steps_fr:
+      - "Deux joueurs préparent ensemble, pendant deux minutes, le récit de leur après-midi d'hier : où, avec qui, quoi."
+      - "L'inspecteur les interroge **séparément**, en portugais : *A que horas chegaste? O que comeram?*"
+      - "Deux réponses qui ne collent pas : l'alibi tombe. C'est le jeu qui fait produire le plus de passé de tout le programme."
+  - level: grands
+    type: production
+    title_fr: "Le journal télévisé d'hier"
+    steps_fr:
+      - "Présente le journal de ta journée d'hier en une minute, face à la caméra du téléphone."
+      - "Trois nouvelles maximum, chacune commençant par *ontem*."
+      - "Regarde-toi. Ce que tu n'as pas su dire devient la liste des mots à chercher aujourd'hui."
 reemploi_fr:
   - "Le récit du soir passe au passé : *O que fizeste hoje?* au lieu de *como foi*."
   - "Le lundi matin, une question rituelle : *O que fizeste no fim de semana?*"

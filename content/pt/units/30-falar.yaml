@@ -97,6 +97,41 @@ activities:
       - "Quelqu'un dit un mot français difficile (*tondeuse*, *échelle*, *hérisson*)."
       - "Tu dois le faire comprendre **en portugais**, sans le traduire : *é uma coisa para…*, *é um animal que…*"
       - "Cinq mots d'affilée : c'est l'épreuve reine de la conversation."
+  - level: petits
+    type: jeu
+    title_fr: "La boîte à souvenirs"
+    steps_fr:
+      - "Rassemblez dix objets ou dessins des trois années : la roue de la météo, le badge *obrigado*, le passeport."
+      - "On en tire un et on dit une phrase dessus, en portugais."
+      - "Rien à dire ? On passe, sans commentaire — et on y revient à la fin."
+  - level: petits
+    type: jeu
+    title_fr: "Le dé de tout"
+    steps_fr:
+      - "Un dé, six thèmes des trois années : *a família*, *os animais*, *a comida*, *a escola*, *ontem*, *amanhã*."
+      - "On lance et on parle du thème pendant trente secondes. Le parent joue aussi, et bloque parfois."
+      - "Bloqué ? On utilise la boîte à outils : *como se diz…?*, *não sei a palavra, mas é uma coisa para…*"
+  - level: grands
+    type: jeu
+    title_fr: "Explique sans le dire"
+    steps_fr:
+      - "Tire une carte et fais deviner le mot **sans le dire** et sans français."
+      - "Trois outils : *é uma coisa para…*, *parece-se com…*, *está em…*"
+      - "C'est la compétence qui te permettra de tenir une vraie conversation au Portugal. Le jeu est détaillé dans la **boîte à jeux**."
+  - level: grands
+    type: jeu
+    title_fr: "Stop ! — la révision des trois ans"
+    steps_fr:
+      - "Cinq colonnes : *nome*, *cor*, *animal*, *comida*, *cidade*. Une lettre tirée au sort lance la manche."
+      - "Le premier qui remplit tout crie *Stop!* Dix points par mot unique, cinq si quelqu'un a le même."
+      - "Trois manches suffisent pour voir ce qui reste vraiment de trois années."
+  - level: grands
+    type: jeu
+    title_fr: "Le grand tournoi"
+    steps_fr:
+      - "Choisis les cinq jeux que tu as le plus aimés en trois ans."
+      - "Une soirée, cinq manches, un classement écrit en portugais."
+      - "Le vainqueur choisit le premier jeu de l'année suivante — parce qu'il y a une année suivante."
 reemploi_fr:
   - "Chercher un vrai interlocuteur : un cousin, un voisin, un correspondant. Vingt minutes par semaine valent plus que n'importe quelle fiche."
   - "Un film ou un dessin animé connu, en portugais du Portugal, sous-titres coupés — une fois par semaine."

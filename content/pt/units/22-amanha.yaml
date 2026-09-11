@@ -93,6 +93,34 @@ activities:
       - "Proposez-vous une activité pour demain, en portugais."
       - "Il faut se mettre d'accord sur **trois choses** : quoi, où, à quelle heure."
       - "On finit par *Combinado!* — et le lendemain, on raconte au passé (unité 21) si ça a été fait."
+  - level: petits
+    type: jeu
+    title_fr: "Les trois images de demain"
+    steps_fr:
+      - "L'enfant dessine trois choses qu'il va faire demain."
+      - "Il les raconte en portugais : *amanhã vou à escola*, puis les range dans l'ordre de la journée."
+      - "Le lendemain soir, on ressort les dessins : *foi assim?* On compare le prévu et le vécu."
+  - level: petits
+    type: jeu
+    title_fr: "Demain, je serai…"
+    steps_fr:
+      - "Chacun mime ce qu'il sera demain : un chat, un pompier, un roi, un dormeur."
+      - "L'autre devine et fait la phrase : *amanhã vais ser um gato!*"
+      - "Le mime est obligatoire avant la phrase : le corps aide à trouver les mots."
+  - level: grands
+    type: jeu
+    title_fr: "Trois projets, un faux"
+    steps_fr:
+      - "Annonce trois projets pour demain, dont un inventé."
+      - "L'autre interroge en portugais pour démasquer l'intrus : *A que horas? Com quem? Porquê?*"
+      - "Le lendemain, on vérifie ce qui s'est vraiment passé."
+  - level: grands
+    type: jeu
+    title_fr: "L'agenda impossible"
+    steps_fr:
+      - "Chacun reçoit trois contraintes écrites : *não posso na terça*, *só depois das cinco*, *tenho treino na quinta*."
+      - "Il faut trouver ensemble, en portugais, un créneau pour se voir."
+      - "Accord trouvé : on conclut par *então está combinado!* et on l'écrit sur un vrai agenda."
 reemploi_fr:
   - "Le soir, avant le coucher : *O que vais fazer amanhã?* — trois phrases en portugais."
   - "Toute organisation familiale de la semaine commence par une phrase en portugais : *Sábado vamos…*"

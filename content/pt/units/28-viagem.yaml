@@ -94,6 +94,34 @@ activities:
       - "Un joueur est un Portugais qui aborde un enfant étranger sur une place."
       - "Il pose quatre questions : d'où tu viens, si tu parles portugais, ce que tu as visité, ce que tu vas faire."
       - "L'enfant doit répondre **et** poser une question en retour."
+  - level: petits
+    type: jeu
+    title_fr: "L'avion en carton"
+    steps_fr:
+      - "Alignez des chaises, distribuez des billets faits main avec un numéro de place."
+      - "L'enfant présente son billet, trouve sa place, et on décolle. Vous êtes l'hôtesse : *o seu bilhete, por favor.*"
+      - "Pendant le vol, on regarde par le hublot et on nomme ce qu'on voit en portugais."
+  - level: petits
+    type: jeu
+    title_fr: "Le passeport à tamponner"
+    steps_fr:
+      - "Fabriquez un petit carnet : une page par escale du **passeport culturel**."
+      - "À chaque mission faite pour de vrai, on tamponne la page et on dit la phrase de l'escale."
+      - "Le tampon se gagne quand la mission est faite — pas quand la page est lue."
+  - level: grands
+    type: jeu
+    title_fr: "La valise de cinq objets"
+    steps_fr:
+      - "Une semaine au Portugal, cinq objets seulement."
+      - "Chacun choisit et justifie en portugais : *levo o chapéu porque em agosto está muito calor.*"
+      - "L'autre a le droit de contester un objet : il faut le défendre ou le laisser à la maison."
+  - level: grands
+    type: jeu
+    title_fr: "Vrai ou faux sur le Portugal"
+    steps_fr:
+      - "Préparez dix affirmations à partir du **passeport culturel** : cinq vraies, cinq fausses."
+      - "On répond *é verdade* ou *é mentira*, et on explique en une phrase."
+      - "Les fausses les plus crédibles sont celles qui apprennent le plus. Gardez-les pour la fin."
 reemploi_fr:
   - "Repérer cette semaine trois mots portugais dans la vraie vie : étiquettes, plaques, noms de plats."
   - "Regarder une carte du Portugal et nommer trois villes à voix haute."

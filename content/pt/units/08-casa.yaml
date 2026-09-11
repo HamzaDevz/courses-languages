@@ -95,6 +95,34 @@ activities:
       - "Cache un objet. L'enfant demande : *Onde está…?*"
       - "Tu ne réponds qu'avec *em cima de*, *debaixo de*, *ao lado de* + un meuble."
       - "Trois questions maximum pour trouver. Puis on échange les rôles."
+  - level: petits
+    type: jeu
+    title_fr: "Le déménagement des peluches"
+    steps_fr:
+      - "L'enfant tient une peluche et exécute vos consignes : *põe o urso em cima da mesa*, *debaixo da cama*, *ao lado da porta*."
+      - "Une consigne mal comprise n'est pas corrigée : on la redit plus lentement, en montrant."
+      - "Puis il commande et vous portez la peluche — en vous trompant exprès pour qu'il proteste : *não! em cima!*"
+  - level: petits
+    type: jeu
+    title_fr: "La maison étiquetée"
+    steps_fr:
+      - "Écrivez dix étiquettes et collez-les avec l'enfant : *a porta*, *a mesa*, *a cama*, *a janela*."
+      - "Règle de la semaine : on ne touche pas un objet étiqueté sans dire son nom en portugais."
+      - "Le samedi, on retire les étiquettes que l'enfant sait déjà par cœur. Les autres restent."
+  - level: grands
+    type: jeu
+    title_fr: "La chasse au trésor de la maison"
+    steps_fr:
+      - "Cachez cinq papiers ; chacun porte un indice en portugais et mène au suivant : *debaixo do sofá*, *ao lado da janela*."
+      - "Le dernier mène à une vraie récompense — un biscuit portugais fait très bien l'affaire."
+      - "La fois suivante, c'est l'enfant qui écrit les indices et vous qui cherchez. Le mode d'emploi est dans la **boîte à jeux**."
+  - level: grands
+    type: bricolage
+    title_fr: "La maison en boîte à chaussures"
+    steps_fr:
+      - "Fabriquez une maison en carton avec quatre pièces et des meubles en papier."
+      - "Chaque pièce reçoit son étiquette portugaise. Les meubles se déplacent."
+      - "Jeu qui va avec : l'un cache une petite figurine dans la maison, l'autre pose des questions — *Está na cozinha? Está debaixo da mesa?*"
 reemploi_fr:
   - "Le matin du départ à l'école, une question devient portugaise : *Onde está a tua mochila?*"
   - "Quand on appelle l'enfant d'une autre pièce : *Onde estás?* — il répond *Estou no/na…*"

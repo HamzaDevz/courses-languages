@@ -55,6 +55,35 @@ activities:
     steps_fr:
       - "Dessine un arc-en-ciel et écris le nom de chaque couleur en portugais."
       - "Écris ensuite : *A minha cor preferida é ______ .*"
+  - level: petits
+    type: jeu
+    title_fr: "Le loto des couleurs"
+    steps_fr:
+      - "Dessinez une grille de six cases et coloriez-en une par couleur apprise."
+      - "Tirez au sort une couleur et dites-la : *azul!* L'enfant pose un jeton (un bouton, une pâte) sur la bonne case."
+      - "Grille pleine : il crie *Lotaria!* Puis c'est lui qui tire et annonce les couleurs."
+      - "La règle du jeu complet est dans la **boîte à jeux**, page « les jeux de cartes »."
+  - level: petits
+    type: jeu
+    title_fr: "La boîte de chaque couleur"
+    steps_fr:
+      - "Posez trois boîtes (ou trois assiettes) au sol, une par couleur."
+      - "Deux minutes de chasse dans la maison : chaque objet trouvé va dans sa boîte, en annonçant *isto é verde*."
+      - "À la fin, on vide les boîtes une par une en recomptant : *um lápis verde, uma meia verde…*"
+  - level: petits
+    type: mouvement
+    title_fr: "Touche le bleu !"
+    steps_fr:
+      - "Mettez de la musique. Tant qu'elle joue, on danse."
+      - "La musique s'arrête, vous criez *toca em azul!* — il faut toucher quelque chose de bleu avant trois secondes."
+      - "Celui qui n'a rien trouvé donne la couleur suivante."
+  - level: grands
+    type: jeu
+    title_fr: "Le duel de l'accord"
+    steps_fr:
+      - "Préparez dix petits papiers : cinq objets masculins (*o carro*, *o livro*…), cinq féminins (*a bola*, *a casa*…)."
+      - "Tirez un papier et annoncez une couleur. Le premier qui dit le groupe **avec le bon accord** marque un point : *a bola vermelha*, *o carro vermelho*."
+      - "Attention aux couleurs qui ne changent jamais : *verde*, *azul*, *laranja*, *cor-de-rosa*. Elles valent deux points."
 year: 1
 dialogue:
   title_fr: "Quel est ton crayon ?"

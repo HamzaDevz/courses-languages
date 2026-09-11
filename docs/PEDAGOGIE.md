@@ -111,6 +111,40 @@ Un enfant qui sait dire qu'il n'a pas compris continue de parler. Un enfant qui
 ne le sait pas se tait — et c'est là que l'apprentissage s'arrête. Ces trois
 phrases-là valent plus que trente mots de vocabulaire.
 
+## Le jeu n'est pas la récompense de la leçon
+
+Chez les 3-6 ans, il n'y a rien d'autre que le jeu. Un enfant de quatre ans
+n'apprend pas une langue en répétant : il l'apprend en **jouant à quelque chose
+qui a besoin de la langue pour être joué**. Si la partie peut se gagner en
+français, elle n'apprend rien — c'est le seul critère qui compte pour juger une
+activité.
+
+Chaque unité porte donc **huit à neuf activités**, dont la moitié au moins pour
+les petits, et la **[boîte à jeux](../content/pt/games.yaml)** ajoute trente
+jeux qui n'appartiennent à aucune unité : on y verse le vocabulaire de la
+semaine et ils resservent toute l'année.
+
+Quatre repères, dans l'ordre où ils comptent :
+
+1. **Obéir avant de produire.** À cet âge, la compréhension précède largement la
+   parole. Les jeux d'ordres (*O Rei manda*, l'épervier des couleurs, la chasse
+   au trésor) laissent l'enfant montrer qu'il a compris **avec son corps** ; on
+   voit immédiatement s'il a suivi, sans jamais lui demander de traduire.
+2. **Trois mots par séance, pas douze.** Pour installer un mot neuf, la leçon en
+   trois temps (j'entends → je montre → je dis) est ce qu'on a de plus sûr. On
+   ne demande de nommer qu'à la fin, quand la réponse est déjà acquise : une
+   hésitation renvoie au temps précédent, sans « non ».
+3. **La langue du jeu d'abord.** *É a tua vez*, *ganhei*, *não vale*,
+   *outra vez!* — sans ces phrases-là, l'enfant joue en portugais mais **parle**
+   en français. Ce sont les premières à savoir par cœur, avant tout jeu.
+4. **Trois jeux joués trente fois.** Quinze jeux essayés une fois valent moins
+   que trois jeux que l'enfant réclame. Gardez ceux qu'il redemande et changez
+   seulement les mots qu'on y met.
+
+On ne corrige pas au milieu d'une partie : on redit la bonne forme juste après,
+sans commentaire, et on continue. Et on arrête **avant** qu'il en ait assez —
+un jeu quitté trop tôt est un jeu redemandé demain.
+
 ## Le voyage culturel
 
 Une langue sans son pays reste un exercice. Deux choses pour cela :

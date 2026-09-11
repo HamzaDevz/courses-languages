@@ -11,6 +11,7 @@ content/
     program.yaml      le programme : parcours par âge, périodes, semaines
     culture.yaml      le passeport culturel : escales et missions
     resources.yaml    livres, chansons, écrans à acheter ou emprunter
+    games.yaml        la boîte à jeux : des jeux qui marchent avec toute unité
     units/
       01-ola.yaml     une unité = un fichier
       02-cores.yaml
@@ -124,11 +125,27 @@ sort à l'oral, l'enfant répond à voix haute, puis vérifie) et l'export Anki.
 
 ```yaml
 - level: petits           # doit correspondre à un id de `levels`
-  type: jeu               # jeu | chanson | exercice | production | dialogue
+  type: jeu               # voir le tableau ci-dessous
   title_fr: "Le réveil et le dodo"
   steps_fr:
     - "Étape 1."
 ```
+
+Le `type` n'est qu'une étiquette affichée, mais elle dit au parent en un coup
+d'œil ce que la séance va demander — de la place, du matériel, ou un crayon :
+
+| `type` | Ce que ça veut dire |
+|---|---|
+| `jeu` | une règle, un gagnant, ça se rejoue |
+| `mouvement` | il faut de la place : on court, on saute, on mime |
+| `bricolage` | on fabrique quelque chose qui resservira (un dé, une roue, un badge) |
+| `chanson` | ça se chante, donc ça se retient sans effort |
+| `exercice` | court, écrit, ciblé — pour les grands |
+| `production` | l'enfant écrit ou enregistre quelque chose à lui |
+| `dialogue` | on rejoue la scène, ou on en joue une nouvelle |
+
+Une unité vise **huit à neuf activités**, dont la moitié au moins pour les
+petits : à 3-6 ans, le jeu n'est pas la récompense de la leçon, c'est la leçon.
 
 ### `toolkit` dans `course.yaml`
 
@@ -226,6 +243,48 @@ escales:
     mission_fr: "Ce que l'enfant doit faire dans la vraie vie."
 outro_fr: "Ce qu'on ajoute pour les plus grands."
 ```
+
+## `games.yaml` — la boîte à jeux
+
+Facultatif. Les activités d'une unité s'usent quand l'unité est finie ; les jeux
+de ce fichier sont des **moules**, réutilisables avec n'importe quel
+vocabulaire. C'est ce qui manque le plus à un parent qui n'est pas enseignant :
+pas des mots de plus, des façons de les faire jouer.
+
+```yaml
+title_fr: "La boîte à jeux"
+intro_fr: "Pourquoi ces jeux."
+warning_fr: "Les trois règles valables pour tous."
+speak:                                  # la langue du jeu, rendue en tête
+  - title_fr: "Pendant la partie"
+    intro_fr: "…"
+    items:
+      - { term: "É a tua vez.", fr: "C'est ton tour.", phon: "è a TOU-a vèch" }
+groups:
+  - title_fr: "Les jeux du corps — rien à préparer"
+    intro_fr: "Ce que cette famille apporte."
+    games:
+      - title_fr: "Le roi ordonne"
+        pt: "O Rei manda"                # son nom dans la langue, s'il en a un
+        ages_fr: "3-10 ans"
+        min: 5                           # durée visée
+        players_fr: "2 et plus"
+        material_fr: "rien"
+        why_fr: "Ce que le jeu travaille vraiment."
+        units_fr: "Unités 5, 7, 9 — animaux, corps, actions"
+        how_fr: ["Étape 1.", "Étape 2."]
+        variants_fr: ["Plus facile…", "Plus difficile…"]
+        phrases:                         # même format que vocab, avec audio
+          - { term: "O Rei manda…", fr: "Le roi ordonne…", phon: "ou RRÈÏ MAN-da" }
+outro_fr: "Ce qu'on retient."
+```
+
+`speak` vient **avant** les jeux sur la page, et ce n'est pas un détail : sans
+*é a tua vez*, *ganhei* et *outra vez*, la partie se joue en français et le jeu
+n'apprend rien. Ces phrases sont enregistrées comme le reste du contenu.
+
+La page est publiée en `site/<langue>/boite-a-jeux.html`, imprimée en
+`print/<langue>/boite-a-jeux.html`, et incluse dans le cahier complet.
 
 ## `resources.yaml` — livres, chansons et écrans
 

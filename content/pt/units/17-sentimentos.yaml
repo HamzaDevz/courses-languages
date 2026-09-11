@@ -96,6 +96,34 @@ activities:
       - "L'un joue quelqu'un qui ne va pas bien (il choisit son sentiment en secret)."
       - "L'autre doit deviner en posant des questions, puis consoler avec *não fiques…* et proposer une solution."
       - "On échange les rôles. Le but n'est pas d'avoir raison, mais de faire parler l'autre."
+  - level: petits
+    type: bricolage
+    title_fr: "Le dé des émotions"
+    steps_fr:
+      - "Fabriquez un dé en papier : six visages dessinés, un par émotion."
+      - "On lance, on fait le visage, on dit la phrase : *estou zangado!*"
+      - "Le soir, un seul lancer : celui qui dit comment la journée s'est passée."
+  - level: petits
+    type: jeu
+    title_fr: "Le miroir des humeurs"
+    steps_fr:
+      - "Face à face. L'un fait un visage, l'autre l'imite exactement, puis nomme l'émotion : *estás triste.*"
+      - "Réponse obligatoire : *sim, estou triste* ou *não, estou cansado.*"
+      - "Trois visages chacun, pas plus : au-delà, le jeu devient une grimace."
+  - level: grands
+    type: jeu
+    title_fr: "La même phrase, quatre émotions"
+    steps_fr:
+      - "Choisissez une phrase banale : *hoje é segunda-feira.*"
+      - "Il faut la dire quatre fois : *contente*, *triste*, *zangado*, *com medo*. L'autre devine l'émotion à chaque fois."
+      - "On ne change pas les mots — seulement la voix et le visage."
+  - level: grands
+    type: jeu
+    title_fr: "Les cartes du *porque*"
+    steps_fr:
+      - "Deux tas : un tas d'émotions, un tas de situations (*a escola*, *o teu irmão*, *a chuva*, *o domingo*)."
+      - "On tire une carte de chaque tas et on relie les deux : *Estou zangado porque o meu irmão levou o meu livro.*"
+      - "Plus la liaison est drôle, mieux c'est — l'important est que *porque* soit dit à chaque tour."
 reemploi_fr:
   - "La question du soir devient portugaise toute la semaine : *Como te sentes?*"
   - "Quand quelqu'un râle à la maison, on lui demande en portugais : *O que aconteceu?*"

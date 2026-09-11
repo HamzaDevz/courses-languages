@@ -89,6 +89,16 @@ def wanted_clips(course: dict) -> dict[str, set[str]]:
     for escale in (course.get("culture") or {}).get("escales") or []:
         for v in escale.get("words") or []:
             add(v["term"], "f")
+    # La langue du jeu : c'est elle qu'on entend le plus souvent dans la
+    # semaine, elle mérite d'être enregistrée comme le reste.
+    games = course.get("games") or {}
+    for section in games.get("speak") or []:
+        for v in section.get("items", []):
+            add(v["term"], "f")
+    for group in games.get("groups") or []:
+        for game in group.get("games") or []:
+            for v in game.get("phrases") or []:
+                add(v["term"], "m")
     return need
 
 

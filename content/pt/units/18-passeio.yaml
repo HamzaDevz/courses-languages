@@ -96,6 +96,34 @@ activities:
       - "Chacun écrit en secret la sortie qu'il veut faire."
       - "On négocie **en portugais** jusqu'à tomber d'accord : proposer, refuser avec une raison, proposer autre chose."
       - "Interdit de dire seulement *não* : il faut toujours une raison et une contre-proposition."
+  - level: petits
+    type: jeu
+    title_fr: "On y va comment ?"
+    steps_fr:
+      - "Mimez un moyen de transport : le train, la voiture, le vélo, la marche."
+      - "L'enfant devine avec la phrase entière : *vamos de comboio!*"
+      - "Puis il mime et vous devinez — en vous trompant une fois sur deux."
+  - level: petits
+    type: jeu
+    title_fr: "Le sac du dimanche"
+    steps_fr:
+      - "Annoncez une sortie : *vamos à piscina!*"
+      - "L'enfant remplit un sac pour de vrai et nomme chaque objet qu'il met dedans."
+      - "Un objet inutile glissé en douce par vous : il doit le trouver et le sortir en disant pourquoi."
+  - level: grands
+    type: jeu
+    title_fr: "Je vois, je vois"
+    steps_fr:
+      - "Dans la voiture ou le bus : *Vejo, vejo… uma coisa vermelha.* L'autre cherche et nomme en portugais."
+      - "Version lettres pour les grands : *vejo uma coisa que começa por «c»*."
+      - "Le jeu complet, avec la liste qui grossit et le comptage, est dans la **boîte à jeux**."
+  - level: grands
+    type: jeu
+    title_fr: "L'agence de voyages"
+    steps_fr:
+      - "Vous êtes l'agent : vendez une sortie en cinq phrases portugaises, avec l'horaire et le moyen de transport."
+      - "Le client écoute, pose deux questions, puis accepte (*boa ideia!*) ou refuse (*não me apetece muito*)."
+      - "On échange. Celui qui vend la sortie la plus convaincante choisit vraiment celle du week-end."
 reemploi_fr:
   - "Le programme du week-end se décide en portugais, au moins la première phrase."
   - "Dans les transports : annoncer le moyen utilisé — *vamos de autocarro!*"

@@ -96,6 +96,34 @@ activities:
       - "Un joueur est le parent pressé, l'autre l'enfant qui traîne."
       - "Le parent donne trois consignes (*veste-te*, *calça os sapatos*, *leva o casaco*)."
       - "L'enfant doit répondre à chaque fois — accepter, refuser ou demander où est la chose."
+  - level: petits
+    type: mouvement
+    title_fr: "La course à l'habillage"
+    steps_fr:
+      - "Un tas de vêtements au milieu de la pièce, un chronomètre."
+      - "Vous criez un vêtement : *o casaco!* L'enfant le trouve et l'enfile — par-dessus le reste, c'est plus drôle."
+      - "Quatre vêtements enfilés : on compte le temps. On rejoue pour le battre."
+  - level: petits
+    type: jeu
+    title_fr: "Le tri du linge propre"
+    steps_fr:
+      - "Videz le panier de linge propre au sol."
+      - "Chacun pioche et annonce ce qu'il tient : *as meias*, *a t-shirt do pai*."
+      - "Le linge trié pour de vrai, l'enfant content, et douze mots revus : le meilleur jeu de la semaine est une corvée déguisée."
+  - level: grands
+    type: jeu
+    title_fr: "Le défilé de mode"
+    steps_fr:
+      - "L'un s'habille n'importe comment dans la chambre, puis défile."
+      - "L'autre commente en portugais, comme à la télévision : *traz uma camisola azul e umas meias vermelhas!*"
+      - "Chaque vêtement nommé avec la bonne couleur vaut un point."
+  - level: grands
+    type: jeu
+    title_fr: "La valise de trois minutes"
+    steps_fr:
+      - "Annoncez une destination et un temps : *vais para a praia, três minutos!*"
+      - "L'enfant remplit un sac pour de vrai et justifie chaque objet : *levo o chapéu porque está sol.*"
+      - "Un objet sans justification en portugais ressort du sac."
 reemploi_fr:
   - "Chaque matin de la semaine, la question de l'habillage se pose en portugais : *O que vais vestir?*"
   - "Ranger le linge en nommant chaque pièce à voix haute."

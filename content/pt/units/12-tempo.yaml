@@ -95,6 +95,34 @@ activities:
       - "Un joueur annonce un temps (au hasard, en portugais)."
       - "L'autre doit proposer une activité qui va avec, en commençant par *Então vamos…*"
       - "Interdit de répéter deux fois la même activité."
+  - level: petits
+    type: mouvement
+    title_fr: "La danse de la pluie et du soleil"
+    steps_fr:
+      - "Trois gestes convenus : *sol* on s'étire, *chuva* on se met en boule, *vento* on se balance."
+      - "Vous annoncez la météo de plus en plus vite. Celui qui se trompe prend la place du meneur."
+      - "Ajoutez *neve* quand les trois premiers sont sûrs : on tombe au ralenti."
+  - level: petits
+    type: bricolage
+    title_fr: "La roue de la météo"
+    steps_fr:
+      - "Découpez un rond de carton en quatre, dessinez le soleil, la pluie, les nuages, la neige."
+      - "Une flèche au centre, attachée avec une attache parisienne."
+      - "Chaque matin, l'enfant règle la roue et annonce : *hoje está sol.* Accrochez-la près de la porte."
+  - level: grands
+    type: jeu
+    title_fr: "Le pari météo"
+    steps_fr:
+      - "Le soir, chacun écrit sa prévision pour demain en portugais : *amanhã vai chover.*"
+      - "Le lendemain, on vérifie par la fenêtre. Bonne prévision : un point."
+      - "En fin de semaine, celui qui a le plus de points choisit la sortie du week-end."
+  - level: grands
+    type: jeu
+    title_fr: "Trente secondes pour sortir"
+    steps_fr:
+      - "Annoncez la météo : *está a chover e está frio.*"
+      - "L'enfant a trente secondes pour rapporter trois objets et les justifier : *levo o guarda-chuva porque está a chover.*"
+      - "Un objet non justifié en portugais ne compte pas. Changez la météo à chaque tour."
 reemploi_fr:
   - "Le bulletin météo du matin, en portugais, avant de choisir les vêtements — les unités 11 et 12 se répondent."
   - "Chaque fois qu'on sort : *Leva o guarda-chuva!* ou *Está calor, leva água!*"

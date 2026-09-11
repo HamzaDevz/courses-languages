@@ -93,6 +93,34 @@ activities:
       - "Sujet tiré au sort : la meilleure saison, le meilleur animal, le meilleur dessert."
       - "Chacun défend son avis avec **deux** raisons, en portugais."
       - "Obligatoire à la fin : reconnaître un point de l'autre avec *tens razão*, puis conclure *cada um tem a sua opinião*."
+  - level: petits
+    type: mouvement
+    title_fr: "Le coin *gosto* et le coin *não gosto*"
+    steps_fr:
+      - "Deux coins de la pièce : l'un est *gosto*, l'autre *não gosto*."
+      - "Vous annoncez un mot : *a sopa!*, *a chuva!*, *os gatos!* L'enfant court dans son coin."
+      - "Arrivé, il doit dire la phrase entière : *não gosto de sopa.* Puis c'est lui qui annonce."
+  - level: petits
+    type: jeu
+    title_fr: "Celui-ci ou celui-là"
+    steps_fr:
+      - "Présentez deux objets réels : deux fruits, deux livres, deux tee-shirts."
+      - "Il choisit et dit pourquoi, même en trois mots : *prefiro este porque é azul.*"
+      - "Dix duels d'affilée, de plus en plus vite. Le *porque* est obligatoire à partir du cinquième."
+  - level: grands
+    type: jeu
+    title_fr: "Le tribunal de l'idée bête"
+    steps_fr:
+      - "Tirez une idée absurde : *as aulas deviam ser à noite*, *os gatos são melhores do que os cães*."
+      - "Une minute pour la défendre en portugais, avec au moins deux *porque*."
+      - "L'autre doit répondre *concordo* ou *não concordo contigo*, et dire pourquoi. Puis on échange de camp — et il faut défendre l'inverse."
+  - level: grands
+    type: jeu
+    title_fr: "Le classement à défendre"
+    steps_fr:
+      - "Cinq choses de la même famille : cinq desserts, cinq animaux, cinq sorties."
+      - "Chacun fait son classement du meilleur au pire et le défend : *o melhor é…, porque…*"
+      - "On compare les deux classements et on essaie de se mettre d'accord sur un podium commun."
 reemploi_fr:
   - "Au dîner, une question d'avis par jour : *O que achas do jantar?*"
   - "Chaque fois que l'enfant dit « j'aime / j'aime pas » en français, on lui demande *porquê?* — en portugais."

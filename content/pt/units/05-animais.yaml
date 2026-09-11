@@ -59,6 +59,41 @@ activities:
       - "Écris trois phrases : *Gosto de ______ .*"
       - "Et une phrase avec : *Não gosto de ______ .*"
       - "Explique ton choix à l'oral, même avec des mots français au milieu."
+  - level: petits
+    type: jeu
+    title_fr: "La ferme sonore"
+    steps_fr:
+      - "Faites le cri d'un animal : *ão-ão!*, *miau!*, *mu!* L'enfant nomme l'animal en portugais."
+      - "Inversez : vous dites *a vaca*, il fait le bruit."
+      - "Version couverture : l'animal se cache sous un drap et ne fait que son bruit ; on devine avant qu'il sorte."
+  - level: petits
+    type: mouvement
+    title_fr: "Marche comme…"
+    steps_fr:
+      - "*Anda como um gato!* — on marche à quatre pattes sans bruit."
+      - "*Salta como um coelho!*, *voa como um pássaro!*, *nada como um peixe!*"
+      - "Au bout de cinq animaux, l'enfant donne les ordres et vous exécutez."
+  - level: petits
+    type: jeu
+    title_fr: "Le sac à surprises des animaux"
+    steps_fr:
+      - "Cachez cinq animaux en plastique ou en peluche dans une taie d'oreiller."
+      - "Il met la main sans regarder, tâte et devine : *é o cavalo!* Juste, il le garde."
+      - "Le jeu complet, avec ses variantes, est dans la **boîte à jeux**."
+  - level: grands
+    type: jeu
+    title_fr: "Qui suis-je ?"
+    steps_fr:
+      - "Collez une carte animal sur le front de l'enfant, sans qu'il la voie."
+      - "Il pose dix questions maximum, auxquelles on ne répond que par *sim* ou *não* : *Sou grande? Vivo em casa? Como erva?*"
+      - "Il annonce : *Sou uma vaca!* Puis c'est votre tour d'avoir la carte sur le front."
+  - level: grands
+    type: jeu
+    title_fr: "L'arche de Noé"
+    steps_fr:
+      - "Écrivez chaque animal sur deux papiers. Chacun en tire un et le garde secret."
+      - "Au signal, tout le monde fait le bruit de son animal en même temps et cherche son jumeau."
+      - "Les paires reformées se présentent : *Somos dois cães!*"
 year: 1
 dialogue:
   title_fr: "Tu as un animal ?"

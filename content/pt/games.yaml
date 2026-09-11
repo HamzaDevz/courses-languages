@@ -1,0 +1,753 @@
+title_fr: "La boîte à jeux"
+intro_fr: >-
+  Un enfant de quatre ans n'apprend pas une langue en répétant : il l'apprend en
+  **jouant à quelque chose qui a besoin de la langue pour être joué**. Les jeux
+  de cette page ne sont attachés à aucune unité : ce sont des **moules**. On y
+  verse le vocabulaire de la semaine et le jeu est prêt.
+warning_fr: >-
+  Trois règles, valables pour tous les jeux : **on ne traduit pas pendant la
+  partie** (on montre, on mime, on refait) ; **on ne corrige pas au milieu**
+  (on redit la bonne forme juste après, sans commentaire) ; et **on arrête
+  avant que l'enfant en ait assez** — un jeu quitté trop tôt est un jeu qu'on
+  redemande demain.
+speak:
+  - title_fr: "Avant de jouer"
+    intro_fr: "Ces phrases-là servent à tous les jeux. Ce sont les premières à savoir par cœur : sans elles, la partie se joue en français."
+    items:
+      - { term: "Vamos jogar?",        fr: "On joue ?",                  phon: "VA-mouch jou-GAR" }
+      - { term: "A que vamos jogar?",  fr: "On joue à quoi ?",           phon: "a ke VA-mouch jou-GAR" }
+      - { term: "Quem começa?",        fr: "Qui commence ?",             phon: "kèïn kou-MÈ-sa" }
+      - { term: "Eu explico.",         fr: "Je t'explique.",             phon: "éou ich-PLI-kou" }
+      - { term: "Pedra, papel ou tesoura!", fr: "Pierre, papier, ciseaux !", phon: "PÉ-dra, pa-PÈL ô te-ZÔ-ra" }
+  - title_fr: "Pendant la partie"
+    intro_fr: "À afficher près de la table de jeu. Chaque phrase dite en portugais est une phrase gagnée."
+    items:
+      - { term: "É a minha vez.",      fr: "C'est mon tour.",            phon: "è a MI-gna vèch" }
+      - { term: "É a tua vez.",        fr: "C'est ton tour.",            phon: "è a TOU-a vèch" }
+      - { term: "Espera!",             fr: "Attends !",                  phon: "chPÈ-ra" }
+      - { term: "Baralha as cartas.",  fr: "Mélange les cartes.",        phon: "ba-RA-lia ach KAR-tach" }
+      - { term: "Tira uma carta.",     fr: "Tire une carte.",            phon: "TI-ra OU-ma KAR-ta" }
+      - { term: "Lança o dado.",       fr: "Lance le dé.",               phon: "LAN-sa ou DA-dou" }
+      - { term: "Avança duas casas.",  fr: "Avance de deux cases.",      phon: "a-VAN-sa DOU-ach KA-zach" }
+      - { term: "Recua uma casa.",     fr: "Recule d'une case.",         phon: "rre-KOU-a OU-ma KA-za" }
+      - { term: "Passo a vez.",        fr: "Je passe mon tour.",         phon: "PA-sou a vèch" }
+      - { term: "Não vale!",           fr: "Ça compte pas !",            phon: "nan-ou VA-le" }
+      - { term: "Foi sem querer.",     fr: "C'était sans faire exprès.", phon: "foï sèïn ke-RÈR" }
+  - title_fr: "À la fin"
+    intro_fr: "Gagner et perdre se disent aussi. *Outra vez!* est la phrase la plus utile de toutes : c'est elle qui fait la deuxième partie."
+    items:
+      - { term: "Ganhei!",             fr: "J'ai gagné !",               phon: "ga-GNÈÏ" }
+      - { term: "Perdi.",              fr: "J'ai perdu.",                phon: "per-DI" }
+      - { term: "Empatámos!",          fr: "Égalité !",                  phon: "èïn-pa-TA-mouch" }
+      - { term: "Ganhaste tu.",        fr: "C'est toi qui as gagné.",    phon: "ga-GNACH-te tou" }
+      - { term: "Outra vez!",          fr: "Encore une fois !",          phon: "Ô-tra vèch" }
+      - { term: "Já chega.",           fr: "Ça suffit / on arrête.",     phon: "ja CHÉ-ga" }
+groups:
+  - title_fr: "Les jeux du corps — rien à préparer, dix minutes"
+    intro_fr: >-
+      Ce sont les jeux du début : l'enfant **obéit à la langue avant de la
+      parler**. Il montre, il court, il s'arrête — et on voit tout de suite s'il
+      a compris, sans jamais lui demander de traduire. À cet âge, comprendre
+      vient largement avant produire : ces jeux vivent de cet écart au lieu de
+      le combattre.
+    games:
+      - title_fr: "Le roi ordonne"
+        pt: "O Rei manda"
+        ages_fr: "3-10 ans"
+        min: 5
+        players_fr: "2 et plus"
+        material_fr: "rien"
+        why_fr: >-
+          Comprendre un ordre et l'exécuter. C'est le jeu qui installe les verbes
+          d'action et les parties du corps sans une seule traduction.
+        units_fr: "Unités 2, 5, 7, 9, 11 — couleurs, animaux, corps, actions, vêtements"
+        how_fr:
+          - "Le meneur dit *O Rei manda… salta!* (le roi ordonne : saute !). Tout le monde saute."
+          - "S'il dit seulement *Salta!*, sans *O Rei manda*, celui qui bouge est éliminé — ou, chez les petits, perd juste un point pour rire."
+          - "Trois ordres suffisent pour commencer : *salta*, *corre*, *senta-te*."
+          - "Au bout de cinq tours, l'enfant devient le roi. **C'est là que la langue se produit.**"
+        variants_fr:
+          - "Avec le corps (unité 7) : *toca no nariz*, *toca nas orelhas*, *abre a boca*."
+          - "Avec les couleurs (unité 2) : *toca em azul!* — il faut trouver quelque chose de bleu dans la pièce."
+          - "Version calme, au lit : les ordres se font avec les mains seulement."
+        phrases:
+          - { term: "O Rei manda…",   fr: "Le roi ordonne…",  phon: "ou RRÈÏ MAN-da" }
+          - { term: "Salta!",         fr: "Saute !",          phon: "SAL-ta" }
+          - { term: "Corre!",         fr: "Cours !",          phon: "KO-rre" }
+          - { term: "Senta-te!",      fr: "Assieds-toi !",    phon: "SÈÏN-ta-te" }
+          - { term: "Toca no nariz!", fr: "Touche ton nez !", phon: "TO-ka nou na-RICH" }
+          - { term: "Estás fora!",    fr: "Tu es éliminé !",  phon: "chTACH FO-ra" }
+      - title_fr: "Un, deux, trois, soleil"
+        pt: "Um, dois, três, macaquinho do chinês"
+        ages_fr: "3-10 ans"
+        min: 10
+        players_fr: "2 et plus"
+        material_fr: "un couloir, un jardin, une grande pièce"
+        why_fr: >-
+          Le jeu de cour de récréation portugais, mot pour mot. L'enfant entend
+          la même phrase trente fois en dix minutes sans s'ennuyer une seconde —
+          c'est exactement la répétition qu'on n'obtient pas en la demandant.
+        units_fr: "Unités 3 et 9 — les nombres, courir et s'arrêter"
+        how_fr:
+          - "Un joueur est face au mur et crie *Um, dois, três, macaquinho do chinês!* pendant que les autres avancent."
+          - "À *chinês*, il se retourne : celui qui bouge encore retourne au départ."
+          - "Le premier qui touche le mur a gagné et prend la place du meneur."
+        variants_fr:
+          - "Pour les tout-petits : on remplace la course par des pas de géant, comptés à voix haute en portugais."
+          - "Pour les grands : le meneur donne la façon d'avancer — *aos saltos* (en sautant), *de gatas* (à quatre pattes), *devagar* (lentement)."
+        phrases:
+          - { term: "Um, dois, três, macaquinho do chinês!", fr: "Un, deux, trois, soleil !", phon: "oun, doïch, trèch, ma-ka-KI-gnou dou chi-NÊCH" }
+          - { term: "Não te mexas!", fr: "Ne bouge pas !",   phon: "nan-ou te MÈ-chach" }
+          - { term: "Vais para trás!", fr: "Tu retournes en arrière !", phon: "vaïch PA-ra TRACH" }
+          - { term: "Cheguei primeiro!", fr: "Je suis arrivé le premier !", phon: "che-GÈÏ pri-MÈÏ-rou" }
+      - title_fr: "Les statues"
+        pt: "As estátuas"
+        ages_fr: "3-8 ans"
+        min: 5
+        players_fr: "2 et plus"
+        material_fr: "de la musique portugaise (voir la page Ressources)"
+        why_fr: >-
+          Écouter jusqu'au bout. Le mot qui arrête la musique est retenu parce
+          qu'il commande le corps, pas parce qu'on l'a répété.
+        units_fr: "Unités 5, 9, 12, 17 — animaux, actions, météo, émotions"
+        how_fr:
+          - "La musique joue, tout le monde danse : *dança!*"
+          - "La musique s'arrête, le meneur crie un mot : *gato!* — chacun se fige en statue de chat."
+          - "Celui qui bouge après *estátua!* donne le mot suivant."
+        variants_fr:
+          - "Avec les émotions (unité 17) : *triste!*, *zangado!*, *contente!* — la statue doit avoir le bon visage."
+          - "Avec la météo (unité 12) : *chuva!* on se protège, *sol!* on s'étire, *vento!* on se balance."
+        phrases:
+          - { term: "Dança!",     fr: "Danse !",       phon: "DAN-sa" }
+          - { term: "Estátua!",   fr: "Statue !",      phon: "ich-TA-tou-a" }
+          - { term: "Não te rias!", fr: "Ne ris pas !", phon: "nan-ou te RRI-ach" }
+      - title_fr: "Tu chauffes, tu refroidis"
+        pt: "Quente ou frio"
+        ages_fr: "3-8 ans"
+        min: 8
+        players_fr: "2 et plus"
+        material_fr: "un objet à cacher — de préférence un mot de l'unité"
+        why_fr: >-
+          Deux mots seulement, mais dits cinquante fois par un enfant qui veut
+          gagner. C'est le meilleur rapport effort/répétition de la boîte.
+        units_fr: "Unités 2, 6, 8, 11 — tout ce qui est un objet nommable"
+        how_fr:
+          - "L'enfant sort. On cache un objet de l'unité — la pomme, le pull bleu, le petit chien."
+          - "Il cherche ; on guide seulement avec *quente* (chaud) et *frio* (froid), et *muito quente!* quand il y est presque."
+          - "Quand il trouve, il doit dire l'objet en portugais : *a maçã!* Sinon on recache."
+        variants_fr:
+          - "Inversez : c'est l'enfant qui cache et qui guide. Il produit alors les deux mots lui-même."
+          - "Avec les prépositions (unité 8) : on répond *em cima*, *debaixo*, *ao lado* au lieu de chaud/froid."
+        phrases:
+          - { term: "Estás quente!",      fr: "Tu chauffes !",    phon: "chTACH KÈÏN-te" }
+          - { term: "Estás muito quente!", fr: "Tu brûles !",     phon: "chTACH MOUÏN-tou KÈÏN-te" }
+          - { term: "Estás frio.",        fr: "Tu refroidis.",    phon: "chTACH FRI-ou" }
+          - { term: "Encontrei!",         fr: "J'ai trouvé !",    phon: "èïn-kon-TRÈÏ" }
+      - title_fr: "Colin-maillard"
+        pt: "A cabra-cega"
+        ages_fr: "4-10 ans"
+        min: 8
+        players_fr: "3 et plus"
+        material_fr: "un foulard"
+        why_fr: >-
+          Reconnaître une voix oblige à écouter la phrase en entier, pas le
+          premier mot. Et la personne attrapée doit se présenter — la langue
+          sert à sortir du jeu.
+        units_fr: "Unités 1, 4, 24 — se présenter, la famille, décrire"
+        how_fr:
+          - "Un joueur a les yeux bandés et tourne trois fois sur lui-même."
+          - "Les autres l'appellent : *estou aqui!* (je suis là), puis se déplacent."
+          - "Quand il attrape quelqu'un, il demande *Quem és tu?* L'autre déguise sa voix pour répondre *Sou eu!*"
+          - "S'il devine le prénom, il change de rôle."
+        variants_fr:
+          - "Pour les grands (unité 24) : au lieu de deviner, il doit décrire en touchant — *tem cabelo comprido*, *é alto*."
+        phrases:
+          - { term: "Quem és tu?",  fr: "Qui es-tu ?",   phon: "kèïn èch TOU" }
+          - { term: "Sou eu!",      fr: "C'est moi !",   phon: "sô ÉOU" }
+          - { term: "Estou aqui!",  fr: "Je suis là !",  phon: "chtô a-KI" }
+          - { term: "Apanhei-te!",  fr: "Je t'ai attrapé !", phon: "a-pa-GNÈÏ-te" }
+      - title_fr: "L'épervier des couleurs"
+        pt: "A apanhada das cores"
+        ages_fr: "4-10 ans"
+        min: 10
+        players_fr: "3 et plus"
+        material_fr: "une pièce avec des objets de couleurs variées, ou un jardin"
+        why_fr: >-
+          On ne peut pas se sauver sans avoir compris le mot : la compréhension
+          devient une question de survie, ce qui la rend immédiate.
+        units_fr: "Unités 2, 11, 8 — couleurs, vêtements, meubles"
+        how_fr:
+          - "Le chat crie une couleur : *vermelho!*"
+          - "Chacun doit toucher quelque chose de rouge avant d'être attrapé — un coussin, un tee-shirt, un livre."
+          - "Celui qui est attrapé devient le chat et crie la couleur suivante."
+        variants_fr:
+          - "Version meubles (unité 8) : *à mesa!*, *à porta!*, *à janela!*"
+          - "Version vêtements (unité 11) : il faut toucher le vêtement nommé, sur soi ou sur quelqu'un."
+        phrases:
+          - { term: "Toca em azul!",  fr: "Touche quelque chose de bleu !", phon: "TO-ka èïn a-ZOUL" }
+          - { term: "Apanhei!",       fr: "Attrapé !",                      phon: "a-pa-GNÈÏ" }
+          - { term: "Estou safo!",    fr: "Je suis sauvé !",                phon: "chtô SA-fou" }
+      - title_fr: "La leçon en trois temps"
+        pt: "Isto é… / Mostra-me… / O que é isto?"
+        ages_fr: "3-6 ans"
+        min: 5
+        players_fr: "2"
+        material_fr: "trois objets ou trois cartes, pas plus"
+        why_fr: >-
+          La façon la plus sûre d'installer un mot chez un petit, empruntée à la
+          pédagogie Montessori. **Trois mots par séance, jamais plus** : on ne
+          demande de nommer qu'à la toute fin, quand la réponse est déjà acquise.
+        units_fr: "Toutes les unités, au premier contact avec le vocabulaire"
+        how_fr:
+          - "**Temps 1 — j'entends.** On pose trois objets. On dit lentement : *Isto é o pão.* Puis les deux autres. L'enfant ne dit rien."
+          - "**Temps 2 — je montre.** *Mostra-me o pão.* *Onde está o leite?* On demande dix fois, dans le désordre, en jouant (cache-le, mets-le sur ta tête, donne-le au chien en peluche)."
+          - "**Temps 3 — je dis.** Seulement si le temps 2 est sans erreur : *O que é isto?* L'enfant nomme."
+          - "Une hésitation au temps 3 ? On revient au temps 2 sans rien dire. **Jamais de « non ».**"
+        variants_fr:
+          - "Le lendemain, on garde deux mots connus et on en ajoute un seul."
+        phrases:
+          - { term: "Isto é o pão.",   fr: "Ça, c'est le pain.",  phon: "ICH-tou è ou PAN-ou" }
+          - { term: "Mostra-me o pão.", fr: "Montre-moi le pain.", phon: "MOCH-tra-me ou PAN-ou" }
+          - { term: "O que é isto?",   fr: "Qu'est-ce que c'est ?", phon: "ou ke è ICH-tou" }
+          - { term: "Muito bem!",      fr: "Très bien !",          phon: "MOUÏN-tou bèïn" }
+  - title_fr: "Les jeux de cartes — avec les cartes de l'unité"
+    intro_fr: >-
+      Chaque unité donne une feuille de **cartes à découper** (fiche imprimable
+      de l'unité, dernière page). Découpées une fois, plastifiées si on veut,
+      elles servent à tous les jeux qui suivent. Faites-en **deux exemplaires** :
+      la moitié des jeux demande des paires.
+    games:
+      - title_fr: "Le memory"
+        pt: "O jogo da memória"
+        ages_fr: "3-10 ans"
+        min: 10
+        players_fr: "2 à 4"
+        material_fr: "deux exemplaires des cartes de l'unité, 6 paires pour commencer"
+        why_fr: >-
+          Le classique, mais avec une règle qui change tout : **on ne garde la
+          paire que si on a dit le mot**. Sans cette règle, c'est un jeu de
+          mémoire ; avec elle, c'est un jeu de langue.
+        units_fr: "Toutes"
+        how_fr:
+          - "Cartes face cachée. Chacun retourne deux cartes en disant ce qu'il voit : *o gato… a vaca. Não!*"
+          - "Paire trouvée **et** mot dit → on la garde et on rejoue. Mot non dit → la paire retourne sur la table."
+          - "À la fin, chacun compte ses paires **en portugais**."
+        variants_fr:
+          - "Paire mot ↔ dessin plutôt que mot ↔ mot : plus facile pour les 3-4 ans."
+          - "Pour les grands : la paire est question ↔ réponse (*Quantos anos tens?* ↔ *Tenho sete anos.*)."
+        phrases:
+          - { term: "Encontrei um par!", fr: "J'ai trouvé une paire !", phon: "èïn-kon-TRÈÏ oun PAR" }
+          - { term: "Não é igual.",      fr: "Ce n'est pas pareil.",    phon: "nan-ou è i-GOUAL" }
+          - { term: "Quantos pares tens?", fr: "Tu as combien de paires ?", phon: "KOUAN-touch PA-rech tèïnch" }
+      - title_fr: "Le loto"
+        pt: "A lotaria"
+        ages_fr: "3-8 ans"
+        min: 10
+        players_fr: "2 à 6"
+        material_fr: "une grille de 6 cases par joueur (dessinée à la main), des jetons, les cartes de l'unité"
+        why_fr: >-
+          Le jeu qui fait écouter le plus de mots à la minute. L'enfant ne
+          produit rien — et c'est voulu : c'est un jeu de compréhension pure,
+          parfait pour le début d'une unité.
+        units_fr: "Toutes, surtout 2, 3, 5, 6, 11"
+        how_fr:
+          - "Chaque joueur dessine (ou colle) six mots de l'unité dans une grille de six cases."
+          - "Un meneur tire une carte et dit le mot à voix haute, une seule fois."
+          - "Celui qui l'a dans sa grille pose un jeton. Grille pleine : *Lotaria!*"
+        variants_fr:
+          - "Le meneur ne dit plus le mot mais la définition ou le bruit : *faz ão-ão* → le chien."
+          - "Le gagnant devient meneur : il lit les cartes lui-même."
+        phrases:
+          - { term: "Tenho!",     fr: "Je l'ai !",         phon: "TÉ-gnou" }
+          - { term: "Não tenho.", fr: "Je ne l'ai pas.",   phon: "nan-ou TÉ-gnou" }
+          - { term: "Lotaria!",   fr: "Carton plein !",    phon: "lou-ta-RI-a" }
+          - { term: "Outra vez, por favor.", fr: "Encore une fois, s'il te plaît.", phon: "Ô-tra vèch, pour fa-VOR" }
+      - title_fr: "Qu'est-ce qui a disparu ?"
+        pt: "O que desapareceu?"
+        ages_fr: "3-10 ans"
+        min: 5
+        players_fr: "2 et plus"
+        material_fr: "5 à 8 cartes ou objets"
+        why_fr: >-
+          Le mot manquant est le seul qu'on cherche vraiment : la mémoire de
+          travail fait le travail de la révision, en riant.
+        units_fr: "Toutes"
+        how_fr:
+          - "On aligne cinq cartes et on les nomme ensemble, deux fois."
+          - "L'enfant ferme les yeux. On en retire une et on referme le rang."
+          - "*O que desapareceu?* Il doit nommer la carte manquante en portugais."
+        variants_fr:
+          - "Plus difficile : on ne retire rien, on **échange deux cartes de place** — *o que mudou?*"
+          - "Pour les grands : huit cartes, et il faut redire la liste entière dans l'ordre."
+        phrases:
+          - { term: "Fecha os olhos.",  fr: "Ferme les yeux.",   phon: "FÉ-cha ouz Ô-liouch" }
+          - { term: "Abre os olhos.",   fr: "Ouvre les yeux.",   phon: "A-bre ouz Ô-liouch" }
+          - { term: "O que desapareceu?", fr: "Qu'est-ce qui a disparu ?", phon: "ou ke de-za-pa-re-SÉOU" }
+          - { term: "Falta o gato.",    fr: "Il manque le chat.", phon: "FAL-ta ou GA-tou" }
+      - title_fr: "Tu as ? J'ai !"
+        pt: "Tens? Tenho!"
+        ages_fr: "5-10 ans"
+        min: 15
+        players_fr: "2 à 4"
+        material_fr: "deux exemplaires des cartes de l'unité"
+        why_fr: >-
+          Le jeu des familles. Il fait dire **une vraie question et une vraie
+          réponse** à chaque tour — la structure exacte qu'on travaille dans
+          « on me demande, je réponds ».
+        units_fr: "Toutes ; excellent avec 4, 5, 6, 11, 26"
+        how_fr:
+          - "On distribue cinq cartes à chacun, le reste fait la pioche."
+          - "À son tour, on demande à un joueur : *Tens o cão?*"
+          - "Il répond *Tenho* et donne la carte, ou *Não tenho — tira do monte* (pioche)."
+          - "Une paire posée = un point. Celui qui n'a plus de cartes arrête la partie."
+        variants_fr:
+          - "Version polie, pour les grands : *Podes dar-me o cão, por favor?* — *Aqui tens.*"
+        phrases:
+          - { term: "Tens o cão?",    fr: "Tu as le chien ?",   phon: "tèïnch ou KAN-ou" }
+          - { term: "Tenho, aqui tens.", fr: "Oui, tiens.",     phon: "TÉ-gnou, a-KI tèïnch" }
+          - { term: "Não tenho.",     fr: "Je ne l'ai pas.",    phon: "nan-ou TÉ-gnou" }
+          - { term: "Tira do monte.", fr: "Pioche.",            phon: "TI-ra dou MON-te" }
+      - title_fr: "La main la plus rapide"
+        pt: "Quem apanha primeiro"
+        ages_fr: "4-10 ans"
+        min: 8
+        players_fr: "2 à 4"
+        material_fr: "les cartes de l'unité, étalées face visible"
+        why_fr: >-
+          Reconnaître un mot **en une seconde**, sans traduire dans sa tête.
+          C'est ce passage-là qui sépare un enfant qui récite d'un enfant qui
+          comprend.
+        units_fr: "Toutes"
+        how_fr:
+          - "Toutes les cartes face visible au milieu de la table, mains sur les genoux."
+          - "Le parent dit un mot : *o queijo!* Le premier qui pose la main dessus la gagne."
+          - "Celui qui gagne la carte doit redire le mot avant de la ranger."
+        variants_fr:
+          - "Sans traduction possible : le parent décrit — *é branco e bebe-se* → o leite."
+          - "Avec deux enfants, une cuillère en bois à attraper au lieu de la carte : moins de disputes."
+        phrases:
+          - { term: "Mãos nos joelhos!", fr: "Les mains sur les genoux !", phon: "man-ouch nouch jou-È-liouch" }
+          - { term: "Fui eu primeiro!", fr: "C'est moi le premier !",     phon: "fouï éou pri-MÈÏ-rou" }
+          - { term: "Ao mesmo tempo!",  fr: "En même temps !",            phon: "aou MÊCH-mou TÈÏN-pou" }
+      - title_fr: "Le mime des cartes"
+        pt: "A mímica"
+        ages_fr: "3-10 ans"
+        min: 10
+        players_fr: "2 et plus"
+        material_fr: "les cartes de l'unité, face cachée"
+        why_fr: >-
+          Le mime supprime le français de la pièce : pour faire deviner, il ne
+          reste que le corps et le mot portugais.
+        units_fr: "Unités 5, 7, 9, 17, 21 — animaux, corps, actions, émotions, hier"
+        how_fr:
+          - "On tire une carte sans la montrer et on mime."
+          - "Les autres devinent **en portugais** : *é o cavalo!*"
+          - "Celui qui devine mime à son tour."
+        variants_fr:
+          - "Version émotions (unité 17) : on mime un visage, on devine *estás zangado?*"
+          - "Version hier (unité 21) : on mime une action et on la devine au passé — *comeste!*"
+        phrases:
+          - { term: "É a tua vez de fazer mímica.", fr: "C'est à toi de mimer.", phon: "è a TOU-a vèch de fa-ZÈR MI-mi-ka" }
+          - { term: "É o cavalo!",  fr: "C'est le cheval !",  phon: "è ou ka-VA-lou" }
+          - { term: "Não é!",       fr: "Non, ce n'est pas ça !", phon: "nan-ou È" }
+          - { term: "Acertaste!",   fr: "Tu as deviné juste !", phon: "a-ser-TACH-te" }
+      - title_fr: "Qui suis-je ?"
+        pt: "Quem sou eu?"
+        ages_fr: "6-10 ans"
+        min: 10
+        players_fr: "2 et plus"
+        material_fr: "une carte et un bandeau (ou du ruban adhésif)"
+        why_fr: >-
+          Poser des questions fermées, écouter *sim* ou *não*, éliminer. C'est
+          le premier vrai raisonnement mené entièrement en portugais.
+        units_fr: "Unités 5, 6, 11, 24 — animaux, aliments, vêtements, descriptions"
+        how_fr:
+          - "On colle une carte sur le front d'un joueur, sans qu'il la voie."
+          - "Il pose des questions auxquelles on ne répond que par *sim* ou *não* : *Sou um animal? Sou grande? Como erva?*"
+          - "Dix questions maximum. Au bout, il devine : *Sou uma vaca!*"
+        variants_fr:
+          - "Pour les plus jeunes : trois cartes seulement sur la table, et les questions sont fournies au dos."
+        phrases:
+          - { term: "Sou um animal?", fr: "Je suis un animal ?", phon: "sô oun a-ni-MAL" }
+          - { term: "Sou grande?",    fr: "Je suis grand ?",     phon: "sô GRAN-de" }
+          - { term: "Sim, és.",       fr: "Oui, tu l'es.",       phon: "sïn, èch" }
+          - { term: "Não, não és.",   fr: "Non, tu ne l'es pas.", phon: "nan-ou, nan-ou èch" }
+  - title_fr: "Les jeux de dés et de plateau — fabriqués en cinq minutes"
+    intro_fr: >-
+      Un dé, une feuille quadrillée, quatre bouchons : c'est tout ce qu'il faut.
+      Le plateau fabriqué **par l'enfant** est joué trois fois plus souvent que
+      le plateau acheté — et le dessiner est déjà une séance de vocabulaire.
+    games:
+      - title_fr: "Le dé des questions"
+        pt: "O dado das perguntas"
+        ages_fr: "4-10 ans"
+        min: 10
+        players_fr: "2 et plus"
+        material_fr: "un dé et une feuille avec six questions numérotées"
+        why_fr: >-
+          Le hasard remplace l'interrogatoire. La même question revient sans que
+          personne ne l'impose — et l'enfant finit par la poser lui-même.
+        units_fr: "Toutes celles qui ont des questions-réponses (c'est-à-dire toutes)"
+        how_fr:
+          - "Écrivez les six questions de l'unité, numérotées de 1 à 6."
+          - "Chacun lance le dé à son tour et répond à la question tirée."
+          - "Répondu sans hésiter → on garde le dé une deuxième fois."
+          - "Après trois tours, on inverse : **c'est l'enfant qui pose la question** au parent."
+        variants_fr:
+          - "Deux dés pour les grands : douze questions, dont trois « raconte » qui demandent trois phrases."
+          - "Un dé des personnes : on doit répondre comme sa sœur, comme le chien, comme un roi."
+        phrases:
+          - { term: "Lança o dado.",   fr: "Lance le dé.",        phon: "LAN-sa ou DA-dou" }
+          - { term: "Saiu o quatro.",  fr: "C'est tombé sur le quatre.", phon: "sa-IOU ou KOUA-trou" }
+          - { term: "Responde tu.",    fr: "Réponds, toi.",       phon: "rrech-PON-de tou" }
+          - { term: "Agora pergunto eu.", fr: "Maintenant c'est moi qui demande.", phon: "a-GO-ra per-GOUN-tou éou" }
+      - title_fr: "Le jeu de l'oie de l'unité"
+        pt: "O jogo da glória"
+        ages_fr: "5-10 ans"
+        min: 20
+        players_fr: "2 à 4"
+        material_fr: "une grande feuille, un dé, un pion par joueur"
+        why_fr: >-
+          Le plateau transforme une liste de mots en parcours. Vingt cases, vingt
+          phrases à produire — sans qu'on ait jamais dit « répète ».
+        units_fr: "Toutes ; à refaire à chaque fin d'unité"
+        how_fr:
+          - "Dessinez vingt cases en serpent. Dans chacune, l'enfant écrit ou dessine **un mot de l'unité**."
+          - "On avance du nombre indiqué par le dé. On ne reste sur la case que si on dit une **phrase entière** avec le mot."
+          - "Sinon, on recule d'une case. Trois cases pièges : *Recua três casas!*, *Passa a vez*, *Joga outra vez*."
+          - "Le premier arrivé à la fin a gagné — et le plateau resservira la semaine suivante."
+        variants_fr:
+          - "Cases-questions pour les grands : la case demande *O que fizeste ontem?* et il faut deux phrases."
+          - "Plateau collectif : on garde un plateau par année, il grossit à chaque unité."
+        phrases:
+          - { term: "Avança duas casas.", fr: "Avance de deux cases.", phon: "a-VAN-sa DOU-ach KA-zach" }
+          - { term: "Recua três casas!",  fr: "Recule de trois cases !", phon: "rre-KOU-a trèch KA-zach" }
+          - { term: "Joga outra vez.",    fr: "Rejoue.",               phon: "JO-ga Ô-tra vèch" }
+          - { term: "Cheguei ao fim!",    fr: "Je suis arrivé au bout !", phon: "che-GÈÏ aou FÏN" }
+      - title_fr: "La marelle qui parle"
+        pt: "A macaca"
+        ages_fr: "4-9 ans"
+        min: 10
+        players_fr: "1 et plus"
+        material_fr: "une craie, ou du ruban adhésif sur le sol du couloir"
+        why_fr: >-
+          Le corps compte en même temps que la bouche. Les nombres appris en
+          sautant ne se perdent plus ; c'est aussi vrai pour les jours de la
+          semaine.
+        units_fr: "Unités 3 et 13 — les nombres, les jours"
+        how_fr:
+          - "Tracez la marelle classique, cases numérotées de 1 à 8."
+          - "On saute case par case **en disant le nombre en portugais**. Un nombre oublié ou dit en français : on recommence au départ."
+          - "Au retour, on compte à l'envers : *oito, sete, seis…*"
+        variants_fr:
+          - "Version jours de la semaine (unité 13) : sept cases, de *segunda-feira* à *domingo*. Sauter le mercredi, c'est dire *quarta-feira* en l'air."
+          - "Version couleurs : les cases sont coloriées, on annonce la couleur et non le nombre."
+        phrases:
+          - { term: "Salta para a casa três.", fr: "Saute sur la case trois.", phon: "SAL-ta PA-ra a KA-za trèch" }
+          - { term: "Num pé só!",  fr: "À cloche-pied !",  phon: "noun PÉ SO" }
+          - { term: "Falhaste!",   fr: "Tu as raté !",     phon: "fa-LIACH-te" }
+      - title_fr: "Le morpion qui parle"
+        pt: "O jogo do galo"
+        ages_fr: "6-10 ans"
+        min: 10
+        players_fr: "2"
+        material_fr: "une feuille, un crayon"
+        why_fr: >-
+          Neuf cases, neuf phrases. Le jeu est si court qu'on en fait cinq de
+          suite — donc quarante-cinq phrases produites en dix minutes.
+        units_fr: "Toutes, à partir de l'unité 9"
+        how_fr:
+          - "Tracez la grille de neuf cases et écrivez un mot de l'unité dans chacune."
+          - "Pour poser sa croix, il faut faire **une phrase correcte avec le mot de la case**."
+          - "Trois croix alignées : gagné. On recommence avec neuf autres mots."
+        variants_fr:
+          - "Version orale pour ceux qui ne lisent pas : les cases contiennent des dessins."
+          - "Version difficile : la phrase doit contenir le mot **et** commencer par *ontem* (unité 21) ou *amanhã* (unité 22)."
+        phrases:
+          - { term: "É a minha vez de jogar.", fr: "C'est à moi de jouer.", phon: "è a MI-gna vèch de jou-GAR" }
+          - { term: "Faz uma frase.",  fr: "Fais une phrase.",  phon: "fach OU-ma FRA-ze" }
+          - { term: "Ganhei em três!", fr: "J'ai gagné en trois !", phon: "ga-GNÈÏ èïn TRÈCH" }
+  - title_fr: "Les jeux qui se cachent dans la journée"
+    intro_fr: >-
+      Ceux-là ne demandent pas de « faire une séance » : ils se glissent dans un
+      trajet, un bain, une préparation de table. Ce sont **les plus rentables du
+      lot**, parce qu'ils rendent la langue utile au lieu de la rendre scolaire.
+    games:
+      - title_fr: "Le sac à surprises"
+        pt: "O saco das surpresas"
+        ages_fr: "3-8 ans"
+        min: 5
+        players_fr: "2 et plus"
+        material_fr: "un sac en tissu, une taie d'oreiller, cinq objets"
+        why_fr: >-
+          Ne pas voir oblige à décrire. La main cherche, la bouche parle : c'est
+          le jeu qui fait le plus parler les enfants timides.
+        units_fr: "Unités 2, 5, 6, 11, 24 — objets, matières, tailles"
+        how_fr:
+          - "Cachez cinq objets de l'unité dans le sac."
+          - "L'enfant y met la main sans regarder et devine : *é uma bola!*"
+          - "Il sort l'objet : juste → il le garde ; faux → il le remet et passe son tour."
+        variants_fr:
+          - "Pour les grands (unité 24) : avant de deviner, il doit décrire — *é pequeno, é duro, é frio*."
+          - "Version goût, les yeux bandés, avec l'unité 6 : *é doce*, *é salgado*."
+        phrases:
+          - { term: "Põe a mão no saco.", fr: "Mets la main dans le sac.", phon: "poïn a MAN-ou nou SA-kou" }
+          - { term: "Não espreites!",     fr: "Ne regarde pas !",          phon: "nan-ou ich-PRÈÏ-tech" }
+          - { term: "O que é?",           fr: "C'est quoi ?",              phon: "ou ke È" }
+          - { term: "É macio.",           fr: "C'est doux.",               phon: "è ma-SI-ou" }
+      - title_fr: "La chasse au trésor"
+        pt: "A caça ao tesouro"
+        ages_fr: "4-10 ans"
+        min: 20
+        players_fr: "1 et plus"
+        material_fr: "cinq petits papiers, un « trésor » (un biscuit portugais fait très bien l'affaire)"
+        why_fr: >-
+          Chaque indice est une consigne à comprendre pour de vrai. L'enfant ne
+          fait pas semblant de comprendre : s'il se trompe, il ne trouve rien.
+        units_fr: "Unités 8 et 15 — la maison, la ville, les prépositions"
+        how_fr:
+          - "Écrivez (ou dessinez) cinq indices en portugais : *debaixo da cama*, *ao lado da porta*, *em cima do frigorífico*."
+          - "Chaque indice mène au suivant. Le cinquième mène au trésor."
+          - "On lit l'indice ensemble à voix haute, on ne traduit pas : on va vérifier sur place."
+        variants_fr:
+          - "Dehors (unité 15) : les indices deviennent des directions — *vira à direita*, *segue em frente até à padaria*."
+          - "L'enfant cache le trésor et écrit les indices pour le parent. C'est la version difficile, et la meilleure."
+        phrases:
+          - { term: "Procura debaixo da cama.", fr: "Cherche sous le lit.", phon: "prou-KOU-ra de-BAÏ-chou da KA-ma" }
+          - { term: "Está a arder!",  fr: "Tu brûles !",        phon: "chta a ar-DÈR" }
+          - { term: "Achei o tesouro!", fr: "J'ai trouvé le trésor !", phon: "a-CHÈÏ ou te-ZÔ-rou" }
+      - title_fr: "Le téléphone cassé"
+        pt: "O telefone estragado"
+        ages_fr: "5-10 ans"
+        min: 5
+        players_fr: "3 et plus"
+        material_fr: "rien"
+        why_fr: >-
+          Écouter une phrase entière et la redire telle quelle. Le rire vient de
+          la déformation — et la déformation montre exactement quel son n'est
+          pas encore entendu.
+        units_fr: "Toutes, avec les phrases de l'unité"
+        how_fr:
+          - "On s'assoit en file. Le premier chuchote une phrase de l'unité à l'oreille du suivant."
+          - "La phrase circule. Le dernier la dit à voix haute."
+          - "On compare avec l'original : *era assim?*"
+        variants_fr:
+          - "À deux : le parent chuchote, l'enfant répète à la peluche, la peluche « répète » au parent."
+          - "Pour les grands : phrases de plus en plus longues, jusqu'à dix mots."
+        phrases:
+          - { term: "Chega aqui.",     fr: "Approche.",          phon: "CHÉ-ga a-KI" }
+          - { term: "Ao ouvido!",      fr: "À l'oreille !",      phon: "aou ô-VI-dou" }
+          - { term: "Era assim?",      fr: "C'était bien ça ?",  phon: "È-ra a-SÏN" }
+          - { term: "Não era nada!",   fr: "Pas du tout !",      phon: "nan-ou È-ra NA-da" }
+      - title_fr: "La maison étiquetée"
+        pt: "A casa com etiquetas"
+        ages_fr: "3-10 ans"
+        min: 15
+        players_fr: "1 et plus"
+        material_fr: "des papiers repositionnables, un feutre"
+        why_fr: >-
+          Le mot est lu cinquante fois par jour sans effort, là où il sert.
+          C'est la seule « révision » qui ne coûte aucune minute de séance.
+        units_fr: "Unités 6, 8, 11, 14 — la cuisine, la maison, les vêtements, le bureau"
+        how_fr:
+          - "À la fin de l'unité, on étiquette ensemble dix objets de la maison : *a porta*, *a mesa*, *o frigorífico*."
+          - "Règle de la maison : **on ne prend pas un objet étiqueté sans dire son nom en portugais.**"
+          - "Au bout d'une semaine, on retire les étiquettes une par une : celles dont l'enfant se souvient partent, les autres restent."
+        variants_fr:
+          - "Avec les articles en couleur : bleu pour *o*, rouge pour *a*. Le genre s'apprend à l'œil, sans règle."
+          - "Chasse à l'étiquette : un parent retire une étiquette en cachette, l'enfant doit trouver laquelle manque."
+        phrases:
+          - { term: "Como se diz isto em português?", fr: "Comment on dit ça en portugais ?", phon: "KO-mou se DICH ICH-tou èïn pour-tou-GUÊCH" }
+          - { term: "Diz o nome primeiro!", fr: "Dis le nom d'abord !", phon: "dich ou NO-me pri-MÈÏ-rou" }
+          - { term: "Já sei este.",     fr: "Celui-là, je le sais déjà.", phon: "ja SÈÏ ÊCH-te" }
+      - title_fr: "La boutique et le restaurant"
+        pt: "A loja e o restaurante"
+        ages_fr: "3-10 ans"
+        min: 15
+        players_fr: "2 et plus"
+        material_fr: "des boîtes vides, de la fausse monnaie, un torchon en guise de tablier"
+        why_fr: >-
+          Le jeu d'imitation est **la** situation où un petit accepte de parler
+          une autre langue : ce n'est pas lui qui parle, c'est le marchand.
+        units_fr: "Unités 6, 16, 26 — à table, les courses, le restaurant"
+        how_fr:
+          - "On installe quatre produits avec un prix affiché, en euros."
+          - "Le parent est le client : *Bom dia! Quanto custa o pão?* L'enfant tient la boutique."
+          - "On change de rôle à la moitié. Le client difficile (qui n'a pas assez d'argent, qui veut autre chose) fait produire le plus de langue."
+        variants_fr:
+          - "Version restaurant (unité 26) : une carte écrite à la main, une commande, l'addition."
+          - "Version pour de vrai : à la pâtisserie portugaise, l'enfant commande **lui-même** un *pastel de nata*."
+        phrases:
+          - { term: "Bom dia! Que deseja?", fr: "Bonjour ! Vous désirez ?", phon: "bon DI-a! ke de-ZÈ-ja" }
+          - { term: "Quanto custa?",   fr: "Ça coûte combien ?",   phon: "KOUAN-tou KOUCH-ta" }
+          - { term: "São dois euros.", fr: "Ça fait deux euros.",  phon: "san-ou doïz ÉOU-rouch" }
+          - { term: "Aqui está o troco.", fr: "Voici la monnaie.", phon: "a-KI chTA ou TRO-kou" }
+      - title_fr: "Le jeu du trajet"
+        pt: "O jogo da viagem"
+        ages_fr: "4-10 ans"
+        min: 10
+        players_fr: "2 et plus"
+        material_fr: "rien — une voiture, un bus, une salle d'attente"
+        why_fr: >-
+          Dix minutes perdues deviennent dix minutes de portugais. C'est le
+          rendez-vous le plus facile à tenir de toute la semaine.
+        units_fr: "Unités 2, 5, 15, 18 — ce qu'on voit par la fenêtre"
+        how_fr:
+          - "Premier jeu — *Vejo, vejo* : « je vois quelque chose de rouge », l'autre cherche et nomme."
+          - "Deuxième jeu — la liste qui grossit : *Fui ao mercado e comprei pão…* chacun répète tout et ajoute un mot."
+          - "Troisième jeu — le compte : on compte en portugais tous les chiens, toutes les voitures bleues, tous les tramways."
+        variants_fr:
+          - "Pour les grands : *Vejo uma coisa que começa por «c»* — la lettre au lieu de la couleur."
+        phrases:
+          - { term: "Vejo, vejo…",  fr: "Je vois, je vois…",     phon: "VÈ-jou, VÈ-jou" }
+          - { term: "Vejo uma coisa vermelha.", fr: "Je vois quelque chose de rouge.", phon: "VÈ-jou OU-ma KOÏ-za ver-MÈ-lia" }
+          - { term: "Onde está?",   fr: "Où est-ce ?",           phon: "ON-de chTA" }
+          - { term: "Estás a ver?", fr: "Tu vois ?",             phon: "chTACH a VÈR" }
+  - title_fr: "Les jeux de mots — pour les grands (7-10 ans)"
+    intro_fr: >-
+      À partir de sept ans, l'enfant aime **gagner avec des mots**. Ces jeux
+      demandent de l'écrit ou de la stratégie ; ils remplacent avantageusement
+      les exercices à trous, et ils se jouent à deux, au dîner.
+    games:
+      - title_fr: "Stop !"
+        pt: "Stop!"
+        ages_fr: "7-10 ans"
+        min: 15
+        players_fr: "2 et plus"
+        material_fr: "une feuille par joueur, un crayon"
+        why_fr: >-
+          Aller chercher un mot dans sa mémoire en dix secondes. C'est
+          l'entraînement le plus direct à la fluidité — et la colonne vide
+          montre précisément ce qui manque.
+        units_fr: "Révision de plusieurs unités à la fois"
+        how_fr:
+          - "Cinq colonnes : *nome* (prénom), *cor*, *animal*, *comida*, *cidade*."
+          - "Quelqu'un récite l'alphabet dans sa tête ; un autre dit *stop!* La lettre atteinte lance la manche."
+          - "On remplit le plus vite possible. Le premier qui a tout crie *Stop!* — tout le monde pose le crayon."
+          - "Dix points par mot unique, cinq si quelqu'un d'autre a le même, zéro si la case est vide."
+        variants_fr:
+          - "Colonnes adaptées à l'unité en cours : *roupa*, *tempo*, *profissão*."
+          - "Version orale pour ceux qui écrivent lentement : on répond à tour de rôle, à voix haute."
+        phrases:
+          - { term: "Stop!",           fr: "Stop !",                phon: "chtop" }
+          - { term: "Que letra saiu?", fr: "C'est quelle lettre ?", phon: "ke LÉ-tra sa-IOU" }
+          - { term: "Já acabei!",      fr: "J'ai fini !",           phon: "ja a-ka-BÈÏ" }
+          - { term: "Quantos pontos tens?", fr: "Tu as combien de points ?", phon: "KOUAN-touch PON-touch tèïnch" }
+      - title_fr: "Qui est-ce ?"
+        pt: "Quem é quem?"
+        ages_fr: "6-10 ans"
+        min: 15
+        players_fr: "2"
+        material_fr: "douze visages dessinés ou découpés dans un magazine, en double"
+        why_fr: >-
+          Toute la description physique y passe, sous forme de questions. C'est
+          l'unité 24 transformée en duel.
+        units_fr: "Unité 24 — décrire ; unité 11 pour les vêtements"
+        how_fr:
+          - "Chaque joueur choisit secrètement un personnage parmi les douze."
+          - "On pose des questions fermées à tour de rôle : *Tem óculos? Tem cabelo louro? É velho?*"
+          - "On retourne les visages éliminés. Celui qui devine le premier gagne."
+        variants_fr:
+          - "Avec des photos de la famille : plus drôle, et le vocabulaire de la parenté revient (unité 4)."
+        phrases:
+          - { term: "Tem óculos?",       fr: "Il porte des lunettes ?", phon: "tèïn O-kou-louch" }
+          - { term: "Tem cabelo comprido?", fr: "Il a les cheveux longs ?", phon: "tèïn ka-BÊ-lou kon-PRI-dou" }
+          - { term: "É homem ou mulher?", fr: "C'est un homme ou une femme ?", phon: "è O-mèïn ô mou-LIÈR" }
+          - { term: "Acho que é o Tomás!", fr: "Je crois que c'est Tomás !", phon: "A-chou ke è ou tou-MACH" }
+      - title_fr: "Dessine et devine"
+        pt: "Desenha e adivinha"
+        ages_fr: "6-10 ans"
+        min: 15
+        players_fr: "2 et plus"
+        material_fr: "une ardoise ou du papier, un chronomètre"
+        why_fr: >-
+          On devine à voix haute, donc on produit des dizaines de mots en une
+          minute — y compris les mauvais, qui sont ceux qu'on retient le mieux.
+        units_fr: "Toutes"
+        how_fr:
+          - "Un joueur tire une carte et dessine, sans lettre ni chiffre, pendant une minute."
+          - "Les autres crient leurs propositions **en portugais** : *é um barco? é um peixe?*"
+          - "Un point pour le dessinateur et un pour celui qui devine."
+        variants_fr:
+          - "Version difficile : le dessinateur ferme les yeux."
+          - "Version phrases (à partir de l'unité 21) : on ne dessine plus un mot mais une scène entière — *ontem fui à praia*."
+        phrases:
+          - { term: "Não vale escrever!", fr: "Pas le droit d'écrire !", phon: "nan-ou VA-le ich-kre-VÈR" }
+          - { term: "Um minuto!",        fr: "Une minute !",             phon: "oun mi-NOU-tou" }
+          - { term: "Já sei! É um barco!", fr: "Je sais ! C'est un bateau !", phon: "ja SÈÏ! è oun BAR-kou" }
+          - { term: "Quase!",            fr: "Presque !",                phon: "KOUA-ze" }
+      - title_fr: "Explique sans le dire"
+        pt: "Explica sem dizer"
+        ages_fr: "8-10 ans"
+        min: 10
+        players_fr: "2 et plus"
+        material_fr: "les cartes de l'unité"
+        why_fr: >-
+          **Le jeu le plus utile du programme.** Contourner un mot qu'on ne
+          connaît pas est ce qui permet de tenir une conversation réelle — et
+          c'est exactement la phrase visée à l'unité 30 : *não sei a palavra,
+          mas é uma coisa para…*
+        units_fr: "Unités 24 et 30 — décrire, se débrouiller"
+        how_fr:
+          - "On tire une carte et on fait deviner le mot **sans jamais le dire**, et sans traduire en français."
+          - "Trois outils autorisés, et seulement eux : à quoi ça sert (*é uma coisa para…*), à quoi ça ressemble (*parece-se com…*), où on le trouve (*está na cozinha*)."
+          - "Un mot français prononcé = carte perdue."
+        variants_fr:
+          - "Version tabou : on ajoute deux mots interdits au dos de la carte."
+          - "Version honnête : quand l'enfant bloque **pour de vrai** dans la vie, on rejoue le tour avec ce mot-là."
+        phrases:
+          - { term: "É uma coisa para comer.", fr: "C'est une chose pour manger.", phon: "è OU-ma KOÏ-za PA-ra kou-MÈR" }
+          - { term: "Parece-se com um rato.",  fr: "Ça ressemble à une souris.",   phon: "pa-RÈ-se-se kon oun RRA-tou" }
+          - { term: "Está na cozinha.",        fr: "C'est dans la cuisine.",       phon: "chTA na kou-ZI-gna" }
+          - { term: "Não sei a palavra.",      fr: "Je ne connais pas le mot.",    phon: "nan-ou SÈÏ a pa-LA-vra" }
+      - title_fr: "Deux vérités, un mensonge"
+        pt: "Duas verdades e uma mentira"
+        ages_fr: "7-10 ans"
+        min: 10
+        players_fr: "2 et plus"
+        material_fr: "rien"
+        why_fr: >-
+          Trois phrases au passé, produites parce qu'il faut tromper l'autre.
+          L'attention se porte sur le contenu — et c'est là que la grammaire
+          passe toute seule.
+        units_fr: "Unités 21 et 22 — hier, demain"
+        how_fr:
+          - "Chacun dit trois phrases sur sa journée d'hier : deux vraies, une fausse."
+          - "L'autre interroge pour démasquer : *A sério? Com quem foste? A que horas?*"
+          - "Il annonce : *Acho que a segunda é mentira.* Un point s'il a raison."
+        variants_fr:
+          - "Version futur (unité 22) : trois projets pour demain, dont un inventé."
+          - "Version famille : on ment sur quelqu'un d'autre, qui doit se défendre."
+        phrases:
+          - { term: "Isso é mentira!",  fr: "Ça, c'est faux !",   phon: "I-sou è mèïn-TI-ra" }
+          - { term: "É verdade.",       fr: "C'est vrai.",        phon: "è ver-DA-de" }
+          - { term: "A sério?",         fr: "Sérieusement ?",     phon: "a SÈ-riou" }
+          - { term: "Apanhei-te a mentir!", fr: "Je t'ai pris en flagrant délit !", phon: "a-pa-GNÈÏ-te a mèïn-TIR" }
+      - title_fr: "L'histoire folle"
+        pt: "A história maluca"
+        ages_fr: "6-10 ans"
+        min: 15
+        players_fr: "2 et plus"
+        material_fr: "rien, ou six cartes tirées au hasard"
+        why_fr: >-
+          Raconter à plusieurs enlève la peur de la page blanche : chacun ne
+          fournit qu'une phrase, mais la phrase vient après celle des autres —
+          il faut donc avoir écouté.
+        units_fr: "Unité 25 — il était une fois"
+        how_fr:
+          - "Le premier commence obligatoirement par *Era uma vez…*"
+          - "Chacun ajoute **une seule phrase**, à tour de rôle."
+          - "Trois relances sont autorisées pour débloquer : *E depois?*, *De repente…*, *Mas então…*"
+          - "Celui qui dit *Viveram felizes para sempre* termine l'histoire."
+        variants_fr:
+          - "Avec six cartes tirées au hasard, à placer dans l'ordre : l'histoire doit toutes les contenir."
+          - "Version écrite : chacun écrit une phrase, plie la feuille, passe. On lit tout à la fin."
+        phrases:
+          - { term: "Era uma vez…",    fr: "Il était une fois…",    phon: "È-ra OU-ma vèch" }
+          - { term: "E depois?",       fr: "Et après ?",            phon: "i de-POÏCH" }
+          - { term: "De repente…",     fr: "Tout à coup…",          phon: "de rre-PÈÏN-te" }
+          - { term: "Viveram felizes para sempre.", fr: "Ils vécurent heureux pour toujours.", phon: "vi-VÈ-ran-ou fe-LI-zech PA-ra SÈÏN-pre" }
+outro_fr: >-
+  Un jeu ne vaut que s'il est rejoué. Gardez-en **trois ou quatre**, ceux que
+  l'enfant réclame, et refaites-les à chaque unité avec de nouveaux mots :
+  quinze jeux joués une fois valent moins que trois jeux joués trente fois.

@@ -1,0 +1,41 @@
+# GABARIT de la boîte à jeux. Facultatif, mais c'est ce qui manque le plus à un
+# parent qui n'est pas enseignant : pas des mots de plus, des façons de les
+# faire jouer.
+#
+# Un jeu d'ici n'appartient à aucune unité : c'est un moule. On y verse le
+# vocabulaire de la semaine et il ressert trente fois.
+title_fr: "La boîte à jeux"
+intro_fr: >
+  Pourquoi ces jeux, et comment s'en servir.
+warning_fr: >
+  Les règles qui valent pour tous les jeux (on ne traduit pas pendant la partie,
+  on ne corrige pas au milieu, on arrête avant que l'enfant en ait assez).
+# La langue du jeu : sans elle, la partie se joue en français et le jeu ne sert
+# à rien. Rendue en tête de page, avant les jeux.
+speak:
+  - title_fr: "Avant de jouer"
+    intro_fr: "À savoir par cœur avant le reste."
+    items:
+      - { term: "…", translit: "…", fr: "…", phon: "…" }
+groups:
+  - title_fr: "Une famille de jeux"
+    intro_fr: "Ce que cette famille apporte, et à quel âge."
+    games:
+      - title_fr: "Le nom du jeu en français"
+        pt: "Son nom dans la langue, s'il en a un"
+        ages_fr: "3-10 ans"
+        min: 10
+        players_fr: "2 et plus"
+        material_fr: "ce qu'il faut, ou « rien »"
+        why_fr: "Ce que le jeu travaille vraiment — en une ou deux phrases."
+        units_fr: "Les unités avec lesquelles il marche le mieux."
+        how_fr:
+          - "Étape 1."
+          - "Étape 2."
+        variants_fr:
+          - "Une variante plus facile, une plus difficile."
+        phrases:
+          - { term: "…", translit: "…", fr: "…", phon: "…" }
+outro_fr: >
+  Ce qu'on retient : trois jeux joués trente fois valent mieux que trente jeux
+  essayés une fois.

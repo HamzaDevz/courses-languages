@@ -1,0 +1,55 @@
+# Le site n'est construit qu'au push sur main : sans ce fichier, une unité au
+# YAML cassé ou une page qui a cessé d'être écrite ne se voit qu'une fois la
+# publication en marche — donc trop tard. Ici, rien n'est publié : on construit
+# et on vérifie, sur la proposition, avant de fusionner.
+name: Vérifier le contenu
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer les dépendances
+        run: python -m pip install -r requirements.txt
+
+      # Pas d'enregistrements ici : ils demandent le réseau et un quart d'heure,
+      # et la publication s'en charge avec son cache. scripts/check.py s'assure
+      # quand même que audio.py sait dire ce qu'il aurait à enregistrer.
+      - name: Générer le site, les fiches et les exports
+        run: python scripts/build.py
+
+      - name: Vérifier le contenu et les pages produites
+        run: python scripts/check.py
+
+      # Les scripts que le build n'exécute pas : à la publication, pdf.py et
+      # audio.py tournent en « continue-on-error » — une faute de syntaxe y
+      # passerait donc inaperçue, et le site perdrait ses PDF ou ses voix sans
+      # que rien n'échoue.
+      - name: Vérifier que les scripts compilent
+        run: python -m compileall -q scripts
+
+      # De quoi regarder le résultat sans tout reconstruire chez soi : le site
+      # complet et les fiches imprimables de la proposition, en téléchargement
+      # sur la page de l'exécution.
+      - name: Publier le site construit
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: site
+          retention-days: 7

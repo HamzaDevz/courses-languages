@@ -97,6 +97,34 @@ activities:
       - "L'un décrit un personnage inventé, l'autre le dessine sans le voir, uniquement d'après le portugais."
       - "On compare le dessin et l'idée de départ : ce qui manque montre ce qu'il faut réviser."
       - "On échange les rôles."
+  - level: petits
+    type: jeu
+    title_fr: "Grand ou petit"
+    steps_fr:
+      - "Deux boîtes : *grande* et *pequeno*. On y trie dix objets de la maison, à voix haute."
+      - "Ajoutez ensuite deux autres boîtes : *novo* et *velho*. Un objet peut aller dans deux boîtes."
+      - "Le dernier objet, c'est l'enfant qui décide où il va — et qui doit dire pourquoi."
+  - level: petits
+    type: jeu
+    title_fr: "La photo qui se dévoile"
+    steps_fr:
+      - "Cachez une photo sous une feuille percée d'un petit trou."
+      - "Déplacez le trou : l'enfant décrit ce qu'il voit — *é castanho*, *tem olhos* — et devine."
+      - "Photo découverte : on la décrit ensemble en trois phrases."
+  - level: grands
+    type: jeu
+    title_fr: "Le dessin dicté dos à dos"
+    steps_fr:
+      - "Dos à dos. L'un a une image, l'autre un crayon."
+      - "Le premier décrit uniquement en portugais, le second dessine sans poser de question — sauf *outra vez, por favor*."
+      - "On compare les deux images : les différences montrent exactement les mots qui ont manqué."
+  - level: grands
+    type: jeu
+    title_fr: "Qui est-ce ?"
+    steps_fr:
+      - "Douze visages sur la table, découpés dans un magazine. Chacun en choisit un en secret."
+      - "Questions fermées à tour de rôle : *Tem óculos? É velho? Tem cabelo louro?*"
+      - "Le premier qui devine gagne. Les règles complètes sont dans la **boîte à jeux**."
 reemploi_fr:
   - "Devant une photo ou dans la rue : *Como é essa pessoa?* — deux phrases en portugais."
   - "Décrire l'objet perdu de la semaine en portugais avant de le chercher."

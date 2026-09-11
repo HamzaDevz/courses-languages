@@ -96,6 +96,34 @@ activities:
       - "L'un raconte une phrase, l'autre relance avec *E depois?* et ajoute la phrase suivante."
       - "Interdit de dire un mot en français : on contourne avec *é uma coisa para…*"
       - "L'histoire s'arrête quand quelqu'un dit *no fim*."
+  - level: petits
+    type: jeu
+    title_fr: "Le théâtre de chaussettes"
+    steps_fr:
+      - "Trois chaussettes, trois yeux collés : voilà les personnages."
+      - "Rejouez une histoire connue en portugais — *Os Três Porquinhos* se raconte avec quinze mots."
+      - "L'enfant tient le loup : c'est le rôle qui parle le plus fort, donc celui qu'on prend le plus volontiers."
+  - level: petits
+    type: jeu
+    title_fr: "La boîte à histoires"
+    steps_fr:
+      - "Trois objets tirés au hasard d'une boîte : une cuillère, une petite voiture, une pierre."
+      - "L'histoire doit contenir les trois, et commencer par *Era uma vez…*"
+      - "Vous relancez quand ça bloque, jamais en français : *e depois?*, *de repente…*"
+  - level: grands
+    type: jeu
+    title_fr: "L'histoire folle à deux"
+    steps_fr:
+      - "Le premier commence par *Era uma vez…* Chacun ajoute **une seule phrase** à tour de rôle."
+      - "Trois relances autorisées : *e depois?*, *de repente…*, *mas então…*"
+      - "Celui qui dit *viveram felizes para sempre* termine l'histoire. Variantes dans la **boîte à jeux**."
+  - level: grands
+    type: production
+    title_fr: "Le conte à l'envers"
+    steps_fr:
+      - "Raconte une histoire connue en commençant par la fin : *Viveram felizes para sempre. Mas antes…*"
+      - "Six phrases, en remontant jusqu'à *era uma vez*."
+      - "Difficile, et c'est le but : il faut vraiment construire, pas réciter."
 reemploi_fr:
   - "L'histoire du soir commence en portugais, même si elle continue en français : *Era uma vez…*"
   - "Chaque fois qu'on raconte un événement de la journée, on place au moins *um dia* et *de repente*."

@@ -65,6 +65,36 @@ activities:
       - "Rejoue le dialogue en prenant le rôle de Tomás, puis celui d'Ana."
       - "Refais-le avec **ton** prénom et celui d'un ami."
       - "Ajoute une réplique à la fin : *Até amanhã!* (à demain)."
+  - level: petits
+    type: jeu
+    title_fr: "La porte magique"
+    steps_fr:
+      - "Tenez la porte du salon fermée avec la main. Pour passer, il faut dire la salutation qui va avec l'heure qu'il est **vraiment** : *bom dia* le matin, *boa tarde* l'après-midi."
+      - "Salutation juste : la porte s'ouvre en grand. Salutation fausse : la porte grince et reste fermée, on réessaie."
+      - "Refaites-le à chaque passage de la journée : c'est le même jeu, mais il dure une semaine."
+  - level: petits
+    type: mouvement
+    title_fr: "Le mur du *sim* et le mur du *não*"
+    steps_fr:
+      - "Désignez deux murs de la pièce : l'un est *sim*, l'autre est *não*."
+      - "Posez une question toute simple : *Tu és o Léo?*, *Tens um cão?*, *Gostas de bolo?*"
+      - "L'enfant court au mur qui correspond à sa réponse, et la dit à voix haute en arrivant."
+      - "Inversez : c'est lui qui pose les questions et vous qui courez. Trompez-vous exprès une fois sur trois."
+  - level: grands
+    type: jeu
+    title_fr: "La chaîne des prénoms"
+    steps_fr:
+      - "Le premier dit *Chamo-me Ana.*"
+      - "Le deuxième reprend et ajoute : *Esta é a Ana. Chamo-me Tomás.*"
+      - "Le troisième reprend les deux et s'ajoute. On continue jusqu'à ce que quelqu'un se trompe."
+      - "À plus de quatre, on tourne en rond : la chaîne recommence au début, mais plus vite."
+  - level: grands
+    type: bricolage
+    title_fr: "Le badge *obrigado* / *obrigada*"
+    steps_fr:
+      - "Découpez un rond de carton. D'un côté écrivez **obrigado**, de l'autre **obrigada**."
+      - "Portez-le une journée entière, du bon côté selon qui le porte."
+      - "Celui qui dit merci en français doit retourner le badge de quelqu'un d'autre : à la fin, on compte les retournements."
 year: 1
 dialogue:
   title_fr: "Deux enfants se rencontrent"

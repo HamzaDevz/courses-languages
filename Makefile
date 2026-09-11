@@ -1,10 +1,13 @@
-.PHONY: build audio pdf serve clean install install-audio
+.PHONY: build check audio pdf serve clean install install-audio
 
 install:            ## Installe la seule dépendance (PyYAML)
 	python3 -m pip install -r requirements.txt
 
 build:              ## Génère site/, print/ et exports/ depuis content/
 	python3 scripts/build.py
+
+check: build        ## Vérifie le contenu et les pages produites (ce que lance la CI)
+	python3 scripts/check.py
 
 install-audio:      ## Installe edge-tts, nécessaire seulement pour « make audio »
 	python3 -m pip install -r requirements-audio.txt
