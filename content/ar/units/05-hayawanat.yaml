@@ -1,0 +1,143 @@
+id: 05-hayawanat
+order: 5
+year: 1
+title: "الحَيَوانات"
+title_fr: "Les animaux"
+goal_fr: "Nommer les animaux familiers et dire lequel on préfère."
+can_do_fr:
+  - "Je sais nommer dix animaux."
+  - "Je sais dire أُحِبُّ et لا أُحِبُّ."
+  - "Je sais répondre à ما حَيَوانُكَ المُفَضَّل؟"
+duration_min: 12
+cefr: "A1.1"
+vocab:
+  - { term: "حَيَوان",  translit: "ḥayawān", fr: "animal",   phon: "ha-ya-WAN" }
+  - { term: "قِطّة",    translit: "qiṭṭa",   fr: "chat",     phon: "QIT-ta" }
+  - { term: "كَلْب",    translit: "kalb",    fr: "chien",    phon: "KALB" }
+  - { term: "حِصان",   translit: "ḥiṣān",   fr: "cheval",   phon: "hi-SAN" }
+  - { term: "عُصْفُور",  translit: "ʿuṣfūr",  fr: "oiseau",   phon: "'ous-FOUR" }
+  - { term: "سَمَكة",   translit: "samaka",  fr: "poisson",  phon: "SA-ma-ka" }
+  - { term: "بَقَرة",   translit: "baqara",  fr: "vache",    phon: "BA-qa-ra" }
+  - { term: "أَرْنَب",   translit: "arnab",   fr: "lapin",    phon: "AR-nab" }
+  - { term: "دَجاجة",   translit: "dajāja",  fr: "poule",    phon: "da-JA-ja" }
+  - { term: "خَروف",   translit: "kharūf",  fr: "mouton",   phon: "kha-ROUF" }
+  - { term: "جَمَل",    translit: "jamal",   fr: "chameau",  phon: "JA-mal" }
+  - { term: "أَسَد",    translit: "asad",    fr: "lion",     phon: "A-sad" }
+  - { term: "فَأْر",    translit: "faʾr",    fr: "souris",   phon: "FAR", level: grands }
+  - { term: "نَحْلة",   translit: "naḥla",   fr: "abeille",  phon: "NAH-la", level: grands }
+phrases:
+  - { term: "أُحِبُّ القِطَط.",          translit: "uḥibbu l-qiṭaṭ.",          fr: "J'aime les chats.",       phon: "ou-HIB-bou l-qi-TAT" }
+  - { term: "لا أُحِبُّ الفِئْران.",      translit: "lā uḥibbu l-fiʾrān.",      fr: "Je n'aime pas les souris.", phon: "la ou-HIB-bou l-fi-RAN" }
+  - { term: "ما حَيَوانُكَ المُفَضَّل؟",  translit: "mā ḥayawānuka l-mufaḍḍal?", fr: "Quel est ton animal préféré ?", phon: "ma ha-ya-WA-nou-ka l-mou-FAD-dal" }
+  - { term: "الكَلْبُ يَنْبَح.",         translit: "al-kalbu yanbaḥ.",         fr: "Le chien aboie.",          phon: "al-KAL-bou YAN-bah" }
+notes_fr:
+  - "**Le ة final marque souvent le féminin, et parfois l'unité.** نَحْل, c'est les abeilles en général ; نَحْلة, une abeille. سَمَك, du poisson ; سَمَكة, un poisson. Le même petit ة sert à isoler **un** exemplaire dans un ensemble."
+  - "**Beaucoup de noms d'animaux sont des mots de tous les jours.** أَسَد a donné le prénom Oussama (أُسامة, un des noms du lion) ; نَحْلة, l'abeille, donne son nom à une sourate entière, النَّحْل."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "La ferme sonore"
+    steps_fr:
+      - "Faites le cri d'un animal. L'enfant le nomme en arabe : قِطّة!"
+      - "Inversez : vous dites بَقَرة, il fait le bruit."
+      - "Version drap : l'animal se cache dessous et ne fait que son bruit ; on devine avant qu'il sorte."
+  - level: petits
+    type: mouvement
+    title_fr: "Marche comme…"
+    steps_fr:
+      - "اِمْشِ كَالقِطّة! — on marche à quatre pattes, sans bruit."
+      - "Puis le lapin qui saute, l'oiseau qui vole, le poisson qui nage."
+      - "Au bout de cinq animaux, c'est l'enfant qui donne les ordres et vous qui exécutez."
+  - level: petits
+    type: jeu
+    title_fr: "Le sac à surprises"
+    steps_fr:
+      - "Cachez cinq animaux en plastique ou en peluche dans une taie d'oreiller."
+      - "Il met la main sans regarder, tâte et devine : حِصان!"
+      - "Juste, il le garde. Le jeu complet est dans la **boîte à jeux**."
+  - level: petits
+    type: jeu
+    title_fr: "Qui manque ?"
+    steps_fr:
+      - "Alignez cinq animaux et nommez-les ensemble, deux fois."
+      - "L'enfant ferme les yeux, vous en retirez un, vous refermez le rang."
+      - "Il rouvre : ما الَّذي اخْتَفى؟ — il doit nommer l'absent en arabe."
+  - level: petits
+    type: jeu
+    title_fr: "J'aime, je n'aime pas"
+    steps_fr:
+      - "Deux coins de la pièce : أُحِبّ et لا أُحِبّ."
+      - "Vous annoncez un animal, l'enfant court dans son coin."
+      - "Arrivé, il dit la phrase entière : أُحِبُّ الأَرانِب."
+  - level: grands
+    type: exercice
+    title_fr: "Un, deux, plusieurs"
+    steps_fr:
+      - "قِطّة → deux : ______ → plusieurs : ______"
+      - "كَلْب → deux : ______ → plusieurs : ______"
+      - "Rappel de l'unité 4 : pour deux, on ajoute ـان au mot."
+      - "Les pluriels d'animaux sont souvent irréguliers — cherche-les et note-les, ils s'apprennent un par un."
+  - level: grands
+    type: jeu
+    title_fr: "Qui suis-je ?"
+    steps_fr:
+      - "Une carte animal sur le front, sans la voir."
+      - "Dix questions maximum, réponses par نَعَم ou لا : هَلْ أَنا كَبير؟ هَلْ أَعيشُ في البَيْت؟"
+      - "Il annonce : أَنا جَمَل! Puis on échange."
+  - level: grands
+    type: production
+    title_fr: "Ma fiche d'animal"
+    steps_fr:
+      - "Choisis un animal et écris quatre phrases : son nom, sa couleur, sa taille, ce qu'il mange."
+      - "Ajoute une phrase avec أُحِبّ et une avec لا أُحِبّ."
+      - "Lis la fiche sans dire le nom : les autres devinent."
+  - level: grands
+    type: dialogue
+    title_fr: "Le vétérinaire"
+    steps_fr:
+      - "L'un amène une peluche malade, l'autre est le vétérinaire."
+      - "Questions obligatoires : ما هٰذا الحَيَوان؟ ما اسْمُهُ؟ كَمْ عُمْرُهُ؟"
+      - "On termine par une ordonnance dessinée et commentée en arabe."
+dialogue:
+  title_fr: "Le chat de la voisine"
+  context_fr: "Dans la cour de l'immeuble, un chat s'approche des deux enfants."
+  lines:
+    - { who: "مَرْيَم", term: "اُنْظُرْ، قِطّة! ما أَجْمَلَها!",     fr: "Regarde, un chat ! Qu'il est beau !", phon: "OUN-dhour, QIT-ta! ma AJ-ma-la-ha" }
+    - { who: "يُوسُف", term: "نَعَم، أُحِبُّ القِطَط كَثيرًا.",       fr: "Oui, j'aime beaucoup les chats.",     phon: "NA-'am, ou-HIB-bou l-qi-TAT ka-THI-ran" }
+    - { who: "مَرْيَم", term: "ما حَيَوانُكَ المُفَضَّل؟",           fr: "Quel est ton animal préféré ?",       phon: "ma ha-ya-WA-nou-ka l-mou-FAD-dal" }
+    - { who: "يُوسُف", term: "الحِصان. وَأَنْتِ؟",                  fr: "Le cheval. Et toi ?",                 phon: "al-hi-SAN. wa AN-ti" }
+    - { who: "مَرْيَم", term: "أَنا أُحِبُّ الأَرانِب. هِيَ صَغيرة.",  fr: "Moi j'aime les lapins. Ils sont petits.", phon: "A-na ou-HIB-bou l-a-RA-nib. HI-ya sa-GHI-ra" }
+    - { who: "يُوسُف", term: "وَهَلْ تُحِبّينَ الفِئْران؟",           fr: "Et est-ce que tu aimes les souris ?", phon: "wa hal tou-HIB-BI-na l-fi-RAN" }
+    - { who: "مَرْيَم", term: "لا! لا أُحِبُّ الفِئْران أَبَدًا!",     fr: "Non ! Je n'aime pas du tout les souris !", phon: "la! la ou-HIB-bou l-fi-RAN A-ba-dan" }
+    - { who: "يُوسُف", term: "وَالقِطّةُ أَيْضًا لا تُحِبُّها… هِيَ تَأْكُلُها!", fr: "Le chat non plus ne les aime pas… il les mange !", phon: "wal-QIT-ta-tou AÏ-dan la tou-HIB-bou-ha… HI-ya ta-KOU-lou-ha" }
+comprehension:
+  - q_fr: "Quel est l'animal préféré de chacun ?"
+    a_fr: "Youssef préfère le **cheval** (الحِصان), Maryam les **lapins** (الأَرانِب)."
+  - q_fr: "Pourquoi Maryam aime-t-elle les lapins ?"
+    a_fr: "Elle le dit : هِيَ صَغيرة — « ils sont petits »."
+  - q_fr: "Qu'est-ce que Maryam n'aime pas du tout, et quel mot le souligne ?"
+    a_fr: "Les **souris**. Le mot **أَبَدًا** (« jamais, pas du tout ») renforce le لا."
+  - q_fr: "Youssef dit تُحِبّينَ à Maryam. Qu'aurait-il dit à un garçon ?"
+    a_fr: "**تُحِبّ**. Comme pour كَ et كِ, le verbe change selon à qui on parle."
+qa:
+  - question: { term: "ما حَيَوانُكَ المُفَضَّل؟", translit: "mā ḥayawānuka l-mufaḍḍal?", fr: "Quel est ton animal préféré ?", phon: "ma ha-ya-WA-nou-ka l-mou-FAD-dal" }
+    answers:
+      - { term: "حَيَوانِي المُفَضَّلُ الحِصان.", translit: "ḥayawānī l-mufaḍḍalu l-ḥiṣān.", fr: "Mon animal préféré est le cheval.", phon: "ha-ya-WA-ni l-mou-FAD-da-lou l-hi-SAN" }
+      - { term: "أُحِبُّ القِطَط.",  translit: "uḥibbu l-qiṭaṭ.",  fr: "J'aime les chats.",  phon: "ou-HIB-bou l-qi-TAT" }
+  - question: { term: "هَلْ تُحِبُّ الكِلاب؟", translit: "hal tuḥibbu l-kilāb?", fr: "Est-ce que tu aimes les chiens ?", phon: "hal tou-HIB-bou l-ki-LAB" }
+    answers:
+      - { term: "نَعَم، أُحِبُّها كَثيرًا.", translit: "naʿam, uḥibbuhā kathīran.", fr: "Oui, je les aime beaucoup.", phon: "NA-'am, ou-HIB-bou-ha ka-THI-ran" }
+      - { term: "لا، أَخافُ مِنْها.", translit: "lā, akhāfu minhā.", fr: "Non, j'en ai peur.", phon: "la, a-KHA-fou MIN-ha" }
+  - question: { term: "ما هٰذا الحَيَوان؟", translit: "mā hādhā l-ḥayawān?", fr: "Quel est cet animal ?", phon: "ma HA-dha l-ha-ya-WAN" }
+    answers:
+      - { term: "هٰذا جَمَل.",   translit: "hādhā jamal.",  fr: "C'est un chameau.", phon: "HA-dha JA-mal" }
+      - { term: "هٰذِهِ دَجاجة.", translit: "hādhihi dajāja.", fr: "C'est une poule.", phon: "HA-dhi-hi da-JA-ja" }
+reemploi_fr:
+  - "Chaque animal croisé cette semaine — dans la rue, dans un livre, à la télévision — se nomme d'abord en arabe."
+  - "Au dîner, une question rituelle : ما حَيَوانُكَ المُفَضَّل اليَوْم؟ La réponse a le droit de changer tous les jours."
+culture_fr: >-
+  **Le chameau — الجَمَل — a nourri la langue autant que les hommes.** L'arabe
+  possède des dizaines de mots pour lui selon son âge, sa couleur, sa démarche,
+  là où le français en a deux. Une langue garde le plus de mots pour ce qui
+  compte le plus : ici, l'animal qui permettait de traverser le désert, donc de
+  commercer, de voyager et de survivre.

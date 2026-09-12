@@ -1,7 +1,8 @@
 # Les langues à la maison
 
 Cours de langues pour les enfants (3-10 ans), en français.
-Première langue : **le portugais du Portugal**. L'arabe est prévu ensuite.
+Deux langues : **le portugais du Portugal** (trois années complètes) et
+**l'arabe littéral, la langue du Coran** (année 1).
 
 Le but n'est pas d'apprendre des listes de mots : c'est que l'enfant
 **comprenne une discussion entière et sache y répondre**. Chaque unité part donc
@@ -40,6 +41,9 @@ Ctrl+P → « Enregistrer au format PDF ». La mise en page A4 est déjà prête
 
 **Portugais — 30 unités, 30 dialogues, 90 questions à savoir répondre,
 246 activités, 30 jeux réutilisables, 12 escales culturelles.**
+
+**Arabe — 10 unités (année 1), 10 dialogues, 30 questions, 90 activités,
+32 jeux réutilisables, dont une famille entière consacrée à l'alphabet.**
 
 Deux parcours, parce qu'un enfant de 4 ans et un enfant de 9 ans n'apprennent
 pas de la même façon :
@@ -88,6 +92,31 @@ tel quel dans le programme.
    de mots, écrit, production). La moitié au moins vise les petits : à cet âge,
    le jeu n'est pas la récompense de la leçon, c'est la leçon.
 6. **Cette semaine dans la vraie vie** — ce qui sort du cours.
+
+### L'arabe : ce qui change
+
+L'arabe suit la même méthode que le portugais — le dialogue d'abord, les
+questions-réponses ensuite, le jeu partout — mais trois choses lui sont propres
+et sont traitées comme telles.
+
+**La variante.** Le cours enseigne l'**arabe littéral (الفُصْحى)**, celui du
+Coran et des livres. C'est un choix, et il a un prix qui est écrit noir sur
+blanc dans le cours : l'enfant pourra lire le Coran et comprendre un dessin
+animé pan-arabe, mais il ne discutera pas pour autant en darija avec sa
+grand-mère. Les deux s'apprennent bien ensemble — le dialecte à l'oreille, à la
+maison ; la fuṣḥā ici.
+
+**L'alphabet.** Vingt-huit lettres, quatre formes chacune selon leur place dans
+le mot, des points qui distinguent des lettres identiques, et trois signes qui
+décident de la voyelle. Il est mené **en parallèle de l'oral, jamais à sa
+place** : deux lettres par semaine, toute l'année, par le jeu — pêche aux
+lettres, jeu des points, les quatre habits d'une même lettre, solaires contre
+lunaires. Tout le contenu est **voyellé**, comme un Coran : un texte sans
+harakāt est illisible pour un débutant.
+
+**Les trois sons.** Le ح, le خ et le ع n'existent pas en français. La colonne
+« se prononce » les approche, elle ne les remplace pas — l'audio est
+indispensable, et le cours le dit plutôt que de faire semblant.
 
 ### La boîte à jeux
 
@@ -235,6 +264,7 @@ content/pt/program.yaml   le programme : parcours par âge, périodes, pratique
 content/pt/culture.yaml   le passeport culturel : 12 escales, 12 missions
 content/pt/resources.yaml livres, chansons, écrans, outils
 content/pt/games.yaml     la boîte à jeux : 30 jeux réutilisables
+content/ar/               l'arabe : même structure, année 1 (10 unités)
 content/pt/units/         une unité = un fichier (dialogue, Q/R, activités)
 scripts/build.py          génère site/ print/ exports/
 scripts/check.py          relit le contenu et les pages produites (make check)

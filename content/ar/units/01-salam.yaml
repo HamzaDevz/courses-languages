@@ -1,0 +1,151 @@
+id: 01-salam
+order: 1
+year: 1
+title: "السَّلام"
+title_fr: "Le salut"
+goal_fr: "Saluer, répondre au salut, dire son nom et remercier."
+can_do_fr:
+  - "Je sais dire السَّلامُ عَلَيْكُم et répondre quand on me le dit."
+  - "Je sais saluer selon le moment de la journée."
+  - "Je sais dire mon nom et demander celui de l'autre."
+  - "Je sais dire merci, s'il te plaît et de rien."
+duration_min: 12
+cefr: "A1.1"
+vocab:
+  - { term: "السَّلامُ عَلَيْكُم",  translit: "as-salāmu ʿalaykum", fr: "la paix sur vous (bonjour)", phon: "as-sa-LA-mou 'a-LAÏ-koum" }
+  - { term: "وَعَلَيْكُمُ السَّلام", translit: "wa ʿalaykumu s-salām", fr: "et sur vous la paix (la réponse)", phon: "wa 'a-LAÏ-kou-mou s-sa-LAM" }
+  - { term: "صَباحُ الخَيْر",       translit: "ṣabāḥu l-khayr",    fr: "bonjour (le matin)",        phon: "sa-BA-hou l-KHAÏR" }
+  - { term: "صَباحُ النُّور",        translit: "ṣabāḥu n-nūr",      fr: "réponse à bonjour le matin", phon: "sa-BA-hou n-NOUR" }
+  - { term: "مَساءُ الخَيْر",        translit: "masāʾu l-khayr",    fr: "bonsoir",                   phon: "ma-SA-ou l-KHAÏR" }
+  - { term: "نَعَم",                translit: "naʿam",             fr: "oui",                       phon: "NA-'am" }
+  - { term: "لا",                   translit: "lā",                fr: "non",                       phon: "LA" }
+  - { term: "مِنْ فَضْلِك",          translit: "min faḍlik",        fr: "s'il te plaît",             phon: "min FAD-lik" }
+  - { term: "شُكْرًا",               translit: "shukran",           fr: "merci",                     phon: "CHOU-kran" }
+  - { term: "عَفْوًا",               translit: "ʿafwan",            fr: "de rien",                   phon: "'AF-wan" }
+  - { term: "مَعَ السَّلامة",        translit: "maʿa s-salāma",     fr: "au revoir",                 phon: "MA-'a s-sa-LA-ma" }
+  - { term: "أَهْلًا",               translit: "ahlan",             fr: "salut (accueil)",           phon: "AH-lan" }
+phrases:
+  - { term: "ما اسْمُكَ؟",          translit: "mā smuka?",         fr: "Comment t'appelles-tu ? (à un garçon)", phon: "mas-MOU-ka" }
+  - { term: "ما اسْمُكِ؟",          translit: "mā smuki?",         fr: "Comment t'appelles-tu ? (à une fille)", phon: "mas-MOU-ki" }
+  - { term: "اسْمِي يُوسُف.",        translit: "ismī Yūsuf.",       fr: "Je m'appelle Youssef.",     phon: "is-MI you-SOUF" }
+  - { term: "كَيْفَ حالُك؟",         translit: "kayfa ḥāluk?",      fr: "Comment vas-tu ?",          phon: "KAÏ-fa HA-louk" }
+  - { term: "أَنا بِخَيْر، الحَمْدُ لِلَّه.", translit: "anā bi-khayr, al-ḥamdu li-llāh.", fr: "Je vais bien, louange à Dieu.", phon: "A-na bi-KHAÏR, al-HAM-dou lil-LAH" }
+notes_fr:
+  - "**كَ ou كِ, selon à qui on parle.** ما اسْمُكَ؟ se dit à un garçon, ما اسْمُكِ؟ à une fille. Ce n'est pas celui qui parle qui décide, c'est **celui à qui on parle** — l'inverse du français. Même chose pour وَأَنْتَ؟ (à un garçon) et وَأَنْتِ؟ (à une fille)."
+  - "**Le salut se rend toujours.** À السَّلامُ عَلَيْكُم on répond وَعَلَيْكُمُ السَّلام — jamais autre chose. C'est la première politesse à installer, et la plus facile : la réponse ne change jamais."
+  - "**Les lettres solaires.** On écrit السَّلام mais on lit *as-salām*, pas *al-salām* : devant quatorze lettres dites **solaires** (س ش ص ت د ر ن ل…), le ل de ال disparaît et la lettre suivante double. Devant les autres, dites **lunaires** (ق ك م ه ب ج…), on lit bien *al-* : القَمَر → *al-qamar*."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "La porte du salam"
+    steps_fr:
+      - "Tenez la porte du salon avec la main. Pour passer, il faut dire السَّلامُ عَلَيْكُم."
+      - "Vous répondez وَعَلَيْكُمُ السَّلام et la porte s'ouvre en grand."
+      - "Puis on inverse : c'est l'enfant qui tient la porte, et c'est lui qui doit rendre le salut."
+      - "Refaites-le à chaque passage de la journée. Le jeu dure une semaine, pas cinq minutes."
+  - level: petits
+    type: mouvement
+    title_fr: "Le mur du نَعَم et le mur du لا"
+    steps_fr:
+      - "Deux murs de la pièce : l'un est نَعَم, l'autre est لا."
+      - "Posez une question simple : أَنْتَ يُوسُف؟ (tu es Youssef ?), عِنْدَكَ قِطّة؟ (tu as un chat ?)"
+      - "L'enfant court au bon mur et dit le mot en arrivant."
+      - "Inversez les rôles, et trompez-vous exprès une fois sur trois : il adorera corriger."
+  - level: petits
+    type: jeu
+    title_fr: "La marionnette qui dit شُكْرًا"
+    steps_fr:
+      - "Tendez un objet à l'enfant en disant مِنْ فَضْلِك."
+      - "Il répond شُكْرًا en le prenant. Vous répondez عَفْوًا."
+      - "Inversez : c'est lui qui donne et vous qui remerciez."
+      - "Trois objets suffisent. On refait le tour à chaque repas de la semaine."
+  - level: petits
+    type: jeu
+    title_fr: "Matin ou soir ?"
+    steps_fr:
+      - "Allumez la lampe : c'est le matin, tout le monde dit صَباحُ الخَيْر."
+      - "Éteignez : c'est le soir, مَساءُ الخَيْر."
+      - "De plus en plus vite. Celui qui se trompe tient l'interrupteur."
+      - "La réponse du matin, صَباحُ النُّور, s'ajoute quand les deux premiers sont sûrs."
+  - level: petits
+    type: jeu
+    title_fr: "La ronde du salut"
+    steps_fr:
+      - "On tourne en rond en tapant dans les mains."
+      - "Au signal, chacun se tourne vers son voisin, lui serre la main et dit السَّلامُ عَلَيْكُم."
+      - "Le voisin répond, puis on repart dans l'autre sens."
+      - "À deux, les peluches font les voisins manquants."
+  - level: grands
+    type: exercice
+    title_fr: "Complète le dialogue"
+    steps_fr:
+      - "— السَّلامُ ______ ! (la suite du salut)"
+      - "— ______ السَّلام. (la réponse entière)"
+      - "— ما ______ ؟ (comment t'appelles-tu, à une fille)"
+      - "— ______ مَرْيَم. (je m'appelle Maryam)"
+  - level: grands
+    type: bricolage
+    title_fr: "Le badge كَ / كِ"
+    steps_fr:
+      - "Découpez un rond de carton. D'un côté écrivez كَ, de l'autre كِ."
+      - "Chacun porte le sien selon qu'il est garçon ou fille — c'est la terminaison que les autres devront employer en lui parlant."
+      - "Celui qui se trompe de terminaison doit refaire sa phrase entière, en arabe."
+  - level: grands
+    type: production
+    title_fr: "Ma carte de présentation"
+    steps_fr:
+      - "Écris trois phrases en arabe, avec les voyelles : un salut, ton nom, et مَعَ السَّلامة."
+      - "Lis-les à voix haute en écoutant l'audio du site pour corriger ta prononciation."
+      - "Garde la carte : tu la reliras à la fin de l'année pour voir le chemin parcouru."
+  - level: grands
+    type: dialogue
+    title_fr: "Rejoue la scène, change le prénom"
+    steps_fr:
+      - "Rejoue le dialogue en prenant le rôle de Yūsuf, puis celui de Maryam."
+      - "Attention : en changeant de rôle, les terminaisons كَ et كِ changent aussi."
+      - "Refais-le avec **ton** prénom et celui d'un ami."
+dialogue:
+  title_fr: "Deux enfants se rencontrent"
+  context_fr: "Le matin, devant l'école. Maryam voit Youssef pour la première fois."
+  lines:
+    - { who: "مَرْيَم", translit: "Maryam", term: "السَّلامُ عَلَيْكُم!",            fr: "La paix sur toi !",             phon: "as-sa-LA-mou 'a-LAÏ-koum" }
+    - { who: "يُوسُف", translit: "Yūsuf",  term: "وَعَلَيْكُمُ السَّلام!",           fr: "Et sur toi la paix !",          phon: "wa 'a-LAÏ-kou-mou s-sa-LAM" }
+    - { who: "مَرْيَم", translit: "Maryam", term: "صَباحُ الخَيْر!",                fr: "Bonjour !",                     phon: "sa-BA-hou l-KHAÏR" }
+    - { who: "يُوسُف", translit: "Yūsuf",  term: "صَباحُ النُّور! كَيْفَ حالُكِ؟",    fr: "Bonjour ! Comment vas-tu ?",    phon: "sa-BA-hou n-NOUR! KAÏ-fa HA-lou-ki" }
+    - { who: "مَرْيَم", translit: "Maryam", term: "أَنا بِخَيْر، الحَمْدُ لِلَّه. وَأَنْتَ؟", fr: "Je vais bien, louange à Dieu. Et toi ?", phon: "A-na bi-KHAÏR, al-HAM-dou lil-LAH. wa AN-ta" }
+    - { who: "يُوسُف", translit: "Yūsuf",  term: "أَنا بِخَيْر، شُكْرًا. ما اسْمُكِ؟", fr: "Je vais bien, merci. Comment t'appelles-tu ?", phon: "A-na bi-KHAÏR, CHOU-kran. mas-MOU-ki" }
+    - { who: "مَرْيَم", translit: "Maryam", term: "اسْمِي مَرْيَم. وَما اسْمُكَ؟",     fr: "Je m'appelle Maryam. Et toi ?", phon: "is-MI MAR-yam. wa mas-MOU-ka" }
+    - { who: "يُوسُف", translit: "Yūsuf",  term: "اسْمِي يُوسُف. مَعَ السَّلامة!",   fr: "Je m'appelle Youssef. Au revoir !", phon: "is-MI you-SOUF. MA-'a s-sa-LA-ma" }
+    - { who: "مَرْيَم", translit: "Maryam", term: "مَعَ السَّلامة يا يُوسُف!",       fr: "Au revoir Youssef !",           phon: "MA-'a s-sa-LA-ma ya you-SOUF" }
+comprehension:
+  - q_fr: "Comment s'appellent les deux enfants ?"
+    a_fr: "Maryam (مَرْيَم) et Youssef (يُوسُف)."
+  - q_fr: "Youssef dit ما اسْمُكِ؟ et Maryam dit ما اسْمُكَ؟. Pourquoi pas la même chose ?"
+    a_fr: "Parce que la fin du mot dépend de **celui à qui on parle** : كِ vers une fille, كَ vers un garçon."
+  - q_fr: "Quelle est la réponse à السَّلامُ عَلَيْكُم ?"
+    a_fr: "**وَعَلَيْكُمُ السَّلام**, toujours la même. Le salut se rend, il ne s'invente pas."
+  - q_fr: "Quelle petite phrase les deux enfants utilisent-ils pour renvoyer la question ?"
+    a_fr: "**وَأَنْتَ؟** / **وَأَنْتِ؟** — « et toi ? ». C'est elle qui transforme deux phrases en discussion."
+qa:
+  - question: { term: "ما اسْمُكَ؟", translit: "mā smuka?", fr: "Comment t'appelles-tu ?", phon: "mas-MOU-ka" }
+    answers:
+      - { term: "اسْمِي يُوسُف.",      translit: "ismī Yūsuf.",       fr: "Je m'appelle Youssef.",  phon: "is-MI you-SOUF" }
+      - { term: "أَنا مَرْيَم.",        translit: "anā Maryam.",       fr: "Moi, c'est Maryam.",     phon: "A-na MAR-yam" }
+  - question: { term: "كَيْفَ حالُك؟", translit: "kayfa ḥāluk?", fr: "Comment vas-tu ?", phon: "KAÏ-fa HA-louk" }
+    answers:
+      - { term: "أَنا بِخَيْر، الحَمْدُ لِلَّه.", translit: "anā bi-khayr, al-ḥamdu li-llāh.", fr: "Je vais bien, louange à Dieu.", phon: "A-na bi-KHAÏR, al-HAM-dou lil-LAH" }
+      - { term: "بِخَيْر، شُكْرًا.",    translit: "bi-khayr, shukran.", fr: "Bien, merci.",          phon: "bi-KHAÏR, CHOU-kran" }
+      - { term: "لَسْتُ بِخَيْر.",      translit: "lastu bi-khayr.",   fr: "Je ne vais pas bien.",   phon: "LAS-tou bi-KHAÏR" }
+  - question: { term: "السَّلامُ عَلَيْكُم!", translit: "as-salāmu ʿalaykum!", fr: "La paix sur toi !", phon: "as-sa-LA-mou 'a-LAÏ-koum" }
+    answers:
+      - { term: "وَعَلَيْكُمُ السَّلام!", translit: "wa ʿalaykumu s-salām!", fr: "Et sur toi la paix !", phon: "wa 'a-LAÏ-kou-mou s-sa-LAM" }
+      - { term: "وَعَلَيْكُمُ السَّلام، أَهْلًا!", translit: "wa ʿalaykumu s-salām, ahlan!", fr: "Et sur toi la paix, salut !", phon: "wa 'a-LAÏ-kou-mou s-sa-LAM, AH-lan" }
+reemploi_fr:
+  - "Toute la semaine, on dit **السَّلامُ عَلَيْكُم** en entrant dans une pièce, à la place du bonjour français."
+  - "À table, chaque fois qu'on se passe quelque chose : مِنْ فَضْلِك — شُكْرًا — عَفْوًا."
+culture_fr: >-
+  **السَّلامُ عَلَيْكُم ne veut pas dire « bonjour » : ça veut dire « que la paix
+  soit sur toi ».** C'est un souhait, pas un mot — c'est pourquoi on y répond en
+  le rendant, et souvent en l'augmentant. Ce salut se dit de l'Atlantique à
+  l'Indonésie, entre gens qui ne partagent aucune autre langue : c'est
+  probablement la phrase arabe la plus prononcée au monde.

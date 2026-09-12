@@ -1,0 +1,780 @@
+title_fr: "La boîte à jeux"
+intro_fr: >-
+  Les activités d'une unité s'usent quand l'unité est finie. Les jeux de cette
+  page sont des **moules** : on y verse le vocabulaire de la semaine et ils
+  resservent toute l'année. Une famille leur est propre — **les jeux de
+  l'alphabet** : vingt-huit lettres, quatre formes chacune, trois voyelles et
+  des points qui changent tout. C'est le chantier que le portugais n'a pas, et
+  il se mène en jouant comme le reste.
+warning_fr: >-
+  Trois règles, valables pour tous les jeux : **on ne traduit pas pendant la
+  partie** (on montre, on mime, on refait) ; **on ne corrige pas au milieu** (on
+  redit la forme juste après, sans commentaire) ; et **on arrête avant que
+  l'enfant en ait assez**.
+
+
+  Une précision honnête sur les noms : les noms arabes donnés ici sont des
+  **noms d'usage pour jouer à la maison**, choisis pour être clairs et faciles à
+  dire. Ce ne sont pas, sauf mention contraire, les noms de jeux traditionnels
+  d'un pays donné — ceux-là changent d'une région à l'autre, et mieux vaut les
+  demander à quelqu'un de là-bas que les inventer ici.
+speak:
+  - title_fr: "Avant de jouer"
+    intro_fr: "Ces phrases servent à tous les jeux. Ce sont les premières à savoir par cœur : sans elles, la partie se joue en français."
+    items:
+      - { term: "هَيَّا نَلْعَب!",     translit: "hayyā nalʿab!",      fr: "On joue !",              phon: "HAÏ-ya NAL-'ab" }
+      - { term: "بِماذا نَلْعَب؟",     translit: "bi-mādhā nalʿab?",   fr: "On joue à quoi ?",       phon: "bi-MA-dha NAL-'ab" }
+      - { term: "مَنْ يَبْدَأ؟",       translit: "man yabdaʾ?",        fr: "Qui commence ?",         phon: "man YAB-da" }
+      - { term: "سَأَشْرَحُ لَك.",     translit: "saʾashraḥu lak.",    fr: "Je vais t'expliquer.",   phon: "sa-ACH-ra-hou lak" }
+      - { term: "حَجَر، وَرَقة، مِقَصّ!", translit: "ḥajar, waraqa, miqaṣṣ!", fr: "Pierre, papier, ciseaux !", phon: "HA-jar, WA-ra-qa, mi-QASS" }
+  - title_fr: "Pendant la partie"
+    intro_fr: "À afficher près de la table de jeu. Chaque phrase dite en arabe est une phrase gagnée."
+    items:
+      - { term: "دَوْرِي!",           translit: "dawrī!",             fr: "C'est mon tour !",       phon: "DAW-ri" }
+      - { term: "دَوْرُك!",           translit: "dawruk!",            fr: "C'est ton tour !",       phon: "DAW-rouk" }
+      - { term: "اِنْتَظِرْ!",         translit: "intaẓir!",           fr: "Attends !",              phon: "in-TA-dhir" }
+      - { term: "اِخْلِطِ الوَرَق.",   translit: "ikhliṭi l-waraq.",   fr: "Mélange les cartes.",    phon: "IKH-li-ti l-WA-raq" }
+      - { term: "خُذْ وَرَقة.",        translit: "khudh waraqa.",      fr: "Prends une carte.",      phon: "KHOUDH WA-ra-qa" }
+      - { term: "اِرْمِ النَّرْد.",     translit: "irmi n-nard.",       fr: "Lance le dé.",           phon: "IR-mi n-NARD" }
+      - { term: "تَقَدَّمْ خانَتَيْن.",  translit: "taqaddam khānatayn.", fr: "Avance de deux cases.", phon: "ta-QAD-dam kha-na-TAÏN" }
+      - { term: "اِرْجِعْ خانة.",      translit: "irjiʿ khāna.",       fr: "Recule d'une case.",     phon: "IR-ji' KHA-na" }
+      - { term: "أُمَرِّرُ دَوْرِي.",   translit: "umarriru dawrī.",    fr: "Je passe mon tour.",     phon: "ou-MAR-ri-rou DAW-ri" }
+      - { term: "هٰذا لا يُحْسَب!",    translit: "hādhā lā yuḥsab!",   fr: "Ça ne compte pas !",     phon: "HA-dha la YOUH-sab" }
+  - title_fr: "À la fin"
+    intro_fr: "Gagner et perdre se disent aussi. مَرَّةً أُخْرى est la phrase la plus utile de toutes : c'est elle qui fait la deuxième partie."
+    items:
+      - { term: "فُزْتُ!",            translit: "fuztu!",             fr: "J'ai gagné !",           phon: "FOUZ-tou" }
+      - { term: "خَسِرْتُ.",          translit: "khasirtu.",          fr: "J'ai perdu.",            phon: "kha-SIR-tou" }
+      - { term: "تَعادَلْنا!",         translit: "taʿādalnā!",         fr: "Égalité !",              phon: "ta-'A-dal-na" }
+      - { term: "أَحْسَنْت!",          translit: "aḥsant!",            fr: "Bien joué !",            phon: "AH-sant" }
+      - { term: "مَرَّةً أُخْرى!",      translit: "marratan ukhrā!",    fr: "Encore une fois !",      phon: "MAR-ra-tan OUKH-ra" }
+      - { term: "كَفى!",             translit: "kafā!",              fr: "Ça suffit, on arrête.",  phon: "ka-FA" }
+groups:
+  - title_fr: "Les jeux de l'alphabet — le chantier propre à l'arabe"
+    intro_fr: >-
+      Vingt-huit lettres, quatre formes chacune selon la place dans le mot, des
+      points qui distinguent des lettres identiques, et trois petits signes
+      au-dessus et au-dessous qui décident de la voyelle. Présenté comme une
+      leçon, c'est décourageant ; présenté comme une collection à compléter,
+      c'est un jeu. **Deux lettres par semaine suffisent** — pas plus.
+    games:
+      - title_fr: "La pêche aux lettres"
+        pt: "صَيْدُ الحُروف"
+        ages_fr: "4-10 ans"
+        min: 15
+        players_fr: "1 et plus"
+        material_fr: "des cartes-lettres, un trombone sur chacune, une ficelle et un aimant"
+        why_fr: >-
+          Reconnaître une lettre isolée, la nommer, la garder. La collection qui
+          grossit fait le travail que la répétition ne fait pas.
+        units_fr: "Toute l'année, en parallèle des unités"
+        how_fr:
+          - "Un trombone sur chaque carte-lettre, les cartes au sol : c'est l'étang."
+          - "L'enfant pêche avec l'aimant. Il garde la lettre s'il sait la nommer, sinon elle retourne à l'eau."
+          - "Deux lettres nouvelles par semaine, mélangées à celles déjà pêchées."
+          - "Les lettres gardées vont dans une boîte. **La boîte est le vrai jeu** : elle se remplit toute l'année."
+        variants_fr:
+          - "Version son : on ne nomme pas la lettre, on dit un mot qui commence par elle."
+          - "Version difficile : on pêche deux lettres et il faut trouver un mot qui contient les deux."
+        phrases:
+          - { term: "ما هٰذا الحَرْف؟", translit: "mā hādhā l-ḥarf?", fr: "Quelle est cette lettre ?", phon: "ma HA-dha l-HARF" }
+          - { term: "هٰذا حَرْفُ الباء.", translit: "hādhā ḥarfu l-bāʾ.", fr: "C'est la lettre bāʾ.",   phon: "HA-dha HAR-fou l-BA" }
+          - { term: "اِصْطَدْتُ حَرْفًا!", translit: "iṣṭadtu ḥarfan!",   fr: "J'ai pêché une lettre !", phon: "is-TAD-tou HAR-fan" }
+      - title_fr: "La même lettre, quatre habits"
+        pt: "الحَرْفُ في أَرْبَعةِ أَشْكال"
+        ages_fr: "6-10 ans"
+        min: 15
+        players_fr: "1 à 4"
+        material_fr: "quatre cartes par lettre, une par forme"
+        why_fr: >-
+          C'est **la** difficulté de l'écriture arabe, et la seule qui décourage
+          vraiment : la même lettre ne se ressemble pas selon sa place. Vue
+          comme quatre habits d'un même personnage, elle cesse d'être un piège.
+        units_fr: "Dès que dix lettres sont reconnues"
+        how_fr:
+          - "Pour chaque lettre, quatre cartes : isolée, en début de mot, au milieu, à la fin."
+          - "On étale tout et on reconstitue les familles de quatre."
+          - "Chaque famille reformée se présente à voix haute : هٰذا حَرْفُ العَيْن، في أَرْبَعةِ أَشْكال."
+          - "Six lettres au début, pas plus — vingt-quatre cartes suffisent à occuper un quart d'heure."
+        variants_fr:
+          - "Version chasse : on cherche les quatre formes d'une même lettre dans un texte voyellé, surligneur en main."
+          - "Les lettres qui ne s'attachent jamais à gauche (ا د ذ ر ز و) forment un petit clan à part : faites-en une famille de rebelles, ça se retient tout seul."
+        phrases:
+          - { term: "في أَوَّلِ الكَلِمة.", translit: "fī awwali l-kalima.", fr: "Au début du mot.",  phon: "fi AW-wa-li l-ka-LI-ma" }
+          - { term: "في وَسَطِ الكَلِمة.",  translit: "fī wasaṭi l-kalima.", fr: "Au milieu du mot.", phon: "fi WA-sa-ti l-ka-LI-ma" }
+          - { term: "في آخِرِ الكَلِمة.",   translit: "fī ākhiri l-kalima.", fr: "À la fin du mot.",  phon: "fi A-khi-ri l-ka-LI-ma" }
+      - title_fr: "Le jeu des points"
+        pt: "لُعْبةُ النُّقَط"
+        ages_fr: "5-10 ans"
+        min: 10
+        players_fr: "2 et plus"
+        material_fr: "un feutre effaçable, une pochette plastique, des gommettes rondes"
+        why_fr: >-
+          ب ت ث ont le même corps et trois points différents ; ج ح خ aussi. Un
+          enfant qui n'a pas compris ça lit au hasard toute l'année. Le jeu rend
+          la différence visible avec le doigt.
+        units_fr: "Périodes 1 et 2 de l'année 1"
+        how_fr:
+          - "Tracez le corps nu de la lettre — sans aucun point — dans la pochette."
+          - "Vous annoncez : الباء! L'enfant pose **un** point en dessous. التاء! Deux points au-dessus. الثاء! Trois."
+          - "Même jeu avec ج ح خ, puis avec د ذ, ر ز, س ش, ص ض, ط ظ, ع غ."
+          - "À la fin, il nomme toutes celles qu'il a fabriquées."
+        variants_fr:
+          - "Version inverse : vous posez les points, il nomme la lettre."
+          - "Version vitesse : deux joueurs, une seule pochette, le plus rapide pose."
+        phrases:
+          - { term: "نُقْطة واحِدة تَحْت.", translit: "nuqṭa wāḥida taḥt.", fr: "Un point en dessous.", phon: "NOUQ-ta WA-hi-da TAHT" }
+          - { term: "نُقْطَتان فَوْق.",      translit: "nuqṭatān fawq.",     fr: "Deux points au-dessus.", phon: "nouq-ta-TAN FAWQ" }
+          - { term: "بِدونِ نُقَط.",        translit: "bidūni nuqaṭ.",      fr: "Sans points.",         phon: "bi-DOU-ni NOU-qat" }
+      - title_fr: "Les trois petits chapeaux"
+        pt: "الحَرَكات الثَّلاث"
+        ages_fr: "6-10 ans"
+        min: 10
+        players_fr: "1 à 3"
+        material_fr: "des cartes-lettres et trois jetons de couleur"
+        why_fr: >-
+          La même lettre se lit *ba*, *bi* ou *bou* selon le signe qu'elle porte.
+          Tant que ce n'est pas automatique, la lecture reste du devinement.
+        units_fr: "Période 1, puis en révision toute l'année"
+        how_fr:
+          - "Trois jetons : un rouge pour la fatḥa (a), un bleu pour la kasra (i), un vert pour la ḍamma (ou)."
+          - "Posez une carte-lettre et un jeton dessus : l'enfant lit la syllabe. بَ! بِ! بُ!"
+          - "Puis deux cartes côte à côte : il lit le mot de deux syllabes qu'elles forment."
+          - "Les mots vrais rapportent un point, les mots inventés font rire — et se lisent aussi bien."
+        variants_fr:
+          - "Version dictée : vous dites بُ, il pose la lettre et le bon jeton."
+          - "Version soukoun : ajoutez un quatrième jeton pour la lettre sans voyelle."
+        phrases:
+          - { term: "اِقْرَأْ هٰذا.",  translit: "iqraʾ hādhā.",  fr: "Lis ça.",           phon: "IQ-ra HA-dha" }
+          - { term: "أَيُّ حَرَكة؟",   translit: "ayyu ḥaraka?",  fr: "Quelle voyelle ?",  phon: "AÏ-you HA-ra-ka" }
+      - title_fr: "Mon prénom en lettres mobiles"
+        pt: "اِسْمِي بِالحُروف"
+        ages_fr: "4-8 ans"
+        min: 10
+        players_fr: "1"
+        material_fr: "les lettres du prénom, découpées une par une"
+        why_fr: >-
+          Le premier mot qu'un enfant veut écrire est son nom. C'est aussi le
+          seul qu'il acceptera de refaire trente fois.
+        units_fr: "Dès la première semaine, avant même l'unité 1"
+        how_fr:
+          - "Écrivez son prénom en arabe, en grand, et découpez chaque lettre."
+          - "Il remet les lettres dans l'ordre — de **droite à gauche**, c'est la moitié de l'apprentissage."
+          - "Puis on mélange avec deux lettres intruses qui n'en font pas partie."
+          - "Quand c'est acquis : le prénom d'un frère, d'une sœur, du chat."
+        variants_fr:
+          - "Version pâte à modeler : on roule chaque lettre au lieu de la découper."
+          - "Version sable ou semoule dans un plateau : on trace avec le doigt, on efface d'un geste."
+        phrases:
+          - { term: "مِنَ اليَمينِ إِلى اليَسار.", translit: "mina l-yamīni ilā l-yasār.", fr: "De la droite vers la gauche.", phon: "MI-na l-ya-MI-ni I-la l-ya-SAR" }
+          - { term: "هٰذا اسْمِي!",  translit: "hādhā smī!",  fr: "C'est mon nom !", phon: "HA-dha s-MI" }
+      - title_fr: "Soleil ou lune ?"
+        pt: "شَمْسِيّة أَمْ قَمَرِيّة؟"
+        ages_fr: "7-10 ans"
+        min: 10
+        players_fr: "2 et plus"
+        material_fr: "des cartes-mots avec ال, un dessin de soleil et un de lune"
+        why_fr: >-
+          On écrit السَّلام et on lit *as-salām*. Sans cette règle, l'enfant lit
+          *al-salām* toute sa vie. Triée en deux tas, elle s'apprend en dix
+          minutes.
+        units_fr: "Dès l'unité 1, où السَّلام la contient déjà"
+        how_fr:
+          - "Deux tas : le soleil et la lune. Vous lisez un mot à voix haute, il devine dans quel tas il va."
+          - "S'il entend un *l* — القَمَر, *al-qamar* — c'est la lune. S'il entend la lettre doubler — الشَّمْس, *ash-shams* — c'est le soleil."
+          - "On vérifie en retournant la carte, où la réponse est écrite."
+          - "Quinze mots suffisent : les deux tas se forment tout seuls."
+        variants_fr:
+          - "Version chasse : dans un texte voyellé, on surligne en jaune les solaires et en gris les lunaires."
+        phrases:
+          - { term: "هَلْ سَمِعْتَ اللّام؟", translit: "hal samiʿta l-lām?", fr: "As-tu entendu le lām ?", phon: "hal sa-MI'-ta l-LAM" }
+          - { term: "شَمْسِيّة!",          translit: "shamsiyya!",         fr: "Solaire !",              phon: "cham-SI-ya" }
+          - { term: "قَمَرِيّة!",          translit: "qamariyya!",         fr: "Lunaire !",              phon: "qa-ma-RI-ya" }
+      - title_fr: "La chasse à la lettre du jour"
+        pt: "حَرْفُ اليَوْم"
+        ages_fr: "4-10 ans"
+        min: 5
+        players_fr: "1 et plus"
+        material_fr: "une lettre affichée sur le frigo"
+        why_fr: >-
+          Cinq minutes par jour, sans séance : la lettre se cherche partout, et
+          l'œil finit par la repérer avant le cerveau.
+        units_fr: "Toute l'année"
+        how_fr:
+          - "Chaque matin, une lettre est affichée sur le frigo."
+          - "Toute la journée, on la traque : sur un emballage, dans un livre, sur une plaque de rue."
+          - "Chaque trouvaille vaut un bâton sur la feuille. Le soir, on compte en arabe."
+          - "Le lendemain, lettre suivante — et l'ancienne reste affichée à côté."
+        variants_fr:
+          - "Version son : on traque le **son** de la lettre dans ce qu'on entend, pas sa forme."
+          - "Version mot : on cherche des mots qui commencent par elle, pas la lettre seule."
+        phrases:
+          - { term: "وَجَدْتُ حَرْفَ اليَوْم!", translit: "wajadtu ḥarfa l-yawm!", fr: "J'ai trouvé la lettre du jour !", phon: "wa-JAD-tou HAR-fa l-YAWM" }
+          - { term: "أَيْنَ رَأَيْتَهُ؟",      translit: "ayna raʾaytahu?",       fr: "Où l'as-tu vue ?",                phon: "AÏ-na ra-AÏ-ta-hou" }
+  - title_fr: "Les jeux du corps — rien à préparer, dix minutes"
+    intro_fr: >-
+      Les jeux du début : l'enfant **obéit à la langue avant de la parler**. Il
+      montre, il court, il s'arrête — et on voit tout de suite s'il a compris,
+      sans jamais lui demander de traduire.
+    games:
+      - title_fr: "Le roi ordonne"
+        pt: "الـمَلِكُ يَأْمُر"
+        ages_fr: "3-10 ans"
+        min: 5
+        players_fr: "2 et plus"
+        material_fr: "rien"
+        why_fr: >-
+          Comprendre un ordre et l'exécuter. C'est le jeu qui installe les
+          impératifs et les parties du corps sans une seule traduction.
+        units_fr: "Unités 2, 5, 7, 9 — couleurs, animaux, corps, actions"
+        how_fr:
+          - "Le meneur dit الـمَلِكُ يَأْمُر… اِقْفِزْ! (le roi ordonne : saute !). Tout le monde saute."
+          - "S'il dit seulement اِقْفِزْ!, sans الـمَلِكُ يَأْمُر, celui qui bouge est éliminé — ou perd un point, pour rire."
+          - "Trois ordres suffisent : اِقْفِزْ، اِجْرِ، اِجْلِسْ."
+          - "Au bout de cinq tours, l'enfant devient le roi. **C'est là que la langue se produit.**"
+        variants_fr:
+          - "Avec le corps (unité 7) : اِلْمِسْ أَنْفَك، اِلْمِسْ أُذُنَيْك، اِفْتَحْ فَمَك."
+          - "Avec les couleurs (unité 2) : اِلْمِسْ شَيْئًا أَزْرَق! — il faut trouver du bleu dans la pièce."
+        phrases:
+          - { term: "الـمَلِكُ يَأْمُر…", translit: "al-maliku yaʾmur…", fr: "Le roi ordonne…",  phon: "al-MA-li-kou YA-mour" }
+          - { term: "اِقْفِزْ!",         translit: "iqfiz!",            fr: "Saute !",          phon: "IQ-fiz" }
+          - { term: "اِجْلِسْ!",         translit: "ijlis!",            fr: "Assieds-toi !",    phon: "IJ-lis" }
+          - { term: "خَرَجْتَ مِنَ اللُّعْبة!", translit: "kharajta mina l-luʿba!", fr: "Tu es éliminé !", phon: "kha-RAJ-ta mi-na l-LOU'-ba" }
+      - title_fr: "Tu chauffes, tu refroidis"
+        pt: "ساخِن أَمْ بارِد"
+        ages_fr: "3-8 ans"
+        min: 8
+        players_fr: "2 et plus"
+        material_fr: "un objet à cacher — de préférence un mot de l'unité"
+        why_fr: >-
+          Deux mots seulement, mais dits cinquante fois par un enfant qui veut
+          gagner. Le meilleur rapport effort/répétition de la boîte.
+        units_fr: "Unités 2, 6, 8 — tout ce qui est un objet nommable"
+        how_fr:
+          - "L'enfant sort. On cache un objet de l'unité — la pomme, la clé, le petit chat."
+          - "Il cherche ; on ne guide qu'avec ساخِن (chaud) et بارِد (froid), et ساخِن جِدًّا! quand il y est presque."
+          - "Quand il trouve, il nomme l'objet en arabe. Sinon on recache."
+        variants_fr:
+          - "Inversez : c'est lui qui cache et qui guide. Il produit alors les deux mots lui-même."
+          - "Avec les prépositions (unité 8) : on répond عَلى، تَحْتَ، بِجانِب au lieu de chaud/froid."
+        phrases:
+          - { term: "ساخِن!",        translit: "sākhin!",       fr: "Tu chauffes !",   phon: "SA-khin" }
+          - { term: "ساخِن جِدًّا!",   translit: "sākhin jiddan!", fr: "Tu brûles !",    phon: "SA-khin JID-dan" }
+          - { term: "بارِد.",        translit: "bārid.",        fr: "Tu refroidis.",   phon: "BA-rid" }
+          - { term: "وَجَدْتُه!",     translit: "wajadtuh!",     fr: "Je l'ai trouvé !", phon: "wa-JAD-touh" }
+      - title_fr: "Les statues"
+        pt: "التَّماثيل"
+        ages_fr: "3-8 ans"
+        min: 5
+        players_fr: "2 et plus"
+        material_fr: "de la musique"
+        why_fr: >-
+          Écouter jusqu'au bout. Le mot qui arrête la musique est retenu parce
+          qu'il commande le corps, pas parce qu'on l'a répété.
+        units_fr: "Unités 5, 7, 9 — animaux, corps, actions"
+        how_fr:
+          - "La musique joue, tout le monde danse : اِرْقُصْ!"
+          - "La musique s'arrête, le meneur crie un mot : قِطّة! — chacun se fige en statue de chat."
+          - "Celui qui bouge après تِمْثال! donne le mot suivant."
+        variants_fr:
+          - "Version corps (unité 7) : la statue doit toucher la partie du corps nommée et ne plus bouger."
+        phrases:
+          - { term: "اِرْقُصْ!",   translit: "irquṣ!",   fr: "Danse !",   phon: "IR-quss" }
+          - { term: "تِمْثال!",    translit: "timthāl!", fr: "Statue !",  phon: "tim-THAL" }
+          - { term: "لا تَتَحَرَّكْ!", translit: "lā tataḥarrak!", fr: "Ne bouge pas !", phon: "la ta-ta-HAR-rak" }
+      - title_fr: "La leçon en trois temps"
+        pt: "هٰذا… / أَرِنِي… / ما هٰذا؟"
+        ages_fr: "3-6 ans"
+        min: 5
+        players_fr: "2"
+        material_fr: "trois objets ou trois cartes, pas plus"
+        why_fr: >-
+          La façon la plus sûre d'installer un mot chez un petit, empruntée à la
+          pédagogie Montessori. **Trois mots par séance, jamais plus** : on ne
+          demande de nommer qu'à la toute fin, quand la réponse est déjà acquise.
+        units_fr: "Toutes les unités, au premier contact avec le vocabulaire"
+        how_fr:
+          - "**Temps 1 — j'entends.** Trois objets posés. On dit lentement : هٰذا خُبْز. Puis les deux autres. L'enfant ne dit rien."
+          - "**Temps 2 — je montre.** أَرِنِي الخُبْز. أَيْنَ الحَليب؟ Dix fois, dans le désordre, en jouant : cache-le, mets-le sur ta tête, donne-le à l'ours."
+          - "**Temps 3 — je dis.** Seulement si le temps 2 est sans erreur : ما هٰذا؟ L'enfant nomme."
+          - "Une hésitation au temps 3 ? On revient au temps 2 sans rien dire. **Jamais de « non ».**"
+        variants_fr:
+          - "Le lendemain, on garde deux mots connus et on en ajoute un seul."
+        phrases:
+          - { term: "هٰذا خُبْز.",     translit: "hādhā khubz.",    fr: "Ça, c'est du pain.",    phon: "HA-dha KHOUBZ" }
+          - { term: "أَرِنِي الخُبْز.", translit: "arinī l-khubz.",  fr: "Montre-moi le pain.",   phon: "A-ri-ni l-KHOUBZ" }
+          - { term: "ما هٰذا؟",       translit: "mā hādhā?",       fr: "Qu'est-ce que c'est ?", phon: "ma HA-dha" }
+          - { term: "أَحْسَنْت!",      translit: "aḥsant!",         fr: "Bravo !",               phon: "AH-sant" }
+      - title_fr: "L'épervier des couleurs"
+        pt: "لُعْبةُ الأَلْوان"
+        ages_fr: "4-10 ans"
+        min: 10
+        players_fr: "3 et plus"
+        material_fr: "une pièce avec des objets de couleurs variées, ou un jardin"
+        why_fr: >-
+          On ne peut pas se sauver sans avoir compris le mot : la compréhension
+          devient urgente, donc immédiate.
+        units_fr: "Unités 2 et 8 — couleurs, meubles"
+        how_fr:
+          - "Le chat crie une couleur : أَحْمَر!"
+          - "Chacun doit toucher quelque chose de rouge avant d'être attrapé."
+          - "Celui qui est attrapé devient le chat et crie la couleur suivante."
+        variants_fr:
+          - "Version meubles (unité 8) : إِلى الباب! إِلى النّافِذة! إِلى الطّاوِلة!"
+        phrases:
+          - { term: "اِلْمِسْ شَيْئًا أَحْمَر!", translit: "ilmis shayʾan aḥmar!", fr: "Touche quelque chose de rouge !", phon: "IL-mis CHAÏ-an AH-mar" }
+          - { term: "أَمْسَكْتُك!",          translit: "amsaktuk!",            fr: "Je t'ai attrapé !",              phon: "am-SAK-touk" }
+  - title_fr: "Les jeux de cartes — avec les cartes de l'unité"
+    intro_fr: >-
+      Chaque unité donne une feuille de **cartes à découper** (dernière page de
+      la fiche imprimable). Découpées une fois, elles servent à tous les jeux
+      qui suivent. Faites-en **deux exemplaires** : la moitié des jeux demande
+      des paires.
+    games:
+      - title_fr: "Le memory"
+        pt: "لُعْبةُ الذّاكِرة"
+        ages_fr: "3-10 ans"
+        min: 10
+        players_fr: "2 à 4"
+        material_fr: "deux exemplaires des cartes de l'unité, six paires pour commencer"
+        why_fr: >-
+          Le classique, avec une règle qui change tout : **on ne garde la paire
+          que si on a dit le mot**. Sans elle, c'est un jeu de mémoire ; avec
+          elle, c'est un jeu de langue.
+        units_fr: "Toutes"
+        how_fr:
+          - "Cartes face cachée. Chacun en retourne deux en disant ce qu'il voit : قِطّة… بَقَرة. لا!"
+          - "Paire trouvée **et** mot dit → on la garde et on rejoue. Mot non dit → la paire retourne sur la table."
+          - "À la fin, chacun compte ses paires **en arabe**."
+        variants_fr:
+          - "Paire mot ↔ dessin plutôt que mot ↔ mot : plus facile pour les 3-4 ans."
+          - "Pour les grands : la paire est question ↔ réponse (كَمْ عُمْرُك؟ ↔ عُمْرِي سَبْعُ سَنَوات)."
+          - "Version lecture : la paire est le mot écrit ↔ le mot dessiné."
+        phrases:
+          - { term: "وَجَدْتُ زَوْجًا!",  translit: "wajadtu zawjan!",  fr: "J'ai trouvé une paire !", phon: "wa-JAD-tou ZAW-jan" }
+          - { term: "لَيْسَ مِثْلَهُ.",   translit: "laysa mithlahu.",  fr: "Ce n'est pas pareil.",    phon: "LAÏ-sa MITH-la-hou" }
+      - title_fr: "Le loto"
+        pt: "اللُّوتُو"
+        ages_fr: "3-8 ans"
+        min: 10
+        players_fr: "2 à 6"
+        material_fr: "une grille de six cases par joueur, des jetons, les cartes de l'unité"
+        why_fr: >-
+          Le jeu qui fait écouter le plus de mots à la minute. L'enfant ne
+          produit rien — et c'est voulu : compréhension pure, parfait au début
+          d'une unité.
+        units_fr: "Toutes, surtout 2, 3, 5, 6"
+        how_fr:
+          - "Chaque joueur dessine six mots de l'unité dans une grille de six cases."
+          - "Un meneur tire une carte et dit le mot à voix haute, une seule fois."
+          - "Celui qui l'a pose un jeton. Grille pleine : اِمْتَلَأَتْ!"
+        variants_fr:
+          - "Le meneur ne dit plus le mot mais le décrit, ou fait le bruit."
+          - "Le gagnant devient meneur : il lit les cartes lui-même."
+        phrases:
+          - { term: "عِنْدِي!",     translit: "ʿindī!",      fr: "Je l'ai !",        phon: "'IN-di" }
+          - { term: "لَيْسَ عِنْدِي.", translit: "laysa ʿindī.", fr: "Je ne l'ai pas.", phon: "LAÏ-sa 'IN-di" }
+          - { term: "اِمْتَلَأَتْ!",  translit: "imtalaʾat!",  fr: "Carton plein !",   phon: "im-ta-LA-at" }
+      - title_fr: "Qu'est-ce qui a disparu ?"
+        pt: "ما الَّذي اخْتَفى؟"
+        ages_fr: "3-10 ans"
+        min: 5
+        players_fr: "2 et plus"
+        material_fr: "cinq à huit cartes ou objets"
+        why_fr: >-
+          Le mot manquant est le seul qu'on cherche vraiment : la mémoire de
+          travail fait le travail de la révision, en riant.
+        units_fr: "Toutes"
+        how_fr:
+          - "On aligne cinq cartes et on les nomme ensemble, deux fois."
+          - "L'enfant ferme les yeux. On en retire une et on referme le rang."
+          - "ما الَّذي اخْتَفى؟ Il nomme la carte manquante en arabe."
+        variants_fr:
+          - "Plus difficile : on n'enlève rien, on **échange deux cartes** — ما الَّذي تَغَيَّر؟"
+          - "Pour les grands : huit cartes, et il faut redire la liste entière dans l'ordre."
+        phrases:
+          - { term: "أَغْمِضْ عَيْنَيْك.",  translit: "aghmiḍ ʿaynayk.", fr: "Ferme les yeux.",   phon: "AGH-mid 'aï-NAÏK" }
+          - { term: "اِفْتَحْ عَيْنَيْك.",  translit: "iftaḥ ʿaynayk.",  fr: "Ouvre les yeux.",   phon: "IF-tah 'aï-NAÏK" }
+          - { term: "يَنْقُصُ القِطّ.",    translit: "yanquṣu l-qiṭṭ.", fr: "Il manque le chat.", phon: "YAN-qou-sou l-QITT" }
+      - title_fr: "Tu as ? J'ai !"
+        pt: "هَلْ عِنْدَك؟ عِنْدِي!"
+        ages_fr: "5-10 ans"
+        min: 15
+        players_fr: "2 à 4"
+        material_fr: "deux exemplaires des cartes de l'unité"
+        why_fr: >-
+          Le jeu des familles. Il fait dire **une vraie question et une vraie
+          réponse** à chaque tour — la structure exacte de « on me demande, je
+          réponds ».
+        units_fr: "Toutes ; excellent avec 4, 5, 6"
+        how_fr:
+          - "Cinq cartes chacun, le reste fait la pioche."
+          - "À son tour, on demande : هَلْ عِنْدَكَ القِطّة؟"
+          - "Il répond عِنْدِي et donne la carte, ou لَيْسَ عِنْدِي — خُذْ مِنَ الكَوْمة (pioche)."
+          - "Une paire posée = un point. Celui qui n'a plus de cartes arrête la partie."
+        variants_fr:
+          - "Version polie : هَلْ يُمْكِنُ أَنْ تُعْطِيَنِي…؟ — تَفَضَّل."
+        phrases:
+          - { term: "هَلْ عِنْدَكَ القِطّة؟", translit: "hal ʿindaka l-qiṭṭa?", fr: "Tu as le chat ?", phon: "hal 'IN-da-ka l-QIT-ta" }
+          - { term: "عِنْدِي، تَفَضَّلْ.",    translit: "ʿindī, tafaḍḍal.",     fr: "Oui, tiens.",     phon: "'IN-di, ta-FAD-dal" }
+          - { term: "خُذْ مِنَ الكَوْمة.",   translit: "khudh mina l-kawma.",  fr: "Pioche.",         phon: "KHOUDH mi-na l-KAW-ma" }
+      - title_fr: "La main la plus rapide"
+        pt: "مَنْ يُمْسِكُ أَوَّلًا"
+        ages_fr: "4-10 ans"
+        min: 8
+        players_fr: "2 à 4"
+        material_fr: "les cartes de l'unité, étalées face visible"
+        why_fr: >-
+          Reconnaître un mot **en une seconde**, sans traduire dans sa tête.
+          C'est ce passage-là qui sépare un enfant qui récite d'un enfant qui
+          comprend.
+        units_fr: "Toutes"
+        how_fr:
+          - "Toutes les cartes face visible, mains sur les genoux."
+          - "Le parent dit un mot : الجُبْن! Le premier qui pose la main dessus la gagne."
+          - "Celui qui gagne la carte doit redire le mot avant de la ranger."
+        variants_fr:
+          - "Sans traduction possible : le parent décrit au lieu de nommer."
+          - "Avec deux enfants, une cuillère en bois à attraper au lieu de la carte : moins de disputes."
+        phrases:
+          - { term: "اليَدانِ عَلى الرُّكْبَتَيْن!", translit: "al-yadāni ʿalā r-rukbatayn!", fr: "Les mains sur les genoux !", phon: "al-ya-DA-ni 'A-la r-rouk-ba-TAÏN" }
+          - { term: "كُنْتُ الأَوَّل!",          translit: "kuntu l-awwal!",             fr: "C'est moi le premier !",     phon: "KOUN-tou l-AW-wal" }
+      - title_fr: "Le mime des cartes"
+        pt: "التَّمْثيلُ الصّامِت"
+        ages_fr: "3-10 ans"
+        min: 10
+        players_fr: "2 et plus"
+        material_fr: "les cartes de l'unité, face cachée"
+        why_fr: >-
+          Le mime supprime le français de la pièce : pour faire deviner, il ne
+          reste que le corps et le mot arabe.
+        units_fr: "Unités 5, 7, 9 — animaux, corps, actions"
+        how_fr:
+          - "On tire une carte sans la montrer et on mime."
+          - "Les autres devinent **en arabe** : هٰذا حِصان!"
+          - "Celui qui devine mime à son tour."
+        variants_fr:
+          - "Version corps (unité 7) : on mime une douleur, on devine avec يُؤْلِمُكَ رَأْسُك؟"
+        phrases:
+          - { term: "هٰذا حِصان!", translit: "hādhā ḥiṣān!", fr: "C'est un cheval !", phon: "HA-dha hi-SAN" }
+          - { term: "لا، لَيْسَ هٰذا.", translit: "lā, laysa hādhā.", fr: "Non, ce n'est pas ça.", phon: "la, LAÏ-sa HA-dha" }
+          - { term: "أَصَبْت!",   translit: "aṣabt!",      fr: "Tu as deviné juste !", phon: "a-SABT" }
+      - title_fr: "Qui suis-je ?"
+        pt: "مَنْ أَنا؟"
+        ages_fr: "6-10 ans"
+        min: 10
+        players_fr: "2 et plus"
+        material_fr: "une carte et un bandeau, ou du ruban adhésif"
+        why_fr: >-
+          Poser des questions fermées, écouter نَعَم ou لا, éliminer. Le premier
+          vrai raisonnement mené entièrement en arabe.
+        units_fr: "Unités 5 et 6 — animaux, aliments"
+        how_fr:
+          - "Une carte sur le front d'un joueur, sans qu'il la voie."
+          - "Il pose des questions auxquelles on ne répond que par نَعَم ou لا : هَلْ أَنا حَيَوان؟ هَلْ أَنا كَبير؟"
+          - "Dix questions maximum. Au bout, il devine : أَنا بَقَرة!"
+        variants_fr:
+          - "Pour les plus jeunes : trois cartes seulement sur la table, et les questions fournies au dos."
+        phrases:
+          - { term: "هَلْ أَنا حَيَوان؟", translit: "hal anā ḥayawān?", fr: "Je suis un animal ?", phon: "hal A-na ha-ya-WAN" }
+          - { term: "نَعَم، أَنْتَ كَذٰلِك.", translit: "naʿam, anta kadhālik.", fr: "Oui, tu l'es.", phon: "NA-'am, AN-ta ka-DHA-lik" }
+          - { term: "لا، لَسْتَ كَذٰلِك.", translit: "lā, lasta kadhālik.", fr: "Non, tu ne l'es pas.", phon: "la, LAS-ta ka-DHA-lik" }
+  - title_fr: "Les jeux de dés et de plateau — fabriqués en cinq minutes"
+    intro_fr: >-
+      Un dé, une feuille quadrillée, quatre bouchons. Le plateau fabriqué **par
+      l'enfant** est joué trois fois plus souvent que le plateau acheté — et le
+      dessiner est déjà une séance de vocabulaire.
+    games:
+      - title_fr: "Le dé des questions"
+        pt: "نَرْدُ الأَسْئِلة"
+        ages_fr: "4-10 ans"
+        min: 10
+        players_fr: "2 et plus"
+        material_fr: "un dé et une feuille avec six questions numérotées"
+        why_fr: >-
+          Le hasard remplace l'interrogatoire. La même question revient sans que
+          personne ne l'impose — et l'enfant finit par la poser lui-même.
+        units_fr: "Toutes"
+        how_fr:
+          - "Écrivez les six questions de l'unité, numérotées de 1 à 6, en chiffres arabes ١ à ٦."
+          - "Chacun lance le dé à son tour et répond à la question tirée."
+          - "Répondu sans hésiter → on relance."
+          - "Après trois tours, on inverse : **c'est l'enfant qui pose la question** au parent."
+        variants_fr:
+          - "Deux dés pour les grands : douze questions, dont trois « raconte » qui demandent trois phrases."
+        phrases:
+          - { term: "اِرْمِ النَّرْد.",   translit: "irmi n-nard.",   fr: "Lance le dé.",     phon: "IR-mi n-NARD" }
+          - { term: "خَرَجَ أَرْبَعة.",  translit: "kharaja arbaʿa.", fr: "C'est tombé sur le quatre.", phon: "KHA-ra-ja AR-ba-'a" }
+          - { term: "أَجِبْ أَنْت.",     translit: "ajib anta.",     fr: "Réponds, toi.",    phon: "A-jib AN-ta" }
+      - title_fr: "Le jeu de parcours de l'unité"
+        pt: "لُعْبةُ المَسار"
+        ages_fr: "5-10 ans"
+        min: 20
+        players_fr: "2 à 4"
+        material_fr: "une grande feuille, un dé, un pion par joueur"
+        why_fr: >-
+          Le plateau transforme une liste de mots en parcours. Vingt cases,
+          vingt phrases à produire — sans qu'on ait jamais dit « répète ».
+        units_fr: "Toutes ; à refaire à chaque fin d'unité"
+        how_fr:
+          - "Dessinez vingt cases en serpent, **de droite à gauche** : le sens de lecture s'apprend aussi par le jeu."
+          - "Dans chaque case, l'enfant écrit ou dessine un mot de l'unité."
+          - "On avance du nombre du dé. On ne reste sur la case qu'en disant une **phrase entière** avec le mot."
+          - "Trois cases pièges : اِرْجِعْ ثَلاثَ خانات، أُمَرِّرُ دَوْرِي، اِلْعَبْ مَرَّةً أُخْرى."
+        variants_fr:
+          - "Cases-questions pour les grands : la case pose une question, il faut deux phrases."
+          - "Plateau collectif : un seul plateau pour l'année, qui grossit à chaque unité."
+        phrases:
+          - { term: "تَقَدَّمْ خانَتَيْن.", translit: "taqaddam khānatayn.", fr: "Avance de deux cases.", phon: "ta-QAD-dam kha-na-TAÏN" }
+          - { term: "اِرْجِعْ ثَلاثَ خانات.", translit: "irjiʿ thalātha khānāt.", fr: "Recule de trois cases.", phon: "IR-ji' tha-LA-tha kha-NAT" }
+          - { term: "وَصَلْتُ إِلى النِّهاية!", translit: "waṣaltu ilā n-nihāya!", fr: "Je suis arrivé au bout !", phon: "wa-SAL-tou I-la n-ni-HA-ya" }
+      - title_fr: "La marelle qui parle"
+        pt: "الحَجْلة"
+        ages_fr: "4-9 ans"
+        min: 10
+        players_fr: "1 et plus"
+        material_fr: "une craie, ou du ruban adhésif sur le sol du couloir"
+        why_fr: >-
+          Le corps compte en même temps que la bouche. Les nombres appris en
+          sautant ne se perdent plus.
+        units_fr: "Unité 3 — les nombres"
+        how_fr:
+          - "Une marelle de huit cases, numérotées en chiffres arabes ١ à ٨."
+          - "On saute case par case **en disant le nombre en arabe**. Un nombre en français : on repart du départ."
+          - "Au retour, on compte à l'envers."
+        variants_fr:
+          - "Version lettres : une lettre par case au lieu d'un chiffre. On la nomme en atterrissant."
+          - "Version couleurs : les cases sont coloriées, on annonce la couleur."
+        phrases:
+          - { term: "اِقْفِزْ إِلى الخانةِ الثّالِثة.", translit: "iqfiz ilā l-khānati th-thālitha.", fr: "Saute sur la case trois.", phon: "IQ-fiz I-la l-KHA-na-ti th-THA-li-tha" }
+          - { term: "عَلى قَدَمٍ واحِدة!", translit: "ʿalā qadamin wāḥida!", fr: "À cloche-pied !", phon: "'A-la QA-da-min WA-hi-da" }
+  - title_fr: "Les jeux qui se cachent dans la journée"
+    intro_fr: >-
+      Ceux-là ne demandent pas de « faire une séance » : ils se glissent dans un
+      trajet, un bain, une préparation de table. **Les plus rentables du lot**,
+      parce qu'ils rendent la langue utile au lieu de la rendre scolaire.
+    games:
+      - title_fr: "Le sac à surprises"
+        pt: "كيسُ المُفاجَآت"
+        ages_fr: "3-8 ans"
+        min: 5
+        players_fr: "2 et plus"
+        material_fr: "un sac en tissu, une taie d'oreiller, cinq objets"
+        why_fr: >-
+          Ne pas voir oblige à décrire. La main cherche, la bouche parle : le jeu
+          qui fait le plus parler les enfants timides.
+        units_fr: "Unités 5, 6, 8 — animaux, aliments, objets"
+        how_fr:
+          - "Cinq objets de l'unité cachés dans le sac."
+          - "L'enfant y met la main sans regarder et devine : هٰذِهِ كُرة!"
+          - "Il sort l'objet : juste → il le garde ; faux → il le remet et passe son tour."
+        variants_fr:
+          - "Pour les grands : avant de deviner, il doit décrire — هٰذا صَغير، هٰذا بارِد."
+          - "Version goût, les yeux bandés, avec l'unité 6."
+        phrases:
+          - { term: "ضَعْ يَدَكَ في الكيس.", translit: "ḍaʿ yadaka fī l-kīs.", fr: "Mets la main dans le sac.", phon: "DA' YA-da-ka fi l-KIS" }
+          - { term: "لا تَنْظُرْ!",         translit: "lā tanẓur!",           fr: "Ne regarde pas !",          phon: "la TAN-dhour" }
+          - { term: "ما هٰذا؟",           translit: "mā hādhā?",            fr: "C'est quoi ?",              phon: "ma HA-dha" }
+      - title_fr: "La chasse au trésor"
+        pt: "البَحْثُ عَنِ الكَنْز"
+        ages_fr: "4-10 ans"
+        min: 20
+        players_fr: "1 et plus"
+        material_fr: "cinq petits papiers, un « trésor » (une datte fait très bien l'affaire)"
+        why_fr: >-
+          Chaque indice est une consigne à comprendre pour de vrai. L'enfant ne
+          fait pas semblant : s'il se trompe, il ne trouve rien.
+        units_fr: "Unité 8 — la maison, les prépositions"
+        how_fr:
+          - "Écrivez ou dessinez cinq indices en arabe : تَحْتَ السَّرير، بِجانِبِ الباب، عَلى الطّاوِلة."
+          - "Chaque indice mène au suivant. Le cinquième mène au trésor."
+          - "On lit l'indice ensemble à voix haute, on ne traduit pas : on va vérifier sur place."
+        variants_fr:
+          - "L'enfant cache le trésor et écrit les indices pour le parent. C'est la version difficile, et la meilleure."
+        phrases:
+          - { term: "اِبْحَثْ تَحْتَ السَّرير.", translit: "ibḥath taḥta s-sarīr.", fr: "Cherche sous le lit.", phon: "IB-hath TAH-ta s-sa-RIR" }
+          - { term: "وَجَدْتُ الكَنْز!",      translit: "wajadtu l-kanz!",       fr: "J'ai trouvé le trésor !", phon: "wa-JAD-tou l-KANZ" }
+      - title_fr: "Le téléphone cassé"
+        pt: "الهاتِفُ المَكْسور"
+        ages_fr: "5-10 ans"
+        min: 5
+        players_fr: "3 et plus"
+        material_fr: "rien"
+        why_fr: >-
+          Écouter une phrase entière et la redire telle quelle. Le rire vient de
+          la déformation — et la déformation montre exactement quel son n'est
+          pas encore entendu. Pour l'arabe, c'est souvent le ح, le خ ou le ع.
+        units_fr: "Toutes"
+        how_fr:
+          - "En file, le premier chuchote une phrase de l'unité à l'oreille du suivant."
+          - "La phrase circule. Le dernier la dit à voix haute."
+          - "On compare avec l'original : هَلْ كانَ هٰكَذا؟"
+        variants_fr:
+          - "À deux : le parent chuchote, l'enfant répète à la peluche, la peluche « répète » au parent."
+          - "Version ciblée : choisissez exprès une phrase avec un ح ou un ع, et écoutez ce qui en reste au bout de la file."
+        phrases:
+          - { term: "تَعالَ هُنا.",    translit: "taʿāla hunā.",    fr: "Approche.",         phon: "ta-'A-la HOU-na" }
+          - { term: "في الأُذُن!",    translit: "fī l-udhun!",     fr: "À l'oreille !",     phon: "fi l-OU-dhoun" }
+          - { term: "هَلْ كانَ هٰكَذا؟", translit: "hal kāna hākadhā?", fr: "C'était bien ça ?", phon: "hal KA-na HA-ka-dha" }
+      - title_fr: "La maison étiquetée"
+        pt: "البَيْتُ المُعَنْوَن"
+        ages_fr: "3-10 ans"
+        min: 15
+        players_fr: "1 et plus"
+        material_fr: "des papiers repositionnables, un feutre"
+        why_fr: >-
+          Le mot est lu cinquante fois par jour sans effort, là où il sert. Pour
+          l'arabe, c'est en plus la seule façon d'exposer l'œil à l'écriture
+          sans faire une leçon de lecture.
+        units_fr: "Unités 6 et 8 — la cuisine, la maison"
+        how_fr:
+          - "À la fin de l'unité, on étiquette ensemble dix objets, en arabe voyellé : الباب، الطّاوِلة، النّافِذة."
+          - "Règle de la maison : **on ne prend pas un objet étiqueté sans dire son nom en arabe.**"
+          - "Au bout d'une semaine, on retire les étiquettes une par une : celles dont l'enfant se souvient partent."
+        variants_fr:
+          - "Écrivez le ال en rouge et le reste en noir : les lettres solaires et lunaires se voient alors à l'œil nu."
+          - "Chasse à l'étiquette : un parent en retire une en cachette, l'enfant doit trouver laquelle manque."
+        phrases:
+          - { term: "كَيْفَ نَقُولُ هٰذا بِالعَرَبِيَّة؟", translit: "kayfa naqūlu hādhā bi-l-ʿarabiyya?", fr: "Comment on dit ça en arabe ?", phon: "KAÏ-fa na-QOU-lou HA-dha bil-a-ra-BI-ya" }
+          - { term: "قُلِ الاِسْمَ أَوَّلًا!", translit: "quli l-isma awwalan!", fr: "Dis le nom d'abord !", phon: "QOU-li l-IS-ma AW-wa-lan" }
+      - title_fr: "La boutique de la maison"
+        pt: "دُكّانُ البَيْت"
+        ages_fr: "3-10 ans"
+        min: 15
+        players_fr: "2 et plus"
+        material_fr: "des boîtes vides, de la fausse monnaie"
+        why_fr: >-
+          Le jeu d'imitation est **la** situation où un petit accepte de parler
+          une autre langue : ce n'est pas lui qui parle, c'est le marchand.
+        units_fr: "Unités 3 et 6 — les nombres, les aliments"
+        how_fr:
+          - "Quatre produits avec un prix affiché en chiffres arabes."
+          - "Le parent est le client : السَّلامُ عَلَيْكُم! بِكَمِ الخُبْز؟ L'enfant tient la boutique."
+          - "On change de rôle à la moitié. Le client difficile fait produire le plus de langue."
+        variants_fr:
+          - "Version pour de vrai : à l'épicerie du quartier, l'enfant commande **lui-même**, en arabe si le vendeur le parle."
+        phrases:
+          - { term: "بِكَمْ هٰذا؟",     translit: "bi-kam hādhā?",    fr: "Ça coûte combien ?", phon: "bi-KAM HA-dha" }
+          - { term: "بِخَمْسةِ يوروهات.", translit: "bi-khamsati yūrūhāt.", fr: "Cinq euros.",  phon: "bi-KHAM-sa-ti you-rou-HAT" }
+          - { term: "تَفَضَّلْ.",       translit: "tafaḍḍal.",        fr: "Voilà, je vous en prie.", phon: "ta-FAD-dal" }
+      - title_fr: "Le jeu du trajet"
+        pt: "لُعْبةُ الطَّريق"
+        ages_fr: "4-10 ans"
+        min: 10
+        players_fr: "2 et plus"
+        material_fr: "rien — une voiture, un bus, une salle d'attente"
+        why_fr: >-
+          Dix minutes perdues deviennent dix minutes d'arabe. Le rendez-vous le
+          plus facile à tenir de toute la semaine.
+        units_fr: "Unités 2, 3, 5 — couleurs, nombres, animaux"
+        how_fr:
+          - "Premier jeu — أَرى شَيْئًا… : « je vois quelque chose de rouge », l'autre cherche et nomme."
+          - "Deuxième jeu — la liste qui grossit : ذَهَبْتُ إِلى السُّوقِ وَاشْتَرَيْتُ… chacun répète tout et ajoute un mot."
+          - "Troisième jeu — le compte : on compte en arabe tous les chiens, toutes les voitures bleues."
+        variants_fr:
+          - "Pour les grands : أَرى شَيْئًا يَبْدَأُ بِحَرْفِ الباء — la lettre au lieu de la couleur."
+        phrases:
+          - { term: "أَرى شَيْئًا أَحْمَر.", translit: "arā shayʾan aḥmar.", fr: "Je vois quelque chose de rouge.", phon: "A-ra CHAÏ-an AH-mar" }
+          - { term: "أَيْنَ هُوَ؟",        translit: "ayna huwa?",         fr: "Où est-ce ?",                     phon: "AÏ-na HOU-wa" }
+  - title_fr: "Les jeux de mots — pour les grands (7-10 ans)"
+    intro_fr: >-
+      À partir de sept ans, l'enfant aime **gagner avec des mots**. Ces jeux
+      demandent de l'écrit ou de la stratégie ; ils remplacent avantageusement
+      les exercices à trous, et se jouent à deux, au dîner.
+    games:
+      - title_fr: "Stop !"
+        pt: "قِفْ!"
+        ages_fr: "7-10 ans"
+        min: 15
+        players_fr: "2 et plus"
+        material_fr: "une feuille par joueur, un crayon"
+        why_fr: >-
+          Aller chercher un mot dans sa mémoire en dix secondes. L'entraînement
+          le plus direct à la fluidité — et la colonne vide montre précisément
+          ce qui manque.
+        units_fr: "Révision de plusieurs unités à la fois"
+        how_fr:
+          - "Cinq colonnes : اِسْم (prénom), لَوْن, حَيَوان, طَعام, بَلَد (pays)."
+          - "Quelqu'un récite l'alphabet arabe dans sa tête ; un autre dit قِفْ! La lettre atteinte lance la manche."
+          - "On remplit le plus vite possible. Le premier qui a tout crie قِفْ! — tout le monde pose le crayon."
+          - "Dix points par mot unique, cinq si quelqu'un a le même, zéro si la case est vide."
+        variants_fr:
+          - "Version orale pour ceux qui écrivent lentement : on répond à tour de rôle, à voix haute."
+          - "Évitez au début les lettres rares (ظ, ذ, ث) : une manche sans aucun mot décourage."
+        phrases:
+          - { term: "قِفْ!",           translit: "qif!",             fr: "Stop !",                phon: "QIF" }
+          - { term: "أَيُّ حَرْفٍ خَرَج؟", translit: "ayyu ḥarfin kharaj?", fr: "C'est quelle lettre ?", phon: "AÏ-you HAR-fin KHA-raj" }
+          - { term: "اِنْتَهَيْتُ!",     translit: "intahaytu!",       fr: "J'ai fini !",           phon: "in-ta-HAÏ-tou" }
+      - title_fr: "Dessine et devine"
+        pt: "اُرْسُمْ وَخَمِّنْ"
+        ages_fr: "6-10 ans"
+        min: 15
+        players_fr: "2 et plus"
+        material_fr: "une ardoise ou du papier, un chronomètre"
+        why_fr: >-
+          On devine à voix haute, donc on produit des dizaines de mots en une
+          minute — y compris les mauvais, qui sont ceux qu'on retient le mieux.
+        units_fr: "Toutes"
+        how_fr:
+          - "Un joueur tire une carte et dessine, sans lettre ni chiffre, pendant une minute."
+          - "Les autres crient leurs propositions **en arabe** : هَلْ هُوَ سَمَكة؟"
+          - "Un point pour le dessinateur et un pour celui qui devine."
+        variants_fr:
+          - "Version difficile : le dessinateur ferme les yeux."
+        phrases:
+          - { term: "لا يَجوزُ الكِتابة!", translit: "lā yajūzu l-kitāba!", fr: "Pas le droit d'écrire !", phon: "la ya-JOU-zou l-ki-TA-ba" }
+          - { term: "دَقيقة واحِدة!",    translit: "daqīqa wāḥida!",      fr: "Une minute !",            phon: "da-QI-qa WA-hi-da" }
+          - { term: "عَرَفْتُ!",         translit: "ʿaraftu!",            fr: "J'ai trouvé !",           phon: "'a-RAF-tou" }
+      - title_fr: "Explique sans le dire"
+        pt: "اِشْرَحْ بِدونِ أَنْ تَقول"
+        ages_fr: "8-10 ans"
+        min: 10
+        players_fr: "2 et plus"
+        material_fr: "les cartes de l'unité"
+        why_fr: >-
+          **Le jeu le plus utile du programme.** Contourner un mot qu'on ne
+          connaît pas est ce qui permet de tenir une conversation réelle — et
+          c'est exactement la phrase visée à l'unité 10 : لا أَعْرِفُ الكَلِمة،
+          لٰكِنَّهُ شَيْءٌ لِـ…
+        units_fr: "Unité 10, et toutes les révisions"
+        how_fr:
+          - "On tire une carte et on fait deviner le mot **sans jamais le dire**, et sans traduire en français."
+          - "Trois outils autorisés : à quoi ça sert (شَيْءٌ نَشْرَبُه), à quoi ça ressemble (يُشْبِهُ…), où on le trouve (في المَطْبَخ)."
+          - "Un mot français prononcé = carte perdue."
+        variants_fr:
+          - "Version tabou : deux mots interdits écrits au dos de la carte."
+          - "Version honnête : quand l'enfant bloque **pour de vrai** dans la vie, on rejoue le tour avec ce mot-là."
+        phrases:
+          - { term: "شَيْءٌ نَشْرَبُه.",    translit: "shayʾun nashrabuh.", fr: "Une chose qu'on boit.",  phon: "CHAÏ-oun NACH-ra-bouh" }
+          - { term: "يُشْبِهُ القِطّة.",    translit: "yushbihu l-qiṭṭa.",  fr: "Ça ressemble à un chat.", phon: "YOUCH-bi-hou l-QIT-ta" }
+          - { term: "لا أَعْرِفُ الكَلِمة.", translit: "lā aʿrifu l-kalima.", fr: "Je ne connais pas le mot.", phon: "la Aʿ-ri-fou l-ka-LI-ma" }
+      - title_fr: "L'histoire folle"
+        pt: "الحِكايةُ المَجْنونة"
+        ages_fr: "6-10 ans"
+        min: 15
+        players_fr: "2 et plus"
+        material_fr: "rien, ou six cartes tirées au hasard"
+        why_fr: >-
+          Raconter à plusieurs enlève la peur de la page blanche : chacun ne
+          fournit qu'une phrase, mais elle vient après celle des autres — il
+          faut donc avoir écouté.
+        units_fr: "Unité 10 et au-delà"
+        how_fr:
+          - "Le premier commence obligatoirement par كانَ يا ما كان… (il était une fois)."
+          - "Chacun ajoute **une seule phrase**, à tour de rôle."
+          - "Trois relances autorisées pour débloquer : وَبَعْدَ ذٰلِك؟ / وَفَجْأَةً… / لٰكِنْ…"
+          - "Celui qui dit وَعاشوا في سَعادة termine l'histoire."
+        variants_fr:
+          - "Avec six cartes tirées au hasard, à placer dans l'ordre : l'histoire doit toutes les contenir."
+          - "Version écrite : chacun écrit une phrase, plie la feuille, passe. On lit tout à la fin."
+        phrases:
+          - { term: "كانَ يا ما كان…",   translit: "kāna yā mā kān…",    fr: "Il était une fois…",  phon: "KA-na ya ma KAN" }
+          - { term: "وَبَعْدَ ذٰلِك؟",     translit: "wa baʿda dhālik?",   fr: "Et après ?",          phon: "wa BA'-da DHA-lik" }
+          - { term: "وَفَجْأَةً…",       translit: "wa fajʾatan…",       fr: "Et tout à coup…",     phon: "wa FAJ-a-tan" }
+outro_fr: >-
+  Un jeu ne vaut que s'il est rejoué. Gardez-en **trois ou quatre**, ceux que
+  l'enfant réclame, et refaites-les à chaque unité avec de nouveaux mots :
+  quinze jeux joués une fois valent moins que trois jeux joués trente fois. Et
+  pour l'alphabet, tenez le rythme le plus lent que vous puissiez tenir : deux
+  lettres par semaine, toute l'année, valent mieux que tout l'alphabet en un
+  mois et rien qui reste.

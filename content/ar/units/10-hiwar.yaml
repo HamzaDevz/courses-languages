@@ -1,0 +1,146 @@
+id: 10-hiwar
+order: 10
+year: 1
+title: "هَيَّا نَتَحَدَّث"
+title_fr: "On discute !"
+goal_fr: "Tenir seul une conversation de six répliques sur soi. Bilan de l'année 1."
+can_do_fr:
+  - "Je sais enchaîner six répliques sans qu'on me souffle."
+  - "Je sais relancer la conversation avec وَأَنْتَ؟ et أَخْبِرْنِي أَكْثَر."
+  - "Je sais dire que je n'ai pas compris au lieu de me taire."
+  - "Je sais relier deux phrases avec وَ, لٰكِنْ et لِأَنَّ."
+duration_min: 15
+cefr: "A1"
+vocab:
+  - { term: "وَ",        translit: "wa",       fr: "et",            phon: "wa" }
+  - { term: "لٰكِنْ",     translit: "lākin",    fr: "mais",          phon: "LA-kin" }
+  - { term: "أَيْضًا",    translit: "ayḍan",    fr: "aussi",         phon: "AÏ-dan" }
+  - { term: "لِأَنَّ",     translit: "liʾanna",  fr: "parce que",     phon: "li-AN-na" }
+  - { term: "ثُمَّ",      translit: "thumma",   fr: "ensuite",       phon: "THOUM-ma" }
+  - { term: "الآنَ",     translit: "al-āna",   fr: "maintenant",    phon: "al-A-na" }
+  - { term: "طَبْعًا",    translit: "ṭabʿan",   fr: "bien sûr",      phon: "TAB-'an" }
+  - { term: "جِدًّا",     translit: "jiddan",   fr: "très",          phon: "JID-dan" }
+phrases:
+  - { term: "وَأَنْتَ؟",              translit: "wa anta?",              fr: "Et toi ? (à un garçon)",       phon: "wa AN-ta" }
+  - { term: "وَأَنْتِ؟",              translit: "wa anti?",              fr: "Et toi ? (à une fille)",       phon: "wa AN-ti" }
+  - { term: "لَمْ أَفْهَم.",           translit: "lam afham.",            fr: "Je n'ai pas compris.",         phon: "lam AF-ham" }
+  - { term: "مَرَّةً أُخْرى، مِنْ فَضْلِك.", translit: "marratan ukhrā, min faḍlik.", fr: "Encore une fois, s'il te plaît.", phon: "MAR-ra-tan OUKH-ra, min FAD-lik" }
+  - { term: "أَخْبِرْنِي أَكْثَر.",      translit: "akhbirnī akthar.",      fr: "Raconte-moi encore.",          phon: "AKH-bir-ni AK-thar" }
+  - { term: "ما أَجْمَل!",           translit: "mā ajmal!",             fr: "Que c'est beau !",             phon: "ma AJ-mal" }
+notes_fr:
+  - "**Trois petits mots font toute la différence entre réciter et discuter** : وَأَنْتَ؟ renvoie la question, أَخْبِرْنِي أَكْثَر demande la suite, et لَمْ أَفْهَم permet de rester au lieu de se taire. Ils valent plus que trente mots de vocabulaire."
+  - "**لِأَنَّ transforme une réponse en discussion.** أُحِبُّ القِطَط est une réponse ; أُحِبُّ القِطَط لِأَنَّها صَغيرة est une conversation. C'est le premier mot à ajouter dès que l'enfant répond par un seul mot."
+  - "**Cette unité n'apporte presque aucun vocabulaire nouveau, et c'est voulu.** On ne mesure pas ce qui a été appris en ajoutant des mots, mais en enlevant les aides : plus de traduction, plus de souffleur, plus de carte sous les yeux."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Le micro"
+    steps_fr:
+      - "Un objet fait le micro. Celui qui le tient est le seul à parler."
+      - "Vous posez une question de l'année, il répond, puis il vous tend le micro et pose la sienne."
+      - "Six allers-retours. On ne compte pas les fautes, on compte les répliques."
+  - level: petits
+    type: jeu
+    title_fr: "La boîte à questions du dîner"
+    steps_fr:
+      - "Huit questions de l'année écrites sur des papiers, pliés dans une boîte posée sur la table."
+      - "Chaque soir, un papier tiré au hasard : tout le monde répond, l'enfant en dernier."
+      - "Les mêmes questions toute la semaine. C'est la répétition qui fait l'effet, pas la variété."
+  - level: petits
+    type: jeu
+    title_fr: "Le téléphone cassé"
+    steps_fr:
+      - "En file, le premier chuchote une phrase de l'année à l'oreille du suivant."
+      - "Le dernier la dit à voix haute. On compare : هَلْ كانَ هٰكَذا؟"
+      - "À deux, on passe par la peluche : elle entend, elle répète."
+  - level: petits
+    type: jeu
+    title_fr: "Le relais de la parole"
+    steps_fr:
+      - "Un objet passe de main en main : seul celui qui le tient parle."
+      - "Chacun ajoute une phrase sur sa journée, en commençant par الآنَ, ثُمَّ ou أَيْضًا."
+      - "Trois tours de table suffisent."
+  - level: petits
+    type: jeu
+    title_fr: "Le dé de l'année"
+    steps_fr:
+      - "Un dé, six thèmes de l'année : الأَلْوان، الأَرْقام، العائِلة، الحَيَوانات، الطَّعام، البَيْت."
+      - "On lance et on parle du thème tiré pendant trente secondes."
+      - "Le parent joue aussi — et bloque parfois, pour montrer qu'on s'en sort avec لَمْ أَفْهَم et كَيْفَ نَقُول…؟"
+  - level: grands
+    type: production
+    title_fr: "Six répliques sans filet"
+    steps_fr:
+      - "Écris une conversation de six répliques entre toi et quelqu'un qui te rencontre pour la première fois."
+      - "Elle doit contenir : un salut, ton nom, ton âge, une chose que tu aimes, une question que **tu** poses, et un au revoir."
+      - "Apprends-la, puis joue-la sans la lire."
+  - level: grands
+    type: exercice
+    title_fr: "Relie tes phrases"
+    steps_fr:
+      - "أُحِبُّ القِطَط ______ هِيَ صَغيرة. (parce que)"
+      - "أُحِبُّ الأَرُزّ ______ لا أُحِبُّ السَّمَك. (mais)"
+      - "عِنْدِي أَخ ______ أُخْت. (et)"
+      - "أَنا جائِع ______ عَطْشان. (aussi)"
+  - level: grands
+    type: jeu
+    title_fr: "Soixante secondes sans français"
+    steps_fr:
+      - "Chacun reçoit trois jetons. On discute en arabe pendant une minute, montre en main."
+      - "Chaque mot français coûte un jeton — mais لَمْ أَفْهَم et كَيْفَ نَقُولُ هٰذا بِالعَرَبِيَّة؟ sont gratuits, et le resteront toujours."
+      - "Objectif de la semaine : finir la minute avec au moins un jeton. Puis on passe à deux minutes."
+  - level: grands
+    type: dialogue
+    title_fr: "Le bilan de l'année"
+    steps_fr:
+      - "Une conversation filmée de deux minutes, sans notes, avec un parent ou un ami."
+      - "Elle doit passer par cinq des dix unités de l'année."
+      - "Regardez-la ensemble. Ce que l'enfant n'a pas su dire devient le programme des vacances — pas un reproche."
+dialogue:
+  title_fr: "La vraie discussion"
+  context_fr: "Fin de l'année. Maryam et Youssef parlent sans que personne ne leur souffle rien."
+  lines:
+    - { who: "مَرْيَم", term: "السَّلامُ عَلَيْكُم يا يُوسُف! كَيْفَ حالُك؟", fr: "Salut Youssef ! Comment vas-tu ?", phon: "as-sa-LA-mou 'a-LAÏ-koum ya you-SOUF! KAÏ-fa HA-louk" }
+    - { who: "يُوسُف", term: "وَعَلَيْكُمُ السَّلام! أَنا بِخَيْر، الحَمْدُ لِلَّه. وَأَنْتِ؟", fr: "Salut ! Je vais bien, louange à Dieu. Et toi ?", phon: "wa 'a-LAÏ-kou-mou s-sa-LAM! A-na bi-KHAÏR, al-HAM-dou lil-LAH. wa AN-ti" }
+    - { who: "مَرْيَم", term: "أَنا بِخَيْر أَيْضًا. عِنْدِي قِطّة جَديدة!", fr: "Je vais bien aussi. J'ai un nouveau chat !", phon: "A-na bi-KHAÏR AÏ-dan. 'IN-di QIT-ta ja-DI-da" }
+    - { who: "يُوسُف", term: "ما أَجْمَل! ما لَوْنُها؟",             fr: "Que c'est beau ! De quelle couleur est-il ?", phon: "ma AJ-mal! ma LAW-nou-ha" }
+    - { who: "مَرْيَم", term: "بَيْضاء وَسَوْداء. اسْمُها ثَلْج.",     fr: "Blanc et noir. Elle s'appelle Neige.", phon: "BAÏ-da wa SAW-da. is-MOU-ha THALJ" }
+    - { who: "يُوسُف", term: "لِماذا ثَلْج؟ لَمْ أَفْهَم.",           fr: "Pourquoi Neige ? Je n'ai pas compris.", phon: "li-MA-dha THALJ? lam AF-ham" }
+    - { who: "مَرْيَم", term: "لِأَنَّ وَجْهَها أَبْيَض، كَالثَّلْج!",  fr: "Parce que son visage est blanc, comme la neige !", phon: "li-AN-na WAJ-ha-ha AB-yad, kath-THALJ" }
+    - { who: "يُوسُف", term: "الآنَ فَهِمْت! أَخْبِرينِي أَكْثَر عَنْها.", fr: "Maintenant j'ai compris ! Raconte-moi encore.", phon: "al-A-na fa-HIMT! akh-bi-RI-ni AK-thar 'AN-ha" }
+    - { who: "مَرْيَم", term: "هِيَ صَغيرة جِدًّا، وَتَأْكُلُ كَثيرًا، لٰكِنَّها لا تَنام!", fr: "Elle est toute petite, elle mange beaucoup, mais elle ne dort pas !", phon: "HI-ya sa-GHI-ra JID-dan, wa ta-KOU-lou ka-THI-ran, LA-kin-na-ha la ta-NAM" }
+    - { who: "يُوسُف", term: "مِثْلُ أَخِي الصَّغير! هَيَّا نَذْهَبُ لِنَراها.", fr: "Comme mon petit frère ! Allons la voir.", phon: "MITH-lou a-KHI s-sa-GHIR! HAÏ-ya nadh-HA-bou li-na-RA-ha" }
+comprehension:
+  - q_fr: "Qu'est-ce que Maryam annonce à Youssef ?"
+    a_fr: "Qu'elle a un **nouveau chat** — عِنْدِي قِطّة جَديدة."
+  - q_fr: "Pourquoi le chat s'appelle-t-il ثَلْج (Neige) ?"
+    a_fr: "Parce que **son visage est blanc comme la neige** : لِأَنَّ وَجْهَها أَبْيَض، كَالثَّلْج."
+  - q_fr: "Youssef ne comprend pas quelque chose. Que fait-il ? Et qu'est-ce que ça change ?"
+    a_fr: "Il le **dit** : لَمْ أَفْهَم. Maryam explique, et la conversation continue au lieu de s'arrêter. C'est exactement le but de l'année."
+  - q_fr: "Retrouve trois mots de liaison dans la dernière réplique de Maryam."
+    a_fr: "**وَ** (et), **لٰكِنَّ** (mais), et **جِدًّا** (très) qui renforce. Trois phrases courtes sont devenues une seule."
+  - q_fr: "Combien d'unités de l'année reconnais-tu dans cette scène ?"
+    a_fr: "Au moins cinq : le salut (1), les couleurs (2), la famille (4), les animaux (5), et les mots de liaison (10)."
+qa:
+  - question: { term: "كَيْفَ حالُك؟ أَخْبِرْنِي عَنْ يَوْمِك.", translit: "kayfa ḥāluk? akhbirnī ʿan yawmik.", fr: "Comment vas-tu ? Raconte-moi ta journée.", phon: "KAÏ-fa HA-louk? AKH-bir-ni 'an YAW-mik" }
+    answers:
+      - { term: "أَنا بِخَيْر. لَعِبْتُ ثُمَّ أَكَلْتُ.", translit: "anā bi-khayr. laʿibtu thumma akaltu.", fr: "Je vais bien. J'ai joué puis j'ai mangé.", phon: "A-na bi-KHAÏR. la-'IB-tou THOUM-ma a-KAL-tou" }
+      - { term: "أَنا تَعْبان، لٰكِنّي سَعيد.", translit: "anā taʿbān, lākinnī saʿīd.", fr: "Je suis fatigué, mais content.", phon: "A-na ta'-BAN, LA-kin-ni sa-'ID" }
+  - question: { term: "لِماذا تُحِبُّ ذٰلِك؟", translit: "limādhā tuḥibbu dhālik?", fr: "Pourquoi aimes-tu ça ?", phon: "li-MA-dha tou-HIB-bou DHA-lik" }
+    answers:
+      - { term: "لِأَنَّهُ جَميل جِدًّا.",  translit: "liʾannahu jamīl jiddan.",  fr: "Parce que c'est très beau.",   phon: "li-AN-na-hou ja-MIL JID-dan" }
+      - { term: "لِأَنَّهُ لَذيذ.",       translit: "liʾannahu ladhīdh.",       fr: "Parce que c'est délicieux.",   phon: "li-AN-na-hou la-DHIDH" }
+      - { term: "لا أَعْرِف، أُحِبُّهُ فَقَط!", translit: "lā aʿrif, uḥibbuhu faqaṭ!", fr: "Je ne sais pas, je l'aime c'est tout !", phon: "la Aʿ-rif, ou-HIB-bou-hou FA-qat" }
+  - question: { term: "هَلْ فَهِمْت؟", translit: "hal fahimt?", fr: "Tu as compris ?", phon: "hal fa-HIMT" }
+    answers:
+      - { term: "نَعَم، الآنَ فَهِمْت!", translit: "naʿam, al-āna fahimt!", fr: "Oui, maintenant j'ai compris !", phon: "NA-'am, al-A-na fa-HIMT" }
+      - { term: "لا، مَرَّةً أُخْرى مِنْ فَضْلِك.", translit: "lā, marratan ukhrā min faḍlik.", fr: "Non, encore une fois s'il te plaît.", phon: "la, MAR-ra-tan OUKH-ra min FAD-lik" }
+reemploi_fr:
+  - "Cette semaine, la règle change : **on ne souffle plus**. Si l'enfant bloque, on attend, et on lui rappelle seulement qu'il a le droit de dire لَمْ أَفْهَم."
+  - "Un moment fixe par jour — le goûter, la voiture — où l'on ne parle qu'arabe pendant une minute. Une minute, pas plus."
+culture_fr: >-
+  **En arabe, discuter a son mot à soi : الحِوار.** Ce n'est pas parler, ni
+  raconter : c'est l'échange, l'aller-retour entre deux personnes qui
+  s'écoutent. Toute l'année a servi à ça — pas à réciter des listes, mais à
+  tenir sa place dans un حِوار. Et un enfant qui sait dire لَمْ أَفْهَم y tient
+  déjà sa place.

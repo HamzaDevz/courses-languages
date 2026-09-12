@@ -1,0 +1,146 @@
+id: 06-taam
+order: 6
+year: 1
+title: "الطَّعام"
+title_fr: "À table"
+goal_fr: "Nommer les aliments, dire qu'on a faim ou soif, demander poliment."
+can_do_fr:
+  - "Je sais dire que j'ai faim ou soif."
+  - "Je sais demander quelque chose avec مِنْ فَضْلِك."
+  - "Je sais dire بِسْمِ اللّٰه avant de manger et الحَمْدُ لِلَّه après."
+duration_min: 12
+cefr: "A1.1"
+vocab:
+  - { term: "ماء",     translit: "māʾ",     fr: "eau",        phon: "MA" }
+  - { term: "خُبْز",    translit: "khubz",   fr: "pain",       phon: "KHOUBZ" }
+  - { term: "حَليب",   translit: "ḥalīb",   fr: "lait",       phon: "ha-LIB" }
+  - { term: "تُفَّاحة",  translit: "tuffāḥa", fr: "pomme",      phon: "touf-FA-ha" }
+  - { term: "مَوْزة",   translit: "mawza",   fr: "banane",     phon: "MAW-za" }
+  - { term: "جُبْن",    translit: "jubn",    fr: "fromage",    phon: "JOUBN" }
+  - { term: "أَرُزّ",    translit: "aruzz",   fr: "riz",        phon: "a-ROUZZ" }
+  - { term: "سَمَك",    translit: "samak",   fr: "poisson",    phon: "SA-mak" }
+  - { term: "تَمْر",    translit: "tamr",    fr: "dattes",     phon: "TAMR" }
+  - { term: "زَيْتُون",  translit: "zaytūn",  fr: "olives",     phon: "zaï-TOUN" }
+  - { term: "عَسَل",    translit: "ʿasal",   fr: "miel",       phon: "'A-sal" }
+  - { term: "شاي",     translit: "shāy",    fr: "thé",        phon: "CHAÏ" }
+  - { term: "لَحْم",    translit: "laḥm",    fr: "viande",     phon: "LAHM", level: grands }
+  - { term: "حَلْوى",   translit: "ḥalwā",   fr: "gâteau, sucrerie", phon: "HAL-wa", level: grands }
+phrases:
+  - { term: "أَنا جائِع.",           translit: "anā jāʾiʿ.",           fr: "J'ai faim. (dit par un garçon)", phon: "A-na JA-i'" }
+  - { term: "أَنا جائِعة.",          translit: "anā jāʾiʿa.",          fr: "J'ai faim. (dit par une fille)", phon: "A-na JA-i-'a" }
+  - { term: "أَنا عَطْشان.",          translit: "anā ʿaṭshān.",         fr: "J'ai soif.",                phon: "A-na 'at-CHAN" }
+  - { term: "أُريدُ ماءً، مِنْ فَضْلِك.", translit: "urīdu māʾan, min faḍlik.", fr: "Je veux de l'eau, s'il te plaît.", phon: "ou-RI-dou MA-an, min FAD-lik" }
+  - { term: "بِسْمِ اللّٰه.",          translit: "bismi llāh.",          fr: "Au nom de Dieu. (avant de manger)", phon: "BIS-mil-LAH" }
+  - { term: "لَذيذ!",               translit: "ladhīdh!",             fr: "C'est délicieux !",         phon: "la-DHIDH" }
+notes_fr:
+  - "**جائِع ou جائِعة, selon qui parle.** Ici, c'est l'inverse de l'unité 1 : ce n'est plus celui à qui on parle qui décide, mais **celui qui parle**. Un garçon dit أَنا جائِع, une fille أَنا جائِعة — exactement comme *je suis content* / *je suis contente*."
+  - "**Deux formules encadrent le repas** : بِسْمِ اللّٰه avant la première bouchée, الحَمْدُ لِلَّه après la dernière. Elles se disent des dizaines de fois par semaine : ce sont donc les phrases arabes que l'enfant saura le plus vite, sans aucun effort."
+  - "**Les mots qui ont voyagé.** سُكَّر a donné *sucre*, قَهْوة a donné *café*, شَراب a donné *sirop*. Quand on apprend ces mots-là, on ne les apprend pas vraiment : on les reconnaît."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Le vrai petit-déjeuner"
+    steps_fr:
+      - "Le matin, on ne demande plus rien en français : خُبْز، مِنْ فَضْلِك."
+      - "Ce qui est demandé en arabe arrive ; ce qui est demandé en français attend un instant, et on redit la phrase ensemble."
+      - "Quatre mots suffisent : خُبْز, حَليب, ماء, عَسَل."
+  - level: petits
+    type: jeu
+    title_fr: "Le goût mystère"
+    steps_fr:
+      - "Les yeux bandés, l'enfant goûte un petit morceau : pomme, pain, fromage, datte."
+      - "Il devine en arabe : تُفَّاحة! Juste, il a le droit de finir le morceau."
+      - "Ajoutez deux mots de jugement : لَذيذ! ou لا أُحِبُّه."
+  - level: petits
+    type: jeu
+    title_fr: "La dînette"
+    steps_fr:
+      - "Les peluches sont à table, l'enfant sert."
+      - "Chaque plat servi se nomme, chaque demande passe par مِنْ فَضْلِك."
+      - "Une peluche difficile refuse tout : elle oblige à proposer autre chose."
+  - level: petits
+    type: jeu
+    title_fr: "Le panier qui grossit"
+    steps_fr:
+      - "Le premier dit : ذَهَبْتُ إِلى السُّوقِ وَاشْتَرَيْتُ خُبْزًا. (je suis allé au marché et j'ai acheté du pain)"
+      - "Le deuxième reprend et ajoute un aliment. On continue jusqu'à l'oubli."
+      - "Chez les petits, on pose les vrais objets sur la table pour soutenir la mémoire."
+  - level: petits
+    type: mouvement
+    title_fr: "جائِع ou عَطْشان ?"
+    steps_fr:
+      - "Deux gestes convenus : la main sur le ventre pour جائِع, la main à la gorge pour عَطْشان."
+      - "Vous racontez une petite situation ; l'enfant fait le geste et dit la phrase."
+      - "Attention au piège : la fille dit جائِعة, le garçon جائِع."
+  - level: grands
+    type: exercice
+    title_fr: "جائِع ou جائِعة ?"
+    steps_fr:
+      - "مَرْيَم تَقُول : أَنا ______ ."
+      - "يُوسُف يَقُول : أَنا ______ ."
+      - "Écris ensuite la même phrase avec عَطْشان / عَطْشانة."
+  - level: grands
+    type: production
+    title_fr: "Le menu du jour"
+    steps_fr:
+      - "Écris le menu du dîner en arabe, avec les voyelles : entrée, plat, dessert."
+      - "Ajoute une phrase pour vendre chaque plat : هٰذا لَذيذ جِدًّا!"
+      - "Présente-le à table avant de servir."
+  - level: grands
+    type: jeu
+    title_fr: "Explique sans le dire"
+    steps_fr:
+      - "Tire une carte d'aliment et fais-la deviner **sans dire le mot**, et sans français."
+      - "Trois outils : à quoi ça sert (شَيْءٌ نَشْرَبُه), à quoi ça ressemble, où on le trouve."
+      - "Le jeu complet est dans la **boîte à jeux** — c'est le plus utile du programme."
+  - level: grands
+    type: dialogue
+    title_fr: "L'invité qui n'aime rien"
+    steps_fr:
+      - "L'un reçoit, l'autre est un invité qui refuse poliment chaque plat."
+      - "L'hôte doit proposer autre chose à chaque refus, sans passer au français."
+      - "L'invité finit par accepter quelque chose et dit لَذيذ!"
+dialogue:
+  title_fr: "Avant le repas"
+  context_fr: "À la maison, la table est mise. Maryam a très faim."
+  lines:
+    - { who: "مَرْيَم", term: "أَنا جائِعة جِدًّا!",              fr: "J'ai très faim !",               phon: "A-na JA-i-'a JID-dan" }
+    - { who: "يُوسُف", term: "وَأَنا عَطْشان. أُريدُ ماءً.",       fr: "Et moi j'ai soif. Je veux de l'eau.", phon: "wa A-na 'at-CHAN. ou-RI-dou MA-an" }
+    - { who: "مَرْيَم", term: "الماءُ هُنا. تَفَضَّلْ.",           fr: "L'eau est là. Sers-toi.",        phon: "al-MA-ou HOU-na. ta-FAD-dal" }
+    - { who: "يُوسُف", term: "شُكْرًا. ما هٰذا؟",                fr: "Merci. Qu'est-ce que c'est ?",   phon: "CHOU-kran. ma HA-dha" }
+    - { who: "مَرْيَم", term: "هٰذا تَمْر. وَهٰذا زَيْتُون.",       fr: "Ça, ce sont des dattes. Et ça, des olives.", phon: "HA-dha TAMR. wa HA-dha zaï-TOUN" }
+    - { who: "يُوسُف", term: "بِسْمِ اللّٰه… لَذيذ!",             fr: "Au nom de Dieu… c'est délicieux !", phon: "BIS-mil-LAH… la-DHIDH" }
+    - { who: "مَرْيَم", term: "هَلْ تُريدُ خُبْزًا وَجُبْنًا؟",      fr: "Veux-tu du pain et du fromage ?", phon: "hal tou-RI-dou KHOUB-zan wa JOUB-nan" }
+    - { who: "يُوسُف", term: "نَعَم، مِنْ فَضْلِك. شُكْرًا جَزيلًا.", fr: "Oui, s'il te plaît. Merci beaucoup.", phon: "NA-'am, min FAD-lik. CHOU-kran ja-ZI-lan" }
+comprehension:
+  - q_fr: "Qui a faim, qui a soif ?"
+    a_fr: "Maryam a **faim** (جائِعة), Youssef a **soif** (عَطْشان)."
+  - q_fr: "Maryam dit جائِعة et non جائِع. Pourquoi ?"
+    a_fr: "Parce qu'ici c'est **celui qui parle** qui décide : une fille dit جائِعة."
+  - q_fr: "Que dit Youssef juste avant de manger ?"
+    a_fr: "**بِسْمِ اللّٰه** — la formule qui ouvre le repas."
+  - q_fr: "Quels deux aliments Maryam présente-t-elle ?"
+    a_fr: "Des **dattes** (تَمْر) et des **olives** (زَيْتُون)."
+qa:
+  - question: { term: "هَلْ أَنْتَ جائِع؟", translit: "hal anta jāʾiʿ?", fr: "As-tu faim ?", phon: "hal AN-ta JA-i'" }
+    answers:
+      - { term: "نَعَم، أَنا جائِع جِدًّا.", translit: "naʿam, anā jāʾiʿ jiddan.", fr: "Oui, j'ai très faim.", phon: "NA-'am, A-na JA-i' JID-dan" }
+      - { term: "لا، شُكْرًا. أَنا عَطْشان.", translit: "lā, shukran. anā ʿaṭshān.", fr: "Non, merci. J'ai soif.", phon: "la, CHOU-kran. A-na 'at-CHAN" }
+  - question: { term: "ماذا تُريد؟", translit: "mādhā turīd?", fr: "Que veux-tu ?", phon: "MA-dha tou-RID" }
+    answers:
+      - { term: "أُريدُ ماءً، مِنْ فَضْلِك.", translit: "urīdu māʾan, min faḍlik.", fr: "Je veux de l'eau, s'il te plaît.", phon: "ou-RI-dou MA-an, min FAD-lik" }
+      - { term: "أُريدُ خُبْزًا وَجُبْنًا.", translit: "urīdu khubzan wa jubnan.", fr: "Je veux du pain et du fromage.", phon: "ou-RI-dou KHOUB-zan wa JOUB-nan" }
+      - { term: "لا أُريدُ شَيْئًا، شُكْرًا.", translit: "lā urīdu shayʾan, shukran.", fr: "Je ne veux rien, merci.", phon: "la ou-RI-dou CHAÏ-an, CHOU-kran" }
+  - question: { term: "هَلْ هٰذا لَذيذ؟", translit: "hal hādhā ladhīdh?", fr: "C'est bon ?", phon: "hal HA-dha la-DHIDH" }
+    answers:
+      - { term: "نَعَم، لَذيذ جِدًّا!", translit: "naʿam, ladhīdh jiddan!", fr: "Oui, très bon !", phon: "NA-'am, la-DHIDH JID-dan" }
+      - { term: "لا أُحِبُّهُ كَثيرًا.", translit: "lā uḥibbuhu kathīran.", fr: "Je n'aime pas trop.", phon: "la ou-HIB-bou-hou ka-THI-ran" }
+reemploi_fr:
+  - "Toute la semaine, بِسْمِ اللّٰه avant de manger et الحَمْدُ لِلَّه après — à la place de rien du tout."
+  - "Une demande par repas doit passer en arabe : أُريدُ… مِنْ فَضْلِك."
+culture_fr: >-
+  **La datte, التَّمْر, est le fruit qui ouvre le jeûne du Ramadan** — on en
+  mange une ou trois avant toute autre chose, avec un verre d'eau. Le palmier
+  et l'olivier reviennent sans cesse dans le Coran, qui jure même par le figuier
+  et l'olivier au début d'une sourate. Ce sont les arbres d'un pays sec : ceux
+  qui donnent à manger là où presque rien ne pousse.
