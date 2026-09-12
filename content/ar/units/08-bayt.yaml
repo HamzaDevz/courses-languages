@@ -1,0 +1,145 @@
+id: 08-bayt
+order: 8
+year: 1
+title: "في البَيْت"
+title_fr: "À la maison"
+goal_fr: "Nommer les pièces et les meubles, et dire où sont les choses."
+can_do_fr:
+  - "Je sais nommer les pièces de la maison."
+  - "Je sais demander أَيْنَ…؟ et répondre avec عَلى, تَحْتَ, في, بِجانِب."
+  - "Je sais dire où je suis."
+duration_min: 14
+cefr: "A1.1 → A1"
+vocab:
+  - { term: "بَيْت",     translit: "bayt",     fr: "maison",       phon: "BAÏT" }
+  - { term: "غُرْفة",    translit: "ghurfa",   fr: "chambre, pièce", phon: "GHOUR-fa" }
+  - { term: "مَطْبَخ",   translit: "maṭbakh",  fr: "cuisine",      phon: "MAT-bakh" }
+  - { term: "حَمَّام",    translit: "ḥammām",   fr: "salle de bains", phon: "ham-MAM" }
+  - { term: "باب",      translit: "bāb",      fr: "porte",        phon: "BAB" }
+  - { term: "نافِذة",    translit: "nāfidha",  fr: "fenêtre",      phon: "NA-fi-dha" }
+  - { term: "سَرير",     translit: "sarīr",    fr: "lit",          phon: "sa-RIR" }
+  - { term: "طاوِلة",    translit: "ṭāwila",   fr: "table",        phon: "TA-wi-la" }
+  - { term: "كُرْسِيّ",    translit: "kursī",    fr: "chaise",       phon: "KOUR-si" }
+  - { term: "حَديقة",    translit: "ḥadīqa",   fr: "jardin",       phon: "ha-DI-qa" }
+  - { term: "مِفْتاح",    translit: "miftāḥ",   fr: "clé",          phon: "mif-TAH" }
+  - { term: "مِصْباح",    translit: "miṣbāḥ",   fr: "lampe",        phon: "mis-BAH" }
+phrases:
+  - { term: "أَيْنَ المِفْتاح؟",      translit: "ayna l-miftāḥ?",      fr: "Où est la clé ?",         phon: "AÏ-na l-mif-TAH" }
+  - { term: "عَلى الطّاوِلة.",       translit: "ʿalā ṭ-ṭāwila.",      fr: "Sur la table.",           phon: "'A-la t-TA-wi-la" }
+  - { term: "تَحْتَ السَّرير.",       translit: "taḥta s-sarīr.",      fr: "Sous le lit.",            phon: "TAH-ta s-sa-RIR" }
+  - { term: "بِجانِبِ الباب.",       translit: "bi-jānibi l-bāb.",    fr: "À côté de la porte.",     phon: "bi-JA-ni-bi l-BAB" }
+  - { term: "أَنا في الغُرْفة.",      translit: "anā fī l-ghurfa.",    fr: "Je suis dans la chambre.", phon: "A-na fi l-GHOUR-fa" }
+  - { term: "تَعالَ هُنا!",          translit: "taʿāla hunā!",        fr: "Viens ici !",             phon: "ta-'A-la HOU-na" }
+notes_fr:
+  - "**Les objets qui servent à faire quelque chose commencent souvent par مِـ.** مِفْتاح, la clé, vient de فَتَحَ (ouvrir) : c'est « ce qui sert à ouvrir ». مِصْباح, la lampe, vient de la lumière du matin. مِقَصّ, les ciseaux, de قَصَّ (couper). Quand un enfant repère ce مِـ, il devine la moitié des noms d'outils sans les avoir appris."
+  - "**حَمَّام a voyagé jusqu'au français** : c'est notre *hammam*. Le mot vient de حَمَّ, « chauffer » — la salle de bains, c'est d'abord la pièce chaude."
+  - "**Après عَلى, تَحْتَ, في, بِجانِب, le mot suivant change de fin** (الطّاوِلةِ, السَّريرِ). On ne l'explique pas aux petits et on ne le corrige pas : on dit la phrase entière, toujours de la même façon, et l'oreille l'enregistre."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Le déménagement des peluches"
+    steps_fr:
+      - "L'enfant tient une peluche et exécute vos consignes : ضَعِ الدُّبَّ عَلى الطّاوِلة، تَحْتَ السَّرير، بِجانِبِ الباب."
+      - "Une consigne mal comprise n'est pas corrigée : on la redit plus lentement, en montrant."
+      - "Puis il commande et vous portez la peluche — en vous trompant exprès, pour qu'il proteste."
+  - level: petits
+    type: jeu
+    title_fr: "Cache-cache avec le doudou"
+    steps_fr:
+      - "Cachez le doudou pendant que l'enfant sort."
+      - "Guidez-le avec deux mots seulement : ساخِن (chaud) et بارِد (froid)."
+      - "Quand il trouve, il doit dire **où** c'était : كانَ تَحْتَ السَّرير!"
+  - level: petits
+    type: jeu
+    title_fr: "La maison étiquetée"
+    steps_fr:
+      - "Dix étiquettes collées ensemble : الباب، الطّاوِلة، السَّرير، النّافِذة."
+      - "Règle de la semaine : on ne touche pas un objet étiqueté sans dire son nom en arabe."
+      - "Le samedi, on retire les étiquettes qu'il connaît par cœur. Les autres restent."
+  - level: petits
+    type: jeu
+    title_fr: "La visite guidée"
+    steps_fr:
+      - "L'enfant fait visiter la maison à une peluche étrangère."
+      - "Une phrase par pièce : هٰذا المَطْبَخ. هٰذِهِ غُرْفَتِي."
+      - "La peluche pose une question idiote dans chaque pièce ; il doit répondre."
+  - level: petits
+    type: bricolage
+    title_fr: "La maison en boîte à chaussures"
+    steps_fr:
+      - "Quatre pièces en carton, des meubles en papier découpé, une étiquette arabe par pièce."
+      - "Jeu qui va avec : l'un cache une petite figurine, l'autre pose des questions — هَلْ هِيَ في المَطْبَخ؟"
+      - "Cinq questions maximum, réponses par نَعَم ou لا."
+  - level: grands
+    type: exercice
+    title_fr: "Où est la clé ?"
+    steps_fr:
+      - "المِفْتاحُ ______ الطّاوِلة. (sur)"
+      - "الكُرَةُ ______ السَّرير. (sous)"
+      - "الكُرْسِيُّ ______ الباب. (à côté de)"
+      - "أَنا ______ الحَديقة. (dans)"
+  - level: grands
+    type: production
+    title_fr: "Le plan de ma maison"
+    steps_fr:
+      - "Dessine le plan de ta maison vue d'en haut, chaque pièce avec son nom arabe voyellé."
+      - "Écris cinq phrases : غُرْفَتِي بِجانِبِ المَطْبَخ…"
+      - "Fais-le lire à quelqu'un qui ne connaît pas ta maison : il doit pouvoir s'y retrouver."
+  - level: grands
+    type: jeu
+    title_fr: "La chasse au trésor"
+    steps_fr:
+      - "Cinq papiers, cinq indices en arabe, chacun menant au suivant : تَحْتَ الكُرْسِيّ، بِجانِبِ النّافِذة."
+      - "On lit l'indice à voix haute sans le traduire : on va vérifier sur place."
+      - "La fois suivante, c'est l'enfant qui écrit les indices. Le mode d'emploi est dans la **boîte à jeux**."
+  - level: grands
+    type: dialogue
+    title_fr: "J'ai perdu quelque chose"
+    steps_fr:
+      - "L'un a perdu un objet et le décrit sans le nommer."
+      - "L'autre pose des questions de lieu : هَلْ هُوَ في غُرْفَتِك؟ هَلْ هُوَ تَحْتَ شَيْء؟"
+      - "Quand l'objet est retrouvé, on récapitule : كانَ في المَطْبَخ، عَلى الطّاوِلة."
+dialogue:
+  title_fr: "Où sont les clés ?"
+  context_fr: "On part dans cinq minutes, et la mère de Maryam ne trouve plus ses clés."
+  lines:
+    - { who: "مَرْيَم", term: "يا يُوسُف، أَيْنَ المِفْتاح؟",        fr: "Youssef, où est la clé ?",        phon: "ya you-SOUF, AÏ-na l-mif-TAH" }
+    - { who: "يُوسُف", term: "لَيْسَ عَلى الطّاوِلة.",              fr: "Elle n'est pas sur la table.",    phon: "LAÏ-sa 'A-la t-TA-wi-la" }
+    - { who: "مَرْيَم", term: "اُنْظُرْ تَحْتَ الكُرْسِيّ.",          fr: "Regarde sous la chaise.",         phon: "OUN-dhour TAH-ta l-KOUR-si" }
+    - { who: "يُوسُف", term: "لا، لَيْسَ هُنا. وَفي المَطْبَخ؟",     fr: "Non, pas ici. Et dans la cuisine ?", phon: "la, LAÏ-sa HOU-na. wa fi l-MAT-bakh" }
+    - { who: "مَرْيَم", term: "اِذْهَبْ وَانْظُرْ بِجانِبِ النّافِذة.", fr: "Va voir à côté de la fenêtre.",   phon: "IDH-hab wan-DHOUR bi-JA-ni-bi n-NA-fi-dha" }
+    - { who: "يُوسُف", term: "وَجَدْتُه! المِفْتاحُ هُنا!",          fr: "Je l'ai trouvée ! La clé est là !", phon: "wa-JAD-tou-hou! al-mif-TA-hou HOU-na" }
+    - { who: "مَرْيَم", term: "أَيْنَ كانَ بِالضَّبْط؟",             fr: "Où était-elle exactement ?",      phon: "AÏ-na KA-na bid-DAB-t" }
+    - { who: "يُوسُف", term: "بِجانِبِ المِصْباح، تَحْتَ الكِتاب!",   fr: "À côté de la lampe, sous le livre !", phon: "bi-JA-ni-bi l-mis-BAH, TAH-ta l-ki-TAB" }
+comprehension:
+  - q_fr: "Que cherchent les deux enfants ?"
+    a_fr: "La **clé** — المِفْتاح."
+  - q_fr: "Cite deux endroits où ils ont cherché sans succès."
+    a_fr: "Sur la table (عَلى الطّاوِلة) et sous la chaise (تَحْتَ الكُرْسِيّ)."
+  - q_fr: "Où était la clé, finalement ?"
+    a_fr: "**À côté de la lampe, sous le livre** — بِجانِبِ المِصْباح، تَحْتَ الكِتاب."
+  - q_fr: "Quel mot revient dans presque chaque réplique, et à quoi sert-il ?"
+    a_fr: "**أَيْنَ** — « où ». C'est le mot qui fait avancer toute la scène."
+qa:
+  - question: { term: "أَيْنَ المِفْتاح؟", translit: "ayna l-miftāḥ?", fr: "Où est la clé ?", phon: "AÏ-na l-mif-TAH" }
+    answers:
+      - { term: "عَلى الطّاوِلة.",   translit: "ʿalā ṭ-ṭāwila.",   fr: "Sur la table.",    phon: "'A-la t-TA-wi-la" }
+      - { term: "تَحْتَ الكِتاب.",   translit: "taḥta l-kitāb.",   fr: "Sous le livre.",   phon: "TAH-ta l-ki-TAB" }
+      - { term: "لا أَعْرِف، اِبْحَثْ مَعِي.", translit: "lā aʿrif, ibḥath maʿī.", fr: "Je ne sais pas, cherche avec moi.", phon: "la Aʿ-rif, IB-hath ma-'I" }
+  - question: { term: "أَيْنَ أَنْت؟", translit: "ayna anta?", fr: "Où es-tu ?", phon: "AÏ-na AN-ta" }
+    answers:
+      - { term: "أَنا في غُرْفَتِي.", translit: "anā fī ghurfatī.", fr: "Je suis dans ma chambre.", phon: "A-na fi GHOUR-fa-ti" }
+      - { term: "أَنا في الحَديقة.", translit: "anā fī l-ḥadīqa.", fr: "Je suis dans le jardin.",  phon: "A-na fi l-ha-DI-qa" }
+  - question: { term: "هَلْ هُوَ في المَطْبَخ؟", translit: "hal huwa fī l-maṭbakh?", fr: "Est-ce que c'est dans la cuisine ?", phon: "hal HOU-wa fi l-MAT-bakh" }
+    answers:
+      - { term: "نَعَم، عَلى الطّاوِلة.", translit: "naʿam, ʿalā ṭ-ṭāwila.", fr: "Oui, sur la table.", phon: "NA-'am, 'A-la t-TA-wi-la" }
+      - { term: "لا، هُوَ في الحَمَّام.", translit: "lā, huwa fī l-ḥammām.", fr: "Non, c'est dans la salle de bains.", phon: "la, HOU-wa fi l-ham-MAM" }
+reemploi_fr:
+  - "Une seule question, toute la semaine, chaque fois qu'on cherche quelque chose : أَيْنَ…؟"
+  - "Au coucher, l'enfant range trois objets en disant où il les met."
+culture_fr: >-
+  **باب, la porte, a donné son nom à des villes entières.** Bab el-Oued à Alger,
+  Bab Bou Jeloud à Fès : les vieilles cités arabes s'organisent autour de leurs
+  portes, et l'on dit d'où l'on vient en nommant la sienne. Le mot est même
+  arrivé en français par la diplomatie : la « Sublime Porte », c'était le
+  gouvernement ottoman — la porte du palais valait pour tout l'État.

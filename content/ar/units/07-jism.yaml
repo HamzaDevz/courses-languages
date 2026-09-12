@@ -1,0 +1,146 @@
+id: 07-jism
+order: 7
+year: 1
+title: "الجِسْم"
+title_fr: "Le corps"
+goal_fr: "Nommer son corps et dire où on a mal."
+can_do_fr:
+  - "Je sais nommer dix parties de mon corps."
+  - "Je sais dire où j'ai mal."
+  - "Je sais dire que j'ai froid, chaud ou sommeil."
+duration_min: 12
+cefr: "A1.1 → A1"
+vocab:
+  - { term: "جِسْم",   translit: "jism",   fr: "corps",    phon: "JISM" }
+  - { term: "رَأْس",   translit: "raʾs",   fr: "tête",     phon: "RAS" }
+  - { term: "وَجْه",   translit: "wajh",   fr: "visage",   phon: "WAJH" }
+  - { term: "عَيْن",   translit: "ʿayn",   fr: "œil",      phon: "'AÏN" }
+  - { term: "أَنْف",   translit: "anf",    fr: "nez",      phon: "ANF" }
+  - { term: "فَم",     translit: "fam",    fr: "bouche",   phon: "FAM" }
+  - { term: "أُذُن",   translit: "udhun",  fr: "oreille",  phon: "OU-dhoun" }
+  - { term: "يَد",     translit: "yad",    fr: "main",     phon: "YAD" }
+  - { term: "رِجْل",   translit: "rijl",   fr: "jambe",    phon: "RIJL" }
+  - { term: "قَدَم",   translit: "qadam",  fr: "pied",     phon: "QA-dam" }
+  - { term: "بَطْن",   translit: "baṭn",   fr: "ventre",   phon: "BATN" }
+  - { term: "شَعْر",   translit: "shaʿr",  fr: "cheveux",  phon: "CHA-'r" }
+  - { term: "سِنّ",    translit: "sinn",   fr: "dent",     phon: "SINN", level: grands }
+  - { term: "قَلْب",   translit: "qalb",   fr: "cœur",     phon: "QALB", level: grands }
+phrases:
+  - { term: "يُؤْلِمُني رَأْسِي.",  translit: "yuʾlimunī raʾsī.",  fr: "J'ai mal à la tête.",  phon: "you-LI-mou-ni RA-si" }
+  - { term: "أَيْنَ يُؤْلِمُك؟",    translit: "ayna yuʾlimuk?",    fr: "Où as-tu mal ?",       phon: "AÏ-na you-LI-mouk" }
+  - { term: "أَنا تَعْبان.",       translit: "anā taʿbān.",       fr: "Je suis fatigué.",     phon: "A-na ta'-BAN" }
+  - { term: "عِنْدِي بَرْد.",       translit: "ʿindī bard.",       fr: "J'ai froid.",          phon: "'IN-di BARD" }
+  - { term: "عِنْدِي عَيْنان.",     translit: "ʿindī ʿaynān.",     fr: "J'ai deux yeux.",      phon: "'IN-di 'aï-NAN" }
+notes_fr:
+  - "**Le corps est plein de duels.** Ce qui va par deux prend la forme du milieu vue à l'unité 4 : عَيْنان (deux yeux), يَدان (deux mains), أُذُنان (deux oreilles), رِجْلان (deux jambes). C'est l'endroit du programme où le duel s'installe tout seul, parce qu'il est sur le corps de l'enfant."
+  - "**عَيْن, c'est l'œil — et la source d'eau.** Le même mot pour ce qui voit et ce qui jaillit du sol. On le retrouve dans des noms de lieux partout : Aïn Témouchent, Aïn Sefra. Quand un enfant apprend عَيْن, il apprend deux choses d'un coup."
+  - "**يُؤْلِمُني veut dire « il me fait mal ».** La phrase arabe est retournée par rapport au français : ce n'est pas moi qui ai mal, c'est ma tête qui me fait mal — يُؤْلِمُني رَأْسِي."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "Le roi ordonne, version corps"
+    steps_fr:
+      - "اِلْمِسْ أَنْفَك! (touche ton nez), اِلْمِسْ أُذُنَيْك! (touche tes oreilles)"
+      - "Celui qui se trompe donne l'ordre suivant."
+      - "Quatre parties du corps suffisent le premier jour. On en ajoute une par séance."
+  - level: petits
+    type: jeu
+    title_fr: "Le monstre dicté"
+    steps_fr:
+      - "Vous dictez, l'enfant dessine : وَحْشٌ لَهُ ثَلاثُ عُيُون (un monstre à trois yeux), أَرْبَعُ أَرْجُل (quatre jambes)."
+      - "On compare le dessin à ce qui était demandé : chaque partie juste vaut un point."
+      - "Puis c'est lui qui dicte et vous qui dessinez."
+  - level: petits
+    type: bricolage
+    title_fr: "Le bonhomme en pâte à modeler"
+    steps_fr:
+      - "Faites un bonhomme ensemble. À chaque morceau posé, on le nomme : رَأْس، يَد، قَدَمان."
+      - "Cassez-lui un bras en douce : ما الَّذي اخْتَفى؟ Il doit trouver ce qui manque."
+  - level: petits
+    type: mouvement
+    title_fr: "La chanson des épaules"
+    steps_fr:
+      - "Sur l'air de « Tête, épaules, genoux et pieds », remplacez par رَأْس، كَتِف، رُكْبة، قَدَم."
+      - "De plus en plus vite, jusqu'à ce que tout le monde s'emmêle."
+      - "C'est le seul moment du programme où l'on a le droit de chanter faux."
+  - level: petits
+    type: jeu
+    title_fr: "Aïe, où ça ?"
+    steps_fr:
+      - "Une peluche a mal quelque part. Vous la faites gémir."
+      - "L'enfant demande أَيْنَ يُؤْلِمُك؟ et devine en montrant."
+      - "Il soigne, puis c'est à son tour d'avoir mal et de le dire en arabe."
+  - level: grands
+    type: exercice
+    title_fr: "Un, ou deux ?"
+    steps_fr:
+      - "يَد → deux : ______"
+      - "عَيْن → deux : ______"
+      - "أُذُن → deux : ______"
+      - "Écris ensuite une phrase avec chacun : عِنْدِي ______ ."
+  - level: grands
+    type: production
+    title_fr: "Le bonhomme à étiqueter"
+    steps_fr:
+      - "Dessine une silhouette et écris le nom arabe de douze parties du corps, avec les voyelles."
+      - "Trace un trait de chaque mot vers l'endroit qu'il désigne."
+      - "Affiche-le : c'est l'affiche de l'unité."
+  - level: grands
+    type: jeu
+    title_fr: "Touche avec…"
+    steps_fr:
+      - "Des consignes qui relient deux parties du corps : اِلْمِسْ رُكْبَتَكَ بِيَدِك."
+      - "On tient la position jusqu'à la consigne suivante ; elles s'empilent jusqu'à la chute."
+      - "Ensuite, c'est l'enfant qui invente les consignes — c'est là qu'il produit les mots."
+  - level: grands
+    type: dialogue
+    title_fr: "Chez l'infirmière"
+    steps_fr:
+      - "L'un se plaint, l'autre est l'infirmière et pose les questions : أَيْنَ يُؤْلِمُك؟ مُنْذُ مَتى؟"
+      - "Trois soins possibles seulement : se reposer, boire de l'eau, un pansement. Il faut justifier son choix."
+      - "On échange les rôles à la deuxième manche."
+dialogue:
+  title_fr: "Youssef ne va pas bien"
+  context_fr: "À la récréation. Youssef est assis dans un coin, il ne joue pas."
+  lines:
+    - { who: "مَرْيَم", term: "ما بِكَ يا يُوسُف؟",              fr: "Qu'est-ce que tu as, Youssef ?",   phon: "ma BI-ka ya you-SOUF" }
+    - { who: "يُوسُف", term: "يُؤْلِمُني رَأْسِي.",               fr: "J'ai mal à la tête.",              phon: "you-LI-mou-ni RA-si" }
+    - { who: "مَرْيَم", term: "هَلْ يُؤْلِمُكَ بَطْنُكَ أَيْضًا؟",   fr: "Est-ce que tu as mal au ventre aussi ?", phon: "hal you-LI-mou-ka BAT-nou-ka AÏ-dan" }
+    - { who: "يُوسُف", term: "لا، بَطْنِي بِخَيْر. أَنا تَعْبان فَقَط.", fr: "Non, mon ventre va bien. Je suis juste fatigué.", phon: "la, BAT-ni bi-KHAÏR. A-na ta'-BAN FA-qat" }
+    - { who: "مَرْيَم", term: "هَلْ نِمْتَ جَيِّدًا؟",              fr: "As-tu bien dormi ?",               phon: "hal NIM-ta JAÏ-yi-dan" }
+    - { who: "يُوسُف", term: "لا، عِنْدِي بَرْدٌ أَيْضًا.",         fr: "Non, et j'ai froid aussi.",        phon: "la, 'IN-di BAR-doun AÏ-dan" }
+    - { who: "مَرْيَم", term: "خُذْ، اِشْرَبْ ماءً وَاذْهَبْ إِلى المُمَرِّضة.", fr: "Tiens, bois de l'eau et va voir l'infirmière.", phon: "KHOUDH, ICH-rab MA-an wadh-HAB I-la l-mou-MAR-ri-da" }
+    - { who: "يُوسُف", term: "شُكْرًا يا مَرْيَم. أَنْتِ صَديقة طَيِّبة.", fr: "Merci Maryam. Tu es une bonne amie.", phon: "CHOU-kran ya MAR-yam. AN-ti sa-DI-qa TAÏ-yi-ba" }
+comprehension:
+  - q_fr: "Où Youssef a-t-il mal ?"
+    a_fr: "À la **tête** — يُؤْلِمُني رَأْسِي."
+  - q_fr: "A-t-il mal au ventre ?"
+    a_fr: "Non : il répond بَطْنِي بِخَيْر, « mon ventre va bien »."
+  - q_fr: "Quelles deux choses Maryam lui conseille-t-elle ?"
+    a_fr: "**Boire de l'eau** (اِشْرَبْ ماءً) et **aller voir l'infirmière**."
+  - q_fr: "Pourquoi Maryam dit-elle أَنْتِ صَديقة et non أَنْتَ صَديق à la fin ? Qui parle à qui ?"
+    a_fr: "C'est **Youssef** qui parle, et il s'adresse à **Maryam**, une fille : d'où أَنْتِ et la forme féminine صَديقة."
+qa:
+  - question: { term: "أَيْنَ يُؤْلِمُك؟", translit: "ayna yuʾlimuk?", fr: "Où as-tu mal ?", phon: "AÏ-na you-LI-mouk" }
+    answers:
+      - { term: "يُؤْلِمُني رَأْسِي.",  translit: "yuʾlimunī raʾsī.",  fr: "J'ai mal à la tête.",   phon: "you-LI-mou-ni RA-si" }
+      - { term: "يُؤْلِمُني بَطْنِي.", translit: "yuʾlimunī baṭnī.", fr: "J'ai mal au ventre.",   phon: "you-LI-mou-ni BAT-ni" }
+      - { term: "لا شَيْء، أَنا بِخَيْر.", translit: "lā shayʾ, anā bi-khayr.", fr: "Rien, je vais bien.", phon: "la CHAÏ, A-na bi-KHAÏR" }
+  - question: { term: "ما بِك؟", translit: "mā bik?", fr: "Qu'est-ce que tu as ?", phon: "ma BIK" }
+    answers:
+      - { term: "أَنا تَعْبان.",   translit: "anā taʿbān.",   fr: "Je suis fatigué.", phon: "A-na ta'-BAN" }
+      - { term: "عِنْدِي بَرْد.",   translit: "ʿindī bard.",   fr: "J'ai froid.",      phon: "'IN-di BARD" }
+      - { term: "أَنا جائِع فَقَط.", translit: "anā jāʾiʿ faqaṭ.", fr: "J'ai juste faim.", phon: "A-na JA-i' FA-qat" }
+  - question: { term: "كَمْ عَيْنًا عِنْدَك؟", translit: "kam ʿaynan ʿindak?", fr: "Combien as-tu d'yeux ?", phon: "kam 'AÏ-nan 'IN-dak" }
+    answers:
+      - { term: "عِنْدِي عَيْنان.", translit: "ʿindī ʿaynān.", fr: "J'ai deux yeux.", phon: "'IN-di 'aï-NAN" }
+      - { term: "عَيْنان وَأُذُنان!", translit: "ʿaynān wa udhunān!", fr: "Deux yeux et deux oreilles !", phon: "'aï-NAN wa ou-dhou-NAN" }
+reemploi_fr:
+  - "Au bain, on nomme en arabe ce qu'on lave : الرَّأْس، اليَدان، القَدَمان."
+  - "Au moindre bobo de la semaine, une seule question : أَيْنَ يُؤْلِمُك؟"
+culture_fr: >-
+  **La main, اليَد, revient partout dans la culture arabe** — sur les portes, en
+  bijou, peinte au henné : c'est la خَمْسة, la « cinq », qu'on appelle aussi
+  main de Fatma. Cinq doigts, cinq piliers, et un geste qui dit d'écarter le
+  mauvais œil. Dans la langue, la même main sert à dire l'aide : يَدٌ واحِدة لا
+  تُصَفِّق, « une seule main n'applaudit pas ».

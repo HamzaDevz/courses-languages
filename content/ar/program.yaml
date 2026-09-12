@@ -1,0 +1,192 @@
+intro_fr: >-
+  Deux parcours selon l'âge, un seul contenu d'unités. **Cette première étape
+  couvre l'année 1** : dix unités qui vont de « je réponds quand on me parle »
+  à « je tiens six répliques tout seul ». Les années 2 et 3 viendront ensuite,
+  sur le modèle du portugais.
+cefr_fr: >-
+  Les niveaux annoncés suivent le **CECRL**, le cadre européen commun. Pour
+  l'arabe, une précision honnête s'impose : le cadre a été pensé pour des
+  langues à alphabet latin, et il ne compte pas le temps que demandent
+  l'écriture et les trois sons absents du français. Un A1 oral en arabe se
+  gagne plus lentement qu'un A1 en portugais — on ne rattrape pas ce retard en
+  allant plus vite, on l'accepte.
+tracks:
+  - id: petits
+    label_fr: "Parcours A — Les petits (3-6 ans)"
+    ages_fr: "3 à 6 ans, avant de savoir lire"
+    cefr_fr: "pré-A1 : comprendre et réagir, à l'oral seulement"
+    session_fr: "8 à 10 min, 4 à 5 fois par semaine"
+    total_fr: "Année 1 : 5 unités"
+    intro_fr: >-
+      À cet âge, **rien ne passe par l'écrit** — ni en français, ni en arabe, et
+      surtout pas par un alphabet nouveau. L'enfant écoute, montre, court, mime
+      et répète. Les lettres apparaissent comme des dessins qu'on reconnaît, pas
+      comme des signes qu'on trace.
+    method_fr:
+      - "**Aucun écrit demandé.** On montre les lettres du prénom de l'enfant, rien de plus."
+      - "**Trois mots neufs par séance, pas douze.** La leçon en trois temps de la boîte à jeux est faite pour ça."
+      - "**Obéir avant de produire.** Les jeux d'ordres montrent qu'il a compris sans jamais lui demander de traduire."
+      - "**On ne corrige pas au milieu d'un jeu.** On redit la forme juste juste après, sans commentaire."
+      - "**L'audio d'abord, toujours.** Le ح, le خ et le ع ne s'apprennent pas à la lecture d'une approximation."
+    rhythm_fr:
+      - { day_fr: "Lundi",    what_fr: "**Le dialogue** en fond, deux fois, sans rien demander.", min: 5 }
+      - { day_fr: "Mardi",    what_fr: "**Un jeu du corps** avec trois mots de l'unité.", min: 10 }
+      - { day_fr: "Mercredi", what_fr: "**Les mots** : leçon en trois temps sur trois mots neufs.", min: 8 }
+      - { day_fr: "Jeudi",    what_fr: "**Un jeu de cartes** (memory, loto, sac à surprises).", min: 10 }
+      - { day_fr: "Vendredi", what_fr: "**Le dialogue** encore, et l'enfant dit une réplique.", min: 8 }
+    cycle_fr:
+      - { label_fr: "Semaines 1-2 — j'entends", what_fr: "Le dialogue tourne, les mots s'installent. **Zéro production demandée.**" }
+      - { label_fr: "Semaines 3-4 — je montre", what_fr: "Il désigne, il exécute des ordres, il trie. On voit qu'il a compris." }
+      - { label_fr: "Semaines 5-7 — je dis", what_fr: "Il produit les mots, puis une réplique du dialogue. On passe à l'unité suivante quand les « je sais… » tiennent." }
+    years:
+      - year: 1
+        label_fr: "Petits · Année 1 (3-4 ans) — J'écoute et je montre"
+        cefr_fr: "pré-A1 : compréhension orale de consignes simples"
+        age_fr: "3-4 ans"
+        goal_fr: >-
+          L'enfant réagit à l'arabe sans qu'on traduise : il répond au salut,
+          montre ce qu'on nomme, et dit une dizaine de mots.
+        can_do_fr:
+          - "Je réponds à السَّلامُ عَلَيْكُم sans qu'on me le rappelle."
+          - "Je montre la bonne couleur, le bon animal, la bonne partie de mon corps."
+          - "Je compte jusqu'à cinq."
+          - "Je dis merci et s'il te plaît en arabe, à table."
+        periods:
+          - label_fr: "Période 1"
+            weeks_fr: "semaines 1 à 7"
+            units: [01-salam]
+            focus_fr: "Le salut et la politesse. Rien d'autre."
+            milestone_fr: "L'enfant répond au salut d'un adulte, sans être poussé."
+          - label_fr: "Période 2"
+            weeks_fr: "semaines 8 à 14"
+            units: [02-alwan]
+            focus_fr: "Les couleurs, par le jeu et le tri."
+            milestone_fr: "Il rapporte un objet de la couleur demandée, sur six couleurs."
+          - label_fr: "Période 3"
+            weeks_fr: "semaines 15 à 21"
+            units: [03-arqam]
+            focus_fr: "Compter jusqu'à cinq, avec le corps et les marches."
+            milestone_fr: "Il compte cinq objets à voix haute, en arabe."
+          - label_fr: "Période 4"
+            weeks_fr: "semaines 22 à 28"
+            units: [04-aila]
+            focus_fr: "La famille, sur de vraies photos."
+            milestone_fr: "Il nomme quatre personnes de sa famille en arabe."
+          - label_fr: "Période 5"
+            weeks_fr: "semaines 29 à 36"
+            units: [05-hayawanat]
+            focus_fr: "Les animaux, et la révision de tout ce qui précède par les jeux."
+            milestone_fr: "Il tient un échange de deux répliques : un salut, une réponse."
+        evaluation_fr:
+          - "**On n'interroge pas.** On joue au loto : ce qu'il pose sans hésiter est acquis."
+          - "**On compte les réactions, pas les mots.** Un enfant qui exécute dix ordres sans traduction a réussi son année."
+          - "**Un enregistrement par trimestre**, trente secondes. C'est la seule trace qui montre le chemin."
+  - id: grands
+    spine: true
+    label_fr: "Parcours B — Les grands (7-10 ans)"
+    ages_fr: "7 à 10 ans, lecteurs en français"
+    cefr_fr: "A1.1 puis A1 à la fin de l'année 1"
+    session_fr: "15 à 20 min, 5 fois par semaine"
+    total_fr: "Année 1 : 10 unités + l'alphabet"
+    intro_fr: >-
+      À cet âge, **l'alphabet devient le deuxième chantier**, mené en parallèle
+      et non à la place de l'oral. Les deux avancent ensemble : l'enfant apprend
+      à dire avant de savoir écrire, et il écrit ce qu'il sait déjà dire.
+    method_fr:
+      - "**L'alphabet en fil continu : deux lettres par semaine**, dans leurs quatre formes (isolée, initiale, médiane, finale). En trois mois, les vingt-huit sont passées ; il faudra l'année entière pour qu'elles soient sûres."
+      - "**Les voyelles courtes (الحَرَكات) dès le début.** Un texte non voyellé est illisible pour un débutant : tout le contenu de ce cours est voyellé, comme un Coran."
+      - "**On écrit ce qu'on sait déjà dire.** Jamais l'inverse : un mot tracé mais jamais prononcé ne sert à rien."
+      - "**Les trois sons difficiles se travaillent séparément**, deux minutes par séance, avec l'audio : ح، خ، ع."
+      - "**La lecture à voix haute compte double.** C'est elle qui relie l'œil, la bouche et l'oreille."
+    rhythm_fr:
+      - { day_fr: "Lundi",    what_fr: "**Le dialogue** en entier, puis les questions de compréhension.", min: 15 }
+      - { day_fr: "Mardi",    what_fr: "**Les mots et les phrases**, lus à voix haute. Deux lettres neuves.", min: 18 }
+      - { day_fr: "Mercredi", what_fr: "**On me demande, je réponds** : l'entraînement du site.", min: 15 }
+      - { day_fr: "Jeudi",    what_fr: "**Écrit** : les deux lettres de la semaine dans leurs quatre formes, puis un exercice.", min: 20 }
+      - { day_fr: "Vendredi", what_fr: "**Un jeu de mots** de la boîte à jeux, et on rejoue le dialogue.", min: 18 }
+    cycle_fr:
+      - { label_fr: "Semaine 1 — j'entends et je lis", what_fr: "Dialogue, vocabulaire, lecture à voix haute de tout ce qui est voyellé." }
+      - { label_fr: "Semaine 2 — je réponds", what_fr: "Les questions-réponses, l'entraînement oral, les jeux de cartes." }
+      - { label_fr: "Semaine 3 — je produis", what_fr: "Écrit, jeu de mots, et le dialogue rejoué sans le texte sous les yeux." }
+    years:
+      - year: 1
+        label_fr: "Grands · Année 1 — Comprendre qu'on me parle, et répondre"
+        cefr_fr: "A1.1 → A1 à l'oral ; lecture voyellée en fin d'année"
+        age_fr: "7-10 ans"
+        goal_fr: >-
+          L'enfant tient six répliques sur lui-même sans qu'on lui souffle, lit
+          un mot voyellé qu'il connaît, et sait dire qu'il n'a pas compris.
+        can_do_fr:
+          - "Je salue, je me présente, je dis mon âge et ce que j'aime."
+          - "Je pose des questions, je ne fais pas que répondre."
+          - "Je lis un mot court voyellé et je reconnais les vingt-huit lettres."
+          - "Je dis لَمْ أَفْهَم au lieu de me taire."
+          - "Je relie deux phrases avec وَ, لٰكِنْ et لِأَنَّ."
+        periods:
+          - label_fr: "Période 1"
+            weeks_fr: "semaines 1 à 7"
+            units: [01-salam, 02-alwan]
+            focus_fr: "Le salut, la politesse, les couleurs. **Alphabet : les dix premières lettres**, avec la fatḥa, la kasra et la ḍamma."
+            milestone_fr: "L'enfant salue, se présente, et reconnaît dix lettres isolées."
+          - label_fr: "Période 2"
+            weeks_fr: "semaines 8 à 14"
+            units: [03-arqam, 04-aila]
+            focus_fr: "Les nombres et la famille. **Alphabet : dix lettres de plus**, et les chiffres arabes ٠ ١ ٢ ٣."
+            milestone_fr: "Il dit son âge, présente trois personnes, et écrit son prénom en arabe."
+          - label_fr: "Période 3"
+            weeks_fr: "semaines 15 à 21"
+            units: [05-hayawanat, 06-taam]
+            focus_fr: "Les animaux, les repas. **Alphabet : les huit dernières lettres**, et les lettres qui ne s'attachent pas à gauche."
+            milestone_fr: "Il lit un mot voyellé connu sans aide, et demande à manger en arabe."
+          - label_fr: "Période 4"
+            weeks_fr: "semaines 22 à 28"
+            units: [07-jism, 08-bayt]
+            focus_fr: "Le corps, la maison, les prépositions de lieu. **Écriture attachée** : les quatre formes en situation."
+            milestone_fr: "Il dit où il a mal et où se trouve un objet ; il écrit trois mots attachés."
+          - label_fr: "Période 5"
+            weeks_fr: "semaines 29 à 36"
+            units: [09-laib, 10-hiwar]
+            focus_fr: "Le jeu, puis la conversation libre. Révision de toute l'année par les jeux."
+            milestone_fr: "**Le bilan de l'année** : deux minutes de conversation filmée, sans notes, passant par cinq unités."
+        evaluation_fr:
+          - "**La conversation filmée vaut toutes les notes.** Deux minutes, sans notes, avec quelqu'un de vrai."
+          - "**La lecture se mesure à voix haute**, sur un texte déjà connu : on vérifie la fluidité, pas le déchiffrage."
+          - "**L'écriture se juge sur la forme des lettres**, pas sur l'orthographe : une lettre bien attachée vaut plus qu'un mot juste mal tracé."
+          - "**Ce qui n'est pas su n'est pas grave — ce qui n'est pas dit l'est.** Un enfant qui se tait plutôt que de dire لَمْ أَفْهَم n'a pas tenu l'objectif de l'année."
+bridge_fr: >-
+  **La passerelle entre les deux parcours.** L'enfant qui sort du parcours A à
+  six ou sept ans ne recommence pas : il refait les unités 1 à 5 en cinq
+  semaines, à l'oral qu'il connaît déjà, en y ajoutant cette fois l'écrit et
+  l'alphabet. Il rejoint ensuite le parcours B à l'unité 6. Ce qu'il a appris à
+  l'oreille devient alors son avantage : il écrit des mots qu'il sait déjà dire.
+practice_fr:
+  - title_fr: "Trouver un vrai interlocuteur"
+    when_fr: "Dès l'année 1"
+    steps_fr:
+      - "Un proche arabophone, même s'il parle un dialecte : l'essentiel est d'entendre de l'arabe vivant, pas seulement l'audio du site."
+      - "Une association ou une école le samedi matin : la plupart des grandes villes en ont."
+      - "**Dites-lui de ne pas traduire.** C'est la seule consigne qui compte, et celle qu'on oublie toujours de donner."
+  - title_fr: "L'heure arabe de la maison"
+    when_fr: "Chaque semaine, à heure fixe"
+    steps_fr:
+      - "Une heure par semaine où l'on ne parle qu'arabe — ou une minute par jour, ce qui vaut mieux."
+      - "La boîte à outils reste sur la table : لَمْ أَفْهَم، مَرَّةً أُخْرى، كَيْفَ نَقُول…؟"
+      - "On n'arrête pas parce qu'on bloque : on utilise les phrases de dépannage. C'est tout l'exercice."
+  - title_fr: "Les écrans, mais en arabe"
+    when_fr: "Dès l'année 1"
+    steps_fr:
+      - "Un dessin animé **déjà vu en français**, revu en arabe : l'histoire étant connue, l'enfant écoute la langue au lieu de suivre l'intrigue."
+      - "Beaucoup de dessins animés doublés en arabe le sont en fuṣḥā — c'est exactement la variante de ce cours."
+      - "Deux questions après, en français, sur ce qui a été compris. Pas dix."
+  - title_fr: "La lecture du Coran, pour ceux qui le souhaitent"
+    when_fr: "Quand l'alphabet est sûr, fin d'année 1"
+    steps_fr:
+      - "Les sourates courtes sont brèves, voyellées et rythmées : c'est le meilleur texte de lecture à voix haute qui existe pour un débutant."
+      - "On lit **à voix haute**, lentement, sans chercher à tout comprendre : la fluidité d'abord, le sens ensuite."
+      - "Un adulte qui lit bien à côté vaut mieux que n'importe quel enregistrement — mais un enregistrement vaut mieux que rien."
+  - title_fr: "Le voyage, ou le séjour"
+    when_fr: "Quand c'est possible"
+    steps_fr:
+      - "Deux semaines dans un pays arabophone font plus que deux ans de fiches — à condition que l'enfant commande, demande et se débrouille lui-même."
+      - "Préparez trois phrases qu'il dira **seul** : commander, demander le prix, demander son chemin."
+      - "Prévenez la famille sur place : personne ne traduit, tout le monde répète lentement."
