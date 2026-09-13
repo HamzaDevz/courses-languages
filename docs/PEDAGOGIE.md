@@ -213,9 +213,31 @@ Le détail est sur la page Programme, section « La pratique ».
   portugaise, le site coupe volontairement la lecture plutôt que de faire lire
   du portugais par une voix française : voir la page **Avoir une vraie voix**.
 
-## Pour l'arabe (plus tard)
+## L'arabe : ce qui change
 
-L'arabe demande une étape que le portugais n'a pas : **l'alphabet**. Compter
-plusieurs semaines sur les lettres et leurs formes (isolée, initiale, médiane,
-finale) avant d'attaquer le vocabulaire écrit. Pendant ce temps, le vocabulaire
-oral avance normalement, avec la translittération pour les parents.
+L'arabe suit la même méthode, avec trois différences qui ne se contournent pas.
+
+**L'alphabet est un deuxième chantier, mené en parallèle — jamais à la place de
+l'oral.** Vingt-huit lettres, quatre formes chacune (isolée, initiale, médiane,
+finale), des points qui distinguent des lettres au corps identique, et trois
+signes qui décident de la voyelle. Le rythme qui tient : **deux lettres par
+semaine, toute l'année**. Tout l'alphabet en un mois ne laisse rien. Pendant ce
+temps l'oral avance normalement, et l'enfant **écrit ce qu'il sait déjà dire** —
+jamais l'inverse.
+
+**Tout est voyellé, comme un Coran.** Un texte sans harakāt est illisible pour
+un débutant : il devine au lieu de lire. La translittération, elle, est là pour
+le parent, pas pour l'enfant — dès que les lettres sont sûres, on la cache.
+
+**Trois sons n'existent pas en français** : le ح, le خ et le ع. Deux minutes par
+séance avec l'audio valent mieux que n'importe quelle explication écrite. La
+colonne « se prononce » les approche ; elle ne les remplace pas, et le cours le
+dit au lieu de faire semblant.
+
+Enfin, une décision à prendre avant de commencer, et qu'il vaut mieux prendre
+les yeux ouverts : **la fuṣḥā n'est la langue de la maison de personne.** Un
+enfant qui n'apprend qu'elle lira le Coran et comprendra les dessins animés
+pan-arabes, mais ne parlera pas avec sa grand-mère marocaine. Les deux
+s'apprennent très bien ensemble — le dialecte à l'oreille, par les gens ; la
+fuṣḥā par un cours comme celui-ci. Ce qui ne marche pas, c'est de croire que
+l'une donnera l'autre.

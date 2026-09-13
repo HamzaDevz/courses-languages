@@ -1,0 +1,147 @@
+id: 04-aila
+order: 4
+year: 1
+title: "العائِلة"
+title_fr: "La famille"
+goal_fr: "Nommer les membres de la famille et les présenter."
+can_do_fr:
+  - "Je sais nommer les gens de ma famille."
+  - "Je sais présenter quelqu'un avec هٰذا ou هٰذِهِ."
+  - "Je sais dire combien j'ai de frères et de sœurs."
+duration_min: 12
+cefr: "A1.1"
+vocab:
+  - { term: "عائِلة",  translit: "ʿāʾila", fr: "famille",        phon: "'A-i-la" }
+  - { term: "أُمّ",     translit: "umm",    fr: "maman",          phon: "OUMM" }
+  - { term: "أَب",      translit: "ab",     fr: "papa",           phon: "AB" }
+  - { term: "أَخ",      translit: "akh",    fr: "frère",          phon: "AKH" }
+  - { term: "أُخْت",    translit: "ukht",   fr: "sœur",           phon: "OUKHT" }
+  - { term: "جَدّ",     translit: "jadd",   fr: "grand-père",     phon: "JADD" }
+  - { term: "جَدَّة",    translit: "jadda",  fr: "grand-mère",     phon: "JAD-da" }
+  - { term: "اِبْن",    translit: "ibn",    fr: "fils",           phon: "IBN" }
+  - { term: "بِنْت",    translit: "bint",   fr: "fille (enfant)", phon: "BINT" }
+  - { term: "عَمّ",     translit: "ʿamm",   fr: "oncle du côté du père", phon: "'AMM" }
+  - { term: "خال",     translit: "khāl",   fr: "oncle du côté de la mère", phon: "KHAL" }
+  - { term: "طِفْل",    translit: "ṭifl",   fr: "petit enfant",   phon: "TIFL" }
+  - { term: "عَمَّة",    translit: "ʿamma",  fr: "tante du côté du père", phon: "'AM-ma", level: grands }
+  - { term: "خالة",    translit: "khāla",  fr: "tante du côté de la mère", phon: "KHA-la", level: grands }
+phrases:
+  - { term: "هٰذِهِ أُمِّي.",        translit: "hādhihi ummī.",     fr: "Voici ma maman.",         phon: "HA-dhi-hi OUM-mi" }
+  - { term: "هٰذا أَبِي.",          translit: "hādhā abī.",        fr: "Voici mon papa.",         phon: "HA-dha a-BI" }
+  - { term: "عِنْدِي أَخَوان.",      translit: "ʿindī akhawān.",    fr: "J'ai deux frères.",       phon: "'IN-di a-kha-WAN" }
+  - { term: "كَمْ أَخًا عِنْدَك؟",    translit: "kam akhan ʿindak?", fr: "Combien as-tu de frères ?", phon: "kam A-khan 'IN-dak" }
+  - { term: "أُحِبُّ عائِلَتِي.",     translit: "uḥibbu ʿāʾilatī.",  fr: "J'aime ma famille.",      phon: "ou-HIB-bou 'a-i-la-TI" }
+notes_fr:
+  - "**هٰذا ou هٰذِهِ, selon ce qu'on montre.** هٰذا أَبِي pour un homme, هٰذِهِ أُمِّي pour une femme. C'est le même mot « voici » en français, deux mots en arabe."
+  - "**Deux mots pour « oncle », deux pour « tante ».** العَمّ est le frère du **père**, الخال le frère de la **mère** ; العَمَّة et الخالة pour leurs sœurs. L'arabe ne mélange jamais les deux côtés de la famille — quand un enfant arabophone parle de son خال, on sait d'où il vient."
+  - "**Le duel : une forme rien que pour deux.** أَخ (un frère), أَخَوان (deux frères), إِخْوة (des frères). Là où le français n'a que singulier et pluriel, l'arabe glisse une forme du milieu, réservée à deux — et on l'emploie tout le temps : يَدان (deux mains), عَيْنان (deux yeux)."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "L'album photo"
+    steps_fr:
+      - "Ouvrez un vrai album, ou les photos du téléphone."
+      - "Vous montrez, l'enfant nomme : هٰذِهِ جَدَّتِي, هٰذا أَبِي."
+      - "Il se trompe de هٰذا / هٰذِهِ ? On redit la phrase juste, sans commentaire, et on continue."
+  - level: petits
+    type: jeu
+    title_fr: "Le memory de la famille"
+    steps_fr:
+      - "Imprimez ou photocopiez deux fois six photos de la famille."
+      - "Cartes retournées : on cherche les paires, et on ne garde la paire que si on dit qui c'est — الجَدّ!"
+      - "Quatre paires suffisent pour commencer."
+  - level: petits
+    type: jeu
+    title_fr: "Qui a dit ça ?"
+    steps_fr:
+      - "Imitez la voix de quelqu'un de la famille en disant une petite phrase arabe connue."
+      - "L'enfant devine : هٰذا أَبِي! هٰذِهِ جَدَّتِي!"
+      - "À son tour d'imiter. C'est le moment où l'on rit le plus."
+  - level: petits
+    type: bricolage
+    title_fr: "Les bonshommes de la famille"
+    steps_fr:
+      - "Découpez une silhouette par membre de la famille, et écrivez le mot arabe dessus."
+      - "L'enfant les range : le père et sa sœur d'un côté (عَمّ, عَمَّة), la mère et son frère de l'autre (خال, خالة)."
+      - "Deux couleurs, une par côté : le côté du père, le côté de la mère. La règle des oncles se voit alors sans être expliquée."
+  - level: petits
+    type: jeu
+    title_fr: "Un, deux, beaucoup"
+    steps_fr:
+      - "Posez un objet : قَلَم. Deux objets : قَلَمان. Trois et plus : أَقْلام."
+      - "L'enfant ajoute ou retire des objets, vous annoncez la forme à chaque fois."
+      - "Puis inversez. C'est le duel qui entre, par la main plutôt que par la règle."
+  - level: grands
+    type: exercice
+    title_fr: "هٰذا ou هٰذِهِ ?"
+    steps_fr:
+      - "______ جَدِّي. (mon grand-père)"
+      - "______ أُخْتِي. (ma sœur)"
+      - "______ خالِي. (mon oncle maternel)"
+      - "______ عَمَّتِي. (ma tante paternelle)"
+  - level: grands
+    type: production
+    title_fr: "Mon arbre généalogique"
+    steps_fr:
+      - "Dessine ton arbre sur une grande feuille, chaque personne avec son mot arabe voyellé."
+      - "Marque d'une couleur le côté du père, d'une autre le côté de la mère."
+      - "Sous l'arbre, écris trois phrases : هٰذا…, هٰذِهِ…, عِنْدِي…"
+  - level: grands
+    type: jeu
+    title_fr: "Le dé de la famille"
+    steps_fr:
+      - "Un dé en papier, six membres de la famille, un par face."
+      - "On lance et on dit **deux** phrases sur la personne tirée : هٰذِهِ خالَتِي. عِنْدَها بِنْتان."
+      - "Difficile : la deuxième phrase doit contenir un nombre."
+  - level: grands
+    type: dialogue
+    title_fr: "Présente ta famille à un inconnu"
+    steps_fr:
+      - "L'un joue un cousin qu'on n'a jamais vu et pose les questions : كَمْ أَخًا عِنْدَك؟ ما اسْمُ أُمِّك؟"
+      - "L'autre répond, puis rend chaque question avec وَأَنْتَ؟"
+      - "Six échanges, sans un mot de français."
+dialogue:
+  title_fr: "Les photos de Maryam"
+  context_fr: "Youssef regarde l'album de la famille de Maryam."
+  lines:
+    - { who: "مَرْيَم", term: "اُنْظُرْ! هٰذِهِ عائِلَتِي.",        fr: "Regarde ! Voici ma famille.",       phon: "OUN-dhour! HA-dhi-hi 'a-i-la-TI" }
+    - { who: "يُوسُف", term: "مَنْ هٰذا؟",                       fr: "Qui est-ce ?",                      phon: "man HA-dha" }
+    - { who: "مَرْيَم", term: "هٰذا أَبِي، وَهٰذِهِ أُمِّي.",       fr: "Ça, c'est mon papa, et ça, ma maman.", phon: "HA-dha a-BI, wa HA-dhi-hi OUM-mi" }
+    - { who: "يُوسُف", term: "وَهٰذا الوَلَدُ الصَّغير؟",          fr: "Et ce petit garçon ?",              phon: "wa HA-dha l-WA-la-dou s-sa-GHIR" }
+    - { who: "مَرْيَم", term: "هٰذا أَخِي. عِنْدِي أَخَوان.",       fr: "C'est mon frère. J'ai deux frères.", phon: "HA-dha a-KHI. 'IN-di a-kha-WAN" }
+    - { who: "يُوسُف", term: "وَمَنْ هٰذا الرَّجُلُ بِجانِبِ جَدَّتِك؟", fr: "Et cet homme à côté de ta grand-mère ?", phon: "wa man HA-dha r-RA-jou-lou bi-JA-ni-bi JAD-da-tik" }
+    - { who: "مَرْيَم", term: "هٰذا خالِي، أَخُو أُمِّي.",           fr: "C'est mon oncle, le frère de ma mère.", phon: "HA-dha KHA-li, A-khou OUM-mi" }
+    - { who: "يُوسُف", term: "عائِلَةٌ كَبيرة! أُحِبُّ عائِلَتِي أَيْضًا.", fr: "Une grande famille ! J'aime ma famille aussi.", phon: "'a-i-LA-toun ka-BI-ra! ou-HIB-bou 'a-i-la-TI AÏ-dan" }
+comprehension:
+  - q_fr: "Combien de frères a Maryam ?"
+    a_fr: "**Deux** — elle dit عِنْدِي أَخَوان, avec la forme du duel."
+  - q_fr: "L'homme à côté de la grand-mère, c'est l'oncle de quel côté ?"
+    a_fr: "Du côté de la **mère** : Maryam dit خالِي, et l'explique — أَخُو أُمِّي, le frère de ma mère."
+  - q_fr: "Pourquoi Maryam dit هٰذا أَبِي puis هٰذِهِ أُمِّي ?"
+    a_fr: "Parce que le mot « voici » suit la personne montrée : **هٰذا** pour un homme, **هٰذِهِ** pour une femme."
+  - q_fr: "Qu'est-ce que Youssef répond à la fin, et à quoi sert cette phrase ?"
+    a_fr: "أُحِبُّ عائِلَتِي أَيْضًا — « j'aime ma famille aussi ». Le mot **أَيْضًا** renvoie la balle : c'est ce qui fait durer la discussion."
+qa:
+  - question: { term: "مَنْ هٰذا؟", translit: "man hādhā?", fr: "Qui est-ce ?", phon: "man HA-dha" }
+    answers:
+      - { term: "هٰذا أَبِي.",   translit: "hādhā abī.",   fr: "C'est mon papa.",    phon: "HA-dha a-BI" }
+      - { term: "هٰذا جَدِّي.",  translit: "hādhā jaddī.", fr: "C'est mon grand-père.", phon: "HA-dha JAD-di" }
+      - { term: "هٰذِهِ أُخْتِي.", translit: "hādhihi ukhtī.", fr: "C'est ma sœur.",  phon: "HA-dhi-hi OUKH-ti" }
+  - question: { term: "كَمْ أَخًا عِنْدَك؟", translit: "kam akhan ʿindak?", fr: "Combien as-tu de frères ?", phon: "kam A-khan 'IN-dak" }
+    answers:
+      - { term: "عِنْدِي أَخٌ واحِد.",  translit: "ʿindī akhun wāḥid.", fr: "J'ai un frère.",     phon: "'IN-di A-khoun WA-hid" }
+      - { term: "عِنْدِي أَخَوان.",     translit: "ʿindī akhawān.",     fr: "J'ai deux frères.",  phon: "'IN-di a-kha-WAN" }
+      - { term: "لَيْسَ عِنْدِي إِخْوة.", translit: "laysa ʿindī ikhwa.", fr: "Je n'ai pas de frères.", phon: "LAÏ-sa 'IN-di IKH-wa" }
+  - question: { term: "ما اسْمُ أُمِّك؟", translit: "mā smu ummik?", fr: "Comment s'appelle ta maman ?", phon: "mas-MOU OUM-mik" }
+    answers:
+      - { term: "اسْمُها فاطِمة.", translit: "ismuhā Fāṭima.", fr: "Elle s'appelle Fatima.", phon: "is-MOU-ha FA-ti-ma" }
+      - { term: "اسْمُها مَرْيَم.", translit: "ismuhā Maryam.", fr: "Elle s'appelle Maryam.", phon: "is-MOU-ha MAR-yam" }
+reemploi_fr:
+  - "Quand on parle de quelqu'un de la famille cette semaine, on emploie le mot arabe : « جَدَّتِي arrive samedi »."
+  - "Au téléphone avec un proche, l'enfant dit lui-même السَّلامُ عَلَيْكُم puis présente : هٰذِهِ أُمِّي."
+culture_fr: >-
+  **En arabe, on est aussi le fils ou la fille de quelqu'un.** اِبْن et بِنْت
+  entrent dans les noms : Ibn Battûta, le voyageur ; Ibn Sīnā, le médecin que
+  l'Europe appelait Avicenne. Et dans beaucoup de familles, on appelle les
+  parents par leur aîné : le père de Youssef devient أَبُو يُوسُف, sa mère
+  أُمُّ يُوسُف. Un nom qui dit la place qu'on tient dans la famille.

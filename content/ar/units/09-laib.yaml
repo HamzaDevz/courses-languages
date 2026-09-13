@@ -1,0 +1,145 @@
+id: 09-laib
+order: 9
+year: 1
+title: "هَيَّا نَلْعَب!"
+title_fr: "On joue !"
+goal_fr: "Proposer de jouer, accepter, refuser, et dire à qui c'est le tour."
+can_do_fr:
+  - "Je sais proposer à quelqu'un de jouer avec moi."
+  - "Je sais accepter et refuser poliment."
+  - "Je sais dire دَوْرِي et دَوْرُك pendant une partie."
+duration_min: 14
+cefr: "A1.1 → A1"
+vocab:
+  - { term: "لُعْبة",   translit: "luʿba",   fr: "jeu, jouet",   phon: "LOU'-ba" }
+  - { term: "كُرة",     translit: "kura",    fr: "ballon",       phon: "KOU-ra" }
+  - { term: "دُمْية",    translit: "dumya",   fr: "poupée",       phon: "DOUM-ya" }
+  - { term: "سَيَّارة",   translit: "sayyāra", fr: "voiture",      phon: "saï-YA-ra" }
+  - { term: "مَلْعَب",   translit: "malʿab",  fr: "terrain de jeu", phon: "MAL-'ab" }
+  - { term: "صَديق",   translit: "ṣadīq",   fr: "ami",          phon: "sa-DIQ" }
+  - { term: "دَوْر",    translit: "dawr",    fr: "tour (au jeu)", phon: "DAWR" }
+  - { term: "اِلْعَبْ",   translit: "ilʿab",   fr: "joue !",       phon: "IL-'ab" }
+  - { term: "اِجْرِ",    translit: "ijri",    fr: "cours !",      phon: "IJ-ri" }
+  - { term: "اِقْفِزْ",   translit: "iqfiz",   fr: "saute !",      phon: "IQ-fiz" }
+  - { term: "اُرْسُمْ",   translit: "ursum",   fr: "dessine !",    phon: "OUR-soum" }
+  - { term: "غَنِّ",     translit: "ghanni",  fr: "chante !",     phon: "GHAN-ni" }
+phrases:
+  - { term: "هَلْ تُريدُ أَنْ تَلْعَبَ مَعِي؟", translit: "hal turīdu an talʿaba maʿī?", fr: "Tu veux jouer avec moi ?", phon: "hal tou-RI-dou an TAL-'a-ba ma-'I" }
+  - { term: "هَيَّا نَلْعَبُ بِالكُرة!",      translit: "hayyā nalʿabu bi-l-kura!",   fr: "Allons jouer au ballon !",  phon: "HAÏ-ya NAL-'a-bou bil-KOU-ra" }
+  - { term: "دَوْرِي!",                  translit: "dawrī!",                     fr: "C'est mon tour !",          phon: "DAW-ri" }
+  - { term: "دَوْرُك!",                  translit: "dawruk!",                    fr: "C'est ton tour !",          phon: "DAW-rouk" }
+  - { term: "اِنْتَظِرْنِي!",              translit: "intaẓirnī!",                 fr: "Attends-moi !",             phon: "in-ta-DHIR-ni" }
+  - { term: "فُزْتُ!",                   translit: "fuztu!",                     fr: "J'ai gagné !",              phon: "FOUZ-tou" }
+notes_fr:
+  - "**L'ordre est la forme la plus courte du verbe.** اِلْعَبْ (joue !), اِجْرِ (cours !), اُرْسُمْ (dessine !) : ce sont des impératifs, et c'est par eux qu'un enfant entre dans le verbe arabe — parce qu'on les lui dit toute la journée."
+  - "**هَيَّا نَـ… veut dire « allons… ».** هَيَّا نَلْعَب (jouons), هَيَّا نَأْكُل (mangeons), هَيَّا نَذْهَب (allons-y). Une seule tournure, et l'enfant peut proposer n'importe quoi."
+  - "**دَوْر, c'est le tour — et le rôle.** Le même mot sert pour « c'est mon tour » au jeu et pour le rôle qu'on joue dans une pièce. Il vient de دارَ, tourner : ce qui revient à chacun en tournant."
+activities:
+  - level: petits
+    type: mouvement
+    title_fr: "Le chef d'orchestre"
+    steps_fr:
+      - "Vous donnez les ordres : اِجْرِ! اِقْفِزْ! غَنِّ! اُرْسُمْ!"
+      - "L'enfant exécute sans traduire. Quatre ordres suffisent le premier jour."
+      - "Au bout de cinq tours, c'est lui le chef — et c'est là qu'il produit les mots."
+  - level: petits
+    type: jeu
+    title_fr: "C'est à qui le tour ?"
+    steps_fr:
+      - "N'importe quel jeu de société, même le plus simple."
+      - "Une seule règle : on ne joue pas sans avoir dit دَوْرِي, et on ne passe pas sans dire دَوْرُك."
+      - "Oubli : on repasse son tour. Ça ne se produit que deux fois."
+  - level: petits
+    type: mouvement
+    title_fr: "Les statues"
+    steps_fr:
+      - "Musique. Tant qu'elle joue, on danse : اِرْقُصْ!"
+      - "La musique s'arrête, vous criez un mot connu — قِطّة! — chacun se fige en statue de chat."
+      - "Celui qui bouge choisit le mot suivant."
+  - level: petits
+    type: jeu
+    title_fr: "La balle qui parle"
+    steps_fr:
+      - "On se lance une balle molle. Celui qui lance pose une question de l'année : ما اسْمُك؟ كَمْ عُمْرُك؟"
+      - "Celui qui attrape répond avant de relancer."
+      - "Balle tombée : on recommence la question, pas le jeu."
+  - level: petits
+    type: jeu
+    title_fr: "Veux-tu jouer avec moi ?"
+    steps_fr:
+      - "Les peluches font la queue. Chacune vient demander : هَلْ تُريدُ أَنْ تَلْعَبَ مَعِي؟"
+      - "L'enfant accepte ou refuse — mais poliment, avec لا، شُكْرًا et une raison."
+      - "Une peluche insiste trois fois : il faut trouver trois refus différents."
+  - level: grands
+    type: exercice
+    title_fr: "Donne l'ordre"
+    steps_fr:
+      - "تَلْعَب → l'ordre : ______"
+      - "تَجْري → l'ordre : ______"
+      - "تَرْسُم → l'ordre : ______"
+      - "Écris ensuite trois phrases en هَيَّا نَـ… pour proposer trois jeux."
+  - level: grands
+    type: jeu
+    title_fr: "Le tournoi de حَجَر، وَرَقة، مِقَصّ"
+    steps_fr:
+      - "Pierre, papier, ciseaux — en arabe : حَجَر، وَرَقة، مِقَصّ."
+      - "Le gagnant dit فُزْتُ!, le perdant خَسِرْتُ, et en cas d'égalité تَعادَلْنا."
+      - "Premier à cinq points, comptés à voix haute en arabe après chaque manche."
+  - level: grands
+    type: production
+    title_fr: "La règle de mon jeu"
+    steps_fr:
+      - "Invente un jeu, même bête, et écris ses trois règles en arabe."
+      - "Chaque règle commence par un ordre : اِرْمِ… اِجْرِ… لا تَلْمِسْ…"
+      - "Fais-y jouer quelqu'un sans traduire. Une règle mal comprise est une règle à réécrire."
+  - level: grands
+    type: dialogue
+    title_fr: "Invite, refuse, propose autre chose"
+    steps_fr:
+      - "L'un propose un jeu, l'autre refuse poliment et propose autre chose."
+      - "Trois allers-retours minimum, et il faut finir par se mettre d'accord."
+      - "Interdit de dire seulement لا : chaque refus doit être suivi d'une proposition."
+dialogue:
+  title_fr: "Dans la cour"
+  context_fr: "Après l'école, au terrain de jeu. Youssef a un ballon."
+  lines:
+    - { who: "مَرْيَم", term: "السَّلامُ عَلَيْكُم! هَلْ تُريدُ أَنْ تَلْعَبَ مَعِي؟", fr: "Salut ! Tu veux jouer avec moi ?", phon: "as-sa-LA-mou 'a-LAÏ-koum! hal tou-RI-dou an TAL-'a-ba ma-'I" }
+    - { who: "يُوسُف", term: "وَعَلَيْكُمُ السَّلام! نَعَم، طَبْعًا.",   fr: "Salut ! Oui, bien sûr.",          phon: "wa 'a-LAÏ-kou-mou s-sa-LAM! NA-'am, TAB-'an" }
+    - { who: "مَرْيَم", term: "هَيَّا نَلْعَبُ بِالكُرة!",              fr: "Allons jouer au ballon !",        phon: "HAÏ-ya NAL-'a-bou bil-KOU-ra" }
+    - { who: "يُوسُف", term: "حَسَنًا. أَنْتِ تَجْرينَ بِسُرْعة!",       fr: "D'accord. Tu cours vite !",       phon: "HA-sa-nan. AN-ti taj-RI-na bi-SOUR-'a" }
+    - { who: "مَرْيَم", term: "اِنْتَظِرْنِي! الآنَ دَوْرِي.",           fr: "Attends-moi ! Maintenant c'est mon tour.", phon: "in-ta-DHIR-ni! al-A-na DAW-ri" }
+    - { who: "يُوسُف", term: "حَسَنًا، اِلْعَبِي أَنْتِ.",              fr: "D'accord, joue, toi.",            phon: "HA-sa-nan, IL-'a-bi AN-ti" }
+    - { who: "مَرْيَم", term: "فُزْتُ! هَلْ نَلْعَبُ مَرَّةً أُخْرى؟",    fr: "J'ai gagné ! On rejoue ?",        phon: "FOUZ-tou! hal NAL-'a-bou MAR-ra-tan OUKH-ra" }
+    - { who: "يُوسُف", term: "لَيْسَ الآن، أَنا تَعْبان. غَدًا؟",       fr: "Pas maintenant, je suis fatigué. Demain ?", phon: "LAÏ-sa l-AN, A-na ta'-BAN. GHA-dan" }
+comprehension:
+  - q_fr: "Qui propose de jouer, et à quoi ?"
+    a_fr: "**Maryam** propose, et elle choisit le **ballon** — هَيَّا نَلْعَبُ بِالكُرة."
+  - q_fr: "Qui gagne ?"
+    a_fr: "**Maryam** — elle dit فُزْتُ!"
+  - q_fr: "Pourquoi Youssef refuse-t-il de rejouer ?"
+    a_fr: "Parce qu'il est **fatigué** (أَنا تَعْبان) — et il propose **demain** (غَدًا) à la place. Il ne dit pas seulement non."
+  - q_fr: "Youssef dit اِلْعَبِي et non اِلْعَبْ. Pourquoi ?"
+    a_fr: "Parce qu'il parle à **une fille** : l'ordre aussi change de forme selon à qui on s'adresse."
+qa:
+  - question: { term: "هَلْ تُريدُ أَنْ تَلْعَبَ مَعِي؟", translit: "hal turīdu an talʿaba maʿī?", fr: "Tu veux jouer avec moi ?", phon: "hal tou-RI-dou an TAL-'a-ba ma-'I" }
+    answers:
+      - { term: "نَعَم، طَبْعًا! هَيَّا.",    translit: "naʿam, ṭabʿan! hayyā.",     fr: "Oui, bien sûr ! Allons-y.", phon: "NA-'am, TAB-'an! HAÏ-ya" }
+      - { term: "لَيْسَ الآن، شُكْرًا.",     translit: "laysa l-ān, shukran.",      fr: "Pas maintenant, merci.",    phon: "LAÏ-sa l-AN, CHOU-kran" }
+      - { term: "نَعَم، لٰكِنْ بَعْدَ قَليل.", translit: "naʿam, lākin baʿda qalīl.", fr: "Oui, mais dans un moment.", phon: "NA-'am, LA-kin BA'-da qa-LIL" }
+  - question: { term: "بِماذا نَلْعَب؟", translit: "bi-mādhā nalʿab?", fr: "On joue à quoi ?", phon: "bi-MA-dha NAL-'ab" }
+    answers:
+      - { term: "هَيَّا نَلْعَبُ بِالكُرة.", translit: "hayyā nalʿabu bi-l-kura.", fr: "Jouons au ballon.",   phon: "HAÏ-ya NAL-'a-bou bil-KOU-ra" }
+      - { term: "أُريدُ أَنْ أَرْسُم.",     translit: "urīdu an arsum.",          fr: "Je veux dessiner.",   phon: "ou-RI-dou an AR-soum" }
+      - { term: "هَيَّا نَجْري!",          translit: "hayyā najrī!",             fr: "Courons !",           phon: "HAÏ-ya NAJ-ri" }
+  - question: { term: "دَوْرُ مَنْ؟", translit: "dawru man?", fr: "C'est à qui le tour ?", phon: "DAW-rou MAN" }
+    answers:
+      - { term: "دَوْرِي!",  translit: "dawrī!",  fr: "C'est mon tour !", phon: "DAW-ri" }
+      - { term: "دَوْرُك!",  translit: "dawruk!", fr: "C'est ton tour !", phon: "DAW-rouk" }
+reemploi_fr:
+  - "Tous les jeux de la semaine se jouent avec les quatre mots de la partie : دَوْرِي، دَوْرُك، فُزْتُ، مَرَّةً أُخْرى."
+  - "Pour proposer quoi que ce soit à la maison — une sortie, un dessin, un gâteau — on commence par هَيَّا نَـ…"
+culture_fr: >-
+  **Les échecs nous sont venus par l'arabe.** Le jeu est né en Inde, a traversé
+  la Perse puis le monde arabe, et notre mot *échec et mat* vient de الشّاه مات,
+  « le roi est mort ». Le mot *hasard*, lui, vient de الزَّهْر, le dé. Deux jeux,
+  deux mots : la langue garde la trace de ce qui a voyagé.

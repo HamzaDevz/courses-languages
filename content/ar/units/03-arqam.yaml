@@ -1,0 +1,146 @@
+id: 03-arqam
+order: 3
+year: 1
+title: "الأَرْقام"
+title_fr: "Les nombres"
+goal_fr: "Compter jusqu'à dix (jusqu'à vingt pour les grands) et dire son âge."
+can_do_fr:
+  - "Je sais compter de un à dix en arabe."
+  - "Je sais répondre à كَمْ عُمْرُك؟"
+  - "Je sais compter des objets à voix haute."
+duration_min: 12
+cefr: "A1.1"
+vocab:
+  - { term: "واحِد",     translit: "wāḥid",    fr: "un",     phon: "WA-hid" }
+  - { term: "اثْنان",    translit: "ithnān",   fr: "deux",   phon: "ith-NAN" }
+  - { term: "ثَلاثة",    translit: "thalātha", fr: "trois",  phon: "tha-LA-tha" }
+  - { term: "أَرْبَعة",   translit: "arbaʿa",   fr: "quatre", phon: "AR-ba-'a" }
+  - { term: "خَمْسة",    translit: "khamsa",   fr: "cinq",   phon: "KHAM-sa" }
+  - { term: "سِتَّة",     translit: "sitta",    fr: "six",    phon: "SIT-ta" }
+  - { term: "سَبْعة",    translit: "sabʿa",    fr: "sept",   phon: "SAB-'a" }
+  - { term: "ثَمانِية",   translit: "thamāniya", fr: "huit",  phon: "tha-MA-ni-ya" }
+  - { term: "تِسْعة",    translit: "tisʿa",    fr: "neuf",   phon: "TIS-'a" }
+  - { term: "عَشَرة",    translit: "ʿashara",  fr: "dix",    phon: "'A-cha-ra" }
+  - { term: "صِفْر",     translit: "ṣifr",     fr: "zéro",   phon: "SIFR" }
+  - { term: "كَمْ؟",      translit: "kam?",     fr: "combien ?", phon: "KAM" }
+  - { term: "أَحَدَ عَشَر", translit: "aḥada ʿashar", fr: "onze",  phon: "A-ha-da 'A-char", level: grands }
+  - { term: "اثْنا عَشَر",  translit: "ithnā ʿashar", fr: "douze", phon: "ITH-na 'A-char", level: grands }
+  - { term: "عِشْرُون",    translit: "ʿishrūn",  fr: "vingt",  phon: "'ich-ROUN", level: grands }
+phrases:
+  - { term: "كَمْ عُمْرُك؟",           translit: "kam ʿumruk?",          fr: "Quel âge as-tu ?",           phon: "kam 'OUM-rouk" }
+  - { term: "عُمْرِي سَبْعُ سَنَوات.",   translit: "ʿumrī sabʿu sanawāt.", fr: "J'ai sept ans.",             phon: "'OUM-ri SAB-'ou sa-na-WAT" }
+  - { term: "عُدَّ مَعِي!",            translit: "ʿudda maʿī!",          fr: "Compte avec moi !",          phon: "'OUD-da ma-'I" }
+  - { term: "كَمْ عَدَدُ الأَقْلام؟",    translit: "kam ʿadadu l-aqlām?",  fr: "Combien y a-t-il de crayons ?", phon: "kam 'A-da-dou l-aq-LAM" }
+notes_fr:
+  - "**Les chiffres que nous écrivons sont arabes.** 1, 2, 3 sont venus en Europe par les mathématiciens arabes, qui les tenaient de l'Inde. L'arabe, lui, en emploie une autre série : ٠ ١ ٢ ٣ ٤ ٥ ٦ ٧ ٨ ٩. On les appelle « chiffres indiens » en arabe, et « chiffres arabes » chez nous — les deux ont raison."
+  - "**Les nombres s'écrivent de gauche à droite**, même dans un texte qui va de droite à gauche : ٢٥ se lit bien vingt-cinq."
+  - "**Une bizarrerie qui se voit plus tard.** De trois à dix, le nombre prend la forme **inverse** de celle du mot compté : ثَلاثةُ أَوْلاد (trois garçons, mot masculin, nombre en ة) mais ثَلاثُ بَنات (trois filles, mot féminin, nombre sans ة). On ne l'explique pas aux petits : on dit juste les phrases justes, encore et encore."
+activities:
+  - level: petits
+    type: mouvement
+    title_fr: "Les escaliers"
+    steps_fr:
+      - "Une marche, un nombre : واحِد, اثْنان, ثَلاثة…"
+      - "Un nombre dit en français : on redescend de deux marches."
+      - "À la descente, on compte à l'envers : عَشَرة, تِسْعة, ثَمانِية…"
+  - level: petits
+    type: jeu
+    title_fr: "Combien de doigts ?"
+    steps_fr:
+      - "Montrez des doigts, l'enfant annonce le nombre en arabe."
+      - "Puis l'inverse : vous dites خَمْسة, il montre cinq doigts."
+      - "Version difficile : deux mains, deux nombres, il annonce le total."
+  - level: petits
+    type: jeu
+    title_fr: "Combien dans la boîte ?"
+    steps_fr:
+      - "Quelques pâtes sèches dans une boîte fermée. Secouez-la."
+      - "L'enfant devine : ثَلاثة؟ خَمْسة؟ On ouvre et on compte ensemble, à voix haute."
+      - "Il a le droit de secouer la boîte pour vous faire deviner à votre tour."
+  - level: petits
+    type: mouvement
+    title_fr: "Les claps"
+    steps_fr:
+      - "Tapez dans vos mains un certain nombre de fois. L'enfant annonce : أَرْبَعة!"
+      - "Puis l'inverse : vous dites سِتَّة, il tape six fois."
+      - "Le soir, dans le noir, les yeux fermés : c'est le même jeu, en plus calme."
+  - level: petits
+    type: jeu
+    title_fr: "La marelle des nombres"
+    steps_fr:
+      - "Huit cases au sol, à la craie ou au ruban adhésif."
+      - "On saute case par case en disant le nombre en arabe. Un nombre oublié, on repart du début."
+      - "Ajoutez les chiffres arabes ١ ٢ ٣ dans les cases : l'œil les apprend en sautant."
+  - level: grands
+    type: bricolage
+    title_fr: "La règle aux deux écritures"
+    steps_fr:
+      - "Sur une bande de carton, écris de 0 à 20 en chiffres européens."
+      - "En dessous, écris les mêmes en chiffres arabes : ٠ ١ ٢ … ٢٠."
+      - "En dessous encore, le nom du nombre en lettres, avec les voyelles."
+      - "Accroche la bande au mur : elle servira toute l'année."
+  - level: grands
+    type: exercice
+    title_fr: "Calcule en arabe"
+    steps_fr:
+      - "ثَلاثة + أَرْبَعة = ______"
+      - "عَشَرة − سِتَّة = ______"
+      - "خَمْسة + خَمْسة = ______"
+      - "Écris le résultat en lettres **et** en chiffres arabes."
+  - level: grands
+    type: jeu
+    title_fr: "Le dé qui monte jusqu'à cinquante"
+    steps_fr:
+      - "Deux dés. À chaque tour, on lance et on annonce la somme en arabe."
+      - "On additionne son total à voix haute d'un tour sur l'autre. Premier à cinquante."
+      - "Un total annoncé en français ne compte pas."
+  - level: grands
+    type: production
+    title_fr: "Ma fiche d'identité"
+    steps_fr:
+      - "Écris en arabe : ton nom, ton âge, le nombre de frères et sœurs, le numéro de ta maison."
+      - "Tous les nombres en chiffres arabes."
+      - "Lis la fiche à voix haute à quelqu'un qui ne l'a pas sous les yeux."
+dialogue:
+  title_fr: "Combien de crayons ?"
+  context_fr: "Maryam range la trousse, Youssef compte avec elle."
+  lines:
+    - { who: "مَرْيَم", term: "عُدَّ مَعِي! واحِد، اثْنان، ثَلاثة…", fr: "Compte avec moi ! Un, deux, trois…", phon: "'OUD-da ma-'I! WA-hid, ith-NAN, tha-LA-tha" }
+    - { who: "يُوسُف", term: "أَرْبَعة، خَمْسة، سِتَّة!",          fr: "Quatre, cinq, six !",              phon: "AR-ba-'a, KHAM-sa, SIT-ta" }
+    - { who: "مَرْيَم", term: "كَمْ عَدَدُ الأَقْلام؟",             fr: "Combien y a-t-il de crayons ?",    phon: "kam 'A-da-dou l-aq-LAM" }
+    - { who: "يُوسُف", term: "سِتَّةُ أَقْلام.",                   fr: "Six crayons.",                     phon: "SIT-ta-tou aq-LAM" }
+    - { who: "مَرْيَم", term: "لا، سَبْعة! هٰذا تَحْتَ الكِتاب.",   fr: "Non, sept ! Celui-là est sous le livre.", phon: "la, SAB-'a! HA-dha TAH-ta l-ki-TAB" }
+    - { who: "يُوسُف", term: "صَحيح، سَبْعة. كَمْ عُمْرُكِ؟",       fr: "C'est vrai, sept. Quel âge as-tu ?", phon: "sa-HIH, SAB-'a. kam 'OUM-rou-ki" }
+    - { who: "مَرْيَم", term: "عُمْرِي سَبْعُ سَنَوات. وَأَنْتَ؟",   fr: "J'ai sept ans. Et toi ?",          phon: "'OUM-ri SAB-'ou sa-na-WAT. wa AN-ta" }
+    - { who: "يُوسُف", term: "عُمْرِي ثَمانِي سَنَوات.",           fr: "J'ai huit ans.",                   phon: "'OUM-ri tha-MA-ni sa-na-WAT" }
+comprehension:
+  - q_fr: "Combien y a-t-il de crayons, finalement ?"
+    a_fr: "**Sept** (سَبْعة). Youssef en avait compté six, Maryam en trouve un de plus."
+  - q_fr: "Où était le crayon manquant ?"
+    a_fr: "**Sous le livre** — تَحْتَ الكِتاب."
+  - q_fr: "Quel âge ont les deux enfants ?"
+    a_fr: "Maryam a **sept** ans, Youssef **huit**."
+  - q_fr: "Youssef dit كَمْ عُمْرُكِ؟ à Maryam. Qu'est-ce qui changerait s'il parlait à un garçon ?"
+    a_fr: "Il dirait كَمْ عُمْرُكَ؟ — la terminaison suit **celui à qui on parle**, comme à l'unité 1."
+qa:
+  - question: { term: "كَمْ عُمْرُك؟", translit: "kam ʿumruk?", fr: "Quel âge as-tu ?", phon: "kam 'OUM-rouk" }
+    answers:
+      - { term: "عُمْرِي خَمْسُ سَنَوات.", translit: "ʿumrī khamsu sanawāt.", fr: "J'ai cinq ans.",  phon: "'OUM-ri KHAM-sou sa-na-WAT" }
+      - { term: "عُمْرِي ثَمانِي سَنَوات.", translit: "ʿumrī thamānī sanawāt.", fr: "J'ai huit ans.", phon: "'OUM-ri tha-MA-ni sa-na-WAT" }
+  - question: { term: "كَمْ عَدَدُ الأَقْلام؟", translit: "kam ʿadadu l-aqlām?", fr: "Combien y a-t-il de crayons ?", phon: "kam 'A-da-dou l-aq-LAM" }
+    answers:
+      - { term: "ثَلاثةُ أَقْلام.", translit: "thalāthatu aqlām.", fr: "Trois crayons.", phon: "tha-LA-tha-tou aq-LAM" }
+      - { term: "عَشَرةُ أَقْلام.", translit: "ʿasharatu aqlām.", fr: "Dix crayons.",   phon: "'A-cha-ra-tou aq-LAM" }
+      - { term: "لا أَعْرِف، عُدَّ مَعِي!", translit: "lā aʿrif, ʿudda maʿī!", fr: "Je ne sais pas, compte avec moi !", phon: "la Aʿ-rif, 'OUD-da ma-'I" }
+  - question: { term: "عُدَّ إِلى عَشَرة.", translit: "ʿudda ilā ʿashara.", fr: "Compte jusqu'à dix.", phon: "'OUD-da I-la 'A-cha-ra" }
+    answers:
+      - { term: "واحِد، اثْنان، ثَلاثة، أَرْبَعة، خَمْسة.", translit: "wāḥid, ithnān, thalātha, arbaʿa, khamsa.", fr: "Un, deux, trois, quatre, cinq.", phon: "WA-hid, ith-NAN, tha-LA-tha, AR-ba-'a, KHAM-sa" }
+      - { term: "سِتَّة، سَبْعة، ثَمانِية، تِسْعة، عَشَرة.", translit: "sitta, sabʿa, thamāniya, tisʿa, ʿashara.", fr: "Six, sept, huit, neuf, dix.", phon: "SIT-ta, SAB-'a, tha-MA-ni-ya, TIS-'a, 'A-cha-ra" }
+reemploi_fr:
+  - "On compte en arabe ce qu'on compte déjà : les marches, les bouchées, les tours de manège."
+  - "Le numéro de la maison, l'étage, l'heure au four : on les lit à voix haute en arabe pendant une semaine."
+culture_fr: >-
+  **Le zéro, صِفْر, a voyagé jusqu'à nous avec son nom.** Les mathématiciens de
+  langue arabe l'ont reçu de l'Inde, lui ont donné ce mot qui veut dire « vide »,
+  et l'ont transmis à l'Europe — où صِفْر est devenu *zephirum*, puis *zéro*, et
+  aussi *chiffre*. Deux mots français pour un seul mot arabe.

@@ -1,0 +1,145 @@
+id: 02-alwan
+order: 2
+year: 1
+title: "الأَلْوان"
+title_fr: "Les couleurs"
+goal_fr: "Nommer les couleurs et dire de quelle couleur est une chose."
+can_do_fr:
+  - "Je sais nommer huit couleurs."
+  - "Je sais demander ما لَوْنُ هٰذا؟ et y répondre."
+  - "Je sais dire quelle est ma couleur préférée."
+duration_min: 12
+cefr: "A1.1"
+vocab:
+  - { term: "لَوْن",        translit: "lawn",        fr: "couleur",  phon: "LAWN" }
+  - { term: "أَحْمَر",      translit: "aḥmar",       fr: "rouge",    phon: "AH-mar" }
+  - { term: "أَزْرَق",      translit: "azraq",       fr: "bleu",     phon: "AZ-raq" }
+  - { term: "أَصْفَر",      translit: "aṣfar",       fr: "jaune",    phon: "AS-far" }
+  - { term: "أَخْضَر",      translit: "akhḍar",      fr: "vert",     phon: "AKH-dar" }
+  - { term: "أَسْوَد",      translit: "aswad",       fr: "noir",     phon: "AS-wad" }
+  - { term: "أَبْيَض",      translit: "abyaḍ",       fr: "blanc",    phon: "AB-yad" }
+  - { term: "بُنِّيّ",       translit: "bunnī",       fr: "marron",   phon: "BOUN-ni" }
+  - { term: "وَرْدِيّ",      translit: "wardī",       fr: "rose",     phon: "WAR-di" }
+  - { term: "بُرْتُقالِيّ",   translit: "burtuqālī",   fr: "orange",   phon: "bour-tou-QA-li", level: grands }
+  - { term: "رَمادِيّ",      translit: "ramādī",      fr: "gris",     phon: "ra-MA-di", level: grands }
+  - { term: "بَنَفْسَجِيّ",   translit: "banafsajī",   fr: "violet",   phon: "ba-naf-sa-JI", level: grands }
+phrases:
+  - { term: "ما لَوْنُ هٰذا؟",          translit: "mā lawnu hādhā?",        fr: "De quelle couleur c'est ?",   phon: "ma LAW-nou HA-dha" }
+  - { term: "هٰذا أَحْمَر.",            translit: "hādhā aḥmar.",           fr: "Ça, c'est rouge.",            phon: "HA-dha AH-mar" }
+  - { term: "الكُرَةُ حَمْراء.",         translit: "al-kuratu ḥamrāʾ.",      fr: "Le ballon est rouge.",        phon: "al-KOU-ra-tou HAM-ra" }
+  - { term: "لَوْنِي المُفَضَّلُ الأَخْضَر.", translit: "lawnī l-mufaḍḍalu l-akhḍar.", fr: "Ma couleur préférée est le vert.", phon: "LAW-ni l-mou-FAD-da-lou l-AKH-dar" }
+notes_fr:
+  - "**Les couleurs ont deux formes.** Devant un mot féminin, أَحْمَر devient حَمْراء, أَزْرَق devient زَرْقاء, أَخْضَر devient خَضْراء. On dit الوَلَدُ أَحْمَر mais الكُرَةُ حَمْراء. Pour les petits, on ne l'explique pas : on le dit juste toujours juste, et l'oreille finit par le prendre."
+  - "**Les couleurs en ـِيّ sont plus faciles.** بُنِّيّ, وَرْدِيّ, رَمادِيّ, بُرْتُقالِيّ suivent la règle ordinaire : on ajoute simplement ة au féminin — بُنِّيَّة."
+  - "**بُرْتُقالِيّ vient de بُرْتُقال, l'orange (le fruit)** — exactement comme en français. Et le fruit, lui, tient son nom du Portugal, par où il est arrivé."
+activities:
+  - level: petits
+    type: jeu
+    title_fr: "La chasse aux couleurs"
+    steps_fr:
+      - "Vous annoncez une couleur : أَحْمَر!"
+      - "L'enfant a dix secondes pour rapporter un objet rouge de la maison."
+      - "Il le pose en disant هٰذا أَحْمَر."
+      - "Cinq couleurs, cinq objets, et on range en les renommant."
+  - level: petits
+    type: jeu
+    title_fr: "Une boîte par couleur"
+    steps_fr:
+      - "Trois boîtes au sol, une par couleur travaillée."
+      - "Deux minutes de chasse : chaque objet trouvé va dans sa boîte, en annonçant la couleur."
+      - "À la fin, on vide les boîtes une par une en recomptant à voix haute."
+  - level: petits
+    type: mouvement
+    title_fr: "Touche le bleu !"
+    steps_fr:
+      - "Musique. Tant qu'elle joue, on danse."
+      - "La musique s'arrête, vous criez أَزْرَق! — il faut toucher quelque chose de bleu avant trois secondes."
+      - "Celui qui n'a rien trouvé donne la couleur suivante."
+  - level: petits
+    type: jeu
+    title_fr: "Le loto des couleurs"
+    steps_fr:
+      - "Une grille de six cases, une couleur par case."
+      - "Tirez une carte et dites la couleur à voix haute, une seule fois."
+      - "L'enfant pose un jeton sur la bonne case. Grille pleine, il crie اِمْتَلَأَتْ! (c'est plein !)"
+      - "Les règles complètes du loto sont dans la **boîte à jeux**."
+  - level: petits
+    type: bricolage
+    title_fr: "Le nuancier de la maison"
+    steps_fr:
+      - "Une grande feuille, une colonne par couleur, avec le mot arabe écrit en haut."
+      - "Pendant la semaine, on colle dans chaque colonne ce qu'on trouve : un bout de papier, une gommette, une plume."
+      - "La colonne la plus remplie gagne. Affichez le nuancier : il devient l'affiche de l'unité."
+  - level: grands
+    type: exercice
+    title_fr: "Masculin ou féminin ?"
+    steps_fr:
+      - "الكِتابُ ______ . (le livre est rouge — كِتاب est masculin)"
+      - "السَّيَّارَةُ ______ . (la voiture est bleue — سَيَّارة est féminin)"
+      - "الشَّجَرَةُ ______ . (l'arbre est vert — شَجَرة est féminin)"
+      - "Vérifie avec la première note : la couleur change de forme, pas de sens."
+  - level: grands
+    type: jeu
+    title_fr: "Le duel des deux formes"
+    steps_fr:
+      - "Dix papiers : cinq mots masculins (كِتاب, بَيْت, قَلَم…), cinq féminins (كُرة, سَيَّارة, شَجَرة…)."
+      - "Tirez un papier, annoncez une couleur. Le premier qui dit le groupe entier avec la bonne forme marque un point."
+      - "Les couleurs en ـِيّ valent un point, celles qui changent complètement en valent deux."
+  - level: grands
+    type: production
+    title_fr: "L'arc-en-ciel légendé"
+    steps_fr:
+      - "Dessine un arc-en-ciel et écris le nom arabe de chaque bande, avec les voyelles."
+      - "Sous le dessin, écris une phrase par couleur : الشَّمْسُ صَفْراء, السَّماءُ زَرْقاء…"
+      - "Relis-les à voix haute. Les mots que tu hésites à lire sont ceux à revoir demain."
+  - level: grands
+    type: dialogue
+    title_fr: "La trousse mystérieuse"
+    steps_fr:
+      - "Un joueur choisit en secret un objet de sa trousse."
+      - "L'autre devine en posant des questions fermées : هَلْ هُوَ أَحْمَر؟ (est-il rouge ?)"
+      - "On ne répond que par نَعَم ou لا. Cinq questions maximum."
+dialogue:
+  title_fr: "La boîte de crayons"
+  context_fr: "Après l'école, Maryam et Youssef dessinent à la même table."
+  lines:
+    - { who: "مَرْيَم", term: "ما لَوْنُ هٰذا القَلَم؟",        fr: "De quelle couleur est ce crayon ?", phon: "ma LAW-nou HA-dha l-QA-lam" }
+    - { who: "يُوسُف", term: "هٰذا أَزْرَق.",                  fr: "Celui-là est bleu.",                phon: "HA-dha AZ-raq" }
+    - { who: "مَرْيَم", term: "وَهٰذا؟ هٰذا أَحْمَر، أَلَيْسَ كَذٰلِك؟", fr: "Et celui-là ? Il est rouge, n'est-ce pas ?", phon: "wa HA-dha? HA-dha AH-mar, a-LAÏ-sa ka-DHA-lik" }
+    - { who: "يُوسُف", term: "لا، هٰذا وَرْدِيّ!",              fr: "Non, celui-là est rose !",          phon: "la, HA-dha WAR-di" }
+    - { who: "مَرْيَم", term: "أُريدُ أَنْ أَرْسُمَ شَجَرَة.",     fr: "Je veux dessiner un arbre.",        phon: "ou-RI-dou an AR-sou-ma CHA-ja-ra" }
+    - { who: "يُوسُف", term: "إِذَنْ خُذِي القَلَمَ الأَخْضَر.",   fr: "Alors prends le crayon vert.",      phon: "I-dhan KHOU-dhi l-QA-la-ma l-AKH-dar" }
+    - { who: "مَرْيَم", term: "شُكْرًا! ما لَوْنُكَ المُفَضَّل؟",  fr: "Merci ! Quelle est ta couleur préférée ?", phon: "CHOU-kran! ma LAW-nou-ka l-mou-FAD-dal" }
+    - { who: "يُوسُف", term: "لَوْنِي المُفَضَّلُ الأَصْفَر، كَالشَّمْس.", fr: "Ma couleur préférée est le jaune, comme le soleil.", phon: "LAW-ni l-mou-FAD-da-lou l-AS-far, kach-CHAMS" }
+comprehension:
+  - q_fr: "De quelle couleur est le crayon que Maryam prenait pour du rouge ?"
+    a_fr: "Il est **rose** (وَرْدِيّ). Youssef la corrige."
+  - q_fr: "Que veut dessiner Maryam, et quel crayon lui faut-il ?"
+    a_fr: "Un arbre (شَجَرة) — il lui faut donc le crayon **vert** (الأَخْضَر)."
+  - q_fr: "Quelle est la couleur préférée de Youssef, et pourquoi la retient-on facilement ?"
+    a_fr: "Le **jaune** (الأَصْفَر) — parce qu'il l'explique : كَالشَّمْس, « comme le soleil »."
+  - q_fr: "Maryam dit الشَّجَرَةُ خَضْراء et non أَخْضَر. Pourquoi ?"
+    a_fr: "Parce que شَجَرة est un mot **féminin** : la couleur prend alors sa forme féminine, خَضْراء."
+qa:
+  - question: { term: "ما لَوْنُ هٰذا؟", translit: "mā lawnu hādhā?", fr: "De quelle couleur c'est ?", phon: "ma LAW-nou HA-dha" }
+    answers:
+      - { term: "هٰذا أَزْرَق.",   translit: "hādhā azraq.",   fr: "C'est bleu.",   phon: "HA-dha AZ-raq" }
+      - { term: "هٰذا أَبْيَض.",   translit: "hādhā abyaḍ.",   fr: "C'est blanc.",  phon: "HA-dha AB-yad" }
+      - { term: "لا أَعْرِف.",     translit: "lā aʿrif.",      fr: "Je ne sais pas.", phon: "la Aʿ-rif" }
+  - question: { term: "ما لَوْنُكَ المُفَضَّل؟", translit: "mā lawnuka l-mufaḍḍal?", fr: "Quelle est ta couleur préférée ?", phon: "ma LAW-nou-ka l-mou-FAD-dal" }
+    answers:
+      - { term: "لَوْنِي المُفَضَّلُ الأَخْضَر.", translit: "lawnī l-mufaḍḍalu l-akhḍar.", fr: "Ma couleur préférée est le vert.", phon: "LAW-ni l-mou-FAD-da-lou l-AKH-dar" }
+      - { term: "أُحِبُّ الأَحْمَر.",  translit: "uḥibbu l-aḥmar.", fr: "J'aime le rouge.", phon: "ou-HIB-bou l-AH-mar" }
+  - question: { term: "هَلْ هٰذا أَحْمَر؟", translit: "hal hādhā aḥmar?", fr: "Est-ce que c'est rouge ?", phon: "hal HA-dha AH-mar" }
+    answers:
+      - { term: "نَعَم، هٰذا أَحْمَر.", translit: "naʿam, hādhā aḥmar.", fr: "Oui, c'est rouge.", phon: "NA-'am, HA-dha AH-mar" }
+      - { term: "لا، هٰذا وَرْدِيّ.",   translit: "lā, hādhā wardī.",    fr: "Non, c'est rose.",  phon: "la, HA-dha WAR-di" }
+reemploi_fr:
+  - "En s'habillant, chaque matin : une seule question, ما لَوْنُ هٰذا؟ — sur le pull, sur les chaussettes."
+  - "Dans la voiture ou le bus, on compte les voitures d'une couleur annoncée à l'avance."
+culture_fr: >-
+  **Le vert, الأَخْضَر, est la couleur la plus présente dans le monde
+  musulman** : on la retrouve sur les drapeaux, les dômes des mosquées, les
+  reliures de Coran. C'est la couleur des jardins promis et, dans un monde né
+  au bord du désert, celle de l'eau et de la vie. Le mot du Coran pour ces
+  jardins, جَنَّة, veut d'abord dire « ce qui est couvert de verdure ».

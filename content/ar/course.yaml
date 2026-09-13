@@ -1,0 +1,68 @@
+code: ar
+name: العَرَبِيَّة
+name_fr: Arabe
+variant: الفُصْحى
+variant_fr: Arabe littéral — la langue du Coran
+direction: rtl
+script: arabic
+has_transliteration: true
+speech_lang: ar-SA
+teaching_language: fr
+note_fr: >-
+  **Ce cours enseigne l'arabe littéral (الفُصْحى), celui du Coran et des
+  livres — pas un dialecte.** C'est un choix, et il a un prix qu'il vaut mieux
+  connaître : l'enfant pourra lire le Coran, comprendre un livre et un dessin
+  animé en arabe classique, mais il ne discutera pas pour autant en darija avec
+  sa grand-mère. Les deux s'apprennent très bien ensemble — le dialecte à
+  l'oreille, à la maison ; la fuṣḥā ici, par la lecture et la répétition.
+
+
+  **Les mots sont écrits avec les voyelles (الحَرَكات)**, comme dans un
+  Coran : c'est la seule façon pour un débutant de savoir comment lire.
+
+
+  **Trois sons n'existent pas en français** et l'audio est indispensable pour
+  eux : le **ح** (un *h* soufflé, gorge serrée), le **خ** (comme la *jota*
+  espagnole), et le **ع**, un son du fond de la gorge qui n'a aucun équivalent.
+  La colonne « se prononce » les approche, elle ne les remplace pas. Dans
+  cette colonne, **l'apostrophe marque le ع** : c'est un coup de gorge, pas
+  une pause.
+
+
+  **La translittération** suit une clé simple : *ā ī ū* = voyelles longues ;
+  *ḥ* = ح, *kh* = خ, *ʿ* = ع, *gh* = غ, *th* = ث, *dh* = ذ, *sh* = ش ;
+  *ṣ ḍ ṭ ẓ* = les lettres emphatiques ص ض ط ظ ; *ʾ* = la hamza ء.
+levels:
+  - id: petits
+    label_fr: 3-6 ans
+    desc_fr: "Pré-lecteurs. Tout à l'oreille : écoute, répétition, jeux, images. Aucun écrit exigé — les lettres se reconnaissent, elles ne s'écrivent pas encore."
+  - id: grands
+    label_fr: 7-10 ans
+    desc_fr: "Lecteurs. L'alphabet et ses quatre formes, les harakāt, le tracé, les premières règles."
+voices:
+  f: ar-SA-ZariyahNeural
+  m: ar-SA-HamedNeural
+speech_rate: "-10%"
+toolkit:
+  - title_fr: "Quand je n'ai pas compris"
+    intro_fr: "À savoir par cœur avant tout le reste. Un enfant qui sait dire qu'il n'a pas compris reste dans la conversation ; celui qui ne le sait pas se tait."
+    items:
+      - { term: "لَمْ أَفْهَم.",            translit: "lam afham.",              fr: "Je n'ai pas compris.",            phon: "lam AF-ham" }
+      - { term: "مَرَّةً أُخْرى، مِنْ فَضْلِك.", translit: "marratan ukhrā, min faḍlik.", fr: "Encore une fois, s'il te plaît.", phon: "MAR-ra-tan OUKH-ra, min FAD-lik" }
+      - { term: "بِبُطْءٍ، مِنْ فَضْلِك.",     translit: "bi-buṭʾin, min faḍlik.",  fr: "Plus lentement, s'il te plaît.",  phon: "bi-BOUT-in, min FAD-lik" }
+      - { term: "الآنَ فَهِمْت!",            translit: "al-āna fahimt!",          fr: "Maintenant j'ai compris !",       phon: "al-A-na fa-HIMT" }
+  - title_fr: "Quand je cherche un mot"
+    intro_fr: "Contourner un mot qu'on ne connaît pas, c'est ce qui permet de continuer à parler au lieu de s'arrêter."
+    items:
+      - { term: "كَيْفَ نَقُولُ هٰذا بِالعَرَبِيَّة؟", translit: "kayfa naqūlu hādhā bi-l-ʿarabiyya?", fr: "Comment on dit ça en arabe ?", phon: "KAÏ-fa na-QOU-lou HA-dha bil-a-ra-BI-ya" }
+      - { term: "ما مَعْنى هٰذا؟",          translit: "mā maʿnā hādhā?",         fr: "Qu'est-ce que ça veut dire ?",    phon: "ma MAʿ-na HA-dha" }
+      - { term: "لا أَعْرِفُ الكَلِمة.",     translit: "lā aʿrifu l-kalima.",     fr: "Je ne connais pas le mot.",       phon: "la AʿRI-fou l-ka-LI-ma" }
+      - { term: "ما هٰذا؟",                translit: "mā hādhā?",               fr: "Qu'est-ce que c'est ?",           phon: "ma HA-dha" }
+  - title_fr: "Pour gagner du temps et rester dans la discussion"
+    intro_fr: "Ces petits mots ne veulent presque rien dire — et ce sont eux qui font qu'une conversation continue."
+    items:
+      - { term: "وَأَنْتَ؟",                translit: "wa anta?",                fr: "Et toi ? (à un garçon)",          phon: "wa AN-ta" }
+      - { term: "وَأَنْتِ؟",                translit: "wa anti?",                fr: "Et toi ? (à une fille)",          phon: "wa AN-ti" }
+      - { term: "لَحْظَة، مِنْ فَضْلِك.",    translit: "laḥẓa, min faḍlik.",      fr: "Un instant, s'il te plaît.",      phon: "LAH-dha, min FAD-lik" }
+      - { term: "نَعَم، بِالتَّأْكيد.",      translit: "naʿam, bi-t-taʾkīd.",     fr: "Oui, bien sûr.",                  phon: "NA-ʿam, bit-ta-KID" }
+      - { term: "حَسَنًا.",                 translit: "ḥasanan.",                fr: "D'accord.",                       phon: "HA-sa-nan" }

@@ -1,0 +1,105 @@
+title_fr: "Livres, écrans et outils"
+intro_fr: >-
+  Ce qu'on achète, emprunte ou écoute autour du cours. La liste est **courte, et
+  volontairement** : mieux vaut trois références sûres que trente approximatives.
+warning_fr: >-
+  **Deux précautions avant d'acheter quoi que ce soit.** D'abord la variante :
+  beaucoup de livres et de dessins animés pour enfants existent en dialecte
+  égyptien ou levantin — ce cours enseigne la **fuṣḥā**, vérifiez avant. Ensuite
+  les voyelles : un livre pour enfants doit être **مُشَكَّل**, entièrement
+  voyellé. Un texte sans harakāt est illisible pour un débutant, quel que soit
+  son âge.
+
+
+  Et une remarque honnête : le monde de l'édition arabe pour enfants est vaste,
+  changeant, et mal référencé depuis la France. Les entrées ci-dessous sont
+  celles dont l'existence et la nature ne font pas de doute. Pour le reste,
+  demandez à une librairie spécialisée ou à un professeur plutôt que de vous
+  fier à une liste — la mienne comprise.
+groups:
+  - title_fr: "Pour lire à voix haute — la langue du Coran"
+    intro_fr: "C'est la variante enseignée ici, et c'est aussi celle qui offre les textes les plus accessibles à un débutant : courts, rythmés et toujours voyellés."
+    items:
+      - title: "جُزْء عَمّ"
+        kind_fr: "les sourates courtes du Coran"
+        age_fr: "dès que l'alphabet est sûr, 7 ans et plus"
+        why_fr: >-
+          La dernière section du Coran rassemble les sourates les plus brèves.
+          Entièrement voyellées, très rythmées, souvent déjà entendues : c'est
+          le meilleur texte de **lecture à voix haute** qu'un débutant puisse
+          avoir. On lit lentement, sans chercher à tout comprendre — la
+          fluidité d'abord.
+        where_fr: "Toute librairie religieuse, et de nombreuses éditions bilingues avec translittération."
+      - title: "كَليلة وَدِمْنة"
+        author: "Ibn al-Muqaffaʿ"
+        kind_fr: "fables animalières, éditions pour enfants"
+        age_fr: "6-10 ans"
+        why_fr: >-
+          Des fables d'animaux venues de l'Inde par la Perse, passées en arabe
+          au VIIIᵉ siècle — les cousines de celles de La Fontaine, qui s'en est
+          inspiré. Les éditions pour enfants sont courtes, illustrées, et
+          reprennent le vocabulaire des animaux de l'unité 5.
+        where_fr: "Librairies arabes, nombreuses éditions jeunesse voyellées."
+      - title: "أَلْف لَيْلة وَلَيْلة"
+        kind_fr: "contes, éditions pour enfants"
+        age_fr: "7-10 ans"
+        why_fr: >-
+          Les Mille et Une Nuits. Beaucoup d'histoires sont déjà connues en
+          français — Aladin, Sinbad — ce qui permet à l'enfant d'écouter la
+          langue au lieu de suivre l'intrigue.
+        where_fr: "Éditions jeunesse abrégées et voyellées, en librairie arabe."
+  - title_fr: "Écrans — à condition de bien choisir"
+    intro_fr: "La règle qui vaut plus que le choix du programme : un dessin animé **déjà vu en français**, revu en arabe. L'histoire étant connue, l'oreille se libère pour la langue."
+    items:
+      - title: "اِفْتَحْ يا سِمْسِم"
+        kind_fr: "émission jeunesse"
+        age_fr: "3-8 ans"
+        why_fr: >-
+          La version arabe de *Sesame Street*, tournée en **fuṣḥā** — c'est
+          précisément sa raison d'être : donner aux enfants de tout le monde
+          arabe une langue commune. Exactement la variante de ce cours.
+        where_fr: "Extraits largement disponibles en ligne ; plusieurs saisons ont été produites."
+      - title: "Les dessins animés doublés en fuṣḥā"
+        kind_fr: "méthode, pas un titre"
+        age_fr: "4-10 ans"
+        why_fr: >-
+          La plupart des dessins animés diffusés dans le monde arabe sont
+          doublés en arabe standard, pas en dialecte : c'est une chance pour ce
+          cours. Cherchez le doublage arabe d'un dessin animé que l'enfant
+          connaît déjà par cœur.
+        where_fr: "Chaînes jeunesse arabophones et plateformes de vidéo ; vérifiez à l'oreille que c'est bien de la fuṣḥā."
+  - title_fr: "Outils pour le parent"
+    intro_fr: "Ce qui sert à préparer une séance, vérifier un mot ou entendre une vraie voix."
+    items:
+      - title: "Almaany"
+        kind_fr: "dictionnaire arabe en ligne"
+        age_fr: "pour le parent"
+        why_fr: "Dictionnaire arabe très complet, avec des entrées arabe-français. Utile pour vérifier un sens avant de l'enseigner."
+        where_fr: "almaany.com"
+      - title: "Forvo"
+        kind_fr: "prononciations enregistrées par des locuteurs"
+        age_fr: "pour le parent"
+        why_fr: "Pour entendre un mot dit par un vrai locuteur quand la synthèse du site ne suffit pas — en particulier pour le ح, le خ et le ع."
+        where_fr: "forvo.com, section arabe."
+      - title: "Institut du monde arabe"
+        kind_fr: "institution, cours de langue"
+        age_fr: "enfants et adultes"
+        why_fr: >-
+          Propose des cours d'arabe, y compris pour enfants, et des ressources
+          culturelles. C'est aussi le meilleur endroit pour demander conseil sur
+          des livres jeunesse, plutôt que de se fier à une liste.
+        where_fr: "Paris, et ressources en ligne."
+      - title: "Une librairie arabe de votre ville"
+        kind_fr: "conseil, pas un produit"
+        age_fr: "pour le parent"
+        why_fr: >-
+          Le meilleur outil de cette page. Un libraire voit passer les éditions
+          jeunesse, sait lesquelles sont voyellées et lesquelles sont en
+          dialecte, et corrigera en trois minutes ce qu'aucune liste en ligne ne
+          peut garantir.
+        where_fr: "Dans les grandes villes ; certaines expédient."
+outro_fr: >-
+  S'il ne fallait garder que trois choses : **un livre voyellé lu vingt fois**,
+  **un dessin animé déjà connu revu en arabe**, et **une personne qui parle la
+  langue et accepte de ne pas traduire**. La troisième vaut les deux autres
+  réunies.
